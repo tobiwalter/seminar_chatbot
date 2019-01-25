@@ -1,0 +1,110 @@
+%YAML 1.1
+---
+actions:
+- utter_no_course
+- utter_welcome
+- action_course_offering
+- utter_no_worries
+- utter_are_you_sure
+- action_select_date
+- action_provide_prerequisites
+- action_cancel_seminar
+- utter_ask_name
+- action_provide_description
+- action_book_seminar
+- action_display_seminar
+- utter_try_again
+- utter_get_help
+- utter_book_where
+- action_show_bookings
+- utter_bye
+- action_provide_datesWithLocation
+- action_verify_user
+entities:
+- location
+- date
+- user-level
+- date-period
+- given-name
+- course
+- display-option
+- course-type
+- booking-type
+- last-name
+intents:
+- inform
+- get_help
+- welcome
+- book_seminar
+- show_bookings
+- bye
+- thank
+- get_general_info
+- cancel_seminar
+- affirm
+- get_description
+- get_dates
+- get_prerequisites
+slots:
+  booking-type:
+    type: categorical
+    values:
+    - upcoming
+    - past
+  booking_confirmed:
+    type: bool
+  cancellation_confirmed:
+    type: bool
+  course:
+    type: text
+  date:
+    type: text
+  date-period:
+    type: text
+  dates:
+    type: unfeaturized
+  display-option:
+    type: text
+  given-name:
+    type: text
+  last-name:
+    type: text
+  location:
+    type: text
+  locations:
+    type: unfeaturized
+  title:
+    type: unfeaturized
+  user-level:
+    type: text
+  user_verified:
+    type: bool
+  employee_id:
+    type: text
+templates:
+  utter_are_you_sure:
+  - text: Are you sure?
+  utter_ask_name:
+  - text: Please give me your first and last name
+  - text: Please provide your first and last name
+  - text: Please tell me your first and last name
+  utter_book_where:
+  - text: Where do you want to take {title}?
+  - text: In which city do you want to take {title}?
+  - text: Please select the city where you want to take {title}
+  utter_bye:
+  - text: Goodbye
+  utter_get_help:
+  - text: To get help, please reach out to helpdesk@company.com by mail or call +49
+      621 66566.
+  utter_no_course:
+  - text: Sorry, we do not offer a course about {course} so far.
+  utter_no_worries:
+  - text: No worries.
+  - text: You are welcome.
+  - text: My pleasure!
+  utter_try_again:
+  - text: This name is not in our database. Please specify your name again.
+  utter_welcome:
+  - text: Hello! Do you want to book a seminar, get information about a seminar or
+      want to have an overview about your bookings?

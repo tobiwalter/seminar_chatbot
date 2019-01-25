@@ -1,0 +1,20 @@
+language: "en"
+
+pipeline:
+- name: "nlp_spacy"
+- name: "tokenizer_spacy"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_spacy"
+- name: "ner_crf": {
+                    "BILOU_flag": true,
+                    "features": [
+                      ["title", "upper", "pos", "pos2"],
+                      ["bias", "low", "word3", "word2", "upper", "title", "digit", "pos", "pos2", "pattern"],
+                      ["low", "title", "upper", "pos", "pos2"]],
+                    "max_iterations": 50,
+                    "L1_c": 1,
+                    "L2_c": 1e-3
+                    }
+- name: "ner_duckling"
+- name: "ner_synonyms"
+- name: "intent_classifier_sklearn"
