@@ -229,7 +229,7 @@ class ActionBookSeminar(Action):
         seminar = seminars[seminar_id]
         if not city.lower() in (sem.lower() for sem in seminar["locations"]):
             dispatcher.utter_message("The seminar {} is not offered in {}".format(seminar["title"],city))
-            return []
+            return [SlotSet("booking_confirmed","False")]
         #check date
         dateMatch = False
         for i in range(len(seminar["dates"])):
@@ -240,7 +240,7 @@ class ActionBookSeminar(Action):
 
         if not dateMatch:
             dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],seminar_date))
-            return []
+            return [SlotSet("booking_confirmed","False")]
 
                 #check occupancy
         if seminar["capacity"] > seminar["occupancy"]:
@@ -490,29 +490,6 @@ class ActionProvidePrerequisites(Action):
 
         dispatcher.utter_message(", ".join(prqs))
         return []
-
-class ActionProvideDatesWithLocation(Action):
-
-    def name(self):
-        """returns name of the action """
-        return "action_provide_datesWithLocation"
-
-    def run(self, dispatcher, tracker, domain):
-        """ retrieves slot values """
-
-        course = tracker.get_slot('course')
-        results = ([],[])
-        for j in range(len(seminars)):
-            if course in seminars[j]["description"]:
-                for k in range(len(seminars[j]["dates"])):
-                    results[0].append(seminars[j]["dates"][k])
-                    results[1].append(seminars[j]["locations"][k])
-
-        resp = "The seminar takes place at the following dates and cities:\
-        \n \n dates: {} \n cities: {} ".format(", ".join(results[0]),", ".join(results[1]))
-
-        dispatcher.utter_message(resp)
-        return [SlotSet("dates",results[0]), SlotSet("location", results[1])]
 
 class VerifyUser(Action):
     def name(self):
