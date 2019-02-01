@@ -10723,10 +10723,6 @@
       },
       {
         "intent": "get_description",
-        "text": "What will I learn in this course?"
-      },
-      {
-        "intent": "get_description",
         "text": "What are the contents of the course?"
       },
       {
@@ -12012,6 +12008,10 @@
           }
         ],
         "text": "Do you have courses in Munich?"
+      },
+      {
+        "intent": "get_general_info",
+        "text": "What kind of seminars are offered?"
       },
       {
         "intent": "get_general_info",
@@ -13434,6 +13434,106 @@
         "text": "Any training in  available?"
       },
       {
+        "intent": "get_dates",
+        "text": "When is the course?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When does machine learning take place?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "On what days can I take the course?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When is the course scheduled?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "On what dates does the seminar take place?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When is it happening?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When does it take place?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When is the seminar offered?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "I want to know the dates of the seminar"
+      },
+      {
+        "intent": "get_dates",
+        "text": "Please tell me the dates of course"
+      },
+      {
+        "intent": "get_dates",
+        "text": "On which dates does the course take place?"
+      },
+      {
+        "intent": "get_dates",
+        "text": "When can I actually take the course?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where can I take it?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Okay, then where can I take it?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "In which cities can I register for the seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where can I attend it?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where can I attend this seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "In which locations is the seminar held?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Tell me where I can attend the seminar"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where does the seminar take place?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "To which city do I need to go in order to attend the seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where do you offer the seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where can I attend the programming seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "Where does the workshop for leadership take place?"
+      },
+      {
+        "intent": "get_locations",
+        "text": "In which cities is the Excel workshop offered?"
+      },
+      {
         "intent": "introduction",
         "text": "- tell me some stuff about you"
       },
@@ -13806,8 +13906,13 @@
         "synonyms": [
           "Python",
           "R",
-          "Programs",
           "Java"
+        ]
+      },
+      {
+        "value": "leadership",
+        "synonyms": [
+          "management"
         ]
       },
       {

@@ -2,13 +2,13 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "given-name",
-        "last-name",
-        "date-period",
-        "course",
         "location",
+        "date-period",
+        "given-name",
+        "course",
+        "user-level",
         "date",
-        "user-level"
+        "last-name"
       ]
     },
     "action_verify_user": {
@@ -16,6 +16,9 @@
         "employee_id",
         "user_verified"
       ]
+    },
+    "utter_no_worries": {
+      "slots": []
     },
     "action_display_seminar": {
       "slots": [
@@ -26,10 +29,10 @@
     },
     "seminar_form": {
       "slots": [
-        "date",
-        "booking_confirmed",
+        "requested_slot",
         "location",
-        "requested_slot"
+        "date",
+        "booking_confirmed"
       ]
     },
     "action_book_seminar": {
@@ -40,7 +43,7 @@
     "utter_bye": {
       "slots": []
     },
-    "utter_no_worries": {
+    "utter_get_help": {
       "slots": []
     },
     "action_cancel_seminar": {
@@ -48,7 +51,7 @@
         "cancellation_confirmed"
       ]
     },
-    "utter_get_help": {
+    "utter_i''m sorry": {
       "slots": []
     },
     "action_show_bookings": {
@@ -70,5 +73,5 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190129-141155"
+  "trained_at": "20190131-184422"
 }
