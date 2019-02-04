@@ -1,3 +1,5 @@
+%YAML 1.1
+---
 actions:
 - action_course_offering
 - utter_chitchat
@@ -22,6 +24,8 @@ actions:
 - action_select_date
 - action_provide_datesWithLocation
 - action_provide_prerequisites
+config:
+  store_entities_as_slots: true
 entities:
 - course
 - last-name
@@ -36,63 +40,110 @@ entities:
 forms:
 - seminar_form
 intents:
-- thank
-- inform
-- book_seminar
-- get_description
-- get_prerequisites
-- get_general_info
+- thank:
+    use_entities: true
+- inform:
+    use_entities: true
+- book_seminar:
+    use_entities: true
+- get_description:
+    use_entities: true
+- get_prerequisites:
+    use_entities: true
+- get_general_info:
+    use_entities: true
 - bad:
     use_entities: false
-- get_help
-- show_bookings
-- bye
-- welcome
-- cancel_seminar
-- affirm
-- get_dates
+- get_help:
+    use_entities: true
+- show_bookings:
+    use_entities: true
+- bye:
+    use_entities: true
+- welcome:
+    use_entities: true
+- cancel_seminar:
+    use_entities: true
+- affirm:
+    use_entities: true
+- get_dates:
+    use_entities: true
 - introduction:
     use_entities: false
 - age:
     use_entities: false
 slots:
   booking-type:
-    type: categorical
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
     values:
     - upcoming
     - past
   booking_confirmed:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   cancellation_confirmed:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   course:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   date:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   date-period:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   dates:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   display-option:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   employee_id:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   given-name:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   last-name:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   location:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   locations:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   requested_slot:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   title:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   user-level:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   user_verified:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
 templates:
   utter_are_you_sure:
   - text: Are you sure?
