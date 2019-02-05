@@ -1,59 +1,62 @@
 %YAML 1.1
 ---
 actions:
-- action_show_bookings
-- utter_get_help
-- utter_ask_course
-- action_provide_prerequisites
-- utter_bye
-- action_course_offering
-- utter_welcome
-- utter_are_you_sure
-- utter_submit
-- utter_chitchat
-- utter_i''m sorry
-- action_select_date
-- action_cancel_seminar
-- action_display_seminar
-- utter_ask_name
-- utter_ask_date
-- action_book_seminar
-- action_provide_datesWithLocation
-- utter_ask_location
 - utter_try_again
+- action_book_seminar
 - action_provide_description
-- action_verify_user
+- action_course_offering
+- action_show_bookings
+- utter_ask_location
+- action_cancel_seminar
+- utter_get_help
+- action_provide_prerequisites
+- utter_ask_name
+- utter_ask_course
 - utter_no_worries
+- utter_are_you_sure
+- utter_chitchat
+- utter_welcome
+- utter_bye
+- utter_introduction
+- action_provide_datesWithLocation
+- action_display_seminar
+- utter_i''m sorry
+- utter_submit
+- action_verify_user
+- action_select_date
+- utter_ask_date
 config:
   store_entities_as_slots: true
 entities:
-- location
-- date
 - user-level
-- last-name
-- course
 - course-type
-- date-period
+- date
 - display-option
-- given-name
+- course
 - booking-type
+- date-period
+- given-name
+- last-name
+- location
 forms:
 - seminar_form
 intents:
-- get_description:
-    use_entities: true
 - thank:
-    use_entities: true
-- get_prerequisites:
-    use_entities: true
-- get_general_info:
     use_entities: true
 - inform:
     use_entities: true
-- bad:
-    use_entities: false
+- get_course_offering:
+    use_entities: true
+- get_dates:
+    use_entities: true
 - book_seminar:
     use_entities: true
+- get_description:
+    use_entities: true
+- get_prerequisites:
+    use_entities: true
+- bad:
+    use_entities: false
 - get_help:
     use_entities: true
 - show_bookings:
@@ -65,8 +68,6 @@ intents:
 - cancel_seminar:
     use_entities: true
 - affirm:
-    use_entities: true
-- get_dates:
     use_entities: true
 - introduction:
     use_entities: false
@@ -171,6 +172,9 @@ templates:
   utter_i''m sorry:
   - text: I am sorry I could not satisfy your request. Can I help you in any other
       way?
+  utter_introduction:
+  - text: I am Sam. I can help you to book seminars, show seminar bookings and get
+      information about the seminar offering.
   utter_no_worries:
   - text: No worries.
   - text: You are welcome.
@@ -180,5 +184,5 @@ templates:
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
-  - text: Hello! Do you want to book a seminar, get information about a seminar or
-      want to have an overview about your bookings?
+  - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
+      bookings and getting information about the seminar offering.'

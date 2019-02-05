@@ -232,7 +232,7 @@
         "text": "please cancel the programming seminar"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -244,7 +244,7 @@
         "text": "I want to improve my Rhetoric skills"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 12,
@@ -262,11 +262,11 @@
         "text": "Do you have Programming courses for beginners?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "text": "What seminars do you offer?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 24,
@@ -290,7 +290,7 @@
         "text": "I need more information about Machine Learning"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -302,7 +302,7 @@
         "text": "Do you have courses in Rhetoric?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 32,
@@ -11998,7 +11998,7 @@
         "text": "What do I need to know for the case study?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -12010,11 +12010,11 @@
         "text": "Do you have courses in Munich?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "text": "What kind of seminars are offered?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -12026,7 +12026,7 @@
         "text": "Do you have courses in June?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -12038,7 +12038,7 @@
         "text": "Can I book seminars in Berlin?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12050,7 +12050,7 @@
         "text": "Are there any seminars in Machine Learning?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12062,7 +12062,7 @@
         "text": "Are there any seminars in ML?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12074,7 +12074,7 @@
         "text": "Are there any seminars in Data Science?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12086,7 +12086,7 @@
         "text": "Are there any seminars in programming?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12098,7 +12098,7 @@
         "text": "Are there any seminars in Python?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12110,7 +12110,7 @@
         "text": "Are there any seminars in R?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12122,7 +12122,7 @@
         "text": "Are there any seminars in Java?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12134,7 +12134,7 @@
         "text": "Are there any seminars in rhetoric?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12146,7 +12146,7 @@
         "text": "Are there any seminars in communication?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12158,7 +12158,7 @@
         "text": "Are there any seminars in persuasion?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 26,
@@ -12170,7 +12170,7 @@
         "text": "Are there any seminars in ?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12182,7 +12182,7 @@
         "text": "Are there Machine Learning courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12194,7 +12194,7 @@
         "text": "Are there ML courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12206,7 +12206,7 @@
         "text": "Are there Data Science courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12218,7 +12218,7 @@
         "text": "Are there programming courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12230,7 +12230,7 @@
         "text": "Are there Python courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12242,7 +12242,7 @@
         "text": "Are there R courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12254,7 +12254,7 @@
         "text": "Are there Java courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12266,7 +12266,7 @@
         "text": "Are there rhetoric courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12278,7 +12278,7 @@
         "text": "Are there communication courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12290,7 +12290,7 @@
         "text": "Are there persuasion courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 10,
@@ -12302,7 +12302,7 @@
         "text": "Are there  courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12314,7 +12314,7 @@
         "text": "I would like to improve my Machine Learning skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12326,7 +12326,7 @@
         "text": "I would like to improve my ML skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12338,7 +12338,7 @@
         "text": "I would like to improve my Data Science skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12350,7 +12350,7 @@
         "text": "I would like to improve my programming skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12362,7 +12362,7 @@
         "text": "I would like to improve my Python skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12374,7 +12374,7 @@
         "text": "I would like to improve my R skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12386,7 +12386,7 @@
         "text": "I would like to improve my Java skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12398,7 +12398,7 @@
         "text": "I would like to improve my rhetoric skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12410,7 +12410,7 @@
         "text": "I would like to improve my communication skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12422,7 +12422,7 @@
         "text": "I would like to improve my persuasion skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12434,7 +12434,7 @@
         "text": "I would like to improve my  skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12446,7 +12446,7 @@
         "text": "I want to improve my Machine Learning skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12458,7 +12458,7 @@
         "text": "I want to improve my ML skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12470,7 +12470,7 @@
         "text": "I want to improve my Data Science skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12482,7 +12482,7 @@
         "text": "I want to improve my programming skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12494,7 +12494,7 @@
         "text": "I want to improve my Python skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12506,7 +12506,7 @@
         "text": "I want to improve my R skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12518,7 +12518,7 @@
         "text": "I want to improve my Java skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12530,7 +12530,7 @@
         "text": "I want to improve my rhetoric skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12542,7 +12542,7 @@
         "text": "I want to improve my communication skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12554,7 +12554,7 @@
         "text": "I want to improve my persuasion skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 21,
@@ -12566,7 +12566,7 @@
         "text": "I want to improve my  skills."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12578,7 +12578,7 @@
         "text": "Does the company offer training in Machine Learning?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12590,7 +12590,7 @@
         "text": "Does the company offer training in ML?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12602,7 +12602,7 @@
         "text": "Does the company offer training in Data Science?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12614,7 +12614,7 @@
         "text": "Does the company offer training in programming?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12626,7 +12626,7 @@
         "text": "Does the company offer training in Python?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12638,7 +12638,7 @@
         "text": "Does the company offer training in R?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12650,7 +12650,7 @@
         "text": "Does the company offer training in Java?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12662,7 +12662,7 @@
         "text": "Does the company offer training in rhetoric?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12674,7 +12674,7 @@
         "text": "Does the company offer training in communication?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12686,7 +12686,7 @@
         "text": "Does the company offer training in persuasion?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 35,
@@ -12698,7 +12698,7 @@
         "text": "Does the company offer training in ?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12710,7 +12710,7 @@
         "text": "Are there any beginners courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12722,7 +12722,7 @@
         "text": "Are there any newcomers courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12734,7 +12734,7 @@
         "text": "Are there any newbies courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12746,7 +12746,7 @@
         "text": "Are there any laymen courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12758,7 +12758,7 @@
         "text": "Are there any first timers courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12770,7 +12770,7 @@
         "text": "Are there any never before courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12782,7 +12782,7 @@
         "text": "Are there any advanced courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12794,7 +12794,7 @@
         "text": "Are there any intermediate courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12806,7 +12806,7 @@
         "text": "Are there any proficient courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 14,
@@ -12818,7 +12818,7 @@
         "text": "Are there any experienced courses?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12830,7 +12830,7 @@
         "text": "I'm interested in Machine Learning."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12842,7 +12842,7 @@
         "text": "I'm interested in ML."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12854,7 +12854,7 @@
         "text": "I'm interested in Data Science."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12866,7 +12866,7 @@
         "text": "I'm interested in programming."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12878,7 +12878,7 @@
         "text": "I'm interested in Python."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12890,7 +12890,7 @@
         "text": "I'm interested in R."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12902,7 +12902,7 @@
         "text": "I'm interested in Java."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12914,7 +12914,7 @@
         "text": "I'm interested in rhetoric."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12926,7 +12926,7 @@
         "text": "I'm interested in communication."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12938,7 +12938,7 @@
         "text": "I'm interested in persuasion."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 18,
@@ -12950,7 +12950,7 @@
         "text": "I'm interested in ."
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -12962,7 +12962,7 @@
         "text": "Can I take seminars in Erfurt as well?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 23,
@@ -12974,7 +12974,7 @@
         "text": "Can I take seminars in Berlin for pros?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 32,
@@ -12986,7 +12986,7 @@
         "text": "I would like to see the courses next month"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -12998,7 +12998,7 @@
         "text": "Are there any workshops in Machine Learning?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13010,7 +13010,7 @@
         "text": "Are there any workshops in ML?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13022,7 +13022,7 @@
         "text": "Are there any workshops in Data Science?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13034,7 +13034,7 @@
         "text": "Are there any workshops in programming?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13046,7 +13046,7 @@
         "text": "Are there any workshops in Python?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13058,7 +13058,7 @@
         "text": "Are there any workshops in R?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13070,7 +13070,7 @@
         "text": "Are there any workshops in Java?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13082,7 +13082,7 @@
         "text": "Are there any workshops in rhetoric?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13094,7 +13094,7 @@
         "text": "Are there any workshops in communication?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13106,7 +13106,7 @@
         "text": "Are there any workshops in persuasion?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 27,
@@ -13118,7 +13118,7 @@
         "text": "Are there any workshops in ?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13130,7 +13130,7 @@
         "text": "Are there any trainings for Machine Learning?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13142,7 +13142,7 @@
         "text": "Are there any trainings for ML?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13154,7 +13154,7 @@
         "text": "Are there any trainings for Data Science?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13166,7 +13166,7 @@
         "text": "Are there any trainings for programming?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13178,7 +13178,7 @@
         "text": "Are there any trainings for Python?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13242,7 +13242,7 @@
         "text": "Who can do this for me?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13254,7 +13254,7 @@
         "text": "Are there any trainings for Java?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13266,7 +13266,7 @@
         "text": "Are there any trainings for rhetoric?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13278,7 +13278,7 @@
         "text": "Are there any trainings for communication?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13290,7 +13290,7 @@
         "text": "Are there any trainings for persuasion?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 28,
@@ -13302,7 +13302,7 @@
         "text": "Are there any trainings for ?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13314,7 +13314,7 @@
         "text": "Any training in Machine Learning available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13326,7 +13326,7 @@
         "text": "Any training in ML available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13338,7 +13338,7 @@
         "text": "Any training in Data Science available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13350,7 +13350,7 @@
         "text": "Any training in programming available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13362,7 +13362,7 @@
         "text": "Any training in Python available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13374,7 +13374,7 @@
         "text": "Any training in R available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13386,7 +13386,7 @@
         "text": "Any training in Java available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13398,7 +13398,7 @@
         "text": "Any training in rhetoric available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13410,7 +13410,7 @@
         "text": "Any training in communication available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13422,7 +13422,7 @@
         "text": "Any training in persuasion available?"
       },
       {
-        "intent": "get_general_info",
+        "intent": "get_course_offering",
         "entities": [
           {
             "start": 16,
@@ -13439,7 +13439,183 @@
       },
       {
         "intent": "get_dates",
-        "text": "When does machine learning take place?"
+        "entities": [
+          {
+            "start": 10,
+            "end": 26,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does Machine Learning take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 12,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does ML take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 22,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does Data Science take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 21,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "When does programming take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "When does Python take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "When does R take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "When does Java take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "When does rhetoric take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 23,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "When does communication take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "When does persuasion take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "When does excel take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 21,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "When does negotiation take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "When does leadership take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "When does data visualization take place?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 10,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "When does  take place?"
       },
       {
         "intent": "get_dates",
@@ -13471,7 +13647,7 @@
       },
       {
         "intent": "get_dates",
-        "text": "Please tell me the dates of course"
+        "text": "Please tell me the dates of the course"
       },
       {
         "intent": "get_dates",
@@ -13523,95 +13699,611 @@
       },
       {
         "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 39,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the Machine Learning seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 25,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the ML seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 35,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the Data Science seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
         "text": "Where can I attend the programming seminar?"
       },
       {
         "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the Python seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 24,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the R seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the Java seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the rhetoric seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 36,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the communication seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the persuasion seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the excel seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the negotiation seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the leadership seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 41,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the data visualization seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 23,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "Where can I attend the  seminar?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 44,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for Machine Learning take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 30,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for ML take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for Data Science take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for programming take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for Python take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for R take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for Java take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for rhetoric take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for communication take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for persuasion take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for excel take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for negotiation take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
         "text": "Where does the workshop for leadership take place?"
       },
       {
         "intent": "get_locations",
-        "text": "In which cities is the Excel workshop offered?"
+        "entities": [
+          {
+            "start": 28,
+            "end": 46,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for data visualization take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 28,
+            "end": 28,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "Where does the workshop for  take place?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 39,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the Machine Learning workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 25,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the ML workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 35,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the Data Science workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the programming workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the Python workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 24,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the R workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the Java workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the rhetoric workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 36,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the communication workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the persuasion workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the excel workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the negotiation workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the leadership workshop offered?"
+      },
+      {
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 23,
+            "end": 41,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "In which cities is the data visualization workshop offered?"
       },
       {
         "intent": "introduction",
-        "text": "- tell me some stuff about you"
+        "text": "tell me some stuff about you"
       },
       {
         "intent": "introduction",
-        "text": "- talk some stuff about yourself"
+        "text": "talk some stuff about yourself"
       },
       {
         "intent": "introduction",
-        "text": "- I want to know you better"
+        "text": "I want to know you better"
       },
       {
         "intent": "introduction",
-        "text": "- I want to know more about you"
+        "text": "I want to know more about you"
       },
       {
         "intent": "introduction",
-        "text": "- who are you"
+        "text": "who are you"
       },
       {
         "intent": "introduction",
-        "text": "- tell me about yourself"
+        "text": "tell me about yourself"
       },
       {
         "intent": "introduction",
-        "text": "- tell me about you"
+        "text": "tell me about you"
       },
       {
         "intent": "introduction",
-        "text": "- about yourself"
+        "text": "about yourself"
       },
       {
         "intent": "introduction",
-        "text": "- describe yourself"
+        "text": "describe yourself"
       },
       {
         "intent": "introduction",
-        "text": "- introduce yourself"
+        "text": "introduce yourself"
       },
       {
         "intent": "introduction",
-        "text": "- say about you"
+        "text": "say about you"
       },
       {
         "intent": "introduction",
-        "text": "- what are you"
+        "text": "what are you"
       },
       {
         "intent": "introduction",
-        "text": "- define yourself"
+        "text": "define yourself"
       },
       {
         "intent": "introduction",
-        "text": "- what is your personality"
+        "text": "what is your personality"
       },
       {
         "intent": "introduction",
-        "text": "- all about you"
+        "text": "all about you"
       },
       {
         "intent": "introduction",
-        "text": "- tell me about your personality"
+        "text": "tell me about your personality"
       },
       {
         "intent": "introduction",
-        "text": "- why are you here"
+        "text": "why are you here"
       },
       {
         "intent": "introduction",
-        "text": "- talk about yourself"
+        "text": "talk about yourself"
       },
       {
         "intent": "age",
-        "text": "- tell me your age"
+        "text": "tell me your age"
       },
       {
         "intent": "age",
-        "text": "- what's your age"
+        "text": "what's your age"
       },
       {
         "intent": "age",

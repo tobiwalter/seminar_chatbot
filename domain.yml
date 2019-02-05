@@ -1,58 +1,60 @@
 %YAML 1.1
 ---
 actions:
-- action_course_offering
-- utter_chitchat
-- utter_bye
-- utter_try_again
-- action_cancel_seminar
-- utter_get_help
-- action_provide_description
-- utter_no_worries
-- utter_ask_location
-- action_display_seminar
-- utter_ask_course
-- utter_submit
-- action_verify_user
-- utter_are_you_sure
 - action_book_seminar
 - utter_welcome
-- utter_ask_name
+- utter_ask_location
 - utter_ask_date
-- action_show_bookings
-- utter_i''m sorry
-- action_select_date
-- action_provide_datesWithLocation
 - action_provide_prerequisites
+- utter_introduction
+- utter_ask_course
+- action_select_date
+- utter_no_worries
+- utter_try_again
+- action_show_bookings
+- action_provide_description
+- utter_are_you_sure
+- action_verify_user
+- action_course_offering
+- utter_i''m sorry
+- action_provide_datesWithLocation
+- utter_get_help
+- utter_chitchat
+- action_cancel_seminar
+- action_display_seminar
+- utter_ask_name
+- utter_bye
+- utter_submit
 entities:
-- course
-- last-name
-- user-level
-- display-option
-- booking-type
 - date-period
 - location
+- course
+- user-level
 - date
 - given-name
+- display-option
+- booking-type
 - course-type
+- last-name
 forms:
 - seminar_form
 intents:
-- thank
+- negative
+- bad:
+    use_entities: false
+- affirm
 - inform
+- cancel_seminar
+- thank
+- get_course_offering
+- get_dates
 - book_seminar
 - get_description
 - get_prerequisites
-- get_general_info
-- bad:
-    use_entities: false
 - get_help
 - show_bookings
 - bye
 - welcome
-- cancel_seminar
-- affirm
-- get_dates
 - introduction:
     use_entities: false
 - age:
@@ -122,6 +124,9 @@ templates:
   utter_i''m sorry:
   - text: I am sorry I could not satisfy your request. Can I help you in any other
       way?
+  utter_introduction:
+  - text: I am Sam. I can help you to book seminars, show seminar bookings and get
+      information about the seminar offering.
   utter_no_worries:
   - text: No worries.
   - text: You are welcome.
@@ -131,5 +136,5 @@ templates:
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
-  - text: Hello! Do you want to book a seminar, get information about a seminar or
-      want to have an overview about your bookings?
+  - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
+      bookings and getting information about the seminar offering.'

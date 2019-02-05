@@ -129,7 +129,7 @@
 	- action_show_bookings
 
 ## inform_then_bookSeminar 
-* get_general_info{"course":"Excel"}
+* get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"dates":"[19/02/19, 07/03/19, 21/03/19]"}
 	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
@@ -144,7 +144,7 @@
 	- slot{"booking_confirmed":"True"}
 	
 ## inform_then_bookSeminar_Fail_then_GetHelp
-* get_general_info{"course":"Excel"}
+* get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"dates":"[19/02/19, 07/03/19, 21/03/19]"}
 	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
@@ -161,9 +161,9 @@
 	- utter_get_help
 
 ## inform_bookSeminar_showBookings_cancelSeminar	
-* get_general_info{"course":"Tableau"}
+* get_course_offering{"course":"Tableau"}
 	- action_display_seminar
-* get_general_info{"course":"Python"}
+* get_course_offering{"course":"Python"}
 	- action_display_seminar
 	- slot{"locations":"Munich, Berlin, Frankfurt"}
 	- slot{"dates": "27/12/18, 19/02/19, 05/03/19"}
@@ -174,11 +174,12 @@
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"14"}
-	- action_book_seminar
 	- seminar_form
 	- form{"name":"seminar_form"}
 	- form{"name":"null"}
+	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
+	
 * show_bookings
 	- action_show_bookings
 * cancel_seminar{"course":"Excel"}
@@ -228,7 +229,7 @@
 ## story14
 * welcome
 	- utter_welcome
-* get_general_info
+* get_course_offering
 	- action_course_offering
 * get_description{"course":"programming"}
 	- action_provide_description
@@ -253,7 +254,7 @@
 	- utter_bye
 
 
-## story15
+## showBookings_then_getInformation
 * welcome
 	- utter_welcome
 * show_bookings{"location":"Berlin"}
@@ -263,7 +264,7 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"421"}
 	- action_show_bookings
-* get_general_info{"course":"Excel"}
+* get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
 	- slot{"dates": "[07/03/19, 19/02/19, 21/03/19]"}
@@ -279,7 +280,7 @@
 * inform{"first-name":"Paul","last-name":"Moore"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
-	- slot{"employee_id":"310"}
+	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
 * bye
@@ -288,7 +289,7 @@
 ## story17
 * welcome
 	- utter_welcome
-* get_general_info
+* get_course_offering
 	- action_course_offering
 * get_prerequisites{"course":"Machine Learning"}
 	- action_provide_prerequisites
@@ -423,7 +424,7 @@
     - slot{"location": "Cologne"}
     - slot{"requested_slot": "date"}
 * introduction
-    - utter_chitchat
+    - utter_introduction
     - action_listen
     - seminar_form
     - slot{"requested_slot": "date"}
@@ -495,7 +496,7 @@
 	- slot{"title": "Python for beginners"}	
 	
 	
-## get_description_and_locations_of_course
+## get_description_and_locations_of_course_andBook
 * get_description{"course":"Machine Learning"}
 	- action_provide_description
 * get_prerequisites
@@ -613,7 +614,7 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 7}
     - action_show_bookings
-* get_general_info
+* get_course_offering
     - action_course_offering
     - utter_ask_course
 * inform{"course": "rhetoric"}
@@ -654,7 +655,7 @@
     - utter_no_worries
 
 ## Generated Story -6785827853527499108
-* get_general_info{"course": "programming"}
+* get_course_offering{"course": "programming"}
     - slot{"course": "programming"}
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
@@ -664,7 +665,7 @@
     - utter_no_worries
 
 ## Generated Story 5921147929666083831
-* get_general_info{"course": "rhetoric"}
+* get_course_offering{"course": "rhetoric"}
     - slot{"course": "rhetoric"}
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
@@ -672,10 +673,10 @@
     - slot{"title": "Persuasion and Influence"}
 
 ## Generated Story -6463177690486665439
-* get_general_info{"course": "Tableau"}
+* get_course_offering{"course": "Tableau"}
     - slot{"course": "Tableau"}
     - action_display_seminar
-* get_general_info{"course": "programming"}
+* get_course_offering{"course": "programming"}
     - slot{"course": "programming"}
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
@@ -737,7 +738,7 @@
 	- utter_i''m sorry
 	
 ## Generated Story 158831049711918748
-* get_general_info{"course-type": "seminars"}
+* get_course_offering{"course-type": "seminars"}
     - action_course_offering
 * get_description{"course": "machine learning"}
     - slot{"course": "machine learning"}
@@ -749,9 +750,6 @@
     - action_provide_prerequisites
 * thank
     - utter_no_worries
-
-
-
 
 
 ## Generated Story 5080578068932025922
@@ -902,6 +900,55 @@
     - slot{"location": null}
 * thank
     - utter_no_worries
+	
+## show_the_next_booking
+* show_bookings{"display-option":"next"}
+	- utter_ask_name
+* inform{"given-name": "judith", "last-name": "anderson"}
+	- action_verify_user
+	- slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_show_bookings
+* thank
+	- utter_no_worries
+	
+## get_course_description
+*get_course_offering
+	- action_course_offering
+*get_description{"course":"Python"}
+	- action_provide_description
+	
+## get_course_prerequesites
+*get_course_offering
+	- action_course_offering
+*get_prerequisites{"course":"Python"}
+	- action_provide_prerequisites
+	
+## get_course_dates
+*get_course_offering
+	- action_course_offering
+*get_dates{"course":"Python"}
+	- action_display_seminar
+	- slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"dates": "27/12/18, 19/02/19, 05/03/19"}
+    - slot{"title": "Python for Beginners"}
+	
+## get_offering_specific_course
+*get_course_offering{"course":"Excel"}
+	- action_display_seminar
+	- slot{"dates":"[19/02/19, 07/03/19, 21/03/19]"}
+	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
+	- slot{"title":"Advanced Excel functions and formulas"}
+*get_prerequisites
+	- action_provide_prerequisites
+	
+## get_course_locations
+*get_course_offering
+	- action_course_offering
+*get_locations{"course":"Python"}
+	- action_display_seminar
+	- slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"dates": "27/12/18, 19/02/19, 05/03/19"}
+    - slot{"title": "Python for Beginners"}
 
-
-
+s

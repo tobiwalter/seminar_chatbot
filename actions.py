@@ -224,6 +224,12 @@ class ActionBookSeminar(Action):
         if not "seminar_id" in locals():
             dispatcher.utter_message(res)
             return [SlotSet("booking_confirmed","False")]
+        
+        if not city:
+            dispatcher.utter_template('utter_ask_location', tracker)
+            
+        if not seminar_date:
+            dispatcher.utter_template('utter_ask_date', tracker)
 
         #check location
         seminar = seminars[seminar_id]
@@ -384,6 +390,10 @@ class ActionDisplaySeminar (Action):
 
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
+        
+        if tracker.get_slot('dates') and tracker.get_slot('locations'):
+            return SeminarForm.required_slots(tracker)
+            
 
         course = tracker.get_slot('course')
 

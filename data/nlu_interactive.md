@@ -1,10 +1,14 @@
-## intent:book_seminar
-- I want to book a seminar about [machine learning](course)
+## intent:affirm
+- yes
+
+## intent:bad
+- That's not possible
+
+## intent:cancel_seminar
+- I want to cancel my [leadership](course) seminar
 
 ## intent:inform
-- [Max](given-name:max) [Smith](last-name:smith)
-- [Berlin](location:berlin)
-- on the [2nd of April](date)
+- [Max](given-name) [Smith](last-name)
 
-## intent:show_bookings
-- Show my booked [seminars](course-type)
+## intent:negative
+- no
