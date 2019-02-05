@@ -1,5 +1,3 @@
-%YAML 1.1
----
 actions:
 - action_book_seminar
 - utter_welcome
@@ -138,3 +136,4 @@ templates:
   utter_welcome:
   - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
       bookings and getting information about the seminar offering.'
+
