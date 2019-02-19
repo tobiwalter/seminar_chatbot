@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Jan 14 20:40:25 2019
 
@@ -24,7 +23,7 @@ import pytz
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -40,8 +39,8 @@ bookings = bookingRef.get()
 seminars = seminarRef.get()
 counts = countRef.get()
 
-class ActionShowBookings(Action):
 
+class ActionShowBookings(Action):
 
     def name(self):
         """returns name of the action """
@@ -59,26 +58,29 @@ class ActionShowBookings(Action):
 
     #    Find booked seminars depending on params given
         if 'matchingID' in locals():
+            bookingRef = db.reference('bookings')
+            bookings = bookingRef.get()
             bookedSeminars = set([])
 
     #   Check for booking type and add seminars accordingly
             if bookingtype == 'past':
                 for i in range(len(bookings)):
-                    if not "cancellation" in bookings[i]:
+                    if "cancellation" not in bookings[i]:
                         if dateparser.parse(bookings[i]["date"]).date() < date.today():
-                            if  bookings[i]["employee_id"] == matchingID:
-                                sem = bookings[i]["seminar_title"] + " on " + bookings[i]["date"] + " in " + bookings[i]["location"]
+                            if bookings[i]["employee_id"] == matchingID:
+                                sem = bookings[i]["seminar_title"] + " on "
+                                + bookings[i]["date"] + " in " + bookings[i]["location"]
                                 bookedSeminars.add(sem)
             elif bookingtype == 'upcoming':
                 for i in range(len(bookings)):
-                    if not "cancellation" in bookings[i]:
+                    if "cancellation" not in bookings[i]:
                         if dateparser.parse(bookings[i]["date"]).date() >= date.today():
                             if  bookings[i]["employee_id"] == matchingID:
                                 sem = bookings[i]["seminar_title"] + " on " + bookings[i]["date"] + " in " + bookings[i]["location"]
                                 bookedSeminars.add(sem)
             else:
                 for i in range(len(bookings)):
-                    if not "cancellation" in bookings[i]:
+                    if "cancellation" not in bookings[i]:
                         if  bookings[i]["employee_id"] == matchingID:
                             sem = bookings[i]["seminar_title"]
                             bookedSeminars.add(sem)
@@ -99,7 +101,7 @@ class ActionShowBookings(Action):
                     res = "These are your booked seminars: " + bookedSeminars
 
                 dispatcher.utter_message(res)
-                return []
+                return [SlotSet("date", None),SlotSet("location",None)]
 
             else:
                 dispatcher.utter_message("There are no recorded bookings for you.")
@@ -113,14 +115,14 @@ class ActionShowBookings(Action):
 
         # Initialise date of next booking with first date in the list and iterate through all dates
         for i in range(len(bookings)):
-            if not "cancellation" in bookings[i]:
+            if "cancellation" not in bookings[i]:
                 if bookings[i]["seminar_title"] in bookedSeminars:
                     temp = bookings[i]["date"]
                     dateNext = dateparser.parse(temp).date()
                     break
 
         for i in range(1,len(bookings)):
-            if not "cancellation" in bookings[i]:
+            if "cancellation" not in bookings[i]:
                 if bookings[i]["seminar_title"] in bookedSeminars:
                     temp = bookings[i]["date"]
                     if dateparser.parse(temp).date() <= dateNext:
@@ -133,10 +135,10 @@ class ActionShowBookings(Action):
     def showBookingsOnGivenDate(self,seminar_date,bookedSeminars,matchingID):
 
         given_date = dateparser.parse(seminar_date).date()
-        matchedSeminars = set([])
+        matchedSeminars = set()
 
         for i in range(len(bookings)):
-            if not "cancellation" in bookings[i]:
+            if "cancellation" not in bookings[i]:
                 if (bookings[i]["seminar_title"] in bookedSeminars and
                 dateparser.parse(bookings[i]["date"]).date() == given_date and
                 bookings[i]["employee_id"] == matchingID):
@@ -157,7 +159,7 @@ class ActionShowBookings(Action):
 
         matchedSeminars = set()
         for i in range(len(bookings)):
-            if not "cancellation" in bookings[i]:
+            if "cancellation" not in bookings[i]:
                 if (bookings[i]["seminar_title"] in bookedSeminars and
                 start <= pytz.utc.localize(dateparser.parse(bookings[i]["date"])) <= end and
                 bookings[i]["employee_id"] == matchingID):
@@ -174,7 +176,7 @@ class ActionShowBookings(Action):
 
         matchedSeminars = set()
         for i in range(len(bookings)):
-            if not "cancellation" in bookings[i]:
+            if "cancellation" not in bookings[i]:
                 if (bookings[i]["seminar_title"] in bookedSeminars and
                 bookings[i]["location"].lower() == city.lower() and
                 bookings[i]["employee_id"] == matchingID):
@@ -195,22 +197,21 @@ class ActionBookSeminar(Action):
 
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
-
+        countRef = db.reference('counts')
         counts = countRef.get()
+        bookingRef = db.reference('bookings')
         bookings = bookingRef.get()
-        res = "You are not in our database. Please try to input your name again."
 
         matchingID = tracker.get_slot('employee_id')
         course = tracker.get_slot('course')
-        city = tracker.get_slot('location')
-        seminar_date = tracker.get_slot('date')
+        city = tracker.get_slot('location').capitalize()
+        userGivenDate = tracker.get_slot('date')
 
-        if not "matchingID" in locals():
-            dispatcher.utter_message(res)
+        if "matchingID" not in locals():
+            dispatcher.utter_template('utter_try_again', tracker)
             return [SlotSet("user_verified","False")]
 
         #matching seminar ID
-        res = "The seminar you requested is not being offered."
         for j in range(len(seminars)):
             breaker = False
             for k in range(len(seminars[j]["description"])):
@@ -218,43 +219,47 @@ class ActionBookSeminar(Action):
                     seminar_id = seminars[j]["seminar_id"]
                     breaker = True
                     break
-            if breaker== True:
+            if breaker:
                 break
 
-        if not "seminar_id" in locals():
+        if "seminar_id" not in locals():
+            res = "The seminar you requested is not being offered."
             dispatcher.utter_message(res)
             return [SlotSet("booking_confirmed","False")]
-        
+
         if not city:
             dispatcher.utter_template('utter_ask_location', tracker)
-            
-        if not seminar_date:
+            return [SlotSet("booking_confirmed","False")]
+
+        if not userGivenDate:
             dispatcher.utter_template('utter_ask_date', tracker)
+            return [SlotSet("booking_confirmed","False")]
 
         #check location
         seminar = seminars[seminar_id]
-        if not city.lower() in (sem.lower() for sem in seminar["locations"]):
+        if not city in seminar["locations"]:
             dispatcher.utter_message("The seminar {} is not offered in {}".format(seminar["title"],city))
             return [SlotSet("booking_confirmed","False")]
+
         #check date
         dateMatch = False
-        for i in range(len(seminar["dates"])):
-            if dateparser.parse(seminar_date).date() == dateparser.parse(seminar["dates"][i]).date():
+        for d in seminar["locations"][city]:
+            if dateparser.parse(userGivenDate).date() == dateparser.parse(d).date():
                 dateMatch = True
-                new_date = str(seminar["dates"][i])
+                seminar_date = str(d)
                 break
 
         if not dateMatch:
-            dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],seminar_date))
-            return [SlotSet("booking_confirmed","False")]
+            dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"], userGivenDate))
+            return [SlotSet("booking_confirmed", "False")]
 
-                #check occupancy
+        #check occupancy    
         if seminar["capacity"] > seminar["occupancy"]:
             occupancy = seminar["occupancy"]
 
             #check if already booked
             for i in range(len(bookings)):
-                if not "cancellation" in bookings[i]:
+                if "cancellation" not in bookings[i]:
                     if bookings[i]["employee_id"] == matchingID and bookings[i]["location"].lower() == city.lower() and bookings[i]["seminar_id"] == seminar_id: #could add OR --> check date against given seminar date
                         res = "You have already booked the seminar {} in {} on {}.".format(course,city,bookings[i]["date"])
                         dispatcher.utter_message(res)
@@ -270,17 +275,17 @@ class ActionBookSeminar(Action):
             #Write to DB
             bookingRef.update({
                 str(booking_count-1): {
-                    'date': new_date,
+                    'date': seminar_date,
                     'employee_id': matchingID,
-                    'location': city.capitalize(),
-                    'seminar_id': seminar_id,
+                    'location': city,
+                    'seminar_id' : seminar_id,
                     'seminar_title': seminar["title"]
                 }})
-            res = "Your booking request for the seminar {} in {} on {} has been forwarded. You will receive a confirmation via email.".format(course.capitalize(),city.capitalize(),new_date)
+            res = "Your booking request for the seminar {} in {} on {} has been forwarded. You will receive a confirmation via email.".format(course.capitalize(),city,seminar_date)
             dispatcher.utter_message(res)
             return [SlotSet("booking_confirmed","True"),SlotSet("date", None),SlotSet("location",None)]
         else:
-            dispatcher.utter_message("All seminars about {} are booked out. You will be notified as soon as new dates are available.".format(course))
+            dispatcher.utter_message("All seminars about {} are booked out.".format(course))
             return [SlotSet("booking_confirmed","False")]
 
             #TO BE DONE: date suggestion, location alternative, capacity check
@@ -299,7 +304,7 @@ class ActionCancelSeminar(Action):
 
         if matchingID is None:
             dispatcher.utter_message("You are not in the database. Please contact HR.")
-            return []
+            return [SlotSet("cancellation_confirmed","False")]
 
 #matching seminar ID
         for j in range(len(seminars)):
@@ -311,15 +316,15 @@ class ActionCancelSeminar(Action):
                     break
             if breaker:
                 break
-
-        if not 'seminar_id' in locals():
+            
+        if 'seminar_id' not in locals():
              dispatcher.utter_message("There is no seminar matching your request.")
-             return []
+             return [SlotSet("cancellation_confirmed","False")]
 
         #search for corresponding booking
         breaker = False
         for j in range(len(bookings)):
-            if not "cancellation" in bookings[j]:
+            if "cancellation" not in bookings[j]:
                 if bookings[j]["employee_id"] == matchingID and bookings[j]["seminar_id"]== seminar_id and dateparser.parse(bookings[j]["date"]).date() > date.today():
                     breaker_1 = True
                     breaker_2 = True
@@ -343,12 +348,19 @@ class ActionCancelSeminar(Action):
                                 str(j): {
                     				'cancellation': cancellation
                                 }})
+#                    booking_count = len(bookings) - 1
+#                    countRef.update({"booking_count": booking_count})
+                    occupancy = seminars[seminar_id]["occupancy"] - 1
+#                    TO-DO!! Updating occupancy does not work yet 
+                    seminarRef.update({
+                    str(seminar_id) + '/occupancy': occupancy        
+                                })
                     res = "Your seminar booking for " + course + " on " + seminar_date + " in " + city + " has been cancelled. You will receive a cancellation confirmation."
                     dispatcher.utter_message(res)
                     return [SlotSet("cancellation_confirmed","True")]
 
         dispatcher.utter_message("You don't have bookings according to your request.")
-        return []
+        return  [SlotSet("cancellation_confirmed","False")]
 
 class ActionProvideDescription(Action):
     def name(self):
@@ -368,13 +380,13 @@ class ActionProvideDescription(Action):
                     seminar_id = seminars[j]["seminar_id"]
                     breaker = True
                     break
-            if breaker == True:
+            if breaker:
                 break
 
         if "seminar_id" in locals():
             seminar = seminars[seminar_id]
             res = "The seminar {} is described as follows: \n \
-            {} \n".format(seminar["title"],seminar["text"])
+            {} \n".format(seminar["title"], seminar["text"])
             dispatcher.utter_message(res)
             return []
 
@@ -391,36 +403,38 @@ class ActionDisplaySeminar (Action):
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
         
-        if tracker.get_slot('dates') and tracker.get_slot('locations'):
-            return SeminarForm.required_slots(tracker)
-            
-
+## TO-DO: Implement scenario when user provides user-level variable 
         course = tracker.get_slot('course')
 
-        for j in range(len(seminars)):
-            breaker = False
-            for k in range(len(seminars[j]["description"])):
-                if seminars[j]["description"][k].lower() == course.lower():
-                    seminar_id = seminars[j]["seminar_id"]
-                    breaker = True
+#        If course given, display locations and dates of seminar
+        if course:
+            for j in range(len(seminars)):
+                breaker = False
+                for k in range(len(seminars[j]["description"])):
+                    if seminars[j]["description"][k].lower() == course.lower():
+                        seminar_id = seminars[j]["seminar_id"]
+                        breaker = True
+                        break
+                if breaker:
                     break
-            if breaker == True:
-                break
 
-        if "seminar_id" in locals():
-            seminar = seminars[seminar_id]
-            locations = ", ".join(seminar["locations"])
-            dates = ", ".join(seminar["dates"])
-            res = "\nThe seminar {} is offered at the following locations and dates: \n\n \
-            Locations: {}\n \
-            Dates: {}".format(seminar["title"], locations, dates)
+            if "seminar_id" in locals():
+                seminar = seminars[seminar_id]
+                locs = seminar.get("locations")
+                res = "The seminar {} is offered at the following locations and dates: \n \n".format(seminar["title"])
+                res += '\n '.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
 
-            dispatcher.utter_message(res)
-            return [SlotSet("locations",locations), SlotSet("dates",dates), SlotSet("title",seminar["title"])]
+                dispatcher.utter_message(res)
+                return [SlotSet("locations", ', '.join(locs.keys())),
+                        SlotSet("title", seminar["title"])]
 
-        else:
-            res = "We don't offer seminars in {}.".format(course)
-            dispatcher.utter_message(res)
+            else:
+                res = "We don't offer seminars in {}.".format(course)
+                #  possible to call actionCourseOffering here?
+                dispatcher.utter_message(res)
+                return []
+        else: 
+            dispatcher.utter_message("I did not understand the course you specified")
             return []
 
 class ActionCourseOffering(Action):
@@ -433,51 +447,40 @@ class ActionCourseOffering(Action):
         """ retrieves slot values """
         cats = set()
         for j in range(len(seminars)):
-            cats.add(seminars[j]["category"])
+            cats.add(seminars[j]["category"].capitalize())
 
         res = "We offer seminars in the following categories: \n\n" + ", ".join(cats)
         dispatcher.utter_message(res)
         return []
 
-class ActionSelectDate(Action):
+class ActionQueryDate(Action):
 
     def name(self):
         """returns name of the action """
-        return "action_select_date"
+        return "action_query_date"
 
     def run(self, dispatcher, tracker, domain):
         city = tracker.get_slot("location")
-        dates = tracker.get_slot("dates")
         course = tracker.get_slot("course")
 
-#        if sem_category:
-        if dates:
-            if city:
-                res = "On which date do you want to take the seminar in {}: \n \
-                        {}.".format(city, ", ".join(dates))
-            else:
-                res = "On which date do you want to take the seminar: \n {}".format(", ".join(dates))
-        else:
-            seminarRef = db.reference('seminars')
-            seminars = seminarRef.get()
-            for j in range(len(seminars)):
-                breaker = False
-                for k in range(len(seminars[j]["description"])):
-                    if seminars[j]["description"][k].lower() == course.lower():
-                        dates = seminars[j]["dates"]
-                        breaker = True
-                        break
-                if breaker == True:
+        for j in range(len(seminars)):
+            breaker = False
+            for k in range(len(seminars[j]["description"])):
+                if seminars[j]["description"][k].lower() == course.lower():
+                    seminar_id = seminars[j]["seminar_id"]
+                    breaker = True
                     break
+            if breaker:
+                break
 
-            if city:
-                res = "On which date do you want to take the seminar in {}: \n \
-                    {}.".format(city, ", ".join(dates))
-            else:
-                res = "On which date do you want to take the seminar: \n {}".format(", ".join(dates))
+        if "seminar_id" in locals():
+            seminar = seminars[seminar_id]
 
+#       Collect dates of seminar in the corresponding city
+        dates = seminar["locations"][city.capitalize()]
+        res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
         dispatcher.utter_message(res)
-        return []
+        return [SlotSet("dates", ', '.join(dates))]
 
 class ActionProvidePrerequisites(Action):
     def name(self):
@@ -492,14 +495,36 @@ class ActionProvidePrerequisites(Action):
         for j in range(len(seminars)):
             breaker = False
             if course.lower() in (d.lower() for d in seminars[j]["description"]):
-                for k in range(len(seminars[j]["prerequisites"])):
-                    prqs.add(seminars[j]["prerequisites"][k])
-                    breaker = True
-            if breaker == True:
+                if seminars[j]["prerequisites"] == "none":
+                    dispatcher.utter_message("There are no prerequisites.")
+                    return []
+                else:
+                    for k in range(len(seminars[j]["prerequisites"])):
+                        prqs.add(seminars[j]["prerequisites"][k])
+                        breaker = True
+            if breaker:
                 break
-
         dispatcher.utter_message(", ".join(prqs))
         return []
+    
+class ActionQueryLevel(Action):
+    def name(self):
+        """returns name of the action """
+        return "action_query_level"
+
+    def run(self, dispatcher, tracker, domain):
+        course = tracker.get_slot('course')
+        
+        for j in range(len(seminars)):
+            if course.lower() in (d.lower() for d in seminars[j]["description"]):
+                level = seminars[j]["level"]
+                dispatcher.utter_message("This is the level of the course: {}".format(level))
+                return []
+        
+        #Message given back to user if no level is specified 
+        dispatcher.utter_message("The level is not specified.")
+        return []
+
 
 class VerifyUser(Action):
     def name(self):
@@ -508,11 +533,14 @@ class VerifyUser(Action):
 
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
+#        If bot performs user verification twice, silently return nothing
+        if tracker.get_slot("employee_id"):
+            return []
 
         firstname = tracker.get_slot('given-name')
         lastname = tracker.get_slot('last-name')
-
-        # Find matching employee ID
+        
+        # Find matching employee identifier
         for i in range(len(employees)):
             if employees[i]["First_name"].lower() == firstname.lower():
                 if employees[i]["Last_name"].lower() == lastname.lower():
@@ -520,10 +548,12 @@ class VerifyUser(Action):
                     return [SlotSet("user_verified","True"), SlotSet("employee_id",employees[i]["employee_id"])]
 
         dispatcher.utter_template('utter_try_again', tracker)
-        return [SlotSet("user_verified","False")]
+        return []
 
 class SeminarForm(FormAction):
    """Example of a custom form action"""
+
+   RANDOMIZE = False
 
    def name(self):
        """Unique identifier of the form"""
@@ -534,19 +564,23 @@ class SeminarForm(FormAction):
    def required_slots(tracker):
        """A list of required slots that the form has to fill"""
 
-       return ["course", "location", "date"]
+       return ["location", "date"]
 
    def slot_mappings(self):
-       return {"date": self.from_entity(entity="date", intent= ["book_seminar","inform"]),
+       return {"date": [self.from_entity(entity="date", intent= ["book_seminar","inform"]),
+                self.from_entity(entity="time", intent=["book_seminar", "inform"])],
                 "location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
 
-   @staticmethod
-   def is_date(string) -> bool:
+   @staticmethod         
+   def is_date(*args):
         """Check if string can be converted to date"""
-        if dateparser.parse(string):
-            return True
-        else:
-            return False
+        isDate = False
+        for arg in args:
+            if isinstance(arg, str):
+                    if dateparser.parse(arg).date() is not None:
+                        isDate = True
+                        break
+        return isDate
 
    def validate(self, dispatcher, tracker, domain):
         """Validate extracted requested slot
@@ -573,9 +607,9 @@ class SeminarForm(FormAction):
         # we'll check when validation failed in order
         # to add appropriate utterances
         for slot, value in slot_values.items():
-            if slot == 'date':
+            if slot == "date":
                 if not self.is_date(value):
-                    dispatcher.utter_message("We do not offer the seminar on the date you specified.")
+                    dispatcher.utter_template("utter_wrong_date", tracker)
                     # validation failed, set slot to None
                     slot_values[slot] = None
 

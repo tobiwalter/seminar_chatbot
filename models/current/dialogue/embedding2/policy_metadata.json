@@ -1,0 +1,61 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "display-option",
+        "location",
+        "last-name",
+        "user-level",
+        "given-name",
+        "date-period",
+        "course",
+        "date"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "employee_id",
+        "user_verified"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "locations",
+        "title"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "cancellation_confirmed"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "date",
+        "booking_confirmed",
+        "location"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "requested_slot",
+        "date",
+        "location"
+      ]
+    }
+  },
+  "rasa_core": "0.12.4",
+  "python": "3.6.6",
+  "max_histories": [
+    null,
+    null,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190217-222228"
+}

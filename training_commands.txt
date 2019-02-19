@@ -1,0 +1,46 @@
+
+
+commands:
+
+
+* evaluating NLU model through cross validation:
+
+
+* evaluating Core model with set of test stories:
+python -m rasa_core.evaluate --core models/current/dialogue --stories test_stories.md -o results
+				
+* start custom actions webhook:
+python -m rasa_core_sdk.endpoint --actions actions	
+
+
+* load both Rasa NLU and Rasa Core models and launch assistant in the console to chat:
+python -m rasa_core.run -d models/dialogue/current/keras2 --u models\current\nlu_tf\default\seminarnlu
+
+* interactive training command (learning new model)
+
+python -m rasa_core.train interactive --o models/current/dialogue -d domain.yml -c policy_config.yml -s stories.md --nlu models\nlu\default\current --endpoints endpoints.yml
+
+
+* interactive training command (loading existing model)
+python -m rasa_core.train interactive --core models/current/dialogue --nlu models\current\nlu_tf\default\seminarnlu --endpoints endpoints.yml
+	
+
+* train Rasa core model:
+
+python -m rasa_core.train -d domain.yml -s stories.md -o models\current\dialogue\keras2 -c policies_keras.yml
+
+
+* train Rasa NLU model:
+
+python -m rasa_nlu.train -c config_tf.yml --data data/place_finder -o models --project current --verbose
+
+* compare policies:
+python -m rasa_core.train compare -c policy_keras.yml policy_embedding.yml -d domain.yml -s stories.md -o comparison_models --runs 3 --percentages 0 5 25 50 70 90 95
+
+* visualize stories:
+
+python -m rasa_core.visualize -d domain.yml -s stories.md -o graph.html -c config.yml
+
+* run Duckling server:
+
+docker run -p 8000:8000 rasa/duckling

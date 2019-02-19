@@ -1,58 +1,66 @@
+%YAML 1.1
+---
 actions:
-- action_book_seminar
-- utter_welcome
-- utter_ask_location
-- utter_ask_date
-- action_provide_prerequisites
-- utter_introduction
-- utter_ask_course
-- action_select_date
-- utter_no_worries
-- utter_try_again
-- action_show_bookings
-- action_provide_description
-- utter_are_you_sure
-- action_verify_user
 - action_course_offering
-- utter_i''m sorry
-- action_provide_datesWithLocation
-- utter_get_help
-- utter_chitchat
-- action_cancel_seminar
-- action_display_seminar
-- utter_ask_name
-- utter_bye
 - utter_submit
+- action_query_date
+- utter_try_again
+- action_display_seminar
+- utter_welcome
+- action_cancel_seminar
+- action_provide_prerequisites
+- utter_ask_course
+- action_provide_datesWithLocation
+- utter_ask_location
+- utter_bye
+- utter_ask_date
+- action_show_bookings
+- action_book_seminar
+- utter_are_you_sure
+- utter_introduction
+- action_provide_description
+- utter_no_chitchat
+- utter_ask_name
+- utter_i''m sorry
+- utter_get_help
+- action_verify_user
+- utter_no_worries
+- action_query_level
+- utter_suggest_help
+- utter_ask_continue
 entities:
-- date-period
-- location
-- course
-- user-level
-- date
-- given-name
 - display-option
-- booking-type
-- course-type
+- user-level
 - last-name
+- location
+- time
+- date
+- booking-type
+- date-period
+- course-type
+- given-name
+- course
 forms:
 - seminar_form
 intents:
-- negative
-- bad:
-    use_entities: false
-- affirm
 - inform
-- cancel_seminar
+- book_seminar
+- show_bookings
+- welcome
 - thank
 - get_course_offering
 - get_dates
-- book_seminar
+- get_location
+- negative
 - get_description
 - get_prerequisites
+- get_level
+- bad:
+    use_entities: false
 - get_help
-- show_bookings
 - bye
-- welcome
+- cancel_seminar
+- affirm
 - introduction:
     use_entities: false
 - age:
@@ -68,13 +76,13 @@ slots:
   cancellation_confirmed:
     type: bool
   course:
-    type: unfeaturized
+    type: text
   date:
     type: unfeaturized
   date-period:
     type: text
   dates:
-    type: unfeaturized
+    type: list
   display-option:
     type: text
   employee_id:
@@ -86,11 +94,15 @@ slots:
   location:
     type: unfeaturized
   locations:
-    type: unfeaturized
+    type: list
   requested_slot:
-    type: unfeaturized
+    type: categorical
+    values:
+    - date
+    - location
+    - course
   title:
-    type: unfeaturized
+    type: text
   user-level:
     type: text
   user_verified:
@@ -102,12 +114,12 @@ templates:
   - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
   utter_ask_date:
-  - text: On which date do you want to take {title}?
-  - text: When do you want to take {title}?
+  - text: On which date do you want to take the {course} seminar?
+  - text: When do you want to take the {course} seminar?
   utter_ask_location:
-  - text: Where do you want to take {title}?
-  - text: In which city do you want to take {title}?
-  - text: Please select the city where you want to take {title}
+  - text: Where do you want to take the seminar in {course}?
+  - text: In which city do you want to take the {course} seminar?
+  - text: Please select the city where you want to take the {course} seminar.
   utter_ask_name:
   - text: Please give me your first and last name
   - text: Please provide your first and last name
@@ -115,7 +127,9 @@ templates:
   utter_bye:
   - text: Goodbye
   utter_chitchat:
-  - text: No chitchat, mate!
+  - text: I don't do smalltalk, let's get things done!
+  utter_default:
+  - text: Sorry, I didn't understand that.
   utter_get_help:
   - text: To get help, please reach out to helpdesk@company.com by mail or call +49
       621 66566.
@@ -136,4 +150,9 @@ templates:
   utter_welcome:
   - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
       bookings and getting information about the seminar offering.'
-
+  utter_suggest_help:
+  - text: Shall I forward you to the helpdesk?
+  - text: Do you want to reach out to the helpdesk?
+  utter_ask_continue:
+  - text: "Do you want to continue?"
+  

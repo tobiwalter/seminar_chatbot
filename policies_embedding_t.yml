@@ -1,0 +1,8 @@
+policies:
+  - name: EmbeddingPolicy
+    epochs: 1000
+    attn_shift_range: 3
+    featurizer:
+      - name: FullDialogueTrackerFeaturizer
+        state_featurizer:
+          - name: LabelTokenizerSingleStateFeaturizer

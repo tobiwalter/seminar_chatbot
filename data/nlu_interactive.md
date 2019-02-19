@@ -1,14 +1,12 @@
-## intent:affirm
-- yes
+## intent:book_seminar
+- I want to join the seminar in [Munich](location)
 
-## intent:bad
-- That's not possible
+## intent:get_course_offering
+- /get_course_offering
 
-## intent:cancel_seminar
-- I want to cancel my [leadership](course) seminar
+## intent:get_description
+- What are the details of the [rhetoric](course) course?
 
 ## intent:inform
-- [Max](given-name) [Smith](last-name)
-
-## intent:negative
-- no
+- [Ron](given-name) [Moore](last-name)
+- [on the 30st of March](time:2019-03-30T00:00:00.000-07:00)[30st of March](date)

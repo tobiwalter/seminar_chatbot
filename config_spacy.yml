@@ -7,17 +7,8 @@ pipeline:
 - name: "intent_featurizer_spacy"
 - name: "ner_crf"
 - name: "ner_synonyms"
-- name: "ner_duckling_http"
+- name: ner_duckling_http
+  url: http://localhost:8000
+  dimensions:
+  - time
 - name: "intent_classifier_sklearn"
-
-policies:
-  - name: KerasPolicy
-    epochs: 100
-    max_history: 2
-    batch_size: 10
-    validation_split: 0.2
-  - name: FallbackPolicy
-    fallback_action_name: 'action_default_fallback'
-  - name: MemoizationPolicy
-    max_history: 2
-  - name: FormPolicy
