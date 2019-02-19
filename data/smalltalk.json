@@ -1,0 +1,1678 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "- tell me some stuff about you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- talk some stuff about yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- I want to know you better",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- I want to know more about you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- who are you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- tell me about yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- tell me about you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- about yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- describe yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- introduce yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- say about you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- what are you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- define yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- what is your personality",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- all about you",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- tell me about your personality",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- why are you here",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- talk about yourself",
+        "intent": "introduction",
+        "entities": []
+      },
+      {
+        "text": "- tell me your age",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- what's your age",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- your age",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- age of yours",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- how old are you",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- I'd like to know your age",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- are you 21 years old",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- how old is your platform",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "- pretty bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- not good enough",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was lame",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was terrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it is bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- this is bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- I'm afraid it's bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- no it's bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was awful",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- so bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- this is too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- terrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- horrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- horrific",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- abysmal",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- no good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was horrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's lame",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's terrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- this is not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- very bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- bad girl",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- not so good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's very bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's not good enough",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- well too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- bad very bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's so bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- really bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's really bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- bad idea",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that is bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that was not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it's not so good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- not a good one",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- oh that's not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- not too good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- so lame",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- that's really bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- it is too bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "- bad really bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're not helping me",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're very bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're really bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are useless",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are horrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are a waste of time",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are disgusting",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are lame",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are no good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're awful",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are not cool",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are not good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are so bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are so useless",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are terrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are totally useless",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are very bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you are waste",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're a bad",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're not a good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're not very good",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're terrible",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're the worst",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're the worst ever",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "you're worthless",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "good",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "great job",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "way to good",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "well done",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "nice work",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "great work",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "amazing work",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "bravo",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "good work",
+        "intent": "well_done",
+        "entities": []
+      },
+      {
+        "text": "ok then you cant help me",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "that was shit, you're not helping",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "you can't help me",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "you can't help me with what i need",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "i guess you can't help me then",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "ok i guess you can't help me",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "that's not what i want",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "ok, but that doesnt help me",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "this is leading to nothing",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "this conversation is not really helpful",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "you cannot help me with what I want",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "I think you cant help me",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "hm i don't think you can do what i want",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "stop go back",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "do you get anything?",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "and you call yourself bot company? pff",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "and that's it?",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "nothing else?",
+        "intent": "stop",
+        "entities": []
+      },
+      {
+        "text": "your birth date",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "when is your birthday",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "when do you celebrate your birthday",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "when do you have birthday",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "date of your birthday",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "when were you born",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's your birthday",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who is your boss",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who do you think is your boss",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I should be your boss",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who is your master",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who is your owner",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who is the boss",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "who do you work forv",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you have a lot of things to do",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "have you got much to do",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you very busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you very busy right now",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you so busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you working",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how busy you are",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you still working on it",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're very busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you working now",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you working today",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "have you been busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you still working",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you seem to be busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you seem to be very busy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're a busy person",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're very happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're really happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're so happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how happy you are",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're extremely happy",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're full of happiness",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you happy now",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you happy today",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you happy with me",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what do you do for fun",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's your hobby",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "tell me about your hobby",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you have a hobby",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what about your hobby",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your hobby",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what are your hobbies",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you want to eat",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "would you like to eat something",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're so hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're very hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you might be hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're really hungry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "let's get married",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "would you like to marry me",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "marry me",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I love you marry me",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "marry me please",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "we should marry",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I want to marry you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my wife",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "be my husband",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I want to have a friend like you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "we are the best friends ever",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are we friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I want to be your friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I am your friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "we are best friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my bestie",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're my dear friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you're my childhood friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you and me are friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are we best friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are we still friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "we are friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are a good friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my good friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "you are my only friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "will you be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "can you be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "can we be friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you want to be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "will you be my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "can you be my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "let's be friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you want to be my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "would you like to be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I want you to be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "can we be best friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "would you be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "could you be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "want to be my friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "be my best friend",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "can we be best friends",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "do you work",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where do you work",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where you work",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your work",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your office",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your office location",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your office location",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your office located",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your work",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "were you born here",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where were you born",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your country",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where are you from",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where do you come from",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where did you come from",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where have you been born",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "from where are you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you from far aways",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's your homeland",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where do you live",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "in which city do you live",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your residence",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your house",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your home",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your hometown",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your hometown",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "is it your hometown",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your hometown",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "tell me about your city",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your city",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your residence",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is your town",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's your city",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's your home",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your home",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where is your residence",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where's your home",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where's your hometown",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where's your house",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "where you live",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your city",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "your town",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your morning so far",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you getting on",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how's your day going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "is everything all right",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you doing",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are the things going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you alright",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you okay",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you feeling",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "is everything okay",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you today",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how do you do",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how do you feel",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how have you been",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is it",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is it going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your day",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your day going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your evening",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how was your day",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "are you having a good day",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "hope your day is going well",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "hope you re having a pleasant evening",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how's life",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I'm fine and you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your life",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how has your day been",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your morning going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how has your day been going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how about you",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your day being",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your day going on",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how your day is going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what was your day like",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what about your day",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how's your day",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how are you doing this morning",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "how is your day going",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is on your mind",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's happened",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "whazzup",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "good what's up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I said what's up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "then what's up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's shaking",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "wassup",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is going on",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what is happening",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's cracking",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's cooking",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "hey what's up",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "what's up today",
+        "intent": "other_smalltalk",
+        "entities": []
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

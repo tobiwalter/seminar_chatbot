@@ -18,9 +18,9 @@ logger = logging.getLogger(__name__)
 # def train_dialogue(domain_file = 'domain.yml',
 # 					# model_path = './models/current/dialogue',
 # 					training_data_file = 'stories.md'):
-					
+
 # 	agent = Agent(domain_file, policies = [MemoizationPolicy(), KerasPolicy()])
-	
+
 # 	agent.train(
 # 				training_data_file,
 # 				max_history = 3,
@@ -28,10 +28,10 @@ logger = logging.getLogger(__name__)
 # 				batch_size = 50,
 # 				validation_split = 0.2,
 # 				augmentation_factor = 50)
-				
+
 # 	agent.persist(model_path)
 # 	return agent
-	
+
 # def run(dbug=False):
 #     if dbug:
 #         init_debug_logging()
@@ -42,12 +42,12 @@ logger = logging.getLogger(__name__)
 #     rasa_core.run.serve_application(agent,channel='cmdline')
 
 def run(serve_forever=True):
-    nlu_interpreter = RasaNLUInterpreter('./models/nlu/current')
+    nlu_interpreter = RasaNLUInterpreter('.\\models\\current\\nlu_tf\\current')
     action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
-    agent = Agent.load('./models/current/dialogue', interpreter=nlu_interpreter, action_endpoint=action_endpoint)
+    agent = Agent.load('.\\models\\current\\dialogue\\embedding', interpreter=nlu_interpreter, action_endpoint=action_endpoint)
     #rasa_core.run.serve_application(agent ,channel='cmdline')
-    
-    return agent	
+
+    return agent
 
 if __name__ == '__main__':
 	run()

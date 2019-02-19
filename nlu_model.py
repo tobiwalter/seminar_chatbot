@@ -1,13 +1,14 @@
-from rasa_nlu.converters import load_data
-from rasa_nlu.config import RasaNLUConfig
+from rasa_nlu.training_data.loading import load_data
+# from rasa_nlu.config import RasaNLUConfig
 from rasa_nlu.model import Trainer, Metadata, Interpreter
+from rasa_nlu import config
 
-def train_nlu(data, config, model_dir):
+def train_nlu(data, config_file, model_dir):
 	training_data =load_data(data)
-	trainer = Trainer(RasaNLUConfig(config))
+	trainer = Trainer(config.load(config_file))
 	trainer.train(training_data)
 	model_directory = trainer.persist(model_dir, fixed_model_name="seminarnlu")
 
 #execute only if running as main programm not as imported module within another program
 if __name__ == '__main__':
-	train_nlu("data/training_data.json","config.json","models/current/nlu")
+	train_nlu("data/training_data.json","config_tf.yml","models/current/nlu_tf")
