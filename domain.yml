@@ -51,7 +51,8 @@ intents:
 - get_course_offering
 - get_dates
 - get_location
-- negative
+- negative:
+    use_entities: false
 - get_description
 - get_prerequisites
 - get_level
@@ -65,6 +66,11 @@ intents:
     use_entities: false
 - age:
     use_entities: false
+- other_smalltalk: 
+    use_entities: false
+- stop:
+    use_entities: false
+
 slots:
   booking-type:
     type: categorical
@@ -126,7 +132,7 @@ templates:
   - text: Please tell me your first and last name
   utter_bye:
   - text: Goodbye
-  utter_chitchat:
+  utter_no_chitchat:
   - text: I don't do smalltalk, let's get things done!
   utter_default:
   - text: Sorry, I didn't understand that.
