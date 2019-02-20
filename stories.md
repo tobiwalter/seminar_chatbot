@@ -12,7 +12,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"} 
+	- form{"name":null} 
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -33,7 +33,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -86,7 +86,7 @@
     - slot{"title": "Persuasion and Influence"}
     - seminar_form
     - form{"name": "seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -113,7 +113,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -145,7 +145,7 @@
 	- slot{"employee_id":"102"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -181,7 +181,7 @@
 	- slot{"employee_id":"14"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -212,7 +212,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -234,7 +234,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -262,7 +262,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -322,7 +322,7 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -370,7 +370,7 @@
 	- slot{"title": "Machine Learning"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
@@ -396,7 +396,7 @@
     - slot{"requested_slot": "location"}
 * get_description
     - action_provide_description
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * form: inform{"location": "Berlin"}
     - slot{"location": "Berlin"}
@@ -438,7 +438,7 @@
 * introduction
     - utter_introduction
     - action_listen
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "date"}
 * form: inform{"date": "24.02."}
     - slot{"date": "24.02."}
@@ -525,7 +525,7 @@
     - slot{"employee_id": 7}
 	- seminar_form
 	- form{"name":"seminar_form"}
-	- form{"name":"null"}
+	- form{"name":null}
 	- action_book_seminar
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
@@ -597,7 +597,7 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Machine Learning"}
-    - seminar_form
+    - seminar_form	
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
 * form: inform{"location": "berlin"}
@@ -1185,7 +1185,7 @@
     - action_display_seminar
     - slot{"locations": "Cologne, Frankfurt, Stuttgart"}
     - slot{"title": "Leadership Behaviour"}
-    - seminar_form
+    - form: seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
 * form: inform{"date": "Feb 24"}
@@ -1624,7 +1624,7 @@
     - slot{"requested_slot": "location"}
 * other_smalltalk
     - utter_no_chitchat
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * form: inform{"location": "Berlin"}
     - slot{"location": "Berlin"}
@@ -1660,15 +1660,15 @@
     - slot{"requested_slot": "location"}
 * other_smalltalk
     - utter_no_chitchat
-    - seminar_form
+    - form:seminar_form
     - slot{"requested_slot": "location"}
 * other_smalltalk
     - utter_no_chitchat
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * other_smalltalk
     - utter_no_chitchat
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * form: inform{"location": "Berlin"}
     - slot{"location": "Berlin"}
@@ -1705,7 +1705,7 @@
 * stop
     - utter_ask_continue
 * affirm
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * form: inform{"location": "Berlin"}
     - slot{"location": "Berlin"}
@@ -1741,13 +1741,13 @@
     - slot{"requested_slot": "location"}
 * other_smalltalk
 	- utter_no_chitchat
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * stop
     - utter_ask_continue
-* deny
+* negative
     - action_deactivate_form
-    - form{"name": "null"}
+    - form{"name": null}
 	
 ## stop and really stop path
 * book_seminar{"course": "leadership"}
@@ -1762,14 +1762,14 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Python for Beginners"}
-    - seminar_form
+    - form: seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
 * stop
     - utter_ask_continue
-* deny
+* negative
     - action_deactivate_form
-    - form{"name": "null"}
+    - form{"name": null}
 	
 ## chitchat stop but continue path
 * book_seminar{"course": "leadership"}
@@ -1789,12 +1789,12 @@
     - slot{"requested_slot": "location"}
 * other_smalltalk
 	- utter_no_chitchat
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * stop
     - utter_ask_continue
 * affirm
-    - seminar_form
+    - form: seminar_form
     - slot{"requested_slot": "location"}
 * form: inform{"location": "Berlin"}
     - slot{"location": "Berlin"}
