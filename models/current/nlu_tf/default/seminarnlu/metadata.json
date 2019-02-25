@@ -61,6 +61,11 @@
             "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer"
         },
         {
+            "name": "intent_entity_featurizer_regex",
+            "regex_file": "regex_featurizer.json",
+            "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer"
+        },
+        {
             "num_hidden_layers_a": 2,
             "hidden_layer_size_a": [
                 256,
@@ -68,11 +73,8 @@
             ],
             "num_hidden_layers_b": 0,
             "hidden_layer_size_b": [],
-            "batch_size": [
-                64,
-                256
-            ],
-            "epochs": 300,
+            "batch_size": 64,
+            "epochs": 400,
             "embed_dim": 20,
             "mu_pos": 0.8,
             "mu_neg": -0.4,
@@ -102,6 +104,6 @@
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20190209-153928",
+    "trained_at": "20190224-174058",
     "rasa_nlu_version": "0.13.8"
 }

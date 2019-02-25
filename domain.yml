@@ -1,51 +1,55 @@
 %YAML 1.1
 ---
 actions:
-- action_course_offering
-- utter_submit
 - action_query_date
-- utter_try_again
-- action_display_seminar
-- utter_welcome
 - action_cancel_seminar
+- action_verify_user
 - action_provide_prerequisites
+- utter_i''m sorry
+- utter_suggest_help
 - utter_ask_course
-- action_provide_datesWithLocation
+- action_book_seminar
+- utter_no_chitchat
+- utter_no_worries
+- action_show_bookings
+- utter_welcome
+- action_display_seminar
+- utter_ask_continue
+- utter_get_help
+- action_query_level
+- utter_are_you_sure
 - utter_ask_location
+- utter_try_again
+- utter_ask_name
+- action_provide_datesWithLocation
+- action_course_offering
 - utter_bye
 - utter_ask_date
-- action_show_bookings
-- action_book_seminar
-- utter_are_you_sure
 - utter_introduction
+- utter_submit
 - action_provide_description
-- utter_no_chitchat
-- utter_ask_name
-- utter_i''m sorry
-- utter_get_help
-- action_verify_user
-- utter_no_worries
-- action_query_level
-- utter_suggest_help
-- utter_ask_continue
+- utter_wrong_date
+- utter_wrong_location  
 entities:
-- display-option
-- user-level
-- last-name
-- location
-- time
 - date
 - booking-type
 - date-period
 - course-type
-- given-name
+- display-option
+- location
 - course
+- time
+- user-level
+- last-name
+- given-name
 forms:
 - seminar_form
 intents:
-- inform
-- book_seminar
 - show_bookings
+- inform
+- other_smalltalk:
+    use_entities: false
+- book_seminar
 - welcome
 - thank
 - get_course_offering
@@ -66,11 +70,8 @@ intents:
     use_entities: false
 - age:
     use_entities: false
-- other_smalltalk: 
-    use_entities: false
 - stop:
     use_entities: false
-
 slots:
   booking-type:
     type: categorical
@@ -89,9 +90,13 @@ slots:
     type: text
   dates:
     type: list
+  time:
+    type: text
   display-option:
     type: text
   employee_id:
+    type: text
+  seminar_id:
     type: text
   given-name:
     type: text
@@ -116,6 +121,8 @@ slots:
 templates:
   utter_are_you_sure:
   - text: Are you sure?
+  utter_ask_continue:
+  - text: Do you want to continue?
   utter_ask_course:
   - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
@@ -132,8 +139,6 @@ templates:
   - text: Please tell me your first and last name
   utter_bye:
   - text: Goodbye
-  utter_no_chitchat:
-  - text: I don't do smalltalk, let's get things done!
   utter_default:
   - text: Sorry, I didn't understand that.
   utter_get_help:
@@ -145,20 +150,23 @@ templates:
   utter_introduction:
   - text: I am Sam. I can help you to book seminars, show seminar bookings and get
       information about the seminar offering.
+  utter_no_chitchat:
+  - text: I don't do smalltalk, let's get things done!
   utter_no_worries:
   - text: No worries.
   - text: You are welcome.
   - text: My pleasure!
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
+  utter_suggest_help:
+  - text: Shall I forward you to the helpdesk?
+  - text: Do you want to reach out to the helpdesk?
+  utter_wrong_date:
+  - text: "The date you entered could not be verified. Please enter the date in the following format: dd//mm//yy"
+  utter_wrong_location:
+  - text: The location you specified is not in our database. Please try again.
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
   - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
       bookings and getting information about the seminar offering.'
-  utter_suggest_help:
-  - text: Shall I forward you to the helpdesk?
-  - text: Do you want to reach out to the helpdesk?
-  utter_ask_continue:
-  - text: "Do you want to continue?"
-  
