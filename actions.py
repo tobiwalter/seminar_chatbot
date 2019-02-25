@@ -15,6 +15,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 from datetime import date
+from datetime import datetime
 import dateparser
 import pytz
 
@@ -238,8 +239,12 @@ class ActionBookSeminar(Action):
         #check location
         seminar = seminars[seminar_id]
         if not city in seminar["locations"]:
-            dispatcher.utter_message("The seminar {} is not offered in {}".format(seminar["title"],city))
-            return [SlotSet("booking_confirmed","False")]
+            res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
+            next_loc = self.nextLocation(city,seminar_id)
+            if next_loc:
+                res = res + " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
+            dispatcher.utter_message(res)
+            return [SlotSet("booking_confirmed","False"),SlotSet("location",next_loc)]
 
         #check date
         dateMatch = False
@@ -288,7 +293,27 @@ class ActionBookSeminar(Action):
             dispatcher.utter_message("All seminars about {} are booked out.".format(course))
             return [SlotSet("booking_confirmed","False")]
 
-            #TO BE DONE: date suggestion, location alternative, capacity check
+            #TO BE DONE: date suggestion, capacity check
+            
+        def nextLocation(self, city, seminar_id):
+        # Install Module geopy
+            from geopy.geocoders import Nominatim
+            from geopy import distance
+    
+            geolocator = Nominatim(user_agent='myapplication')
+            loc_coordinates = []
+            loc_distance = {}
+            location = geolocator.geocode(city)
+    
+             #calculate distance between user's preferred location and seminar locations
+            for loc in seminars[seminar_id]["locations"]:
+                sem_city = geolocator.geocode(loc)
+                loc_coordinates.append((sem_city.latitude, sem_city.longitude))
+                loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
+    
+            next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
+    
+            return next_loc
 
 class ActionCancelSeminar(Action):
     def name(self):
@@ -426,7 +451,7 @@ class ActionDisplaySeminar (Action):
 
                 dispatcher.utter_message(res)
                 return [SlotSet("locations", ', '.join(locs.keys())),
-                        SlotSet("title", seminar["title"])]
+                        SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
 
             else:
                 res = "We don't offer seminars in {}.".format(course)
@@ -436,7 +461,7 @@ class ActionDisplaySeminar (Action):
         else: 
             dispatcher.utter_message("I did not understand the course you specified")
             return []
-
+    
 class ActionCourseOffering(Action):
 
     def name(self):
@@ -557,30 +582,40 @@ class SeminarForm(FormAction):
 
    def name(self):
        """Unique identifier of the form"""
-
        return "seminar_form"
 
    @staticmethod
    def required_slots(tracker):
        """A list of required slots that the form has to fill"""
-
-       return ["location", "date"]
+       
+       if tracker.get_slot('time'):
+           return ["location"]
+       else:
+           return ["location", "date"]
 
    def slot_mappings(self):
        return {"date": [self.from_entity(entity="date", intent= ["book_seminar","inform"]),
                 self.from_entity(entity="time", intent=["book_seminar", "inform"])],
                 "location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
-
+   
+   @staticmethod 
+   def is_date(val):
+       """Check if string can be converted to date"""
+       isDate = False
+       if isinstance(val, str):
+           if isinstance(dateparser.parse(val),datetime):
+               isDate = True
+               return isDate
+           
    @staticmethod         
-   def is_date(*args):
-        """Check if string can be converted to date"""
-        isDate = False
-        for arg in args:
-            if isinstance(arg, str):
-                    if dateparser.parse(arg).date() is not None:
-                        isDate = True
-                        break
-        return isDate
+   def loc_in_database(val,tracker):
+       """ Check if given location is in database"""
+       seminar_id = tracker.get_slot("seminar_id")
+       seminar = seminars[seminar_id]
+       if val in seminar["locations"].keys():
+           return True
+       else:
+           return False 
 
    def validate(self, dispatcher, tracker, domain):
         """Validate extracted requested slot
@@ -593,27 +628,37 @@ class SeminarForm(FormAction):
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-            slot_values.update(self.extract_requested_slot(dispatcher,
-                                                           tracker, domain))
-            if not slot_values:
-                # reject form action execution
-                # if some slot was requested but nothing was extracted
-                # it will allow other policies to predict another action
-                raise ActionExecutionRejection(self.name(),
-                                               "Failed to validate slot {0} "
-                                               "with action {1}"
-                                               "".format(slot_to_fill, self.name()))
+        	for slot, value in self.extract_requested_slot(dispatcher,
+                                                           tracker,
+                                                           domain).items():
+          		validate_func = getattr(self, "validate_{}".format(slot),
+                                        lambda *x: value)
+          		slot_values[slot] = validate_func(value, dispatcher, tracker, 
+          																												domain)
 
+        	if not slot_values:
+              # reject form action execution
+              # if some slot was requested but nothing was extracted
+              # it will allow other policies to predict another action
+          		raise ActionExecutionRejection(self.name(),
+                                             "Failed to validate slot {0} "
+                                             "with action {1}"
+                                             "".format(slot_to_fill,
+                                                       self.name()))
         # we'll check when validation failed in order
         # to add appropriate utterances
         for slot, value in slot_values.items():
-            if slot == "date":
+            if slot == "date" or slot == "time":
                 if not self.is_date(value):
                     dispatcher.utter_template("utter_wrong_date", tracker)
                     # validation failed, set slot to None
                     slot_values[slot] = None
 
-        ## TO-DOs: Add validation methods for slots location and course
+            elif slot == "location":
+            	if not self.loc_in_database(value,tracker):
+                    dispatcher.utter_template("utter_wrong_location", tracker)
+                    slot_values[slot] = None
+            		 # validation failed, set slot to None
 
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
