@@ -16,8 +16,10 @@ from firebase_admin import credentials
 from firebase_admin import db
 from datetime import date
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
 import dateparser
 import pytz
+import locale
 
 # =============================================================================
 # Initialize Firebase database instance
@@ -39,7 +41,7 @@ employees = employeesRef.get()
 bookings = bookingRef.get()
 seminars = seminarRef.get()
 counts = countRef.get()
-
+locale.setlocale(locale.LC_ALL, 'deu_deu')
 
 class ActionShowBookings(Action):
 
@@ -51,16 +53,17 @@ class ActionShowBookings(Action):
         """ retrieves slot values """
 
         matchingID = tracker.get_slot('employee_id')
-#        date_period = tracker.get_slot('date-period')
+        date_period = tracker.get_slot('date-period')
         seminar_date = tracker.get_slot('date')
         city = tracker.get_slot('location')
         bookingtype = tracker.get_slot('booking-type')
         display_option = tracker.get_slot('display-option')
+        time = tracker.get_slot('time')
 
     #    Find booked seminars depending on params given
         if 'matchingID' in locals():
-            bookingRef = db.reference('bookings')
-            bookings = bookingRef.get()
+            # global bookingRef  #= db.reference('bookings')
+            # global bookings ##= bookingRef.get()
             bookedSeminars = set([])
 
     #   Check for booking type and add seminars accordingly
@@ -91,10 +94,8 @@ class ActionShowBookings(Action):
                     res = "This is your next seminar: " + self.showNextBooking(bookedSeminars)
                 elif seminar_date:
                     res = self.showBookingsOnGivenDate(seminar_date,bookedSeminars,matchingID)
-#                elif date_period:
-#                    dateStart = date_period["startDate"]
-#                    dateEnd = date_period["endDate"]
-#                    res = self.showBookingsWithinPeriod(dateStart, dateEnd, bookedSeminars, matchingID)
+                elif date_period:
+                    res = self.showBookingsWithinPeriod(date_period, time,bookedSeminars, matchingID)
                 elif city:
                     res = self.showBoookingsAtLocation(city,bookedSeminars,matchingID)
                 else:
@@ -152,9 +153,19 @@ class ActionShowBookings(Action):
         else:
             return "There are no recorded bookings for you on the specified date."
 
-    def showBookingsWithinPeriod(self,dateStart,dateEnd,bookedSeminars, matchingID):
-        start = dateparser.parse(dateStart)
-        end = dateparser.parse(dateEnd)
+    def showBookingsWithinPeriod(self,date_period, time,bookedSeminars, matchingID):
+
+        if isinstance(time, dict):
+            start = dateparser.parse(time["from"]).date()
+            end = dateparser.parse(time["to"]).date()
+        else: 
+            start = dateparser.parse(time)
+            if "week" in date_period:
+                end = start + relativedelta(days = 7)
+            elif "month" in date_period:
+                end = start + relativedelta(day=31)
+            elif "year" in date_period:
+                end = start + relativedelta(day=365)
 
     #   If bookings between start and end, add them to the list of matched seminars
 
@@ -162,14 +173,14 @@ class ActionShowBookings(Action):
         for i in range(len(bookings)):
             if "cancellation" not in bookings[i]:
                 if (bookings[i]["seminar_title"] in bookedSeminars and
-                start <= pytz.utc.localize(dateparser.parse(bookings[i]["date"])) <= end and
+                start <= pytz.utc.localize(dateparser.parse(bookings[i]["date"],settings={'DATE_ORDER': 'DMY'})) <= end and
                 bookings[i]["employee_id"] == matchingID):
 
                     sem = bookings[i]["seminar_title"] + " on " + bookings[i]["date"]
                     matchedSeminars.add(sem)
 
         if len(matchedSeminars) != 0:
-            return "Your booked seminars between " + start.strftime("%d.%m.%y") + " and " + end.strftime("%d.%m.%Y") + ": " + ', '.join(matchedSeminars)
+            return "Your booked seminars between {} and {}: {}".format(start.strftime("%d.%m.%y"), end.strftime("%d.%m.%Y"), ' ,'.join(matchedSeminars))
         else:
             return "There are no recorded bookings for you within the specified period."
 
@@ -188,8 +199,7 @@ class ActionShowBookings(Action):
         if len(matchedSeminars) != 0:
             return "Your booked seminars in {} : {}".format(city,', '.join(matchedSeminars))
         else:
-            return "There are no recorded bookings for you in " + city
-
+            return "There are no recorded bookings for you in {}".format(city)
 
 class ActionBookSeminar(Action):
     def name(self):
@@ -198,19 +208,15 @@ class ActionBookSeminar(Action):
 
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
-        countRef = db.reference('counts')
-        counts = countRef.get()
-        bookingRef = db.reference('bookings')
-        bookings = bookingRef.get()
+        # countRef = db.reference('counts')
+        # counts = countRef.get()
+        # bookingRef = db.reference('bookings')
+        # bookings = bookingRef.get()
 
         matchingID = tracker.get_slot('employee_id')
         course = tracker.get_slot('course')
         city = tracker.get_slot('location').capitalize()
         userGivenDate = tracker.get_slot('date')
-
-        if "matchingID" not in locals():
-            dispatcher.utter_template('utter_try_again', tracker)
-            return [SlotSet("user_verified","False")]
 
         #matching seminar ID
         for j in range(len(seminars)):
@@ -242,7 +248,7 @@ class ActionBookSeminar(Action):
             res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
             next_loc = self.nextLocation(city,seminar_id)
             if next_loc:
-                res = res + " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
+                res += " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
             dispatcher.utter_message(res)
             return [SlotSet("booking_confirmed","False"),SlotSet("location",next_loc)]
 
@@ -256,7 +262,7 @@ class ActionBookSeminar(Action):
 
         if not dateMatch:
             dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"], userGivenDate))
-            return [SlotSet("booking_confirmed", "False")]
+            return [SlotSet("booking_confirmed", "False"),SlotSet("date", None),SlotSet("location",None)]
 
         #check occupancy    
         if seminar["capacity"] > seminar["occupancy"]:
@@ -268,7 +274,7 @@ class ActionBookSeminar(Action):
                     if bookings[i]["employee_id"] == matchingID and bookings[i]["location"].lower() == city.lower() and bookings[i]["seminar_id"] == seminar_id: #could add OR --> check date against given seminar date
                         res = "You have already booked the seminar {} in {} on {}.".format(course,city,bookings[i]["date"])
                         dispatcher.utter_message(res)
-                        return [SlotSet("booking_confirmed","False")]
+                        return [SlotSet("booking_confirmed","False"), SlotSet("date", None),SlotSet("location",None)]
 
             #Update occupancy
             seminarRef.child(str(seminar_id)).update({"occupancy": occupancy + 1})
@@ -291,7 +297,7 @@ class ActionBookSeminar(Action):
             return [SlotSet("booking_confirmed","True"),SlotSet("date", None),SlotSet("location",None)]
         else:
             dispatcher.utter_message("All seminars about {} are booked out.".format(course))
-            return [SlotSet("booking_confirmed","False")]
+            return [SlotSet("booking_confirmed","False"),SlotSet("date", None),SlotSet("location",None)]
 
             #TO BE DONE: date suggestion, capacity check
             
@@ -371,7 +377,7 @@ class ActionCancelSeminar(Action):
                     cancellation = "cancelled on " + str(date.today())
                     bookingRef.update({
                                 str(j): {
-                    				'cancellation': cancellation
+                                    'cancellation': cancellation
                                 }})
 #                    booking_count = len(bookings) - 1
 #                    countRef.update({"booking_count": booking_count})
@@ -505,7 +511,7 @@ class ActionQueryDate(Action):
         dates = seminar["locations"][city.capitalize()]
         res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
         dispatcher.utter_message(res)
-        return [SlotSet("dates", ', '.join(dates))]
+        return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
 
 class ActionProvidePrerequisites(Action):
     def name(self):
@@ -628,19 +634,19 @@ class SeminarForm(FormAction):
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-        	for slot, value in self.extract_requested_slot(dispatcher,
+            for slot, value in self.extract_requested_slot(dispatcher,
                                                            tracker,
                                                            domain).items():
-          		validate_func = getattr(self, "validate_{}".format(slot),
+                validate_func = getattr(self, "validate_{}".format(slot),
                                         lambda *x: value)
-          		slot_values[slot] = validate_func(value, dispatcher, tracker, 
-          																												domain)
+                slot_values[slot] = validate_func(value, dispatcher, tracker, 
+                                                                                                                        domain)
 
-        	if not slot_values:
+            if not slot_values:
               # reject form action execution
               # if some slot was requested but nothing was extracted
               # it will allow other policies to predict another action
-          		raise ActionExecutionRejection(self.name(),
+                raise ActionExecutionRejection(self.name(),
                                              "Failed to validate slot {0} "
                                              "with action {1}"
                                              "".format(slot_to_fill,
@@ -655,10 +661,10 @@ class SeminarForm(FormAction):
                     slot_values[slot] = None
 
             elif slot == "location":
-            	if not self.loc_in_database(value,tracker):
+                if not self.loc_in_database(value,tracker):
                     dispatcher.utter_template("utter_wrong_location", tracker)
                     slot_values[slot] = None
-            		 # validation failed, set slot to None
+                     # validation failed, set slot to None
 
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
