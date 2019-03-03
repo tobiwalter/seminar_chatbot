@@ -379,7 +379,7 @@ class ActionProvideDescription(Action):
     def run(self, dispatcher, tracker, domain):
         """ retrieves slot values """
 
-        course = tracker.get_slot('course')
+        course = tracker.get_slot('course').strip()
         user_level = tracker.get_slot('user-level')
 
         for j in range(len(seminars)):
@@ -420,8 +420,9 @@ class ActionDisplaySeminar (Action):
         
 ## TO-DO: Implement scenario when user provides user-level variable 
         course = tracker.get_slot('course')
+        city = tracker.get_slot('location').capitalize()
 
-#        If course given, display locations and dates of seminar
+        # If course given, display locations and dates of seminar
         if course:
             for j in range(len(seminars)):
                 breaker = False
@@ -436,22 +437,37 @@ class ActionDisplaySeminar (Action):
             if "seminar_id" in locals():
                 seminar = seminars[seminar_id]
                 locs = seminar.get("locations")
-                res = "The seminar {} is offered at the following locations and dates: \n \n".format(seminar["title"])
-                res += '\n '.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
+                res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
+                res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
 
                 dispatcher.utter_message(res)
                 return [SlotSet("locations", ', '.join(locs.keys())),
                         SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
 
             else:
-                res = "We don't offer seminars in {}.".format(course)
+                res = "We don't offer {} seminars.".format(course)
                 #  possible to call actionCourseOffering here?
                 dispatcher.utter_message(res)
                 return []
+
+        elif city:
+            available_seminars = []
+            for j in range(len(seminars)):
+              if city in seminars[j]["locations"]:
+                available_seminars.append(seminars[j]["category"]) ## can also display available dates here
+
+            if len(available_seminars) != 0:
+              res = "We have seminars in the following categories in {} :\n{}".format(city, 
+                                                  ', '.join(available_seminars))
+              dispatcher.utter_message(res)
+              return []
+            else: 
+              dispatcher.utter_message("There are no seminars offered in {}".format(city))
+              return []
         else: 
-            dispatcher.utter_message("I did not understand the course you specified")
+            dispatcher.utter_message("We do not offer courses in the category you specified.")
             return []
-    
+
 class ActionCourseOffering(Action):
 
     def name(self):
