@@ -102,6 +102,7 @@
 	- slot{"employee_id":"94"}
 	- action_query_date
 	- slot{"dates": "18/02/19, 29/02/19, 27/03/19"}
+	- slot{"title": "blabla"}
 	- seminar_form
 	- form{"name":"seminar_form"}
 	- form{"name":null}
@@ -574,6 +575,9 @@
     - slot{"location": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
 * show_bookings	
 	- action_show_bookings
 	
@@ -597,8 +601,8 @@
     - slot{"requested_slot": "date"}
 * get_dates
     - action_query_date
-    - action_listen
     - slot{"dates": "22/02/19, 24/02/19, 24/03/19"}
+	- slot{"title": "blabla"}
     - seminar_form
     - slot{"requested_slot": "date"}
 * form: inform{"date": "22/02/19"}
@@ -642,8 +646,8 @@
     - slot{"requested_slot": "date"}
 * get_dates
     - action_query_date
-    - action_listen
     - slot{"dates": "24/03/19, 02/04/19"}
+	- slot{"title": "blabla"}
     - seminar_form
     - slot{"requested_slot": "date"}
 * form: inform{"date": "24/03/19"}

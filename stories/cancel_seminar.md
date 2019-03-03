@@ -44,6 +44,7 @@
 * bad
     - utter_i''m sorry
 * negative	
+	- utter_do_something_else	
 
 ## Generated Story 4074317787840752391
 * cancel_seminar{"course": "programming"}
@@ -62,6 +63,31 @@
 * thank
     - utter_no_worries
 	
+
+## Generated Story -1597762326665473517
+* cancel_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_are_you_sure
+* affirm
+	- utter_ask_name
+* inform{"given-name": "Mike", "last-name": "Garcia"}
+    - slot{"given-name": "Mike"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+* inform{"given-name": "Mike", "last-name": "Garcia"}
+    - slot{"given-name": "Mike"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+	- utter_suggest_help
+* affirm
+	- utter_get_help 
+	
+## Generated Story -1597762326665473517
+* cancel_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_are_you_sure
+* negative
+	- utter_do_something_else
 
 ## Generated Story -1597762326665473517
 * cancel_seminar{"course": "Machine Learning"}

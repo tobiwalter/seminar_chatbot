@@ -144,7 +144,7 @@
     - action_verify_user
     - utter_suggest_help
 * negative
-	- action_listen
+	- utter_do_something_else
 	
 ## smalltalk while asking for name 
 * show_bookings

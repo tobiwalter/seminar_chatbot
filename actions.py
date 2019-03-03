@@ -20,6 +20,7 @@ from dateutil.relativedelta import relativedelta
 import dateparser
 import pytz
 import locale
+import json
 
 # =============================================================================
 # Initialize Firebase database instance
@@ -246,11 +247,8 @@ class ActionBookSeminar(Action):
         seminar = seminars[seminar_id]
         if not city in seminar["locations"]:
             res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
-            next_loc = self.nextLocation(city,seminar_id)
-            if next_loc:
-                res += " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
             dispatcher.utter_message(res)
-            return [SlotSet("booking_confirmed","False"),SlotSet("location",next_loc)]
+            return [SlotSet("booking_confirmed","False"),SlotSet("location", None)]
 
         #check date
         dateMatch = False
@@ -300,26 +298,6 @@ class ActionBookSeminar(Action):
             return [SlotSet("booking_confirmed","False"),SlotSet("date", None),SlotSet("location",None)]
 
             #TO BE DONE: date suggestion, capacity check
-            
-        def nextLocation(self, city, seminar_id):
-        # Install Module geopy
-            from geopy.geocoders import Nominatim
-            from geopy import distance
-    
-            geolocator = Nominatim(user_agent='myapplication')
-            loc_coordinates = []
-            loc_distance = {}
-            location = geolocator.geocode(city)
-    
-             #calculate distance between user's preferred location and seminar locations
-            for loc in seminars[seminar_id]["locations"]:
-                sem_city = geolocator.geocode(loc)
-                loc_coordinates.append((sem_city.latitude, sem_city.longitude))
-                loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
-    
-            next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
-    
-            return next_loc
 
 class ActionCancelSeminar(Action):
     def name(self):
@@ -416,9 +394,15 @@ class ActionProvideDescription(Action):
 
         if "seminar_id" in locals():
             seminar = seminars[seminar_id]
-            res = "The seminar {} is described as follows: \n \
-            {} \n".format(seminar["title"], seminar["text"])
-            dispatcher.utter_message(res)
+            # res = "The seminar {} is described as follows: \n \
+            # {} \n".format(seminar["title"], seminar["text"])
+            # dispatcher.utter_message(res)
+            attachment = json.dumps([{"fallback": seminar['text'], #only if client doesn't show formatted text
+                  "color": "good",
+                  "pretext": "You may be interested in this seminar ",
+                  "title": seminar['title'],
+                  "title_link": seminar['url']}])
+            dispatcher.utter_attachment(attachment)
             return []
 
         else:
@@ -491,7 +475,7 @@ class ActionQueryDate(Action):
         return "action_query_date"
 
     def run(self, dispatcher, tracker, domain):
-        city = tracker.get_slot("location")
+        city = tracker.get_slot("location").capitalize()
         course = tracker.get_slot("course")
 
         for j in range(len(seminars)):
@@ -507,11 +491,44 @@ class ActionQueryDate(Action):
         if "seminar_id" in locals():
             seminar = seminars[seminar_id]
 
-#       Collect dates of seminar in the corresponding city
-        dates = seminar["locations"][city.capitalize()]
-        res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
-        dispatcher.utter_message(res)
-        return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
+        # Collect dates of seminar in the corresponding city
+        if city in seminar["locations"]:
+            dates = seminar["locations"][city]
+            res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
+            dispatcher.utter_message(res)
+            return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
+
+        # Suggest closest seminar location if seminar not held in specified city 
+        else:
+            res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
+            next_loc = self.nextLocation(city,seminar_id)
+            if next_loc:
+                res += " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
+
+            buttons=[{'title': 'Yes', 'payload': "/bye}"},{'title': 'No', 'payload': '/negative'}]
+            dispatcher.utter_message(res)
+            dispatcher.utter_button_message("Do you agree with this location?", buttons)
+            return [SlotSet("location",next_loc)]
+
+    def nextLocation(self, city, seminar_id):
+    # Install Module geopy
+        from geopy.geocoders import Nominatim
+        from geopy import distance
+
+        geolocator = Nominatim(user_agent='myapplication')
+        loc_coordinates = []
+        loc_distance = {}
+        location = geolocator.geocode(city)
+
+         #calculate distance between user's preferred location and seminar locations
+        for loc in seminars[seminar_id]["locations"]:
+            sem_city = geolocator.geocode(loc)
+            loc_coordinates.append((sem_city.latitude, sem_city.longitude))
+            loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
+
+        next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
+
+        return next_loc
 
 class ActionProvidePrerequisites(Action):
     def name(self):
@@ -639,8 +656,7 @@ class SeminarForm(FormAction):
                                                            domain).items():
                 validate_func = getattr(self, "validate_{}".format(slot),
                                         lambda *x: value)
-                slot_values[slot] = validate_func(value, dispatcher, tracker, 
-                                                                                                                        domain)
+                slot_values[slot] = validate_func(value, dispatcher, tracker,domain)
 
             if not slot_values:
               # reject form action execution

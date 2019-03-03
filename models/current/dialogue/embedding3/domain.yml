@@ -32,7 +32,8 @@ actions:
 - utter_wrong_date
 - utter_book_somewhere_else
 - utter_do_something_else
-
+config:
+  store_entities_as_slots: true
 entities:
 - course
 - date-period
@@ -48,27 +49,42 @@ entities:
 forms:
 - seminar_form
 intents:
-- get_dates
-- inform
-- book_seminar
-- affirm
-- show_bookings
+- get_dates:
+    use_entities: true
+- inform:
+    use_entities: true
+- book_seminar:
+    use_entities: true
+- affirm:
+    use_entities: true
+- show_bookings:
+    use_entities: true
 - other_smalltalk:
     use_entities: false
-- welcome
-- thank
-- get_course_offering
-- get_location
+- welcome:
+    use_entities: true
+- thank:
+    use_entities: true
+- get_course_offering:
+    use_entities: true
+- get_location:
+    use_entities: true
 - negative:
     use_entities: false
-- get_description
-- get_prerequisites
-- get_level
+- get_description:
+    use_entities: true
+- get_prerequisites:
+    use_entities: true
+- get_level:
+    use_entities: true
 - bad:
     use_entities: false
-- get_help
-- bye
-- cancel_seminar
+- get_help:
+    use_entities: true
+- bye:
+    use_entities: true
+- cancel_seminar:
+    use_entities: true
 - introduction:
     use_entities: false
 - age:
@@ -77,65 +93,103 @@ intents:
     use_entities: false
 slots:
   booking-type:
-    type: categorical
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
     values:
     - upcoming
     - past
   booking_confirmed:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   cancellation_confirmed:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   course:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   date:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   date-period:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   dates:
-    type: list
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   display-option:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   employee_id:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   given-name:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   last-name:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   location:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   locations:
-    type: list
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   requested_slot:
-    type: categorical
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
     values:
     - date
     - location
     - course
   seminar_id:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   time:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   title:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   user-level:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   user_verified:
-    type: bool
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
 templates:
   utter_are_you_sure:
-  - text: Are you sure?
-    buttons:
-    - title: "yes"
-      payload: "yes"
-    - title: "no"
-      payload: "no"
+  - buttons:
+    - payload: 'yes'
+      title: 'yes'
+    - payload: 'no'
+      title: 'no'
+    text: Are you sure?
   utter_ask_continue:
-  - text: Do you want to continue?
-    buttons:
-    - title: "yes"
-      payload: "yes"
-    - title: "no"
-      payload: "no"
+  - buttons:
+    - payload: 'yes'
+      title: 'yes'
+    - payload: 'no'
+      title: 'no'
+    text: Do you want to continue?
   utter_ask_course:
   - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
@@ -150,18 +204,24 @@ templates:
   - text: Please give me your first and last name
   - text: Please provide your first and last name
   - text: Please tell me your first and last name
+  utter_book_somewhere_else:
+  - text: Do you want to book the seminar somewhere else? If yes, please specify the
+      location.
   utter_bye:
   - text: Goodbye
   utter_default:
   - text: Sorry, I didn't understand that.
+  utter_do_something_else:
+  - text: Can I do something else for you? Remember I can help you to book seminars,
+      show seminar bookings and get information about the seminar offering."
   utter_get_help:
-  - text: To get help, please reach out to helpdesk@company.com by mail or call +49
+  - buttons:
+    - payload: Call helpdesk
+      title: Call helpdesk
+    - payload: Write email
+      title: Write email
+    text: To get help, please reach out to helpdesk@company.com by mail or call +49
       621 66566.
-    buttons:
-    - title: "Call helpdesk"
-      payload: "Call helpdesk"
-    - title: "Write email"
-      payload: "Write email"
   utter_i''m sorry:
   - text: I am sorry I could not satisfy your request. Can I help you in any other
       way?
@@ -179,11 +239,6 @@ templates:
   utter_suggest_help:
   - text: Shall I forward you to the helpdesk?
   - text: Do you want to reach out to the helpdesk?
-  utter_do_something_else:
-  - text: Can I do something else for you? Remember I can help you to book seminars, show seminar bookings and get
-      information about the seminar offering."
-  utter_book_somewhere_else:
-  - text: Do you want to book the seminar somewhere else? If yes, please specify the location. 
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
