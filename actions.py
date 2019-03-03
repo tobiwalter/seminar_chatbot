@@ -27,7 +27,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -42,7 +43,7 @@ employees = employeesRef.get()
 bookings = bookingRef.get()
 seminars = seminarRef.get()
 counts = countRef.get()
-locale.setlocale(locale.LC_ALL, 'deu_deu')
+#locale.setlocale(locale.LC_ALL, 'deu_deu')
 
 class ActionShowBookings(Action):
 
@@ -401,7 +402,8 @@ class ActionProvideDescription(Action):
                   "color": "good",
                   "pretext": "You may be interested in this seminar ",
                   "title": seminar['title'],
-                  "title_link": seminar['url']}])
+                  "title_link": seminar['url'],
+                  "text": seminar['text']}])
             dispatcher.utter_attachment(attachment)
             return []
 
