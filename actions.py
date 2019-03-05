@@ -25,13 +25,8 @@ cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
-<<<<<<< HEAD
-    'databaseURL': 'https://seminar-b9c58.firebaseio.com/'
+		'databaseURL': 'https://seminar-b9c58.firebaseio.com/'
 })      
-=======
-	'databaseURL': 'https://seminar-b9c58.firebaseio.com/'
-})
->>>>>>> 4468ac4976d13596612e854785ab0229aee3c533
 
 seminarRef = db.reference('seminars')
 countRef = db.reference('counts')
@@ -309,128 +304,69 @@ class ActionCancelSeminar(Action):
 		city = tracker.get_slot('location')
 		seminar_date = tracker.get_slot('date')
 
-<<<<<<< HEAD
-        if not matchingID:
-            dispatcher.utter_message("You are not in the database. Please contact HR.")
-            return [SlotSet("cancellation_confirmed","False")]
-
-        # matching seminar ID
-          for j in range(len(seminars)):
-            breaker = False
-            for k in range(len(seminars[j]["description"])):
-                if seminars[j]["description"][k].lower() == course.lower():
-                    seminar_id = seminars[j]["seminar_id"]
-                    breaker = True
-                    break
-            if breaker:
-                break
-            
-        if 'seminar_id' not in locals(): ## can we change all these to if not 'seminar_id'?
-             dispatcher.utter_message("There is no seminar matching your request.")
-             return [SlotSet("cancellation_confirmed","False")]
-
-        #search for corresponding booking
-        breaker = False
-        for j in range(len(bookings)):
-            if "cancellation" not in bookings[j]:
-                if bookings[j]["employee_id"] == matchingID and bookings[j]["seminar_id"]== seminar_id and dateparser.parse(bookings[j]["date"]).date() > date.today():
-
-                    breaker_1 = True
-                    breaker_2 = True
-
-                    #check date in case user defined date
-                    if seminar_date:
-                        breaker_1 = (dateparser.parse(seminar_date).date() == dateparser.parse(bookings[j]["date"]).date())
-
-                    #check location in case user defined location
-                    if city:
-                        breaker_2 = city.lower() == bookings[j]["location"].lower()
-
-                    breaker = breaker_1 and breaker_2
-
-                if breaker:
-                    #cancel booking by deleting entries
-                    seminar_date = bookings[j]["date"]
-                    city = bookings[j]["location"]
-                    cancellation = "cancelled on " + str(date.today())
-                    bookingRef.update({
-                                str(j): {
-                                    'cancellation': cancellation
-                                }})
-=======
-		if matchingID is None:
+		if not matchingID:
 			dispatcher.utter_message("You are not in the database. Please contact HR.")
 			return [SlotSet("cancellation_confirmed","False")]
 
-#matching seminar ID
+				# matching seminar ID
 		for j in range(len(seminars)):
 			breaker = False
 			for k in range(len(seminars[j]["description"])):
-				if seminars[j]["description"][k].lower() == course.lower():
-					seminar_id = seminars[j]["seminar_id"]
-					breaker = True
-					break
+					if seminars[j]["description"][k].lower() == course.lower():
+							seminar_id = seminars[j]["seminar_id"]
+							breaker = True
+							break
 			if breaker:
-				break
+					break
 			
-		if 'seminar_id' not in locals():
-			 dispatcher.utter_message("There is no seminar matching your request.")
-			 return [SlotSet("cancellation_confirmed","False")]
+		if 'seminar_id' not in locals(): ## can we change all these to if not 'seminar_id'?
+				 dispatcher.utter_message("There is no seminar matching your request.")
+				 return [SlotSet("cancellation_confirmed","False")]
 
-		#search for corresponding booking
+				#search for corresponding booking
 		breaker = False
 		for j in range(len(bookings)):
-			if "cancellation" not in bookings[j]:
-				if bookings[j]["employee_id"] == matchingID and bookings[j]["seminar_id"]== seminar_id and dateparser.parse(bookings[j]["date"]).date() > date.today():
-					breaker_1 = True
-					breaker_2 = True
+				if "cancellation" not in bookings[j]:
+						if bookings[j]["employee_id"] == matchingID and bookings[j]["seminar_id"]== seminar_id and dateparser.parse(bookings[j]["date"]).date() > date.today():
 
-					#check date in case user defined date
-					if seminar_date:
-						breaker_1 = (dateparser.parse(seminar_date).date() == dateparser.parse(bookings[j]["date"]).date())
+								breaker_1 = True
+								breaker_2 = True
 
-					#check location in case user defined location
-					if city:
-						breaker_2 = city.lower() == bookings[j]["location"].lower()
+								#check date in case user defined date
+								if seminar_date:
+										breaker_1 = (dateparser.parse(seminar_date).date() == dateparser.parse(bookings[j]["date"]).date())
 
-					breaker = breaker_1 and breaker_2
+								#check location in case user defined location
+								if city:
+										breaker_2 = city.lower() == bookings[j]["location"].lower()
 
-				if breaker:
-					#cancel booking by deleting entries
-					seminar_date = bookings[j]["date"]
-					city = bookings[j]["location"]
-					cancellation = "cancelled on " + str(date.today())
-					bookingRef.update({
-								str(j): {
-									'cancellation': cancellation
-								}})
->>>>>>> 4468ac4976d13596612e854785ab0229aee3c533
+								breaker = breaker_1 and breaker_2
+
+						if breaker:
+								#cancel booking by deleting entries
+								seminar_date = bookings[j]["date"]
+								city = bookings[j]["location"]
+								cancellation = "cancelled on " + str(date.today())
+								bookingRef.update({
+														str(j): {
+																'cancellation': cancellation
+														}})
 #                    booking_count = len(bookings) - 1
 #                    countRef.update({"booking_count": booking_count})
-					occupancy = seminars[seminar_id]["occupancy"] - 1
+								occupancy = seminars[seminar_id]["occupancy"] - 1
 #                    TO-DO!! Updating occupancy does not work yet 
-<<<<<<< HEAD
-                    seminarRef.update({
-                    str(seminar_id) + '/occupancy': occupancy        
-                                })
-                    res = "Your seminar booking for {} on {} in {} has been cancelled. \
-                    You will receive a cancellation confirmation.".format(course, seminar_date, city)
-                    dispatcher.utter_message(res)
-                    return [SlotSet("cancellation_confirmed","True")]
-=======
-					seminarRef.update({
-					str(seminar_id) + '/occupancy': occupancy        
-								})
-					res = "Your seminar booking for " + course + " on " + seminar_date + " in " + city + " has been cancelled. You will receive a cancellation confirmation."
-					dispatcher.utter_message(res)
-					return [SlotSet("cancellation_confirmed","True")]
->>>>>>> 4468ac4976d13596612e854785ab0229aee3c533
+								seminarRef.update({
+								str(seminar_id) + '/occupancy': occupancy        
+														})
+								res = "Your seminar booking for {} on {} in {} has been cancelled. \
+								You will receive a cancellation confirmation.".format(course, seminar_date, city)
+								dispatcher.utter_message(res)
+								return [SlotSet("cancellation_confirmed","True")]
 
 		dispatcher.utter_message("You don't have bookings according to your request.")
 		return  [SlotSet("cancellation_confirmed","False")]
 
 class ActionProvideDescription(Action):
-<<<<<<< HEAD
 	def name(self):
 		"""returns name of the action """
 		return "action_provide_description"
@@ -457,11 +393,11 @@ class ActionProvideDescription(Action):
 			# {} \n".format(seminar["title"], seminar["text"])
 			# dispatcher.utter_message(res)
 			attachment = json.dumps([{"fallback": seminar['text'], #only if client doesn't show formatted text
-				  "color": "good",
-				  "pretext": "You may be interested in this seminar ",
-				  "title": seminar['title'],
-				  "title_link": seminar['url'],
-				  "text": seminar['text']}])
+					"color": "good",
+					"pretext": "You may be interested in this seminar ",
+					"title": seminar['title'],
+					"title_link": seminar['url'],
+					"text": seminar['text']}])
 			dispatcher.utter_attachment(attachment)
 			return []
 
@@ -469,46 +405,6 @@ class ActionProvideDescription(Action):
 			res = "We don't offer seminars that match your request."
 			dispatcher.utter_message(res)
 			return []
-=======
-    def name(self):
-        """returns name of the action """
-        return "action_provide_description"
-
-    def run(self, dispatcher, tracker, domain):
-        """ retrieves slot values """
-
-        course = tracker.get_slot('course').strip()
-        user_level = tracker.get_slot('user-level')
-
-        for j in range(len(seminars)):
-            breaker = False
-            for k in range(len(seminars[j]["description"])):
-                if seminars[j]["description"][k].lower() == course.lower():
-                    seminar_id = seminars[j]["seminar_id"]
-                    breaker = True
-                    break
-            if breaker:
-                break
-
-        if "seminar_id" in locals():
-            seminar = seminars[seminar_id]
-            # res = "The seminar {} is described as follows: \n \
-            # {} \n".format(seminar["title"], seminar["text"])
-            # dispatcher.utter_message(res)
-            attachment = json.dumps([{"fallback": seminar['text'], #only if client doesn't show formatted text
-                  "color": "good",
-                  "pretext": "You may be interested in this seminar ",
-                  "title": seminar['title'],
-                  "title_link": seminar['url'],
-                  "text": seminar['text']}])
-            dispatcher.utter_attachment(attachment)
-            return []
-
-        else:
-            res = "We don't offer seminars that match your request."
-            dispatcher.utter_message(res)
-            return []
->>>>>>> f28ac7ac680ad33e4dbd2802c4c485b7820a90aa
 
 class ActionDisplaySeminar (Action):
 	def name(self):
@@ -518,91 +414,54 @@ class ActionDisplaySeminar (Action):
 	def run(self, dispatcher, tracker, domain):
 		""" retrieves slot values """
 		
-## TO-DO: Implement scenario when user provides user-level variable 
-<<<<<<< HEAD
 		course = tracker.get_slot('course')
-
-#        If course given, display locations and dates of seminar
+		# If course given, display locations and dates of seminar
 		if course:
-			for j in range(len(seminars)):
-				breaker = False
-				for k in range(len(seminars[j]["description"])):
-					if seminars[j]["description"][k].lower() == course.lower():
-						seminar_id = seminars[j]["seminar_id"]
-						breaker = True
-						break
-				if breaker:
-					break
+				for j in range(len(seminars)):
+						breaker = False
+						for k in range(len(seminars[j]["description"])):
+								if seminars[j]["description"][k].lower() == course.lower():
+										seminar_id = seminars[j]["seminar_id"]
+										breaker = True
+										break
+						if breaker:
+								break
 
-			if "seminar_id" in locals():
-				seminar = seminars[seminar_id]
-				locs = seminar.get("locations")
-				res = "The seminar {} is offered at the following locations and dates: \n \n".format(seminar["title"])
-				res += '\n '.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
+				if "seminar_id" in locals():
+						seminar = seminars[seminar_id]
+						locs = seminar.get("locations")
+						res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
+						res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
 
-				dispatcher.utter_message(res)
-				return [SlotSet("locations", ', '.join(locs.keys())),
-						SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
+						dispatcher.utter_message(res)
+						return [SlotSet("locations", ', '.join(locs.keys())),
+										SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
 
-			else:
-				res = "We don't offer seminars in {}.".format(course)
-				#  possible to call actionCourseOffering here?
-				dispatcher.utter_message(res)
-				return []
+				else:
+						res = "We don't offer {} seminars.".format(course)
+						#  possible to call actionCourseOffering here?
+						dispatcher.utter_message(res)
+						return []
+
+		elif tracker.get_slot('location'):
+				city = tracker.get_slot('location').capitalize()
+				available_seminars = []
+				for j in range(len(seminars)):
+					if city.capitalize() in seminars[j]["locations"]:
+						available_seminars.append(seminars[j]["category"]) ## can also display available dates here
+
+				if len(available_seminars) != 0:
+					res = "We have seminars in the following categories in {} :\n{}".format(
+																		city.capitalize(), ', '.join(available_seminars))
+					dispatcher.utter_message(res)
+					return []
+				else: 
+					dispatcher.utter_message("There are no seminars offered in {}".format(city))
+					return []
 		else: 
-			dispatcher.utter_message("I did not understand the course you specified")
-			return []
-	
-=======
-        course = tracker.get_slot('course')
-        # If course given, display locations and dates of seminar
-        if course:
-            for j in range(len(seminars)):
-                breaker = False
-                for k in range(len(seminars[j]["description"])):
-                    if seminars[j]["description"][k].lower() == course.lower():
-                        seminar_id = seminars[j]["seminar_id"]
-                        breaker = True
-                        break
-                if breaker:
-                    break
+				dispatcher.utter_message("We do not offer courses in the category you specified.")
+				return []
 
-            if "seminar_id" in locals():
-                seminar = seminars[seminar_id]
-                locs = seminar.get("locations")
-                res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
-                res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
-
-                dispatcher.utter_message(res)
-                return [SlotSet("locations", ', '.join(locs.keys())),
-                        SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
-
-            else:
-                res = "We don't offer {} seminars.".format(course)
-                #  possible to call actionCourseOffering here?
-                dispatcher.utter_message(res)
-                return []
-
-        elif tracker.get_slot('location'):
-            city = tracker.get_slot('location').capitalize()
-            available_seminars = []
-            for j in range(len(seminars)):
-              if city.capitalize() in seminars[j]["locations"]:
-                available_seminars.append(seminars[j]["category"]) ## can also display available dates here
-
-            if len(available_seminars) != 0:
-              res = "We have seminars in the following categories in {} :\n{}".format(
-                                        city.capitalize(), ', '.join(available_seminars))
-              dispatcher.utter_message(res)
-              return []
-            else: 
-              dispatcher.utter_message("There are no seminars offered in {}".format(city))
-              return []
-        else: 
-            dispatcher.utter_message("We do not offer courses in the category you specified.")
-            return []
-
->>>>>>> f28ac7ac680ad33e4dbd2802c4c485b7820a90aa
 class ActionCourseOffering(Action):
 
 	def name(self):
@@ -692,128 +551,65 @@ class ActionDateButtons(Action):
 		return []
 
 class ActionQueryDate(Action):
+		def name(self):
+				"""returns name of the action """
+				return "action_query_date"
 
-<<<<<<< HEAD
-    def name(self):
-        """returns name of the action """
-        return "action_query_date"
+		def run(self, dispatcher, tracker, domain):
+				city = tracker.get_slot("location").capitalize()
+				course = tracker.get_slot("course")
 
-    def run(self, dispatcher, tracker, domain):
-        city = tracker.get_slot("location").capitalize()
-        course = tracker.get_slot("course")
+				for j in range(len(seminars)):
+						breaker = False
+						for k in range(len(seminars[j]["description"])):
+								if seminars[j]["description"][k].lower() == course.lower():
+										seminar_id = seminars[j]["seminar_id"]
+										breaker = True
+										break
+						if breaker:
+								break
 
-        for j in range(len(seminars)):
-            breaker = False
-            for k in range(len(seminars[j]["description"])):
-                if seminars[j]["description"][k].lower() == course.lower():
-                    seminar_id = seminars[j]["seminar_id"]
-                    breaker = True
-                    break
-            if breaker:
-                break
+				if "seminar_id" in locals():
+						seminar = seminars[seminar_id]
 
-        if "seminar_id" in locals():
-            seminar = seminars[seminar_id]
+				# Collect dates of seminar in the corresponding city
+				if city in seminar["locations"]:
+						dates = seminar["locations"][city]
+						res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
+						dispatcher.utter_message(res)
+						return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
 
-        # Collect dates of seminar in the corresponding city
-        if city in seminar["locations"]:
-            dates = seminar["locations"][city]
-            res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
-            dispatcher.utter_message(res)
-            return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
+				# Suggest closest seminar location if seminar not held in specified city 
+				else:
+						res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
+						next_loc = self.nextLocation(city,seminar_id)
+						if next_loc:
+								res += "But there is a seminar in {}.".format(next_loc)
 
-        # Suggest closest seminar location if seminar not held in specified city 
-        else:
-            res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
-            next_loc = self.nextLocation(city,seminar_id)
-            if next_loc:
-                res += "But there is a seminar in {}.".format(next_loc)
+						buttons=[{'title': 'Yes', 'payload': "/affirm}"},{'title': 'No', 'payload': '/negative'}]
+						dispatcher.utter_message(res)
+						dispatcher.utter_button_message("Do you agree with this location?", buttons)
+						return [SlotSet("location",next_loc)]
 
-            buttons=[{'title': 'Yes', 'payload': "/affirm}"},{'title': 'No', 'payload': '/negative'}]
-            dispatcher.utter_message(res)
-            dispatcher.utter_button_message("Do you agree with this location?", buttons)
-            return [SlotSet("location",next_loc)]
+		def nextLocation(self, city, seminar_id):
+		# Install Module geopy
+				from geopy.geocoders import Nominatim
+				from geopy import distance
 
-    def nextLocation(self, city, seminar_id):
-    # Install Module geopy
-        from geopy.geocoders import Nominatim
-        from geopy import distance
+				geolocator = Nominatim(user_agent='myapplication')
+				loc_coordinates = []
+				loc_distance = {}
+				location = geolocator.geocode(city)
 
-        geolocator = Nominatim(user_agent='myapplication')
-        loc_coordinates = []
-        loc_distance = {}
-        location = geolocator.geocode(city)
+				 #calculate distance between user's preferred location and seminar locations
+				for loc in seminars[seminar_id]["locations"]:
+						sem_city = geolocator.geocode(loc)
+						loc_coordinates.append((sem_city.latitude, sem_city.longitude))
+						loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
 
-         #calculate distance between user's preferred location and seminar locations
-        for loc in seminars[seminar_id]["locations"]:
-            sem_city = geolocator.geocode(loc)
-            loc_coordinates.append((sem_city.latitude, sem_city.longitude))
-            loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
+				next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
 
-        next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
-
-        return next_loc
-=======
-	def name(self):
-		"""returns name of the action """
-		return "action_query_date"
-
-	def run(self, dispatcher, tracker, domain):
-		city = tracker.get_slot("location").capitalize()
-		course = tracker.get_slot("course")
-
-		for j in range(len(seminars)):
-			breaker = False
-			for k in range(len(seminars[j]["description"])):
-				if seminars[j]["description"][k].lower() == course.lower():
-					seminar_id = seminars[j]["seminar_id"]
-					breaker = True
-					break
-			if breaker:
-				break
-
-		if "seminar_id" in locals():
-			seminar = seminars[seminar_id]
-
-		# Collect dates of seminar in the corresponding city
-		if city in seminar["locations"]:
-			dates = seminar["locations"][city]
-			res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
-			dispatcher.utter_message(res)
-			return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
-
-		# Suggest closest seminar location if seminar not held in specified city 
-		else:
-			res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
-			next_loc = self.nextLocation(city,seminar_id)
-			if next_loc:
-				res += " But there is a seminar in {}. Do you agree with this location?".format(next_loc)
-
-			buttons=[{'title': 'Yes', 'payload': "/bye}"},{'title': 'No', 'payload': '/negative'}]
-			dispatcher.utter_message(res)
-			dispatcher.utter_button_message("Do you agree with this location?", buttons)
-			return [SlotSet("location",next_loc)]
-
-	def nextLocation(self, city, seminar_id):
-	# Install Module geopy
-		from geopy.geocoders import Nominatim
-		from geopy import distance
-
-		geolocator = Nominatim(user_agent='myapplication')
-		loc_coordinates = []
-		loc_distance = {}
-		location = geolocator.geocode(city)
-
-		 #calculate distance between user's preferred location and seminar locations
-		for loc in seminars[seminar_id]["locations"]:
-			sem_city = geolocator.geocode(loc)
-			loc_coordinates.append((sem_city.latitude, sem_city.longitude))
-			loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude))
-
-		next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
-
-		return next_loc
->>>>>>> 4468ac4976d13596612e854785ab0229aee3c533
+				return next_loc
 
 class ActionProvidePrerequisites(Action):
 	def name(self):
@@ -891,7 +687,7 @@ class SeminarForm(FormAction):
 
 	@staticmethod
 	def required_slots(tracker):
-	   
+		 
 		if tracker.get_slot('time'):
 			return ["location"]
 		else:
@@ -901,7 +697,7 @@ class SeminarForm(FormAction):
 		return {"date": [self.from_entity(entity="date", intent= ["book_seminar","inform"]),
 				self.from_entity(entity="time", intent=["book_seminar", "inform"])],
 				"location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
-   
+	 
 	@staticmethod 
 	def is_date(val):
 		isDate = False
@@ -909,7 +705,7 @@ class SeminarForm(FormAction):
 			if isinstance(dateparser.parse(val),datetime):
 				isDate = True
 				return isDate
-		   
+			 
 	@staticmethod         
 	def loc_in_database(val,tracker):
 		seminar_id = tracker.get_slot("seminar_id")
@@ -931,21 +727,21 @@ class SeminarForm(FormAction):
 		slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
 		if slot_to_fill:
 			for slot, value in self.extract_requested_slot(dispatcher,
-														   tracker,
-														   domain).items():
+															 tracker,
+															 domain).items():
 				validate_func = getattr(self, "validate_{}".format(slot),
 										lambda *x: value)
 				slot_values[slot] = validate_func(value, dispatcher, tracker,domain)
 
 			if not slot_values:
-			  # reject form action execution
-			  # if some slot was requested but nothing was extracted
-			  # it will allow other policies to predict another action
+				# reject form action execution
+				# if some slot was requested but nothing was extracted
+				# it will allow other policies to predict another action
 				raise ActionExecutionRejection(self.name(),
 											 "Failed to validate slot {0} "
 											 "with action {1}"
 											 "".format(slot_to_fill,
-													   self.name()))
+														 self.name()))
 		# we'll check when validation failed in order
 		# to add appropriate utterances
 		for slot, value in slot_values.items():
