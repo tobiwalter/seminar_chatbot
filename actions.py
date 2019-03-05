@@ -367,6 +367,7 @@ class ActionCancelSeminar(Action):
 		return  [SlotSet("cancellation_confirmed","False")]
 
 class ActionProvideDescription(Action):
+<<<<<<< HEAD
 	def name(self):
 		"""returns name of the action """
 		return "action_provide_description"
@@ -405,6 +406,46 @@ class ActionProvideDescription(Action):
 			res = "We don't offer seminars that match your request."
 			dispatcher.utter_message(res)
 			return []
+=======
+    def name(self):
+        """returns name of the action """
+        return "action_provide_description"
+
+    def run(self, dispatcher, tracker, domain):
+        """ retrieves slot values """
+
+        course = tracker.get_slot('course').strip()
+        user_level = tracker.get_slot('user-level')
+
+        for j in range(len(seminars)):
+            breaker = False
+            for k in range(len(seminars[j]["description"])):
+                if seminars[j]["description"][k].lower() == course.lower():
+                    seminar_id = seminars[j]["seminar_id"]
+                    breaker = True
+                    break
+            if breaker:
+                break
+
+        if "seminar_id" in locals():
+            seminar = seminars[seminar_id]
+            # res = "The seminar {} is described as follows: \n \
+            # {} \n".format(seminar["title"], seminar["text"])
+            # dispatcher.utter_message(res)
+            attachment = json.dumps([{"fallback": seminar['text'], #only if client doesn't show formatted text
+                  "color": "good",
+                  "pretext": "You may be interested in this seminar ",
+                  "title": seminar['title'],
+                  "title_link": seminar['url'],
+                  "text": seminar['text']}])
+            dispatcher.utter_attachment(attachment)
+            return []
+
+        else:
+            res = "We don't offer seminars that match your request."
+            dispatcher.utter_message(res)
+            return []
+>>>>>>> f28ac7ac680ad33e4dbd2802c4c485b7820a90aa
 
 class ActionDisplaySeminar (Action):
 	def name(self):
@@ -415,6 +456,7 @@ class ActionDisplaySeminar (Action):
 		""" retrieves slot values """
 		
 ## TO-DO: Implement scenario when user provides user-level variable 
+<<<<<<< HEAD
 		course = tracker.get_slot('course')
 
 #        If course given, display locations and dates of seminar
@@ -448,6 +490,57 @@ class ActionDisplaySeminar (Action):
 			dispatcher.utter_message("I did not understand the course you specified")
 			return []
 	
+=======
+        course = tracker.get_slot('course')
+        city = tracker.get_slot('location').capitalize()
+
+        # If course given, display locations and dates of seminar
+        if course:
+            for j in range(len(seminars)):
+                breaker = False
+                for k in range(len(seminars[j]["description"])):
+                    if seminars[j]["description"][k].lower() == course.lower():
+                        seminar_id = seminars[j]["seminar_id"]
+                        breaker = True
+                        break
+                if breaker:
+                    break
+
+            if "seminar_id" in locals():
+                seminar = seminars[seminar_id]
+                locs = seminar.get("locations")
+                res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
+                res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
+
+                dispatcher.utter_message(res)
+                return [SlotSet("locations", ', '.join(locs.keys())),
+                        SlotSet("title", seminar["title"]), SlotSet("seminar_id", seminar_id)]
+
+            else:
+                res = "We don't offer {} seminars.".format(course)
+                #  possible to call actionCourseOffering here?
+                dispatcher.utter_message(res)
+                return []
+
+        elif city:
+            available_seminars = []
+            for j in range(len(seminars)):
+              if city in seminars[j]["locations"]:
+                available_seminars.append(seminars[j]["category"]) ## can also display available dates here
+
+            if len(available_seminars) != 0:
+              res = "We have seminars in the following categories in {} :\n{}".format(city, 
+                                                  ', '.join(available_seminars))
+              dispatcher.utter_message(res)
+              return []
+            else: 
+              dispatcher.utter_message("There are no seminars offered in {}".format(city))
+              return []
+        else: 
+            dispatcher.utter_message("We do not offer courses in the category you specified.")
+            return []
+
+>>>>>>> f28ac7ac680ad33e4dbd2802c4c485b7820a90aa
 class ActionCourseOffering(Action):
 
 	def name(self):
