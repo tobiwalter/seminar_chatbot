@@ -56,8 +56,8 @@ class ActionShowBookings(Action):
 
 	#    Find booked seminars depending on params given
 		if 'matchingID' in locals():
-			# global bookingRef  #= db.reference('bookings')
-			# global bookings ##= bookingRef.get()
+			bookingRef = db.reference('bookings')
+			bookings = bookingRef.get()
 			bookedSeminars = set([])
 
 	#   Check for booking type and add seminars accordingly
@@ -509,8 +509,8 @@ class ActionLocationButtons(Action):
 
 		for loc in locations:
 			loc = loc.strip()
-			buttons.append({'title': loc, 'payload': "/inform{'location': " + loc.capitalize() + "}"})
-		
+			buttons.append({'title': loc, 'payload': "/inform{\"location\":\""+ loc.capitalize()+"\"}"})
+			# buttons.append({'title': loc, 'payload': loc})
 		dispatcher.utter_button_message("", buttons)
 		return []
 
@@ -545,7 +545,7 @@ class ActionDateButtons(Action):
 		buttons=[]
 
 		for d in dates:
-			buttons.append({'title': d, 'payload': "/inform{'date': " + d + "}"})
+			buttons.append({'title': d, 'payload': "/inform{\"date\":\"" + d + "\"}"})
 		
 		dispatcher.utter_button_message("", buttons)
 		return []
@@ -571,13 +571,20 @@ class ActionQueryDate(Action):
 
 				if "seminar_id" in locals():
 						seminar = seminars[seminar_id]
-
 				# Collect dates of seminar in the corresponding city
 				if city in seminar["locations"]:
-						dates = seminar["locations"][city]
-						res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
-						dispatcher.utter_message(res)
-						return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
+					dates = seminar["locations"][city]
+
+					buttons=[]
+
+					for d in dates:
+						buttons.append({'title': d, 'payload': "/inform{\"date\":\"" + d + "\"}"})  
+						
+					res = "In {} the seminar takes place on those dates: {}".format(city, ", ".join(dates))
+					dispatcher.utter_message(res)
+					dispatcher.utter_button_message("When do you want to take it?", buttons)
+				
+					return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
 
 				# Suggest closest seminar location if seminar not held in specified city 
 				else:
@@ -586,7 +593,7 @@ class ActionQueryDate(Action):
 						if next_loc:
 								res += "But there is a seminar in {}.".format(next_loc)
 
-						buttons=[{'title': 'Yes', 'payload': "/affirm}"},{'title': 'No', 'payload': '/negative'}]
+						buttons=[{'title': 'Yes', 'payload': "/affirm"},{'title': 'No', 'payload': '/negative'}]
 						dispatcher.utter_message(res)
 						dispatcher.utter_button_message("Do you agree with this location?", buttons)
 						return [SlotSet("location",next_loc)]
@@ -634,7 +641,6 @@ class ActionProvidePrerequisites(Action):
 			if breaker:
 				break
 		dispatcher.utter_message(", ".join(prqs))
-		return []
 	
 class ActionQueryLevel(Action):
 	def name(self):
@@ -715,6 +721,52 @@ class SeminarForm(FormAction):
 		else:
 			return False 
 
+	# @staticmethod
+	# def locationButtons(dispatcher,tracker):
+	#   locations = tracker.get_slot('locations')
+
+	#   buttons=[]
+	#   locations = locations.split(",")
+
+	#   for loc in locations:
+	#     loc = loc.strip()
+	#     # buttons.append({'title': loc, 'payload': "/inform{\"location\":\""+ loc.capitalize()+"\"}"})
+	#     buttons.append({'title': loc, 'payload': loc})
+	#     dispatcher.utter_button_message("", buttons)
+	#     return []
+
+	# @staticmethod
+	# def dateButtons(dispatcher,tracker):
+	#   location = tracker.get_slot("location").capitalize()
+	#   course = tracker.get_slot("course")
+
+	#   for j in range(len(seminars)):
+	#     breaker = False
+	#     for k in range(len(seminars[j]["description"])):
+	#       if seminars[j]["description"][k].lower() == course.lower():
+	#         seminar_id = seminars[j]["seminar_id"]
+	#         breaker = True
+	#         break
+	#     if breaker:
+	#       break
+
+	#   if "seminar_id" in locals():
+	#     seminar = seminars[seminar_id]
+
+	#   if location in seminar["locations"]:
+	#     dates = seminar["locations"][location]
+	#   else:
+	#     dates = []
+
+	#   buttons=[]
+
+	#   for d in dates:
+	#     buttons.append({'title': d, 'payload': "/inform{\"date\":\"" + d + "\"}"})
+		
+	#   dispatcher.utter_button_message("", buttons)
+	#   return []
+
+
 	def validate(self, dispatcher, tracker, domain):
 		"""Validate extracted requested slot
 			else reject the execution of the form action
@@ -763,13 +815,18 @@ class SeminarForm(FormAction):
 	def request_next_slot(self, dispatcher, tracker, domain):
 		for slot in self.required_slots(tracker):
 			if self._should_request_slot(tracker, slot):
+				# logger.debug("Request next slot '{}'".format(slot))
 				dispatcher.utter_template("utter_ask_{}".format(slot), tracker)
 				if slot == "location":
 					ActionLocationButtons().run(dispatcher, tracker, domain)
+					# self.locationButtons(dispatcher, tracker)
 					return [SlotSet(REQUESTED_SLOT, slot)]
 				elif slot == "date":
 					ActionDateButtons().run(dispatcher, tracker, domain)
+					# self.dateButtons(dispatcher, tracker)
 					return [SlotSet(REQUESTED_SLOT, slot)]
+
+		# logger.debug("No slots left to request")
 		return None
 
 	def submit(self, dispatcher, tracker, domain):
