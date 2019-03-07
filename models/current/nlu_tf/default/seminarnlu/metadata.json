@@ -6,6 +6,11 @@
             "class": "rasa_nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer"
         },
         {
+            "name": "intent_entity_featurizer_regex",
+            "regex_file": "regex_featurizer.json",
+            "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer"
+        },
+        {
             "BILOU_flag": true,
             "features": [
                 [
@@ -61,11 +66,6 @@
             "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer"
         },
         {
-            "name": "intent_entity_featurizer_regex",
-            "regex_file": "regex_featurizer.json",
-            "class": "rasa_nlu.featurizers.regex_featurizer.RegexFeaturizer"
-        },
-        {
             "num_hidden_layers_a": 2,
             "hidden_layer_size_a": [
                 256,
@@ -73,7 +73,10 @@
             ],
             "num_hidden_layers_b": 0,
             "hidden_layer_size_b": [],
-            "batch_size": 64,
+            "batch_size": [
+                64,
+                256
+            ],
             "epochs": 400,
             "embed_dim": 20,
             "mu_pos": 0.8,
@@ -84,11 +87,17 @@
             "C2": 0.002,
             "C_emb": 0.8,
             "droprate": 0.2,
-            "intent_tokenization_flag": false,
-            "intent_split_symbol": "_",
-            "evaluate_every_num_epochs": 10,
-            "evaluate_on_num_examples": 1000,
+            "intent_tokenization_flag": true,
+            "intent_split_symbol": "+",
+            "evaluate_every_num_epochs": 20,
+            "evaluate_on_num_examples": 200,
             "name": "intent_classifier_tensorflow_embedding",
+            "hidden_layers_sizes_a": [
+                256,
+                128
+            ],
+            "hidden_layers_sizes_b": [],
+            "random_seed": "None",
             "classifier_file": "intent_classifier_tensorflow_embedding.ckpt",
             "class": "rasa_nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
         },
@@ -104,6 +113,6 @@
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20190302-113936",
+    "trained_at": "20190305-211004",
     "rasa_nlu_version": "0.13.8"
 }

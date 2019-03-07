@@ -1339,6 +1339,1341 @@
       },
       {
         "intent": "introduction",
+        "text": "tell me some stuff about you"
+      },
+      {
+        "intent": "introduction",
+        "text": "talk some stuff about yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "I want to know you better"
+      },
+      {
+        "intent": "introduction",
+        "text": "I want to know more about you"
+      },
+      {
+        "intent": "introduction",
+        "text": "who are you"
+      },
+      {
+        "intent": "introduction",
+        "text": "tell me about yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "tell me about you"
+      },
+      {
+        "intent": "introduction",
+        "text": "about yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "describe yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "introduce yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "say about you"
+      },
+      {
+        "intent": "introduction",
+        "text": "what are you"
+      },
+      {
+        "intent": "introduction",
+        "text": "define yourself"
+      },
+      {
+        "intent": "introduction",
+        "text": "what is your personality"
+      },
+      {
+        "intent": "introduction",
+        "text": "all about you"
+      },
+      {
+        "intent": "introduction",
+        "text": "tell me about your personality"
+      },
+      {
+        "intent": "introduction",
+        "text": "why are you here"
+      },
+      {
+        "intent": "introduction",
+        "text": "talk about yourself"
+      },
+      {
+        "intent": "age",
+        "text": "tell me your age"
+      },
+      {
+        "intent": "age",
+        "text": "what's your age"
+      },
+      {
+        "intent": "age",
+        "text": "your age"
+      },
+      {
+        "intent": "age",
+        "text": "age of yours"
+      },
+      {
+        "intent": "age",
+        "text": "how old are you"
+      },
+      {
+        "intent": "age",
+        "text": "I'd like to know your age"
+      },
+      {
+        "intent": "age",
+        "text": "are you 21 years old"
+      },
+      {
+        "intent": "age",
+        "text": "how old is your platform"
+      },
+      {
+        "intent": "bad",
+        "text": "pretty bad"
+      },
+      {
+        "intent": "bad",
+        "text": "not good enough"
+      },
+      {
+        "intent": "bad",
+        "text": "that was lame"
+      },
+      {
+        "intent": "bad",
+        "text": "that was terrible"
+      },
+      {
+        "intent": "bad",
+        "text": "it is bad"
+      },
+      {
+        "intent": "bad",
+        "text": "that's bad"
+      },
+      {
+        "intent": "bad",
+        "text": "this is bad"
+      },
+      {
+        "intent": "bad",
+        "text": "not good"
+      },
+      {
+        "intent": "bad",
+        "text": "I'm afraid it's bad"
+      },
+      {
+        "intent": "bad",
+        "text": "no it's bad"
+      },
+      {
+        "intent": "bad",
+        "text": "that was awful"
+      },
+      {
+        "intent": "bad",
+        "text": "bad"
+      },
+      {
+        "intent": "bad",
+        "text": "so bad"
+      },
+      {
+        "intent": "bad",
+        "text": "this is too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "terrible"
+      },
+      {
+        "intent": "bad",
+        "text": "horrible"
+      },
+      {
+        "intent": "bad",
+        "text": "horrific"
+      },
+      {
+        "intent": "bad",
+        "text": "abysmal"
+      },
+      {
+        "intent": "bad",
+        "text": "it's bad"
+      },
+      {
+        "intent": "bad",
+        "text": "no good"
+      },
+      {
+        "intent": "bad",
+        "text": "that was bad"
+      },
+      {
+        "intent": "bad",
+        "text": "that was horrible"
+      },
+      {
+        "intent": "bad",
+        "text": "that's lame"
+      },
+      {
+        "intent": "bad",
+        "text": "that's not good"
+      },
+      {
+        "intent": "bad",
+        "text": "that's terrible"
+      },
+      {
+        "intent": "bad",
+        "text": "that's too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "this is not good"
+      },
+      {
+        "text": "too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "very bad"
+      },
+      {
+        "intent": "bad",
+        "text": "bad girl"
+      },
+      {
+        "intent": "bad",
+        "text": "it's not good"
+      },
+      {
+        "intent": "bad",
+        "text": "not so good"
+      },
+      {
+        "intent": "bad",
+        "text": "it's very bad"
+      },
+      {
+        "intent": "bad",
+        "text": "it's too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "that's not good enough"
+      },
+      {
+        "intent": "bad",
+        "text": "well too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "bad very bad"
+      },
+      {
+        "intent": "bad",
+        "text": "it's so bad"
+      },
+      {
+        "intent": "bad",
+        "text": "really bad"
+      },
+      {
+        "intent": "bad",
+        "text": "it's really bad"
+      },
+      {
+        "intent": "bad",
+        "text": "bad idea"
+      },
+      {
+        "intent": "bad",
+        "text": "that is bad"
+      },
+      {
+        "intent": "bad",
+        "text": "that was not good"
+      },
+      {
+        "intent": "bad",
+        "text": "it's not so good"
+      },
+      {
+        "intent": "bad",
+        "text": "not a good one"
+      },
+      {
+        "intent": "bad",
+        "text": "oh that's not good"
+      },
+      {
+        "intent": "bad",
+        "text": "not too good"
+      },
+      {
+        "intent": "bad",
+        "text": "so lame"
+      },
+      {
+        "intent": "bad",
+        "text": "that's really bad"
+      },
+      {
+        "intent": "bad",
+        "text": "it is too bad"
+      },
+      {
+        "intent": "bad",
+        "text": "bad really bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you're not helping me"
+      },
+      {
+        "intent": "bad",
+        "text": "you are bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you're very bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you're really bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you are useless"
+      },
+      {
+        "intent": "bad",
+        "text": "you are horrible"
+      },
+      {
+        "intent": "bad",
+        "text": "you are a waste of time"
+      },
+      {
+        "intent": "bad",
+        "text": "you are disgusting"
+      },
+      {
+        "intent": "bad",
+        "text": "you are lame"
+      },
+      {
+        "intent": "bad",
+        "text": "you are no good"
+      },
+      {
+        "intent": "bad",
+        "text": "you're bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you're awful"
+      },
+      {
+        "intent": "bad",
+        "text": "you are not cool"
+      },
+      {
+        "intent": "bad",
+        "text": "you are not good"
+      },
+      {
+        "intent": "bad",
+        "text": "you are so bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you are so useless"
+      },
+      {
+        "intent": "bad",
+        "text": "you are terrible"
+      },
+      {
+        "intent": "bad",
+        "text": "you are totally useless"
+      },
+      {
+        "intent": "bad",
+        "text": "you are very bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you are waste"
+      },
+      {
+        "intent": "bad",
+        "text": "you're a bad"
+      },
+      {
+        "intent": "bad",
+        "text": "you're not a good"
+      },
+      {
+        "intent": "bad",
+        "text": "you're not very good"
+      },
+      {
+        "intent": "bad",
+        "text": "you're terrible"
+      },
+      {
+        "intent": "bad",
+        "text": "you're the worst"
+      },
+      {
+        "intent": "bad",
+        "text": "you're the worst ever"
+      },
+      {
+        "intent": "bad",
+        "text": "you're worthless"
+      },
+      {
+        "intent": "well_done",
+        "text": "good"
+      },
+      {
+        "intent": "well_done",
+        "text": "great job"
+      },
+      {
+        "intent": "well_done",
+        "text": "way to good"
+      },
+      {
+        "intent": "well_done",
+        "text": "well done"
+      },
+      {
+        "intent": "well_done",
+        "text": "nice work"
+      },
+      {
+        "intent": "well_done",
+        "text": "great work"
+      },
+      {
+        "intent": "well_done",
+        "text": "amazing work"
+      },
+      {
+        "intent": "well_done",
+        "text": "bravo"
+      },
+      {
+        "intent": "well_done",
+        "text": "good work"
+      },
+      {
+        "intent": "stop",
+        "text": "ok then you cant help me"
+      },
+      {
+        "intent": "stop",
+        "text": "that was shit, you're not helping"
+      },
+      {
+        "intent": "stop",
+        "text": "you can't help me"
+      },
+      {
+        "intent": "stop",
+        "text": "you can't help me with what i need"
+      },
+      {
+        "intent": "stop",
+        "text": "i guess you can't help me then"
+      },
+      {
+        "intent": "stop",
+        "text": "ok i guess you can't help me"
+      },
+      {
+        "intent": "stop",
+        "text": "that's not what i want"
+      },
+      {
+        "intent": "stop",
+        "text": "ok, but that doesnt help me"
+      },
+      {
+        "intent": "stop",
+        "text": "this is leading to nothing"
+      },
+      {
+        "intent": "stop",
+        "text": "this conversation is not really helpful"
+      },
+      {
+        "intent": "stop",
+        "text": "you cannot help me with what I want"
+      },
+      {
+        "intent": "stop",
+        "text": "I think you cant help me"
+      },
+      {
+        "intent": "stop",
+        "text": "hm i don't think you can do what i want"
+      },
+      {
+        "intent": "stop",
+        "text": "stop"
+      },
+      {
+        "intent": "stop",
+        "text": "stop go back"
+      },
+      {
+        "intent": "stop",
+        "text": "do you get anything?"
+      },
+      {
+        "intent": "stop",
+        "text": "and you call yourself bot company? pff"
+      },
+      {
+        "intent": "stop",
+        "text": "and that's it?"
+      },
+      {
+        "intent": "stop",
+        "text": "nothing else?"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your birth date"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "when is your birthday"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "when do you celebrate your birthday"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "when do you have birthday"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "date of your birthday"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "when were you born"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's your birthday"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who is your boss"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who do you think is your boss"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I should be your boss"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who is your master"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who is your owner"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who is the boss"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "who do you work forv"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you have a lot of things to do"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "have you got much to do"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you very busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you very busy right now"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you so busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you working"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how busy you are"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you still working on it"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're very busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you working now"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you working today"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "have you been busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you still working"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you seem to be busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you seem to be very busy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're a busy person"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're very happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're really happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're so happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how happy you are"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're extremely happy"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're full of happiness"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you happy now"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you happy today"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you happy with me"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what do you do for fun"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's your hobby"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "tell me about your hobby"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you have a hobby"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what about your hobby"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your hobby"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what are your hobbies"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you want to eat"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "would you like to eat something"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're so hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're very hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you might be hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're really hungry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "let's get married"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "would you like to marry me"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "marry me"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I love you marry me"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "marry me please"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "we should marry"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want to marry you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my wife"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "be my husband"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want to have a friend like you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "we are the best friends ever"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are we friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want to be your friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I am your friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "we are best friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my bestie"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're my dear friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you're my childhood friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you and me are friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are we best friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are we still friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "we are friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are a good friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my good friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "you are my only friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "will you be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "can you be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "can we be friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you want to be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "will you be my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "can you be my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "let's be friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you want to be my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "would you like to be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want you to be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "can we be best friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "would you be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "could you be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "want to be my friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "be my best friend"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "can we be best friends"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "do you work"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where do you work"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where you work"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your work"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your office"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your office location"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your office location"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your office located"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your work"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "were you born here"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where were you born"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your country"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where are you from"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where do you come from"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where did you come from"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where have you been born"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "from where are you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you from far aways"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's your homeland"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where do you live"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "in which city do you live"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your residence"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your house"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your home"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your hometown"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your hometown"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "is it your hometown"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your hometown"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "tell me about your city"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your city"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your residence"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is your town"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's your city"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's your home"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your home"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where is your residence"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where's your home"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where's your hometown"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where's your house"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "where you live"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your city"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "your town"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your morning so far"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you getting on"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how's your day going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "is everything all right"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you doing"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are the things going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you alright"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you okay"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you feeling"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "is everything okay"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you today"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how do you do"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how do you feel"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how have you been"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is it"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is it going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your day"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your day going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your evening"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how was your day"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "are you having a good day"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "hope your day is going well"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "hope you re having a pleasant evening"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how's life"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I'm fine and you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your life"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how has your day been"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your morning going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how has your day been going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how about you"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your day being"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your day going on"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how your day is going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what was your day like"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what about your day"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how's your day"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how are you doing this morning"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "how is your day going"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is on your mind"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's happened"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "whazzup"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "good what's up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I said what's up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "then what's up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's shaking"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "wassup"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is going on"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what is happening"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's cracking"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's cooking"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "hey what's up"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "what's up today"
+      },
+      {
+        "intent": "introduction",
         "text": "- tell me some stuff about you"
       },
       {
@@ -4073,18 +5408,6 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 38,
-            "end": 47,
-            "value": "November.",
-            "entity": "date-period"
-          }
-        ],
-        "text": "I want to participate in a seminar in November."
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
             "start": 23,
             "end": 31,
             "value": "tomorrow",
@@ -4092,30 +5415,6 @@
           }
         ],
         "text": "Is there a seminar for tomorrow I can book?"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 22,
-            "end": 31,
-            "value": "Frankfurt",
-            "entity": "location"
-          }
-        ],
-        "text": "Is there a seminar in Frankfurt I can book?"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 27,
-            "end": 33,
-            "value": "Munich",
-            "entity": "location"
-          }
-        ],
-        "text": "The seminar should be near Munich."
       },
       {
         "intent": "book_seminar",
@@ -4264,7 +5563,7 @@
             "start": 36,
             "end": 45,
             "value": "beginners",
-            "entity": "userlevel"
+            "entity": "user-level"
           }
         ],
         "text": "Do you have Programming courses for beginners?"
@@ -4296,6 +5595,510 @@
           }
         ],
         "text": "I need more information about Machine Learning"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 57,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in Machine Learning"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 43,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in ML"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 53,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in Data Science"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 52,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in programming"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 47,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in Python"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 42,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in R"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 45,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in Java"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 49,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in rhetoric"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 54,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in communication"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 51,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in persuasion"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 46,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in excel"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 52,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in negotiation"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 51,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in leadership"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 51,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in management"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 59,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in data visualization"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 41,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in "
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 43,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the Machine Learning workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 29,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the ML workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 39,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the Data Science workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 38,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the programming workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the Python workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 28,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the R workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the Java workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the rhetoric workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the communication workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 37,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the persuasion workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 32,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the excel workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 38,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the negotiation workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 37,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the leadership workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 37,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the management workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 45,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the data visualization workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 27,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "What can I expect from the  workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this seminar?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this course?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this workshop?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 31,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this class?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this lecture?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this lab?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this coding lab?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 35,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this hackathon?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 42,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this coding challenge?"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ],
+        "text": "What will I learn in this case study?"
       },
       {
         "intent": "get_course_offering",
@@ -7365,18 +9168,6 @@
       },
       {
         "intent": "cancel_seminar",
-        "entities": [
-          {
-            "start": 20,
-            "end": 20,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "I need to cancel my  seminar"
-      },
-      {
-        "intent": "cancel_seminar",
         "text": "I have to cancel my training"
       },
       {
@@ -8506,18 +10297,6 @@
         "entities": [
           {
             "start": 19,
-            "end": 19,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "I want to book the  seminar"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 19,
             "end": 35,
             "value": "Machine Learning",
             "entity": "course"
@@ -8530,24 +10309,6 @@
           }
         ],
         "text": "I want to book the Machine Learning seminar for beginners"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 19,
-            "end": 35,
-            "value": "Machine Learning",
-            "entity": "course"
-          },
-          {
-            "start": 48,
-            "end": 57,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ],
-        "text": "I want to book the Machine Learning seminar for newcomers"
       },
       {
         "intent": "book_seminar",
@@ -8578,48 +10339,12 @@
           },
           {
             "start": 48,
-            "end": 54,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ],
-        "text": "I want to book the Machine Learning seminar for laymen"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 19,
-            "end": 35,
-            "value": "Machine Learning",
-            "entity": "course"
-          },
-          {
-            "start": 48,
             "end": 60,
             "value": "beginners",
             "entity": "user-level"
           }
         ],
         "text": "I want to book the Machine Learning seminar for first timers"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 19,
-            "end": 35,
-            "value": "Machine Learning",
-            "entity": "course"
-          },
-          {
-            "start": 48,
-            "end": 60,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ],
-        "text": "I want to book the Machine Learning seminar for never before"
       },
       {
         "intent": "book_seminar",
@@ -8674,24 +10399,6 @@
           }
         ],
         "text": "I want to book the Machine Learning seminar for proficient"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 19,
-            "end": 35,
-            "value": "Machine Learning",
-            "entity": "course"
-          },
-          {
-            "start": 48,
-            "end": 59,
-            "value": "proficient",
-            "entity": "user-level"
-          }
-        ],
-        "text": "I want to book the Machine Learning seminar for experienced"
       },
       {
         "intent": "book_seminar",
@@ -12529,18 +14236,6 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 24,
-            "end": 24,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "Let me register for the  course please"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
             "start": 21,
             "end": 37,
             "value": "Machine Learning",
@@ -13693,24 +15388,6 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 17,
-            "end": 17,
-            "value": "",
-            "entity": "course"
-          },
-          {
-            "start": 28,
-            "end": 37,
-            "value": "Frankfurt",
-            "entity": "location"
-          }
-        ],
-        "text": "Register for the  course in Frankfurt"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
             "start": 23,
             "end": 39,
             "value": "Machine Learning",
@@ -13886,24 +15563,6 @@
           }
         ],
         "text": "I want to register for persuasion on the 26th of July"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 23,
-            "end": 23,
-            "value": "",
-            "entity": "course"
-          },
-          {
-            "start": 31,
-            "end": 43,
-            "value": "26th of July",
-            "entity": "date"
-          }
-        ],
-        "text": "I want to register for  on the 26th of July"
       },
       {
         "intent": "book_seminar",
@@ -14161,18 +15820,6 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 27,
-            "end": 27,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "Make a reservation for the  seminar"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
             "start": 32,
             "end": 48,
             "value": "Machine Learning",
@@ -14288,18 +15935,6 @@
           }
         ],
         "text": "Please add me to the seminar in persuasion"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 32,
-            "end": 32,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "Please add me to the seminar in "
       },
       {
         "intent": "book_seminar",
@@ -14485,24 +16120,6 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 23,
-            "end": 23,
-            "value": "",
-            "entity": "course"
-          },
-          {
-            "start": 27,
-            "end": 36,
-            "value": "Stuttgart",
-            "entity": "location"
-          }
-        ],
-        "text": "I want to register for  in Stuttgart"
-      },
-      {
-        "intent": "book_seminar",
-        "entities": [
-          {
             "start": 16,
             "end": 22,
             "value": "Munich",
@@ -14661,18 +16278,6 @@
         "intent": "get_description",
         "entities": [
           {
-            "start": 30,
-            "end": 30,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "I need more information about "
-      },
-      {
-        "intent": "get_description",
-        "entities": [
-          {
             "start": 12,
             "end": 28,
             "value": "Machine Learning",
@@ -14788,18 +16393,6 @@
           }
         ],
         "text": "What is the persuasion course about"
-      },
-      {
-        "intent": "get_description",
-        "entities": [
-          {
-            "start": 12,
-            "end": 12,
-            "value": "",
-            "entity": "course"
-          }
-        ],
-        "text": "What is the  course about"
       },
       {
         "intent": "get_description",
@@ -14944,18 +16537,6 @@
           }
         ],
         "text": "Can you give me some more information about the ML course?"
-      },
-      {
-        "intent": "get_description",
-        "entities": [
-          {
-            "start": 60,
-            "end": 72,
-            "value": "Machine Learning",
-            "entity": "course"
-          }
-        ],
-        "text": "Can you give me some more information about the Data Science course?"
       },
       {
         "intent": "get_description",
@@ -18850,6 +20431,666 @@
         "text": "In which cities is the data visualization workshop offered?"
       },
       {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the Python seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 20,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the R seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the Java seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the rhetoric seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 32,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the communication seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 30,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the negotiation seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the leadership seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the management seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 19,
+            "end": 37,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book the data visualization seminar. When does it take place?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 24,
+            "end": 40,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does the course in Machine Learning take place? I want to book it."
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 24,
+            "end": 26,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does the course in ML take place? I want to book it."
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 24,
+            "end": 36,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "When does the course in Data Science take place? I want to book it."
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 24,
+            "end": 34,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "When does the course in management take place? I want to book it."
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 24,
+            "end": 42,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "When does the course in data visualization take place? I want to book it."
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the Machine Learning seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 23,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the ML seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the Data Science seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the programming seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the Python seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 22,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the R seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the Java seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the rhetoric seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 39,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the data visualization seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 21,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "I'd like to book the  seminar. What are the dates?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 25,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend rhetoric. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 30,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend communication. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend persuasion. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend excel. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend negotiation. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend leadership. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend management. When is it possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the excel seminar. Where is it offered?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the negotiation seminar. Where is it offered?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the leadership seminar. Where is it offered?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the management seminar. Where is it offered?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the ML course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 47,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the Data Science course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 46,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the programming course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the Python course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the R course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the Java course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 45,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the management course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 35,
+            "end": 53,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "I would like to participate in the data visualization course. Where is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the Machine Learning seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 23,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the ML seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the Data Science seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the programming seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the excel seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the negotiation seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the leadership seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the management seminar. At what locations is this possible?"
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the Java seminar. Tell me where I can do that please."
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the rhetoric seminar. Tell me where I can do that please."
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 34,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the communication seminar. Tell me where I can do that please."
+      },
+      {
+        "intent": "book_seminar+get_location",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to attend the persuasion seminar. Tell me where I can do that please."
+      },
+      {
         "intent": "introduction",
         "text": "tell me some stuff about you"
       },
@@ -19518,6 +21759,558 @@
         "text": "What do I need to know for the seminar?"
       },
       {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 48,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for Machine Learning?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 34,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for ML?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for Data Science?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 43,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for programming?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for Python?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 33,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for R?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for Java?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for rhetoric?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 45,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for communication?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for persuasion?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 37,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for excel?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 43,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for negotiation?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for leadership?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for management?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 50,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for data visualization?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 32,
+            "end": 32,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "Are there any prerequisites for ?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 46,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for Machine Learning?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 32,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for ML?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 42,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for Data Science?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for programming?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for Python?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for R?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for Java?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for rhetoric?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 43,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for communication?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for persuasion?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 35,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for excel?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for negotiation?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for leadership?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for management?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 48,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for data visualization?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 30,
+            "end": 30,
+            "value": "",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills are necessary for ?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 50,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the Machine Learning seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 36,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the ML seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 46,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the Data Science seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 45,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the programming seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 40,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the Python seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 35,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the R seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 38,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the Java seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 42,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the rhetoric seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 47,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the communication seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 44,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the persuasion seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 39,
+            "value": "excel",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the excel seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 45,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the negotiation seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 44,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the leadership seminar?"
+      },
+      {
+        "intent": "get_prerequisites",
+        "entities": [
+          {
+            "start": 34,
+            "end": 44,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "What skills do I need to join the management seminar?"
+      },
+      {
         "intent": "get_course_offering",
         "entities": [
           {
@@ -19578,18 +22371,6 @@
         "text": "I want to take part in the Excel workshop"
       },
       {
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 13,
-            "end": 16,
-            "value": "all ",
-            "entity": "display-option"
-          }
-        ],
-        "text": "Can you show all my bookings now"
-      },
-      {
         "intent": "inform",
         "entities": [
           {
@@ -19607,7 +22388,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric ",
+            "value": "rhetoric",
             "entity": "course"
           }
         ],
@@ -19623,7 +22404,7 @@
           {
             "start": 24,
             "end": 32,
-            "value": "rhetoric ",
+            "value": "rhetoric",
             "entity": "course"
           }
         ],
@@ -19688,8 +22469,8 @@
         "entities": [
           {
             "start": 22,
-            "end": 29,
-            "value": "Cologne ",
+            "end": 28,
+            "value": "Cologne",
             "entity": "location"
           }
         ],
@@ -19790,6 +22571,157 @@
       {
         "intent": "get_course_offering",
         "text": "Which courses can I take?"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to get a spot in the programming seminar"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to get a slot in the programming seminar"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 29,
+            "end": 40,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to get a place in the programming seminar"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 41,
+            "end": 57,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the seminar in Machine Learning"
+      },
+      {
+        "entities": [
+          {
+            "start": 30,
+            "end": 38,
+            "value": "workshop",
+            "entity": "course-type"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Please tell me more about the workshop in Excel"
+      },
+      {
+        "intent": "show_bookings",
+        "text": "Display my booked seminars"
+      },
+      {
+        "intent": "show_bookings",
+        "text": "Tell me which seminars I booked so far "
+      },
+      {
+        "intent": "show_bookings",
+        "text": "Tell me which courses I booked so far "
+      },
+      {
+        "intent": "show_bookings",
+        "text": "Can you tell me which seminars I booked so far?"
+      },
+      {
+        "intent": "show_bookings",
+        "text": "Can you tell me which courses I booked so far?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "Tim",
+            "entity": "given-name"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Ferris",
+            "entity": "last-name"
+          }
+        ],
+        "text": "My name is Tim Ferris"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "Roger",
+            "entity": "given-name"
+          },
+          {
+            "start": 11,
+            "end": 18,
+            "value": "Federer",
+            "entity": "last-name"
+          }
+        ],
+        "text": "I am Roger Federer"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 8,
+            "value": "Seth",
+            "entity": "given-name"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "value": "Rogen",
+            "entity": "last-name"
+          }
+        ],
+        "text": "I'm Seth Rogen"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ],
+        "text": "I want to take it in Munich"
       }
     ],
     "regex_features": [],
@@ -19809,7 +22741,12 @@
           "persuasion",
           "negotation",
           "leadership",
-          "data visualization"
+          "data visualization",
+          "tableau",
+          "math",
+          "deep learning",
+          "storytelling",
+          "business english"
         ]
       }
     ],
@@ -19844,11 +22781,21 @@
         ]
       },
       {
+        "value": "presentation",
+        "synonyms": [
+          "storytelling",
+          "public speaking",
+          "giving a speech"
+        ]
+      },
+      {
         "value": "Machine Learning",
         "synonyms": [
           "ML",
           "Data Science",
-          "Big Data"
+          "Big Data",
+          "Data Mining",
+          "Statistics"
         ]
       },
       {
@@ -19857,6 +22804,13 @@
           "Python",
           "R",
           "Java"
+        ]
+      },
+      {
+        "value": "deep learning",
+        "synonyms": [
+          "neural networks",
+          "deep networks"
         ]
       },
       {
@@ -19871,6 +22825,13 @@
           "Communcation",
           "Persuasion",
           "Influence"
+        ]
+      },
+      {
+        "value": "math",
+        "synonyms": [
+          "linear algebra",
+          "calculus"
         ]
       },
       {

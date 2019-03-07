@@ -1,0 +1,126 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "last-name",
+        "title",
+        "requested_slot",
+        "time",
+        "course",
+        "seminar_id",
+        "locations",
+        "display-option",
+        "date-period",
+        "user-level",
+        "date",
+        "location",
+        "given-name"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "title",
+        "requested_slot",
+        "seminar_id",
+        "locations",
+        "date",
+        "location"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "employee_id",
+        "user_verified"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "location",
+        "date",
+        "requested_slot",
+        "time"
+      ]
+    },
+    "utter_no_chitchat": {
+      "slots": [
+        "location",
+        "date",
+        "requested_slot"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "location",
+        "date",
+        "booking_confirmed"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "dates",
+        "title",
+        "requested_slot",
+        "seminar_id",
+        "location",
+        "date"
+      ]
+    },
+    "action_query_level": {
+      "slots": [
+        "location",
+        "date",
+        "requested_slot"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "location",
+        "date"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "cancellation_confirmed"
+      ]
+    },
+    "action_provide_description": {
+      "slots": [
+        "location",
+        "date",
+        "requested_slot"
+      ]
+    },
+    "action_provide_prerequisites": {
+      "slots": [
+        "location",
+        "date",
+        "requested_slot"
+      ]
+    },
+    "action_deactivate_form": {
+      "slots": [
+        "requested_slot"
+      ]
+    },
+    "utter_introduction": {
+      "slots": [
+        "date",
+        "requested_slot"
+      ]
+    }
+  },
+  "rasa_core": "0.12.4",
+  "python": "3.6.6",
+  "max_histories": [
+    null,
+    null,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190306-214722"
+}

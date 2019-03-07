@@ -2,49 +2,62 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "requested_slot",
-        "display-option",
-        "course",
-        "seminar_id",
         "given-name",
         "date",
-        "last-name",
-        "location",
-        "dates",
         "user-level",
-        "time",
-        "date-period",
+        "course",
         "locations",
-        "title"
+        "time",
+        "title",
+        "seminar_id",
+        "location",
+        "display-option",
+        "last-name",
+        "date-period"
       ]
     },
     "action_verify_user": {
       "slots": [
-        "user_verified",
-        "employee_id"
+        "employee_id",
+        "user_verified"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "date",
+        "location"
       ]
     },
     "action_display_seminar": {
       "slots": [
+        "seminar_id",
         "title",
-        "requested_slot",
-        "locations",
-        "seminar_id"
+        "locations"
       ]
     },
     "seminar_form": {
       "slots": [
-        "location",
-        "time",
         "requested_slot",
-        "date"
+        "date",
+        "location",
+        "time"
       ]
     },
     "action_book_seminar": {
       "slots": [
         "date",
-        "booking_confirmed",
-        "location"
+        "location",
+        "booking_confirmed"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "date",
+        "requested_slot",
+        "title",
+        "seminar_id",
+        "location",
+        "dates"
       ]
     },
     "action_cancel_seminar": {
@@ -53,25 +66,7 @@
       ]
     },
     "action_deactivate_form": {
-      "slots": [
-        "requested_slot"
-      ]
-    },
-    "action_query_date": {
-      "slots": [
-        "requested_slot",
-        "seminar_id",
-        "date",
-        "location",
-        "dates",
-        "title"
-      ]
-    },
-    "action_show_bookings": {
-      "slots": [
-        "date",
-        "location"
-      ]
+      "slots": []
     }
   },
   "rasa_core": "0.12.4",
@@ -87,5 +82,5 @@
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190303-001912"
+  "trained_at": "20190307-173912"
 }

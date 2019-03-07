@@ -6,6 +6,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"2"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## show_bookings_location_specified 
 * show_bookings{"location":"Frankfurt"}
@@ -15,6 +17,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"0"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## show_bookings_on_specific_date
 * show_bookings{"date":"5th of November"}
@@ -24,6 +28,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"13"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## showBookingsInPeriod_firstFail_thenSuccess
 * show_bookings{"date-period":"this year"}
@@ -35,6 +41,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"18"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## showBookings_then_getInformation
 * show_bookings{"location":"Berlin"}
@@ -44,6 +52,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"421"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -62,6 +72,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"15"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## story19
 * show_bookings
@@ -82,7 +94,9 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 7}
     - action_show_bookings
-
+    - slot{"date": null}
+    - slot{"location": null}
+	
 ## show_the_next_booking
 * show_bookings{"display-option":"next"}
 	- utter_ask_name
@@ -91,6 +105,8 @@
 	- slot{"user_verified": "True"}
     - slot{"employee_id": 10}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}	
 
 ## Generated Story 5145335876734410380
 * show_bookings{"location": "Berlin"}
@@ -103,6 +119,8 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 10}
     - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## Generated Story -3630320044724628870
 * show_bookings{"location": "Cologne"}
@@ -115,6 +133,8 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 4}
     - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## Generated Story 261112219490772306
 * show_bookings{"course-type": "seminars"}
@@ -156,6 +176,8 @@
 	- slot{"user_verified": "True"}
     - slot{"employee_id": 48}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## show_bookings in period
 * show_bookings{"date-period":"January"}
@@ -165,6 +187,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"10"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## Generated Story -5392053354662535431
 * show_bookings

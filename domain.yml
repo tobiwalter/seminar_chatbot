@@ -1,60 +1,62 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_course
-- action_course_offering
-- utter_i''m sorry
-- action_show_bookings
 - utter_no_worries
-- utter_get_help
+- utter_submit
+- action_show_bookings
+- utter_i''m sorry
 - action_provide_description
-- utter_bye
-- action_book_seminar
-- utter_try_again
+- utter_do_something_else
+- utter_get_help
+- utter_ask_continue
 - action_cancel_seminar
-- action_query_level
-- utter_ask_date
-- action_provide_prerequisites
-- utter_are_you_sure
+- utter_ask_course_cancel
+- utter_book_somewhere_else
+- utter_ask_name
 - utter_suggest_help
 - action_display_seminar
-- utter_no_chitchat
-- utter_ask_name
+- utter_ask_course_book
+- action_query_level
 - utter_introduction
-- utter_wrong_location
-- action_query_date
+- utter_bye
 - utter_welcome
-- utter_ask_continue
-- action_verify_user
-- utter_submit
-- action_provide_datesWithLocation
+- utter_are_you_sure
+- utter_try_again
+- utter_no_chitchat
+- action_course_offering
 - utter_ask_location
 - utter_wrong_date
-- utter_book_somewhere_else
-- utter_do_something_else
-
+- action_provide_prerequisites
+- action_verify_user
+- utter_ask_date
+- action_book_seminar
+- utter_wrong_location
+- action_provide_datesWithLocation
+- action_query_date
 entities:
-- course
-- date-period
+- null
 - last-name
-- display-option
 - date
-- given-name
 - time
 - location
 - course-type
 - booking-type
-- user-level
+- course
+- given-name
+- display-option
+- date-period
 forms:
 - seminar_form
 intents:
-- get_dates
-- inform
-- book_seminar
-- affirm
-- show_bookings
 - other_smalltalk:
     use_entities: false
+- book_seminar
+- inform
+- get_dates
+- book_seminar+get_dates
+- book_seminar+get_location
+- affirm
+- show_bookings
 - welcome
 - thank
 - get_course_offering
@@ -106,11 +108,7 @@ slots:
   locations:
     type: list
   requested_slot:
-    type: categorical
-    values:
-    - date
-    - location
-    - course
+    type: unfeaturized
   seminar_id:
     type: text
   time:
@@ -123,22 +121,24 @@ slots:
     type: bool
 templates:
   utter_are_you_sure:
-  - text: Are you sure?
-    buttons:
-    - title: "yes"
-      payload: "yes"
-    - title: "no"
-      payload: "no"
+  - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Are you sure?
   utter_ask_continue:
-  - text: Do you want to continue?
-    buttons:
-    - title: "yes"
-      payload: "yes"
-    - title: "no"
-      payload: "no"
-  utter_ask_course:
+  - buttons:
+    - payload: 'yes'
+      title: 'yes'
+    - payload: 'no'
+      title: 'no'
+    text: Do you want to continue?
+  utter_ask_course_book:
   - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
+  utter_ask_course_cancel:
+  - text: In which category?
   utter_ask_date:
   - text: On which date do you want to take the {course} seminar?
   - text: When do you want to take the {course} seminar?
@@ -150,18 +150,24 @@ templates:
   - text: Please give me your first and last name
   - text: Please provide your first and last name
   - text: Please tell me your first and last name
+  utter_book_somewhere_else:
+  - text: Do you want to book the seminar somewhere else? If yes, please specify the
+      location.
   utter_bye:
   - text: Goodbye
   utter_default:
   - text: Sorry, I didn't understand that.
+  utter_do_something_else:
+  - text: Can I do something else for you? Remember I can help you to book seminars,
+      show seminar bookings and get information about the seminar offering.
   utter_get_help:
-  - text: To get help, please reach out to helpdesk@company.com by mail or call +49
+  - buttons:
+    - payload: Call helpdesk
+      title: Call helpdesk
+    - payload: Write email
+      title: Write email
+    text: To get help, please reach out to helpdesk@company.com by mail or call +49
       621 66566.
-    buttons:
-    - title: "Call helpdesk"
-      payload: "Call helpdesk"
-    - title: "Write email"
-      payload: "Write email"
   utter_i''m sorry:
   - text: I am sorry I could not satisfy your request. Can I help you in any other
       way?
@@ -179,11 +185,6 @@ templates:
   utter_suggest_help:
   - text: Shall I forward you to the helpdesk?
   - text: Do you want to reach out to the helpdesk?
-  utter_do_something_else:
-  - text: Can I do something else for you? Remember I can help you to book seminars, show seminar bookings and get
-      information about the seminar offering."
-  utter_book_somewhere_else:
-  - text: Do you want to book the seminar somewhere else? If yes, please specify the location. 
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:

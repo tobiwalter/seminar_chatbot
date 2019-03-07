@@ -1,4 +1,4 @@
-## show_bookings_then_cancel_seminar_then_book_seminar
+## 	
 * show_bookings
 	- utter_ask_name
 * inform{"given-name":"Tim","last-name":"Miller"}
@@ -6,6 +6,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"91"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -83,6 +85,8 @@
     - slot{"location": null}
 * show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * cancel_seminar{"course":"Excel"}
 	- utter_are_you_sure
 * affirm
@@ -142,6 +146,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"952"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * cancel_seminar{"course":"rhetoric"}
 	- utter_are_you_sure
 * affirm
@@ -196,6 +202,8 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 2}
     - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * book_seminar{"course": "machine learning"}
     - slot{"course": "machine learning"}
     - action_display_seminar
@@ -231,6 +239,8 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 7}
     - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * get_course_offering
     - action_course_offering
 * book_seminar{"course":"rhetoric"}
@@ -299,6 +309,8 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 10}
     - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * book_seminar{"course": "rhetoric"}
     - slot{"course": "rhetoric"}
     - action_display_seminar
@@ -344,7 +356,7 @@
     - slot{"last-name": "Garcia"}
     - seminar_form
     - form{"name": "seminar_form"}
-	- form{"name": "null"}
+	- form{"name": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
 * get_help
@@ -445,7 +457,7 @@
 	- slot{"cancellation_confirmed":"True"}
 * book_seminar
 	- action_course_offering
-	- utter_ask_course
+	- utter_ask_course_book
 * inform{"course":"Programming"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -460,6 +472,8 @@
     - slot{"location": null}
 * show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## cancel_then show bookings
 * cancel_seminar{"course":"rhetoric"}
@@ -474,6 +488,8 @@
 	- slot{"cancellation_confirmed":"True"}
 *show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
@@ -488,6 +504,9 @@
 	- slot{"cancellation_confirmed":"True"}
 * show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	
 * book_seminar{"course":"Data Science"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -509,6 +528,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"91"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * book_seminar{"course":"Machine Learning"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -528,6 +549,8 @@
 	- slot{"cancellation_confirmed":"True"}
 * show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 	
 ## show_book_cancel
 * show_bookings
@@ -537,6 +560,8 @@
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"91"}
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
 * book_seminar{"course":"Machine Learning"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -580,85 +605,9 @@
 	- slot{"cancellation_confirmed":"True"}
 * show_bookings	
 	- action_show_bookings
-	
-## Get dates in middle of seminar_form
-* book_seminar
-    - action_course_offering
-    - utter_ask_course
-* inform{"course": "leadership"}
-    - slot{"course": "leadership"}
-    - action_display_seminar
-	- slot{"seminar_id":"4"}
-    - slot{"locations": "Cologne, Frankfurt, Stuttgart"}
-    - slot{"title": "Leadership Behaviour"}
-    - seminar_form
-    - form{"name": "seminar_form"}
-    - slot{"requested_slot": "location"}
-* form: inform{"location": "Cologne"}
-    - slot{"location": "Cologne"}
-    - form: seminar_form
-    - slot{"location": "Cologne"}
-    - slot{"requested_slot": "date"}
-* get_dates
-    - action_query_date
-    - slot{"dates": "22/02/19, 24/02/19, 24/03/19"}
-	- slot{"title": "blabla"}
-    - seminar_form
-    - slot{"requested_slot": "date"}
-* form: inform{"date": "22/02/19"}
-    - slot{"date": "22/02/19"}
-    - form: seminar_form
-    - slot{"date": "22/02/19"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - action_book_seminar
-    - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
-
-## Generated Story 7980597511259212919
-* book_seminar{"course": "Machine Learning"}
-    - slot{"course": "Machine Learning"}
-    - utter_ask_name
-* inform{"given-name": "Max", "last-name": "Smith"}
-    - slot{"given-name": "Max"}
-    - slot{"last-name": "Smith"}
-    - action_verify_user
-    - slot{"user_verified": "True"}
-    - slot{"employee_id": 2}
-    - action_display_seminar
-	- slot{"seminar_id":"4"}
-    - slot{"locations": "Berlin, Frankfurt, Munich"}
-    - slot{"title": "Machine Learning"}
-    - slot{"seminar_id": 1}
-    - seminar_form
-    - form{"name": "seminar_form"}
-    - slot{"requested_slot": "location"}
-* form: inform{"location": "Frankfurt"}
-    - slot{"location": "Frankfurt"}
-    - form: seminar_form
-    - slot{"location": "Frankfurt"}
-    - slot{"requested_slot": "date"}
-* get_level
-    - action_query_level
-    - action_listen
-    - seminar_form
-    - slot{"requested_slot": "date"}
-* get_dates
-    - action_query_date
-    - slot{"dates": "24/03/19, 02/04/19"}
-	- slot{"title": "blabla"}
-    - seminar_form
-    - slot{"requested_slot": "date"}
-* form: inform{"date": "24/03/19"}
-    - slot{"date": "24/03/19"}
-    - form: seminar_form
-    - slot{"date": "24/03/19"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - action_book_seminar
-    - slot{"booking_confirmed": "False"}
-	
+		
 ## course_offering & booking a seminar - verification fails
 * get_course_offering
 	- action_course_offering
@@ -675,8 +624,73 @@
     - utter_suggest_help
 * affirm
     - utter_get_help
+	
+## story20
+* show_bookings
+	- utter_ask_name
+* inform{"given-name":"Tim","last-name":"Miller"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"952"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+* cancel_seminar{"course":"rhetoric"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+* get_course_offering
+	- action_course_offering
+* book_seminar{"course":"Data Science"}
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Machine Learning"}
+	- seminar_form
+	- form{"name":"seminar_form"}
+	- form{"name":null}
+	- action_book_seminar
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+    - slot{"location": null}
+	
+## show_book_cancel with get_course_offering
+* show_bookings
+	- utter_ask_name
+* inform{"given-name":"Tim","last-name":"Miller"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"91"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+* get_course_offering
+	- action_course_offering
+* book_seminar{"course":"Machine Learning"}
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Python for beginners"}
+	- seminar_form
+	- form{"name":"seminar_form"}
+	- form{"name":null}
+	- action_book_seminar 
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+    - slot{"location": null}
+* cancel_seminar{"course":"programming"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+
+	
+
+	
 
 
+ 
 
 
 	

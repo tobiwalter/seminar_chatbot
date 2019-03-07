@@ -130,7 +130,7 @@
 * get_dates{"course":"programming","location":"Berlin"}
 	- action_query_date
 	- slot{"dates":"12/02/19"}
-	- slot{"title": "blabla"}
+	- slot{"title": " "}
 
 ## query date when location already given
 * get_course_offering
