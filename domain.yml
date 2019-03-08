@@ -129,9 +129,9 @@ templates:
     text: Are you sure?
   utter_ask_continue:
   - buttons:
-    - payload: 'yes'
+    - payload: /affirm
       title: 'yes'
-    - payload: 'no'
+    - payload: /negative
       title: 'no'
     text: Do you want to continue?
   utter_ask_course_book:
@@ -183,8 +183,12 @@ templates:
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
   utter_suggest_help:
-  - text: Shall I forward you to the helpdesk?
-  - text: Do you want to reach out to the helpdesk?
+    - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Do you want to reach out to the helpdesk?
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
