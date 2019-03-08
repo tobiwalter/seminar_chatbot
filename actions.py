@@ -21,8 +21,8 @@ import json
 
 # Fetch the service account key JSON file contents
 
-#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -380,7 +380,7 @@ class ActionCancelSeminar(Action):
 								seminarRef.update({
 								str(seminar_id) + '/occupancy': occupancy        
 														})
-								res = "Your seminar booking for {} on {} in {} has been cancelled. \n \
+								res = "Your seminar booking for {} on {} in {} has been cancelled. \
 								You will receive a cancellation confirmation.".format(course, seminar_date, city)
 								dispatcher.utter_message(res)
 								return [SlotSet("cancellation_confirmed","True"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
@@ -611,7 +611,7 @@ class ActionQueryDate(Action):
 						if next_loc:
 								res += "But there is a seminar in {}.".format(next_loc)
 
-						buttons=[{'title': 'Yes', 'payload': "/affirm}"},{'title': 'No', 'payload': '/negative'}]
+						buttons=[{'title': 'Yes', 'payload': "/affirm"},{'title': 'No', 'payload': '/negative'}]
 						dispatcher.utter_message(res)
 						dispatcher.utter_button_message("Do you agree with this location?", buttons)
 						return [SlotSet("location",next_loc)]
