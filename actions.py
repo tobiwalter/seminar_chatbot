@@ -483,6 +483,44 @@ class ActionDisplaySeminar (Action):
 				else: 
 					dispatcher.utter_message("There are no seminars offered in {}".format(city))
 					return []
+
+# 		elif tracker.get_slot('date'):
+# 				sem_date = tracker.get_slot('date')
+# 				if isinstance(time, dict):
+# 					start = dateparser.parse(time["from"]).date()
+# 					end = dateparser.parse(time["to"]).date()
+# 				else: 
+# 					start = dateparser.parse(time)
+# 					if "week" in date_period:
+# 						end = start + relativedelta(days = 7)
+# 					elif "month" in date_period:
+# 						end = start + relativedelta(day=31)
+# 					elif "year" in date_period:
+# 						end = start + relativedelta(day=365)
+
+# 			#   If bookings between start and end, add them to the list of matched seminars
+
+# 				available_seminars = []
+# 				for i in range(len(seminars)):
+# 					for loc in seminars[i]["locations"]:
+# 						for d in loc:
+# 							if start <= pytz.utc.localize(dateparser.parse(d),settings={'DATE_ORDER': 'DMY'}) <= end:
+# 								sem = "{} on {} in {}.".format(seminars[i]["title"], loc[j],loc)
+# 								available_seminars.add(sem)
+
+# # possible with Python list comprehension?
+# 				for i in range(len(seminars)):
+# 					available_seminars = [("{} on {} in {}.".format(seminars[i]["title"], loc[j],loc)) for d in loc for loc in seminars[i]["locations"] if start <= pytz.utc.localize(dateparser.parse(d),settings={'DATE_ORDER': 'DMY'}) <= end]
+
+# 				if len(available_seminars) != 0:
+# 					res = "We offer seminars in the following categories in the specified period:\n{}".format(
+# 						', '.join(available_seminars))
+# 					dispatcher.utter_message(res)
+# 					return []
+# 				else: 
+# 					dispatcher.utter_message("There are no seminars offered in the given period.")
+# 					return []
+				
 		else: 
 				dispatcher.utter_message("We do not offer courses in the category you specified.")
 				return []
@@ -536,6 +574,7 @@ class ActionLocationButtons(Action):
 			loc = loc.strip()
 			buttons.append({'title': loc, 'payload': "/inform{\"location\":\""+ loc.capitalize()+"\"}"})
 			# buttons.append({'title': loc, 'payload': loc})
+		buttons.append({'title' : 'None of those', 'payload' : "/negative"})
 		dispatcher.utter_button_message("", buttons)
 		return []
 
@@ -571,7 +610,7 @@ class ActionDateButtons(Action):
 
 		for d in dates:
 			buttons.append({'title': d, 'payload': "/inform{\"date\":\"" + d + "\"}"})
-
+		buttons.append({'title':'I can\'t on those dates', 'payload' : '/negative'})
 		dispatcher.utter_button_message("", buttons)
 		return []
 
