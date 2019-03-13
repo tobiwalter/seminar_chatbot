@@ -471,8 +471,11 @@ class ActionDisplaySeminar (Action):
 						if seminar["locations"][loc][i]["occupancy"] < seminar["capacity"]:
 							dates[loc].append(seminar["locations"][loc][i]["date"])
 
-					dates[loc] = sorted(dates[loc], key=lambda x: datetime.strptime(x, '%d/%m/%y'))
+					if len(dates[loc]) > 0:
+						dates[loc] = sorted(dates[loc], key=lambda x: datetime.strptime(x, '%d/%m/%y'))
 
+				#do not display locations that are fully booked for all dates
+				dates = dict( [(k,v) for k,v in dates.items() if len(v)>0])
 				res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
 				res += '\n'.join(["{:10}: {}".format(key, ', '.join(value)) for key, value in dates.items()])
 
@@ -559,10 +562,10 @@ class ActionLocationButtons(Action):
 
 			loc_occupancy = sorted(loc_occupancy.items(), key=lambda x: x[1])
 			for x in list(loc_occupancy)[0:3]:
-				buttons.append({'title': x[0], 'payload': "/inform{'location': " + x[0].capitalize() + "}"})
+				buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
 
 			buttons.append({'title': "other location", 'payload': "/inform"})
-			dispatcher.utter_button_message("", buttons)
+			dispatcher.utter_button_message("Please select a button:", buttons)
 		return []
 
 class ActionDateButtons(Action):
@@ -601,11 +604,11 @@ class ActionDateButtons(Action):
 
 				date_occupancy = sorted(date_occupancy.items(), key=lambda x: x[1])
 				for x in list(date_occupancy)[0:2]:
-					buttons.append({'title': x[0], 'payload': "/inform{'date': " + x[0] + "}"})
+					buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
 
 				buttons.append({'title': "other date", 'payload': "/inform"})
 			
-			dispatcher.utter_button_message("", buttons)
+			dispatcher.utter_button_message("Please select a button:", buttons)
 		return []
 
 class ActionQueryDate(Action):
