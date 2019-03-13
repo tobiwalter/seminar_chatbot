@@ -70,15 +70,16 @@ class ActionShowBookings(Action):
 					if "cancellation" not in bookings[i]:
 						if dateparser.parse(bookings[i]["date"]).date() < date.today():
 							if bookings[i]["employee_id"] == matchingID:
-								sem = bookings[i]["seminar_title"] + " on "
-								+ bookings[i]["date"] + " in " + bookings[i]["location"]
+								sem = "{} on {} in {}".format(bookings[i]["seminar_title"], bookings[i]["date"],
+									bookings[i]["location"])
 								bookedSeminars.add(sem)
 			elif bookingtype == 'upcoming':
 				for i in range(len(bookings)):
 					if "cancellation" not in bookings[i]:
 						if dateparser.parse(bookings[i]["date"]).date() >= date.today():
 							if  bookings[i]["employee_id"] == matchingID:
-								sem = bookings[i]["seminar_title"] + " on " + bookings[i]["date"] + " in " + bookings[i]["location"]
+								sem = "{} on {} in {}.".format(bookings[i]["seminar_title"], bookings[i]["date"],
+									bookings[i]["location"])
 								bookedSeminars.add(sem)
 			else:
 				for i in range(len(bookings)):
@@ -131,7 +132,8 @@ class ActionShowBookings(Action):
 						dateNext = dateparser.parse(temp).date()
 						num = i
 
-		return bookings[num]["seminar_title"]
+		return "{} on {} in {}.".format(bookings[num]["seminar_title"],bookings[num]["date"],
+			bookings[num]["location"])
 
 
 	def showBookingsOnGivenDate(self,seminar_date,bookedSeminars,matchingID):
@@ -431,7 +433,7 @@ class ActionProvideDescription(Action):
 			dispatcher.utter_message(res)
 			return []
 
-class ActionDisplaySeminar (Action):
+class ActionDisplaySeminar(Action):
 	def name(self):
 		"""returns name of the action """
 		return "action_display_seminar"
@@ -456,7 +458,8 @@ class ActionDisplaySeminar (Action):
 						seminar = seminars[seminar_id]
 						locs = seminar.get("locations")
 						res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
-						res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in locs.items()])
+						res += '\n'.join(["{:10}: {:<10}".format(key, ''.join(locs[key][i]['date'])) for key in locs.keys()
+        						for i in range(len(locs[key]))])
 
 						dispatcher.utter_message(res)
 						return [SlotSet("locations", ', '.join(locs.keys())),
