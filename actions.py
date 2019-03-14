@@ -69,15 +69,16 @@ class ActionShowBookings(Action):
 					if "cancellation" not in bookings[i]:
 						if dateparser.parse(bookings[i]["date"]).date() < date.today():
 							if bookings[i]["employee_id"] == matchingID:
-								sem = bookings[i]["seminar_title"] + " on "
-								+ bookings[i]["date"] + " in " + bookings[i]["location"]
+								sem = "{} on {} in {}".format(bookings[i]["seminar_title"], bookings[i]["date"],
+									bookings[i]["location"])
 								bookedSeminars.add(sem)
 			elif bookingtype == 'upcoming':
 				for i in range(len(bookings)):
 					if "cancellation" not in bookings[i]:
 						if dateparser.parse(bookings[i]["date"]).date() >= date.today():
 							if  bookings[i]["employee_id"] == matchingID:
-								sem = bookings[i]["seminar_title"] + " on " + bookings[i]["date"] + " in " + bookings[i]["location"]
+								sem = "{} on {} in {}.".format(bookings[i]["seminar_title"], bookings[i]["date"],
+									bookings[i]["location"])
 								bookedSeminars.add(sem)
 			else:
 				for i in range(len(bookings)):
@@ -129,7 +130,8 @@ class ActionShowBookings(Action):
 						dateNext = dateparser.parse(temp).date()
 						num = i
 
-		return bookings[num]["seminar_title"]
+		return "{} on {} in {}.".format(bookings[num]["seminar_title"],bookings[num]["date"],
+			bookings[num]["location"])
 
 
 	def showBookingsOnGivenDate(self,seminar_date,bookedSeminars,matchingID):
@@ -435,7 +437,7 @@ class ActionProvideDescription(Action):
 			dispatcher.utter_message(res)
 			return []
 
-class ActionDisplaySeminar (Action):
+class ActionDisplaySeminar(Action):
 	def name(self):
 		"""returns name of the action """
 		return "action_display_seminar"
@@ -494,15 +496,53 @@ class ActionDisplaySeminar (Action):
 			for j in range(len(seminars)):
 				if city.capitalize() in seminars[j]["locations"]:
 					available_seminars.append(seminars[j]["category"]) ## can also display available dates here
+          
+				if len(available_seminars) != 0:
+					res = "We have seminars in the following categories in {} :\n{}".format(
+																		city.capitalize(), ', '.join(available_seminars))
+					dispatcher.utter_message(res)
+					return []
+				else: 
+					dispatcher.utter_message("There are no seminars offered in {}".format(city))
+					return []
 
-			if len(available_seminars) != 0:
-				res = "We have seminars in the following categories in {} :\n{}".format(
-																	city.capitalize(), ', '.join(available_seminars))
-				dispatcher.utter_message(res)
-				return []
-			else: 
-				dispatcher.utter_message("There are no seminars offered in {}".format(city))
-				return []
+# 		elif tracker.get_slot('date'):
+# 				sem_date = tracker.get_slot('date')
+# 				if isinstance(time, dict):
+# 					start = dateparser.parse(time["from"]).date()
+# 					end = dateparser.parse(time["to"]).date()
+# 				else: 
+# 					start = dateparser.parse(time)
+# 					if "week" in date_period:
+# 						end = start + relativedelta(days = 7)
+# 					elif "month" in date_period:
+# 						end = start + relativedelta(day=31)
+# 					elif "year" in date_period:
+# 						end = start + relativedelta(day=365)
+
+# 			#   If bookings between start and end, add them to the list of matched seminars
+
+# 				available_seminars = []
+# 				for i in range(len(seminars)):
+# 					for loc in seminars[i]["locations"]:
+# 						for d in loc:
+# 							if start <= pytz.utc.localize(dateparser.parse(d),settings={'DATE_ORDER': 'DMY'}) <= end:
+# 								sem = "{} on {} in {}.".format(seminars[i]["title"], loc[j],loc)
+# 								available_seminars.add(sem)
+
+# # possible with Python list comprehension?
+# 				for i in range(len(seminars)):
+# 					available_seminars = [("{} on {} in {}.".format(seminars[i]["title"], loc[j],loc)) for d in loc for loc in seminars[i]["locations"] if start <= pytz.utc.localize(dateparser.parse(d),settings={'DATE_ORDER': 'DMY'}) <= end]
+
+# 				if len(available_seminars) != 0:
+# 					res = "We offer seminars in the following categories in the specified period:\n{}".format(
+# 						', '.join(available_seminars))
+# 					dispatcher.utter_message(res)
+# 					return []
+# 				else: 
+# 					dispatcher.utter_message("There are no seminars offered in the given period.")
+# 					return []
+				
 		else: 
 			dispatcher.utter_message("We do not offer courses in the category you specified.")
 			return []
