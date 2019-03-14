@@ -42,9 +42,9 @@ logger = logging.getLogger(__name__)
 #     rasa_core.run.serve_application(agent,channel='cmdline')
 
 def run(serve_forever=True):
-    nlu_interpreter = RasaNLUInterpreter('.\\models\\current\\nlu_tf\\current')
+    nlu_interpreter = RasaNLUInterpreter('.\\models\\current\\dialogue\\embedding3')
     action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
-    agent = Agent.load('.\\models\\current\\dialogue\\embedding', interpreter=nlu_interpreter, action_endpoint=action_endpoint)
+    agent = Agent.load('.\\models\\current\\dialogue\\embedding3', interpreter=nlu_interpreter, action_endpoint=action_endpoint)
     #rasa_core.run.serve_application(agent ,channel='cmdline')
 
     return agent
