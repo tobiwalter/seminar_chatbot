@@ -150,7 +150,6 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 8}
     - action_query_date
-	- slot{"seminar_id":"7"}
     - slot{"dates": "24/03/19, 02/04/19"}
     - slot{"title": "Python for Beginners"}
     - seminar_form

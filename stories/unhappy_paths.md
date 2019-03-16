@@ -1,5 +1,5 @@
 ## unhappy_path_seminar_form_1
-* book_seminar{"course": "programming"}
+* book_seminar{"course": "programming"}	
     - slot{"course": "programming"}
     - utter_ask_name
 * inform{"given-name": "Hugo", "last-name": "Garcia"}
@@ -853,6 +853,9 @@
     - slot{"employee_id": 0}
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}		
 	
 ## smalltalk when booking seminars
 * book_seminar{"course": "leadership"}
@@ -961,6 +964,84 @@
     - slot{"date": "24/03/19"}
     - seminar_form
     - slot{"date": "24/03/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "False"}
+	
+## unhappy_path_no loc or date fits
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* negative
+    - action_deactivate_form
+	- utter_do_something_else
+	
+## unhappy_path_no loc 
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* negative
+    - action_deactivate_form
+	- utter_do_something_else
+	
+## unhappy path with action_query_date
+* book_seminar{"course": "Data Science", "location": "Munich"}
+    - slot{"course": "Data Science"}
+    - slot{"location": "Munich"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+	- slot{"title": "blabla"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* stop
+    - utter_ask_continue
+* affirm
+    - seminar_form
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "2nd April", "time": "2019-04-02T00:00:00.000-07:00"}
+    - slot{"date": "2nd April"}
+    - form: seminar_form
+    - slot{"date": "2nd April"}
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar

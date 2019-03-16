@@ -8,8 +8,9 @@
         random_seed: 42
         attn_shift_range: 10
         ## embedding parameters
-        embed_dim: 100
+        embed_dim: 150
         mu_pos: 0.7
+        use_max_sim_neg: true
         featurizer:
           - name: FullDialogueTrackerFeaturizer
             state_featurizer:

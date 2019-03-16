@@ -126,7 +126,7 @@ templates:
       title: 'yes'
     - payload: /negative
       title: 'no'
-    text: Are you sure?
+    text: Are you sure to cancel your seminar in {course}?
   utter_ask_continue:
   - buttons:
     - payload: /affirm
@@ -183,7 +183,7 @@ templates:
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
   utter_suggest_help:
-    - buttons:
+  - buttons:
     - payload: /affirm
       title: 'yes'
     - payload: /negative

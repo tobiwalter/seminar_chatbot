@@ -2,67 +2,67 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "given-name",
-        "date",
+        "date-period",
         "user-level",
-        "course",
-        "locations",
-        "time",
-        "title",
         "seminar_id",
-        "location",
         "display-option",
+        "given-name",
+        "course",
         "last-name",
-        "date-period"
+        "date",
+        "title",
+        "time",
+        "location",
+        "locations"
       ]
     },
     "action_verify_user": {
       "slots": [
-        "employee_id",
-        "user_verified"
-      ]
-    },
-    "action_show_bookings": {
-      "slots": [
-        "date",
-        "location"
-      ]
-    },
-    "action_display_seminar": {
-      "slots": [
-        "seminar_id",
-        "title",
-        "locations"
+        "user_verified",
+        "employee_id"
       ]
     },
     "seminar_form": {
       "slots": [
-        "requested_slot",
-        "date",
+        "time",
         "location",
-        "time"
+        "requested_slot",
+        "date"
       ]
     },
     "action_book_seminar": {
       "slots": [
-        "date",
         "location",
-        "booking_confirmed"
+        "booking_confirmed",
+        "date"
       ]
     },
-    "action_query_date": {
+    "action_display_seminar": {
       "slots": [
-        "date",
-        "requested_slot",
         "title",
         "seminar_id",
-        "location",
-        "dates"
+        "locations"
       ]
     },
     "action_cancel_seminar": {
       "slots": [
         "cancellation_confirmed"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "dates",
+        "seminar_id",
+        "date",
+        "title",
+        "location",
+        "requested_slot"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "location",
+        "date"
       ]
     },
     "action_deactivate_form": {
@@ -82,5 +82,5 @@
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190307-173912"
+  "trained_at": "20190308-133745"
 }
