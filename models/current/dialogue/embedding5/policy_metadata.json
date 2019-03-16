@@ -2,25 +2,18 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "course",
-        "display-option",
-        "time",
-        "user-level",
-        "title",
-        "last-name",
         "given-name",
+        "date",
+        "user-level",
+        "course",
         "locations",
-        "date-period",
+        "time",
+        "title",
+        "seminar_id",
         "location",
-        "seminar_id",
-        "date"
-      ]
-    },
-    "action_display_seminar": {
-      "slots": [
-        "locations",
-        "seminar_id",
-        "title"
+        "display-option",
+        "last-name",
+        "date-period"
       ]
     },
     "action_verify_user": {
@@ -29,42 +22,47 @@
         "user_verified"
       ]
     },
-    "seminar_form": {
+    "action_show_bookings": {
       "slots": [
         "date",
-        "time",
+        "location"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "seminar_id",
+        "title",
+        "locations"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "requested_slot",
+        "date",
         "location",
-        "requested_slot"
+        "time"
       ]
     },
     "action_book_seminar": {
       "slots": [
+        "date",
         "location",
-        "booking_confirmed",
-        "date"
+        "booking_confirmed"
       ]
     },
     "action_query_date": {
       "slots": [
+        "date",
         "requested_slot",
         "title",
+        "seminar_id",
         "location",
-        "dates",
-        "date"
+        "dates"
       ]
     },
     "action_cancel_seminar": {
       "slots": [
-        "location",
-        "course",
-        "cancellation_confirmed",
-        "date"
-      ]
-    },
-    "action_show_bookings": {
-      "slots": [
-        "location",
-        "date"
+        "cancellation_confirmed"
       ]
     },
     "action_deactivate_form": {
@@ -84,5 +82,5 @@
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190314-163124"
+  "trained_at": "20190307-173912"
 }

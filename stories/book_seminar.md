@@ -949,3 +949,138 @@
     - utter_do_something_else
 * negative
     - utter_bye
+	
+## book seminar at other location or date
+* book_seminar{"course": "programming"}
+	- slot{"course": "programming"}
+	- utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+	- slot{"given-name": "Hugo"}
+	- slot{"last-name": "Garcia"}
+	- action_verify_user
+	- slot{"user_verified": "True"}
+	- slot{"employee_id": 9}
+	- action_display_seminar
+	- slot{"seminar_id":"7"}
+	- slot{"locations": "Berlin, Munich, Frankfurt"}
+	- slot{"title": "Python for Beginners"}
+	- seminar_form
+	- form{"name": "seminar_form"}
+* other_loc_date
+	- seminar_form
+	- form{"name": null}
+	- action_book_seminar
+	- slot{"booking_confirmed": "True"}
+	- slot{"date": null}
+	- slot{"location": null}
+
+## book seminar without course specified at other loc or date
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "Ron", "last-name": "Moore"}
+    - slot{"given-name": "Ron"}
+    - slot{"last-name": "Moore"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 4}
+    - action_course_offering
+    - utter_ask_course_book
+* inform{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* other_loc_date
+    - form: seminar_form
+	- slot{"requested_slot": "location"}
+* inform{"location": "Munich"}
+    - slot{"location": "Munich"}
+    - form: seminar_form
+    - slot{"location": "Munich"}	
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "02/04/19", "time": "2019-02-04T00:00:00.000-08:00"}
+    - slot{"date": "02/04/19"}
+    - form: seminar_form
+    - slot{"date": "02/04/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+    - slot{"location": null}		
+
+## book seminar without course specified at other loc or date
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "Ron", "last-name": "Moore"}
+    - slot{"given-name": "Ron"}
+    - slot{"last-name": "Moore"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 4}
+    - action_course_offering
+    - utter_ask_course_book
+* inform{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* inform{"location": "Munich"}
+    - slot{"location": "Munich"}
+    - form: seminar_form
+    - slot{"location": "Munich"}
+    - slot{"requested_slot": "date"}
+* other_loc_date
+    - form: seminar_form
+	- slot{"requested_slot": "date"}
+* form: inform{"date": "02/04/19", "time": "2019-02-04T00:00:00.000-08:00"}
+    - slot{"date": "02/04/19"}
+    - form: seminar_form
+    - slot{"date": "02/04/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+    - slot{"location": null}		
+
+## book seminar with action query date	
+* book_seminar{"course": "machine learning", "location": "Berlin"}
+    - slot{"course": "machine learning"}
+    - slot{"location": "Berlin"}
+    - utter_ask_name
+* inform{"given-name": "Jane", "last-name": "Love"}
+    - slot{"given-name": "Jane"}
+    - slot{"last-name": "Love"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+    - action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+    - slot{"title": "Machine Learning"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* other_loc_date
+	- seminar_form
+	- slot{"requested_slot": "date"}
+* form: inform{"date": "24.03.19"}
+    - slot{"date": "24.03.19"}
+    - form: seminar_form
+    - slot{"date": "24.03.19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+    - slot{"location": null}
+	
+
+	

@@ -34,7 +34,6 @@ actions:
 - action_provide_datesWithLocation
 - action_query_date
 entities:
-- null
 - last-name
 - date
 - time
@@ -61,6 +60,7 @@ intents:
 - thank
 - get_course_offering
 - get_location
+- other_loc_date
 - negative:
     use_entities: false
 - get_description

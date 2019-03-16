@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\sovanta_bot\\models/current/nlu_tf\\seminanlu\\model_20190305-211003\\intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\sovanta_bot\\models/current/nlu_tf\\seminanlu\\model_20190305-211003\\intent_classifier_tensorflow_embedding.ckpt"
