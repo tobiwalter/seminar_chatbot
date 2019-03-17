@@ -110,6 +110,7 @@ class ActionShowBookings(Action):
         temp = bookings[i]["date"]
         dateNext = dateparser.parse(temp,settings={'DATE_ORDER': 'DMY'}).date()
         break
+
     # compare successive dates 
     for i in range(1,len(bookings)):
         temp = bookings[i]["date"]
@@ -139,6 +140,7 @@ class ActionShowBookings(Action):
     if isinstance(time, dict):
       start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
       end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()
+
     # If duckling extracted only a day, set this day as start and try to infer the lenght of the interval by 
     #  the value of the date period entity
     else: 
