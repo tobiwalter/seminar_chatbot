@@ -8,9 +8,9 @@
     - slot{"last-name": "Love"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
-    - action_query_date
-	- slot{"dates": "24/03/19, 02/04/19"}
-	- slot{"title": "blabla"}
+    - action_display_seminar
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Machine Learning"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
@@ -27,9 +27,9 @@
 * book_seminar{"course": "leadership", "location": "Cologne"}
     - slot{"course": "leadership"}
     - slot{"location": "Cologne"}
-    - action_query_date
-	- slot{"dates": "24/03/19, 02/04/19"}
-	- slot{"title": "blabla"}
+    - action_display_seminar
+    - slot{"locations": "Cologne, Frankfurt, Stuttgart"}
+    - slot{"title": "Leadership Behaviour"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
@@ -59,7 +59,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Python for Beginners"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -120,7 +119,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Machine Learning"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -156,7 +154,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Python for Beginners"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -184,7 +181,6 @@
     - action_display_seminar
     - slot{"locations": "Erfurt, Berlin, Stuttgart"}
     - slot{"title": "Advanced Excel functions and formulas"}	
-	- slot{"seminar_id":"7"}
 * thank
     - utter_no_worries
 	
@@ -210,7 +206,6 @@
     - action_display_seminar
     - slot{"locations": "Cologne, Frankfurt, Stuttgart"}
     - slot{"title": "Leadership Behaviour"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -248,7 +243,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Erfurt, Stuttgart"}
     - slot{"title": "Advanced Excel functions and formulas"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -299,7 +293,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Frankfurt, Munich"}
     - slot{"title": "Python for Beginners"}
-	- slot{"seminar_id":"7"}
 * book_seminar{"course": "programming"}
     - utter_ask_name
 * inform{"given-name": "Jane", "last-name": "Love"}
@@ -318,8 +311,8 @@
     - slot{"requested_slot": "date"}
 * get_dates
     - action_query_date
+    - action_listen
     - slot{"dates": "27/02/19, 19/03/19, 05/04/19"}
-	- slot{"title": "blabla"}
     - seminar_form
     - slot{"requested_slot": "date"}
 * form: inform{"date": "05/04"}
@@ -346,7 +339,6 @@
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Python for Beginners"}
-	- slot{"seminar_id":"7"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
@@ -375,6 +367,36 @@
     - slot{"date": null}
     - slot{"location": null}
 	
+## test story 14
+* book_seminar{"course-type": "lab", "course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Smith"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Smith"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 2}
+    - action_display_seminar
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Berlin"}
+    - slot{"location": "Berlin"}
+    - form: seminar_form
+    - slot{"location": "Berlin"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "19.02.19"}
+    - slot{"date": "19.02.19"}
+    - form: seminar_form
+    - slot{"date": "19.02.19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "False"}
+	
 ## test story 15 
 * cancel_seminar{"course": "programming"}
     - slot{"course": "programming"}
@@ -389,10 +411,6 @@
     - slot{"employee_id": 2}
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "False"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
-	- utter_suggest_help
 	
 ## test story 16
 * welcome
@@ -429,10 +447,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
-	
 	
 ## test story 18
 * welcome
@@ -441,7 +455,6 @@
 	- action_display_seminar
 	- slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Persuasion and Influence"}
-	- slot{"seminar_id":"9"}
 * book_seminar{"location":"Munich"}
 	- utter_ask_name
 * inform{"given-name":"Sam","last-name":"Richards"}
@@ -487,7 +500,6 @@
     - slot{"employee_id": 9}
     - action_query_date
     - slot{"dates": "24/03/19, 02/04/19"}
-	- slot{"title": "blabla"}
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
@@ -533,13 +545,10 @@
 	- slot{"employee_id": 2}
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"False"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}	
-	- utter_suggest_help
+* bad
+	- utter_i''m sorry
 * negative
-	- utter_do_something_else
-* negative
+	- action_listen
 	
 ## test story 24
 * get_course_offering
@@ -548,7 +557,6 @@
 	- action_display_seminar
 	- slot{"locations": "Berlin, Munich, Frankfurt"}
     - slot{"title": "Advanced Excel functions and formulas"}
-	- slot{"seminar_id":"7"}
 * get_level
 	- action_query_level
 	
@@ -565,9 +573,10 @@
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"94"}
-	- action_query_date
-	- slot{"dates": "24/03/19, 02/04/19"}
-	- slot{"title": "blabla"}	
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
 	- form{"name":null}
@@ -580,9 +589,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}
 * show_bookings	
 	- action_show_bookings
 	
@@ -611,10 +617,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
-	
 	
 ## test story 28
 * cancel_seminar{"course":"rhetoric"}
@@ -627,10 +629,6 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
-	
 * book_seminar
 	- action_course_offering
 	- utter_ask_course

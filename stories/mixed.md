@@ -13,9 +13,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}			
 * book_seminar{"course":"Machine Learning"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -95,9 +92,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 
 ## story14
 * get_course_offering
@@ -159,9 +153,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * book_seminar{"course":"Data Science"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -464,9 +455,6 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * book_seminar
 	- action_course_offering
 	- utter_ask_course_book
@@ -498,9 +486,6 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 *show_bookings
 	- action_show_bookings
     - slot{"date": null}
@@ -517,13 +502,11 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * show_bookings
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	
 * book_seminar{"course":"Data Science"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -564,9 +547,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * show_bookings
 	- action_show_bookings
     - slot{"date": null}
@@ -599,9 +579,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 	
 ## book_cancel_show
 * book_seminar{"course":"Python","location":"Munich"}
@@ -626,9 +603,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * show_bookings	
 	- action_show_bookings
     - slot{"date": null}
@@ -666,9 +640,6 @@
 * affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 * get_course_offering
 	- action_course_offering
 * book_seminar{"course":"Data Science"}
@@ -712,133 +683,9 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
 	- slot{"cancellation_confirmed":"True"}
-	
-## show_book_cancel with get_course_offering
-* cancel_seminar{"course":"Machine Learning"}
-	- utter_are_you_sure
-* negative
-	- utter_do_something_else
-* get_course_offering
-	- action_course_offering
-* book_seminar{"course":"Machine Learning"}
-	- action_display_seminar
-	- slot{"seminar_id":"4"}
-	- slot{"locations":"Munich, Berlin, Frankfurt"}
-	- slot{"title": "Python for beginners"}
-	- seminar_form
-	- form{"name":"seminar_form"}
-	- form{"name":null}
-	- action_book_seminar 
-	- slot{"booking_confirmed":"True"}
-	- slot{"date": null}
-    - slot{"location": null}	
-	
-## cancel_show_get_infos
-* cancel_seminar{"course":"rhetoric"}
-	- utter_are_you_sure
-* affirm
-	- utter_ask_name
-* inform{"given-name":"Paul","last-name":"Moore"}
-	- action_verify_user
-	- slot{"user_verified":"True"}
-	- slot{"employee_id":"310"}	
-	- action_cancel_seminar
-	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}		
-* show_bookings
-	- action_show_bookings
-    - slot{"date": null}
-    - slot{"location": null}
-* get_course_offering
-	- action_course_offering
-* get_description{"course":"Excel"}
-	- action_provide_description
-* get_dates{"location":"Munich"}
-	- action_query_date
-	
-## Generated Story -1331700729346410498
-* get_dates{"course": "rhetoric"}
-    - slot{"course": "rhetoric"}
-    - action_display_seminar
-    - slot{"locations": "Berlin, Frankfurt, Munich"}
-    - slot{"title": "Persuasion and Influence"}
-    - slot{"seminar_id": 0}
-* book_seminar{"time": "2019-03-10T00:00:00.000-08:00", "date": "10th of March"}
-    - slot{"date": "10th of March"}
-    - slot{"time": "2019-03-10T00:00:00.000-08:00"}
-    - utter_ask_name
-* inform{"given-name": "Max", "last-name": "Smith"}
-    - slot{"given-name": "Max"}
-    - slot{"last-name": "Smith"}
-    - action_verify_user
-    - slot{"user_verified": "True"}
-    - slot{"employee_id": 2}
-    - seminar_form
-    - form{"name": "seminar_form"}
-    - slot{"requested_slot": "location"}
-* form: inform{"location": "Munich"}
-    - slot{"location": "Munich"}
-    - form: seminar_form
-    - slot{"location": "Munich"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - action_book_seminar
-    - slot{"booking_confirmed": "False"}
-    - slot{"date": null}
-    - slot{"location": null}
-* thank
-    - utter_no_worries
-	
-## demo story
-* show_bookings
-	- utter_ask_name
-* inform{"given-name": "Max", "last-name": "Smith"}
-	- slot{"given-name": "Max"}
-    - slot{"last-name": "Smith"}
-    - action_verify_user
-    - slot{"user_verified": "True"}
-    - slot{"employee_id": 2}
-	- action_show_bookings
-	- slot{"date": null}
-    - slot{"location": null}
-* get_course_offering
-	- action_course_offering
-* get_description{"course":"Excel"}
-	- action_provide_description
-* get_location
-	- action_display_seminar
-	- slot{"locations": "Berlin, Frankfurt, Munich"}
-    - slot{"title": "Persuasion and Influence"}
-    - slot{"seminar_id": 0}
-* book_seminar{"location":"Munich"}
-	- seminar_form
-	- form: seminar_form
-	- form{"name": null}
-	- action_book_seminar
-	- slot{"booking_confirmed": "True"}
-	- slot{"date": null}
-    - slot{"location": null}
-* cancel_seminar{"course":"Excel"}
-	- utter_are_you_sure
-* affirm
-	- action_cancel_seminar
-	- slot{"cancellation_confirmed":"True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}			
 
 	
-	
-
-	
-
-
 
 	
 

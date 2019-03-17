@@ -208,10 +208,10 @@ class ActionBookSeminar(Action):
 
 	def run(self, dispatcher, tracker, domain):
 		""" retrieves slot values """
-		countRef = db.reference('counts')
-		counts = countRef.get()
-		bookingRef = db.reference('bookings')
-		bookings = bookingRef.get()
+		# countRef = db.reference('counts')
+		# counts = countRef.get()
+		# bookingRef = db.reference('bookings')
+		# bookings = bookingRef.get()
 
 		matchingID = tracker.get_slot('employee_id')
 		course = tracker.get_slot('course')
@@ -274,8 +274,7 @@ class ActionBookSeminar(Action):
 						return [SlotSet("booking_confirmed","False"), SlotSet("date", None),SlotSet("location",None)]
 
 			#Update occupancy
-			occupancy = seminar["locations"][city.capitalize()][dateMatch]["occupancy"]
-			occupancy += 1	
+			occupancy = seminar["locations"][city.capitalize()][dateMatch]["occupancy"] + 1
 			occupancyRef = seminarRef.child(str(seminar_id))
 			occupancyRef = occupancyRef.child("locations")
 			occupancyRef = occupancyRef.child(city.capitalize())
@@ -446,7 +445,6 @@ class ActionDisplaySeminar(Action):
 	def run(self, dispatcher, tracker, domain):
 		""" retrieves slot values """
 
-		seminars = db.reference('seminars').get()
 		course = tracker.get_slot('course')
 
 		# If course given, display locations and dates of seminar
@@ -573,7 +571,6 @@ class ActionLocationButtons(Action):
 
 	def run(self, dispatcher, tracker, domain):
 
-		seminars = db.reference('seminars').get()
 		course = tracker.get_slot('course')
 
 		for j in range(len(seminars)):
@@ -618,7 +615,6 @@ class ActionDateButtons(Action):
 		return "action_date_buttons"
 
 	def run(self, dispatcher, tracker, domain):
-		seminars = db.reference('seminars').get()
 		location = tracker.get_slot("location").capitalize()
 		course = tracker.get_slot("course")
 

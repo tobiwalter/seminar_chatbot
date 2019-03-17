@@ -1,11 +1,13 @@
 policies:
   - name: KerasPolicy
-    epochs: 200
+    batch_size: 32
+    epochs: 400
+    rnn_size: 64
     featurizer:
-    - name: MaxHistoryTrackerFeaturizer
-      max_history: 5
-      state_featurizer:
-        - name: BinarySingleStateFeaturizer
+      - name: MaxHistoryTrackerFeaturizer
+        max_history: 5
+        state_featurizer:
+          - name: LabelTokenizerSingleStateFeaturizer
   - name: FallbackPolicy
     nlu_threshold: 0.4
     core_threshold: 0.3
@@ -13,3 +15,4 @@ policies:
   - name: MemoizationPolicy
     max_history: 5
   - name: FormPolicy
+  

@@ -140,7 +140,7 @@
 	
 ## cancel seminar no course specified - fail
 * cancel_seminar
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -159,7 +159,7 @@
 	
 ## cancel seminar no course specified - succeed 
 * cancel_seminar
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -173,7 +173,7 @@
 	
 ## cancel seminar loc specified - succeed 
 * cancel_seminar{"location":"Berlin"}
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -187,7 +187,7 @@
 	
 ## cancel seminar loc specified - fail
 * cancel_seminar{"location":"Berlin"}
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -206,7 +206,7 @@
 	
 ## cancel seminar date specified - succeed 
 * cancel_seminar{"date":"March 20"}
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -220,7 +220,7 @@
 	
 ## cancel seminar date specified - fail
 * cancel_seminar{"location":"March 20"}
-	- utter_ask_course_cancel
+	- utter_ask_course_book_book_cancel
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
