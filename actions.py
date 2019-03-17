@@ -107,12 +107,12 @@ class ActionShowBookings(Action):
     # Initialise date of next booking with first date in the list of booked seminars and iterate through all dates
           
     for i in range(len(bookings)):
-        temp = bookings[i]["date"]
-        dateNext = dateparser.parse(temp,settings={'DATE_ORDER': 'DMY'}).date()
+      if not 'cancellation' in bookings[i]:
+        dateNext = dateparser.parse(bookings[i]["date"],settings={'DATE_ORDER': 'DMY'}).date()
         break
-
     # compare successive dates 
     for i in range(1,len(bookings)):
+      if not 'cancellation' in bookings[i]:
         temp = bookings[i]["date"]
         if dateparser.parse(temp,settings={'DATE_ORDER': 'DMY'}).date() <= dateNext:
             dateNext = dateparser.parse(temp,settings={'DATE_ORDER': 'DMY'}).date()
@@ -127,6 +127,7 @@ class ActionShowBookings(Action):
     userGivenDate = dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date()
 
     matchedSeminars = ["{} in {}".format(ele["seminar_title"],ele["location"]) for ele in bookings 
+      if not 'cancellation' in ele
       if dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() == userGivenDate]
 
     if len(matchedSeminars) != 0:
@@ -155,7 +156,9 @@ class ActionShowBookings(Action):
   #   If bookings between start and end, add them to the list of matched seminars
 
     matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]) for ele in bookings 
+      if not 'cancellation' in ele 
       if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
+      
 
     if len(matchedSeminars) != 0:
       return "Your booked seminars between {} and {}: {}".format(start.strftime("%d.%m.%y"), 
@@ -164,8 +167,9 @@ class ActionShowBookings(Action):
       return "There are no recorded bookings for you within the specified period."
 
   def showBoookingsAtLocation(self,city, matchingID, bookings):
+
     matchedSeminars = ["{} on {}".format(ele["seminar_title"],ele["date"]) for ele in bookings
-        if ele["location"].lower() == city.lower()]
+        if not 'cancellation' in ele if ele["location"].lower() == city.lower()]
 
     if len(matchedSeminars) != 0:
       return "Your booked seminars in {} : {}".format(city.capitalize(),', '.join(matchedSeminars))
@@ -250,7 +254,7 @@ class ActionBookSeminar(Action):
         #If not booked, perform booking from here on: First, update occupancy
         occupancy = dateMatch["occupancy"]
         occupancy += 1  
-        occupancyRef = seminarRef.child("{}/locations/{}/{}".format(str(seminar_id),city.capitalize(),str(seminarDates.index(ele)))).update({"occupancy": occupancy})
+        occupancyRef = seminarRef.child("{}/locations/{}/{}".format(str(seminar_id),city.capitalize(),str(seminarDates.index(dateMatch)))).update({"occupancy": occupancy})
 
         #Update booking count of matching employee
         countRef.update({str(matchingID): counts+1})
@@ -803,4 +807,4 @@ class SeminarForm(FormAction):
 
   def submit(self, dispatcher, tracker, domain):
     dispatcher.utter_template('utter_submit', tracker)
-    return []
+    return [FollowupAction('action_book_seminar')]
