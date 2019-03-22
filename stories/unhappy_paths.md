@@ -34,6 +34,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_2
 * book_seminar{"course": "leadership"}
@@ -71,6 +72,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}	
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_2.1
 * book_seminar{"course": "leadership"}
@@ -108,6 +110,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 
 ## unhappy_path_seminar_form_3
 * book_seminar{"course": "leadership"}
@@ -145,6 +148,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_3.1
 * book_seminar{"course": "leadership"}
@@ -182,6 +186,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_4
 * book_seminar{"course": "programming"}
@@ -219,6 +224,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_4.1
 * book_seminar{"course": "programming"}
@@ -256,6 +262,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_5
 * book_seminar{"course": "programming"}
@@ -293,6 +300,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_5.1
 * book_seminar{"course": "programming"}
@@ -330,6 +338,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## verry_unhappy_path_seminar_form_1
 * book_seminar{"course": "leadership"}
@@ -375,6 +384,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## verry_unhappy_path_seminar_form_1
 * book_seminar{"course": "leadership"}
@@ -420,6 +430,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## verry_unhappy_path_seminar_form_1.1
 * book_seminar{"course": "leadership"}
@@ -465,6 +476,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## stop_but_continue_path_form
 * book_seminar{"course": "leadership"}
@@ -503,6 +515,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## stop_but_continue_path_form date
 * book_seminar{"course": "leadership"}
@@ -541,6 +554,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## chitchat stop and really stop path
 * book_seminar{"course": "leadership"}
@@ -697,6 +711,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path: stop but continue loc
 * book_seminar{"course": "programming"}
@@ -735,6 +750,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path: stop, continue and ask for dates
 * book_seminar{"course": "programming"}
@@ -773,6 +789,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path_seminar_form_17
 * book_seminar{"course": "programming"}
@@ -810,6 +827,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## unhappy_path - show_bookings
 * show_bookings
@@ -824,6 +842,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## unhappy_path stop - cancel_seminar
 * cancel_seminar{"course": "machine learning"}
@@ -853,6 +873,9 @@
     - slot{"employee_id": 0}
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	
 ## smalltalk when booking seminars
 * book_seminar{"course": "leadership"}
@@ -889,6 +912,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## book seminar wo course - smalltalk intent 
 * book_seminar
@@ -929,6 +953,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## get_level
 * book_seminar{"course": "Machine Learning"}
@@ -965,6 +990,10 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}	
+	
 	
 ## unhappy_path_no loc or date fits
 * book_seminar{"course": "programming"}
@@ -1043,3 +1072,6 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}

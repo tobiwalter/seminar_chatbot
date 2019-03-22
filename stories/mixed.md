@@ -8,6 +8,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -28,6 +30,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 
 ## inform_then_bookSeminar 
 * get_course_offering{"course":"Excel"}
@@ -48,6 +51,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## inform_then_bookSeminar_Fail_then_GetHelp
 * get_course_offering{"course":"Excel"}
@@ -90,6 +94,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * cancel_seminar{"course":"Excel"}
 	- utter_are_you_sure
 * affirm
@@ -120,6 +126,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 
 ## story17
 * get_course_offering
@@ -143,6 +150,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 
 ## story20
 * show_bookings
@@ -154,6 +162,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * cancel_seminar{"course":"rhetoric"}
 	- utter_are_you_sure
 * affirm
@@ -174,6 +184,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## get_description_and_locations_of_course_andBook
 * get_description{"course":"Machine Learning"}
@@ -200,6 +211,7 @@
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}	
+	- slot{"course": null}
 	
 ## show_bookings then book_seminar
 * show_bookings{"course-type": "seminars"}
@@ -213,6 +225,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * book_seminar{"course": "machine learning"}
     - slot{"course": "machine learning"}
     - action_display_seminar
@@ -237,6 +251,7 @@
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}	
+	- slot{"course": null}
 
 ## Generated Story 769974900844405482
 * show_bookings{"course-type": "seminars"}
@@ -250,6 +265,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * get_course_offering
     - action_course_offering
 * book_seminar{"course":"rhetoric"}
@@ -275,6 +292,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## Generated Story -6463177690486665439
 * get_course_offering{"course": "Tableau"}
@@ -306,6 +324,9 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
 
 ## Generated Story 5080578068932025922
 * show_bookings{"display-option": "next"}
@@ -320,6 +341,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * book_seminar{"course": "rhetoric"}
     - slot{"course": "rhetoric"}
     - action_display_seminar
@@ -344,6 +367,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## Generated Story -3751396503439969687
 * get_course_offering
@@ -368,6 +392,9 @@
 	- form{"name": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
 * get_help
     - utter_get_help
 
@@ -400,6 +427,9 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
 	
 ## Generated Story -7543584780551948522
 * get_dates{"course": "Machine Learning"}
@@ -424,6 +454,9 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
 	
 ## Generated Story -1047672868992554109
 * get_dates{"course": "rhetoric"}
@@ -452,6 +485,9 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
@@ -482,10 +518,13 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * show_bookings
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## cancel_then show bookings
 * cancel_seminar{"course":"rhetoric"}
@@ -505,6 +544,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
@@ -524,6 +565,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * book_seminar{"course":"Data Science"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -536,6 +579,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## show_book_cancel_show
 * show_bookings
@@ -547,6 +591,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * book_seminar{"course":"Machine Learning"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -559,6 +605,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -571,6 +618,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## show_book_cancel
 * show_bookings
@@ -582,6 +631,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * book_seminar{"course":"Machine Learning"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -594,6 +645,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -621,6 +673,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -633,6 +686,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 		
 ## course_offering & booking a seminar - verification fails
 * get_course_offering
@@ -661,6 +716,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * cancel_seminar{"course":"rhetoric"}
 	- utter_are_you_sure
 * affirm
@@ -683,6 +740,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## show_book_cancel with get_course_offering
 * show_bookings
@@ -694,6 +752,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * get_course_offering
 	- action_course_offering
 * book_seminar{"course":"Machine Learning"}
@@ -708,6 +768,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -735,7 +796,8 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-    - slot{"location": null}	
+    - slot{"location": null}
+	- slot{"course": null}
 	
 ## cancel_show_get_infos
 * cancel_seminar{"course":"rhetoric"}
@@ -755,6 +817,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * get_course_offering
 	- action_course_offering
 * get_description{"course":"Excel"}
@@ -792,6 +856,7 @@
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * thank
     - utter_no_worries
 	
@@ -807,6 +872,8 @@
 	- action_show_bookings
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * get_course_offering
 	- action_course_offering
 * get_description{"course":"Excel"}
@@ -824,6 +891,7 @@
 	- slot{"booking_confirmed": "True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 * cancel_seminar{"course":"Excel"}
 	- utter_are_you_sure
 * affirm

@@ -16,6 +16,8 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
+	
 	
 ## book_seminar wo specifying course
 * book_seminar
@@ -38,6 +40,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
 	
 ## story12
 * book_seminar{"user-level":"beginners","course":"Python"}
@@ -57,6 +60,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 * thank
 	- utter_no_worries
 	
@@ -77,6 +81,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 6766012708966849594
 * book_seminar{"course": "Machine Learning"}
@@ -113,6 +118,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 * book_seminar{"course": "rhetoric"}
     - slot{"course": "rhetoric"}
     - action_display_seminar
@@ -137,6 +143,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## book2seminars_2
 * book_seminar{"course": "programming", "location": "berlin"}
@@ -166,6 +173,8 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
+	
 * book_seminar{"course": "Machine Learning"}
     - slot{"course": "Machine Learning"}
     - action_display_seminar
@@ -190,6 +199,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 1532980813945416615
 * book_seminar{"course": "Machine Learning"}
@@ -223,6 +233,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 5906864830090693214
 * book_seminar{"course": "leadership"}
@@ -256,6 +267,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## Generated Story 6994048039071921318
 * book_seminar{"course": "Excel"}
@@ -288,6 +300,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## Generated Story -5546799112556677101
 * book_seminar{"course": "programming"}
@@ -321,6 +334,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## book2seminars 3 
 * book_seminar{"course": "machine learning", "location": "Berlin"}
@@ -348,6 +362,8 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
+	
 * book_seminar{"course": "leadership", "location": "Cologne"}
     - slot{"course": "leadership"}
     - slot{"location": "Cologne"}
@@ -367,6 +383,7 @@
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 2515710135921758139
 * book_seminar{"course": "machine learning"}
@@ -400,6 +417,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 2746093808326620672
 * book_seminar
@@ -436,6 +454,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 6612259313248420894
 * book_seminar{"course-type": "lab", "course": "programming"}
@@ -503,6 +522,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}		
+	- slot{"course" : null}
 
 ## book seminar no course specified 
 * book_seminar
@@ -539,6 +559,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## book seminar no course specified 
 * book_seminar
@@ -589,6 +610,7 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 4938161388784026970
 * book_seminar{"course": "rhetoric"}
@@ -622,6 +644,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## book seminar verification fails	
 * book_seminar
@@ -690,6 +713,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ## book seminar verification fails
 * book_seminar{"course":"programming"}
@@ -734,9 +758,9 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
+	
 * book_seminar{"course": "leadership", "location": "Cologne"}
-    - slot{"course": "leadership"}
-    - slot{"location": "Cologne"}
     - slot{"course": "leadership"}
     - slot{"location": "Cologne"}
 	- action_query_date
@@ -746,13 +770,13 @@
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
     - slot{"date": "Feb 24"}
-    - slot{"date": "Feb 24"}
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar   <!-- predicted: action_listen -->
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## book_seminar giving wrong location
 * book_seminar{"course": "Excel", "location": "Frankfurt"}
@@ -785,6 +809,7 @@
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ##  book_seminar giving wrong location 2
 * book_seminar{"course": "Excel", "location": "Frankfurt"}
@@ -845,6 +870,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 
 ##  book_seminar giving wrong location and rejecting recommended and not booking somewhere else 
 * book_seminar{"course": "Excel", "location": "Frankfurt"}
@@ -897,6 +923,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## book seminar verification fails	
 * book_seminar{"course":"Machine Learning"}
@@ -933,6 +960,7 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
 	
 ## Generated Story 4423079056173582957
 * book_seminar
@@ -967,13 +995,14 @@
 	- slot{"title": "Python for Beginners"}
 	- seminar_form
 	- form{"name": "seminar_form"}
-* other_loc_date
+* inform
 	- seminar_form
 	- form{"name": null}
 	- action_book_seminar
 	- slot{"booking_confirmed": "True"}
 	- slot{"date": null}
 	- slot{"location": null}
+	- slot{"course" : null}
 
 ## book seminar without course specified at other loc or date
 * book_seminar
@@ -995,7 +1024,7 @@
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "location"}
-* other_loc_date
+* inform
     - form: seminar_form
 	- slot{"requested_slot": "location"}
 * inform{"location": "Munich"}
@@ -1012,7 +1041,8 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-    - slot{"location": null}		
+    - slot{"location": null}	
+	- slot{"course" : null}	
 
 ## book seminar without course specified at other loc or date
 * book_seminar
@@ -1039,7 +1069,7 @@
     - form: seminar_form
     - slot{"location": "Munich"}
     - slot{"requested_slot": "date"}
-* other_loc_date
+* inform
     - form: seminar_form
 	- slot{"requested_slot": "date"}
 * form: inform{"date": "02/04/19", "time": "2019-02-04T00:00:00.000-08:00"}
@@ -1052,9 +1082,10 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}		
+	- slot{"course" : null}
 
-## book seminar with action query date	
-* book_seminar{"course": "machine learning", "location": "Berlin"}
+# book seminar with action query date other location or date
+* 	
     - slot{"course": "machine learning"}
     - slot{"location": "Berlin"}
     - utter_ask_name
@@ -1069,7 +1100,7 @@
     - seminar_form
     - form{"name": "seminar_form"}
     - slot{"requested_slot": "date"}
-* other_loc_date
+* inform
 	- seminar_form
 	- slot{"requested_slot": "date"}
 * form: inform{"date": "24.03.19"}
@@ -1082,6 +1113,81 @@
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"course" : null}
+	
+## book seminar date clash - cancel seminar yes
+* book_seminar{"location": "Frankfurt"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_display_seminar
+	- utter_ask_course_book
+* inform{"course": "Python"}
+	- action_query_date
+	- slot{"dates": "07/03/19, 21/03/19"}
+    - slot{"title": "Python for beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "March 21", "time": "2019-03-21T00:00:00.000-07:00"}
+    - slot{"date": "March 21"}
+    - slot{"time": "2019-03-21T00:00:00.000-07:00"}
+    - form: seminar_form
+    - slot{"date": "March 21"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"course": null}
+    - slot{"location": null}
+	- slot{"course" : null}
+* cancel_seminar
+	- utter_ask_course_cancel
+* inform{"course": "Excel"}
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed": "True"}
+
+## book seminar date clash - cancel seminar yes
+* book_seminar{"location": "Frankfurt"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_display_seminar
+	- utter_ask_course_book
+* inform{"course": "Python"}
+	- action_query_date
+	- slot{"dates": "07/03/19, 21/03/19"}
+    - slot{"title": "Python for beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "March 21", "time": "2019-03-21T00:00:00.000-07:00"}
+    - slot{"date": "March 21"}
+    - slot{"time": "2019-03-21T00:00:00.000-07:00"}
+    - form: seminar_form
+    - slot{"date": "March 21"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"course": null}
+    - slot{"location": null}
+	- slot{"course" : null}
+* negative
+	- utter_do_something_else
+
+	
+	
+	
+
 	
 
 	

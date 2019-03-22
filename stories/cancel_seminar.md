@@ -9,6 +9,9 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 * bye
 	- utter_bye
 
@@ -40,6 +43,9 @@
     - slot{"employee_id": 0}
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 
 ## Generated Story 6806321299963726368
 * cancel_seminar{"course": "leadership"}
@@ -55,6 +61,9 @@
     - slot{"employee_id": 2}
     - action_cancel_seminar
 	- slot{"cancellation_confirmed":"False"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	- utter_suggest_help
 * negative
 	- utter_do_something_else	
@@ -73,6 +82,9 @@
     - slot{"employee_id": 2}
     - action_cancel_seminar
 	- slot{"cancellation_confirmed":"False"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	- utter_suggest_help
 * affirm
 	- utter_get_help
@@ -91,6 +103,9 @@
     - slot{"employee_id": 9}
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 * thank
     - utter_no_worries
 	
@@ -170,10 +185,14 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	
 ## cancel seminar loc specified - succeed 
 * cancel_seminar{"location":"Berlin"}
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -184,10 +203,14 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	
 ## cancel seminar loc specified - fail
 * cancel_seminar{"location":"Berlin"}
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -207,6 +230,7 @@
 ## cancel seminar date specified - succeed 
 * cancel_seminar{"date":"March 20"}
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -217,10 +241,14 @@
 	- slot{"employee_id":"310"}	
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 	
 ## cancel seminar date specified - fail
 * cancel_seminar{"location":"March 20"}
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm

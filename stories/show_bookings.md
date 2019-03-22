@@ -8,6 +8,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
 	
 ## show_bookings_location_specified 
 * show_bookings{"location":"Frankfurt"}
@@ -19,6 +21,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## show_bookings_on_specific_date
 * show_bookings{"date":"5th of November"}
@@ -30,6 +34,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## showBookingsInPeriod_firstFail_thenSuccess
 * show_bookings{"date-period":"this year"}
@@ -43,6 +49,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## showBookings_then_getInformation
 * show_bookings{"location":"Berlin"}
@@ -54,6 +62,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -74,6 +84,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## story19
 * show_bookings
@@ -96,6 +108,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## show_the_next_booking
 * show_bookings{"display-option":"next"}
@@ -107,6 +121,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}	
+	- slot{"date-period": null}
+	- slot{"time": null}
 
 ## Generated Story 5145335876734410380
 * show_bookings{"location": "Berlin"}
@@ -121,6 +137,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## Generated Story -3630320044724628870
 * show_bookings{"location": "Cologne"}
@@ -135,6 +153,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## Generated Story 261112219490772306
 * show_bookings{"course-type": "seminars"}
@@ -178,6 +198,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## show_bookings in period
 * show_bookings{"date-period":"January"}
@@ -189,6 +211,8 @@
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 	
 ## Generated Story -5392053354662535431
 * show_bookings
@@ -202,6 +226,8 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 * other_smalltalk
     - utter_no_chitchat
 	
@@ -219,4 +245,6 @@
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
 		
