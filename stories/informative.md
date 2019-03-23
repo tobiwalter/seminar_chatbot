@@ -10,7 +10,7 @@
 	- slot{"seminar_id":"4"}
 	
 ## Generated Story -6785827853527499108
-* get_course_offering{"course": "programming"}
+* get_course_offering{ "course": "programming"}
     - slot{"course": "programming"}
     - action_display_seminar
     - slot{"locations": "Berlin, Munich, Frankfurt"}
@@ -144,6 +144,15 @@
 * get_prerequisites{"course": "Machine Learning"}
     - slot{"course": "Machine Learning"}
     - action_provide_prerequisites
+	
+## get duration
+* get_duration{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_query_duration
+	
+## get duration
+* get_duration
+    - action_query_duration
 
 ## get course offering - course specified	
 * get_course_offering{"course":"Python"}

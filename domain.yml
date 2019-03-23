@@ -61,6 +61,7 @@ intents:
 - get_course_offering
 - get_location
 - other_loc_date
+- praise
 - negative:
     use_entities: false
 - get_description
@@ -180,10 +181,12 @@ templates:
   - text: No worries.
   - text: You are welcome.
   - text: My pleasure!
+  utter_thanks:
+  - text: Thank you, I try to do my best.
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
   utter_suggest_help:
-    - buttons:
+  - buttons:
     - payload: /affirm
       title: 'yes'
     - payload: /negative

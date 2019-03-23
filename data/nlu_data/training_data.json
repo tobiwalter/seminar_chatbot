@@ -12676,6 +12676,899 @@
         "intent": "book_seminar",
         "entities": []
       },
+	  {
+        "text": "How long is the ML seminar?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "How long does the programming seminar last?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "What is the length of the Excel course?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "How many days does the Python lab last?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Over how many days is the Machine Learning course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 42,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the ML course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 28,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the Data Science course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 38,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the programming course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the Python course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the R course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 27,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the Java course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 30,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the rhetoric course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the communication course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 39,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the persuasion course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the excel course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 31,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the negotiation course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the leadership course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the management course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Over how many days is the data visualization course scheduled?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 44,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does Machine Learning take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 34,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does ML take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 20,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does Data Science take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 30,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does programming take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does Python take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does R take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 19,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does Java take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 22,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does rhetoric take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does communication take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 31,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does persuasion take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does excel take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does negotiation take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 29,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does leadership take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does management take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "At what time does data visualization take place?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 36,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the leadership workshop?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "When does Excel begin?",
+        "intent": "get_duration",
+        "entities": []
+      },
+	  {
+        "text": "At what time does it take place?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "What time does it start?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "When does it start?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "How many days is the seminar?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the course?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the workshop?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the class?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "c",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the lab?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 24,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the coding challenge?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days is the case study?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the seminar last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the course last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the workshop last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the class last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the lecture last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the lab last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 21,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the coding lab last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the hackathon last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the coding challenge last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 34,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does the case study last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does it begin?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "When does the seminar begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the course begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the workshop begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the class begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the lecture begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the lab begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 17,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the coding lab begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When does the case study begin?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will it take?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "How much time will the seminar take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will the course take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will the workshop take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will the lab take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 26,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will the coding lab take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will the case study take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the seminar last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the course last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the workshop last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the class last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the lecture last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the coding lab last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long will the coding challenge last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 18,
+            "end": 34,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "What is the duration of the seminar?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "What is the length of the seminar?",
+        "intent": "get_duration",
+        "entities": []
+      },
       {
         "text": "please cancel my seminar on 30/11/2017",
         "intent": "cancel_seminar",
@@ -24179,6 +25072,7 @@
           }
         ]
       },
+		
       {
         "text": "What is the Java course about",
         "intent": "get_description",
@@ -29569,7 +30463,7 @@
           }
         ]
       },
-	  {
+      {
         "text": "Display my upcoming seminars",
         "intent": "show_bookings",
         "entities": [
@@ -31210,7 +32104,160 @@
             "entity": "booking-type"
           }
         ]
+      },
+      {
+        "text": "Leipzig",
+        "intent": "",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "other date",
+        "intent": "other_loc_date",
+        "entities": []
+      },
+      {
+        "text": "other location",
+        "intent": "other_loc_date",
+        "entities": []
+      },
+	  {
+        "text": "good",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "great job",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "way to good",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "well done",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "nice work",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "great work",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "amazing work",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "bravo",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "good work",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "you did a wonderful job",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "fantastic",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "marvelous",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "splendid",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "mind blowing",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "just great",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "u r awesome",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "you are awesome",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "kudos",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "brilliant",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "outstanding",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "excellent",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "brilliant",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "marvelous",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "that is awesome",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "that is wonderful",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "wonderful",
+        "intent": "praise",
+        "entities": []
       }
+	  
     ],
     "regex_features": [],
     "lookup_tables": [

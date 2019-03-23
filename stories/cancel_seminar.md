@@ -264,4 +264,33 @@
 	- utter_suggest_help
 * affirm
 	- utter_get_help 
+	
+## cancel seminar smalltalk intent
+* cancel_seminar{"course":"rhetoric"}
+	- utter_are_you_sure
+* other_smalltalk
+	- utter_no_chitchat
+	- utter_are_you_sure
+* affirm
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+* bye
+	- utter_bye
 
+## cancel seminar affirm but then stop
+* cancel_seminar{"course":"rhetoric"}
+	- utter_are_you_sure
+* affirm
+	- utter_ask_name
+* stop
+	- utter_ask_continue
+* negative
+	- utter_do_something_else

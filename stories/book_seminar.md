@@ -661,6 +661,21 @@
 * affirm
     - utter_get_help
 	
+## book seminar verification fails	
+* book_seminar{"course":"Machine Learning", "location":"Berlin"}
+    - utter_ask_name
+* inform{"given-name": "Tim", "last-name": "Miller"}
+    - slot{"given-name": "Tim"}
+    - slot{"last-name": "Miller"}
+    - action_verify_user
+* inform{"given-name": "Tim", "last-name": "Miller"}
+    - slot{"given-name": "Tim"}
+    - slot{"last-name": "Miller"}
+    - action_verify_user
+    - utter_suggest_help
+* affirm
+    - utter_get_help
+	
 ## requesting location in the middle
 * book_seminar
     - utter_ask_name
@@ -734,12 +749,8 @@
 * book_seminar{"course": "machine learning", "location": "Berlin"}
     - slot{"course": "machine learning"}
     - slot{"location": "Berlin"}
-    - slot{"course": "machine learning"}
-    - slot{"location": "Berlin"}
     - utter_ask_name
 * inform{"given-name": "Jane", "last-name": "Love"}
-    - slot{"given-name": "Jane"}
-    - slot{"last-name": "Love"}
     - slot{"given-name": "Jane"}
     - slot{"last-name": "Love"}
     - action_verify_user
