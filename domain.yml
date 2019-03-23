@@ -10,6 +10,7 @@ actions:
 - utter_get_help
 - utter_ask_continue
 - action_cancel_seminar
+- action_query_duration
 - utter_ask_course_cancel
 - utter_book_somewhere_else
 - utter_ask_name
@@ -58,9 +59,11 @@ intents:
 - show_bookings
 - welcome
 - thank
+- get_duration
 - get_course_offering
 - get_location
 - other_loc_date
+- praise
 - negative:
     use_entities: false
 - get_description
@@ -180,10 +183,12 @@ templates:
   - text: No worries.
   - text: You are welcome.
   - text: My pleasure!
+  utter_thanks:
+  - text: Thank you, I try to do my best.
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
   utter_suggest_help:
-    - buttons:
+  - buttons:
     - payload: /affirm
       title: 'yes'
     - payload: /negative
