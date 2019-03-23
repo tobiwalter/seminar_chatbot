@@ -5,4 +5,44 @@ def matchingSeminar(seminars,course) -> int:
 		for ele in seminars:
 			if course.lower() in (d.lower() for d in ele["description"]):
 				seminar_id = ele["seminar_id"]
-				return seminar_id 
+				return seminar_id
+
+def period_check(date_period, date_time):
+
+    month = {
+        "January": 1,
+        "February": 2,
+        "March": 3,
+        "April": 4,
+        "May": 5,
+        "June": 6,
+        "July": 7,
+        "August": 8,
+        "September": 9,
+        "October": 10,
+        "November": 11,
+        "December": 12
+    }
+
+    season = {
+        "spring": [3,4,5],
+        "summer": [6,7,8],
+        "autumn": [9,10,11],
+        "winter": [12,1,2]
+    }
+
+    date_time = datetime.strptime(date_time, '%d/%m/%y')
+
+    if date_period.lower() in season:
+      if date_time.month in season.get(date_period.lower()):
+        return True
+      else:
+        return False
+    elif date_period.capitalize() in month:
+      if date_time.month == month.get(date_period.capitalize()):
+        return True
+      else:
+        return False
+    else:
+      return False
+
