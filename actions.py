@@ -5,7 +5,7 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet, FollowupAction
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import ActionExecutionRejection
-from helpers import matchingSeminar 
+from helpers import matchingSeminar, period_check
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
@@ -628,7 +628,7 @@ class ActionLocationButtons(Action):
                    sort_by_occ[l] = loc_occupancy[l][1]
 
             loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
-            loc_buttons.append(sorted(sort_by_occ.items(), key=lambda x: x[1]))
+            loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
 
             #displaying top 3 locations
             for x in list(loc_buttons)[0:3]:
@@ -640,20 +640,20 @@ class ActionLocationButtons(Action):
 
     def locDistance(self, homecity, destination):
         # Install Module geopy
-        from geopy.geocoders import Nominatim
-        from geopy import distance
+      from geopy.geocoders import Nominatim
+      from geopy import distance
 
-        geolocator = Nominatim(user_agent='myapplication')
+      geolocator = Nominatim(user_agent='myapplication')
 
-        try:
-            location = geolocator.geocode(homecity)
-            sem_city = geolocator.geocode(destination)
-            dis = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude)).km
+      try:
+          location = geolocator.geocode(homecity)
+          sem_city = geolocator.geocode(destination)
+          dis = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude)).km
 
-        except:
-            print(destination, "not found.")
-            dis = float('inf')
-        return dis
+      except:
+          print(destination, "not found.")
+          dis = float('inf')
+      return dis
 
 class ActionDateButtons(Action):
 

@@ -8,7 +8,7 @@ def matchingSeminar(seminars,course) -> int:
 				return seminar_id
 
 def period_check(date_period, date_time):
-
+    from datetime import datetime
     month = {
         "January": 1,
         "February": 2,
