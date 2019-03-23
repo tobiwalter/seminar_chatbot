@@ -12676,7 +12676,7 @@
         "intent": "book_seminar",
         "entities": []
       },
-	  {
+      {
         "text": "How long is the ML seminar?",
         "intent": "get_duration",
         "entities": []
@@ -13066,7 +13066,7 @@
         "intent": "get_duration",
         "entities": []
       },
-	  {
+      {
         "text": "At what time does it take place?",
         "intent": "get_duration",
         "entities": []
@@ -25072,7 +25072,6 @@
           }
         ]
       },
-		
       {
         "text": "What is the Java course about",
         "intent": "get_description",
@@ -32107,7 +32106,7 @@
       },
       {
         "text": "Leipzig",
-        "intent": "",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -32127,7 +32126,7 @@
         "intent": "other_loc_date",
         "entities": []
       },
-	  {
+      {
         "text": "good",
         "intent": "praise",
         "entities": []
@@ -32256,8 +32255,563 @@
         "text": "wonderful",
         "intent": "praise",
         "entities": []
+      },
+      {
+        "text": "list the seminars I will attend in October",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 35,
+            "end": 42,
+            "value": "October",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "what are my bookings in January?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "January",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "list my seminars in January",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "January",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show me all seminars in February",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "February",
+            "entity": "date-period"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "value": "all",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "what seminars do I have in March?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 27,
+            "end": 32,
+            "value": "March",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "do I have seminars in April?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 27,
+            "value": "April",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show my seminars in May",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show me my bookings for June",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "June",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Are there bookings in July?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 26,
+            "value": "July",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Do I have bookings in August?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "August",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Display the bookings for September",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 25,
+            "end": 34,
+            "value": "September",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Did I book seminars for October?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "October",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars do I have in November?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "November",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show me all bookings December?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "December",
+            "entity": "date-period"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "value": "all",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "Please cancel all seminars in April",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 30,
+            "end": 35,
+            "value": "April",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "can you cancel my seminars in May?",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 30,
+            "end": 33,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "cancel the seminars in June",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "June",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "I want to cancel my seminars in July",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 32,
+            "end": 36,
+            "value": "July",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "I need to cancel my seminars in August",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "August",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "cancel the programming course in September",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 33,
+            "end": 42,
+            "value": "September",
+            "entity": "date-period"
+          },
+          {
+            "start": 11,
+            "end": 22,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "i want to cancel the management seminar in December",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "management",
+            "entity": "course"
+          },
+          {
+            "start": 43,
+            "end": 51,
+            "value": "December",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "I need to cancel the ML seminar in January",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 35,
+            "end": 42,
+            "value": "January",
+            "entity": "date-period"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "value": "ML",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to book a seminar in May",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 31,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "I want to book the programming seminar in April",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 30,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "value": "April",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "book the seminar in May",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 23,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "book a seminar in August, please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "August",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Do I have seminars in summer?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show me the courses in winter?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "winter",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Do I have seminars in spring?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "spring",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Do I have the programming course in spring?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 36,
+            "end": 42,
+            "value": "spring",
+            "entity": "date-period"
+          },
+          {
+            "start": 14,
+            "end": 25,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "are there bookings in autumn?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "autumn",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "show all my bookings in summer",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "summer",
+            "entity": "date-period"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "value": "all",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "Are there bookings in winter?",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "winter",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Display your course portfolio please",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Display your seminar portfolio please",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "I want to book the ML seminar in Cologne",
+        "intent": "",
+        "entities": [
+          {
+            "start": 19,
+            "end": 21,
+            "value": "ML",
+            "entity": "course"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 33,
+            "end": 40,
+            "value": "Cologne",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Leipzig",
+        "intent": "",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "May 20th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "May 20th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Patricia Grey",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Patricia",
+            "entity": "given-name"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "value": "Grey",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Mary Grey",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Mary",
+            "entity": "given-name"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Grey",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "David Wagner",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "David",
+            "entity": "given-name"
+          },
+          {
+            "start": 6,
+            "end": 12,
+            "value": "Wagner",
+            "entity": "last-name"
+          }
+        ]
       }
-	  
     ],
     "regex_features": [],
     "lookup_tables": [
