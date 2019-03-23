@@ -309,6 +309,8 @@ class ActionCancelSeminar(Action):
     course = tracker.get_slot('course')
     city = tracker.get_slot('location')
     seminar_date = tracker.get_slot('date')
+    date_period = tracker.get_slot('date-period')
+    time = tracker.get_slot('time')
 
     if matchingID is not None:  
       """ retrieves data snapshots """
@@ -316,71 +318,102 @@ class ActionCancelSeminar(Action):
       bookings = bookingRef.get()
 
     # matching seminar ID
-      seminar_id = matchingSeminar(seminars,course)
-
-      if seminar_id is None:
-       dispatcher.utter_message("There is no seminar matching your request.")
-       return [SlotSet("cancellation_confirmed","False"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
-
-      #search for corresponding booking
-      if bookings is None:
-        dispatcher.utter_message("We do not have bookings for you in our database.")
-        return []
-      else:
-        breaker = False
-        for ele in bookings:
-          if not "cancellation" in ele:
-            if ele["seminar_id"]== seminar_id and dateparser.parse(ele["date"],
-              settings={'DATE_ORDER': 'DMY'}).date() > date.today():
-
-              dateEqual = True
-              locEqual  = True
-
-              #check date in case user defined date
-              if seminar_date is not None:
-                dateEqual = (dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date() 
-                  == dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date())
-              #check location in case user defined location
-              if city is not None:
-                locEqual = city.lower() == ele["location"].lower()
-
-              breaker = dateEqual and locEqual  
-
-              if breaker:
-                #cancel booking by deleting entries
-                seminar_date = ele["date"]
-                city = ele["location"]
-                cancellation = "cancelled on " + str(date.today())
-                bookingRef.update({str(bookings.index(ele)): {'cancellation': cancellation}})
-
-              #Update occupancy
-                try:
-                  seminarDates = seminars[seminar_id]["locations"][city.capitalize()]
-                  for ele in seminarDates:
-                    semdate = ele["date"]
-                    if dateparser.parse(seminar_date).date() == dateparser.parse(semdate).date():
-                      dateMatch = ele
-                      break
-
-                      occupancy = ele["occupancy"]
-                      occupancy -= 1
-                      occupancyRef = seminarRef.child("{}/locations/{}/{}".format(str(seminar_id),
-                                      city.capitalize(),str(seminarDates.index(dateMatch)))).update({"occupancy": occupancy})
-                except:
-                  print('Seminar date is not in the database. No occupancy update!')
-
-                  res = "Your seminar booking for {} on {} in {} has been cancelled. \n \
-                  You will receive a cancellation confirmation.".format(course, seminar_date, city)
-                  dispatcher.utter_message(res)
-                  return [SlotSet("cancellation_confirmed","True"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
-            else:
-                # bot message if cancellation was not successful      
-                dispatcher.utter_message("There are no bookings according to your request or the requested booking \
-                                      is already past and cannot be cancelled anymore.")
-                return  [SlotSet("cancellation_confirmed","False"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
-    else:
-        dispatcher.utter_message("You are not in the database. Please contact HR.")
+      if course is None:
+        dispatcher.utter_message("Which course do you want to cancel?")
         return [SlotSet("cancellation_confirmed","False")]
+      else:
+        seminar_id = matchingSeminar(seminars,course)
+
+        if seminar_id is None:
+          dispatcher.utter_message("There is no seminar matching your request.")
+          return [SlotSet("cancellation_confirmed","False"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
+
+        #search for corresponding booking
+        if bookings is None:
+          dispatcher.utter_message("We do not have bookings for you in our database.")
+          return []
+        else:
+          res = ""
+          for ele in bookings:
+            # ignore cancelled bookings
+            if not "cancellation" in ele:
+              if ele["seminar_id"]== seminar_id and dateparser.parse(ele["date"],
+                settings={'DATE_ORDER': 'DMY'}).date() > date.today():
+
+                dateEqual = True
+                locEqual  = True
+
+                #check date in case user defined date or period
+                if seminar_date is not None:
+                  dateEqual = (dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date() 
+                    == dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date())
+
+                elif date_period is not None:
+                  # Check if temporal expression extracted by duckling is an interval, i.e. has a "from" and "two" value
+                  if isinstance(time, dict):
+                    start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
+                    end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()
+
+                    dateEqual = (start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end)
+
+                  elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
+                    start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
+                    if "week" or "Week" in date_period:
+                      end = start + relativedelta(days = 7)
+                    elif "month" or "Month" in date_period:
+                      end = start + relativedelta(day=31)
+                    elif "year" or "Year" in date_period:
+                      end = start + relativedelta(day=365)
+
+                    dateEqual = (start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end)
+
+                  else:
+                    dateEqual = period_check(date_period, ele["date"])
+                
+                #check location in case user defined location
+                if city is not None:
+                  locEqual = city.lower() == ele["location"].lower() 
+
+                if dateEqual and locEqual:
+                  #cancel booking by deleting entries
+                  seminar_date = ele["date"]
+                  city = ele["location"]
+                  cancellation = "cancelled on " + str(date.today())
+                  bookingRef.update({str(bookings.index(ele)): {'cancellation': cancellation}})
+
+                #Update occupancy
+                  try:
+                    seminarDates = seminars[seminar_id]["locations"][city.capitalize()]
+                    for ele in seminarDates:
+                      semdate = ele["date"]
+                      if dateparser.parse(seminar_date).date() == dateparser.parse(semdate).date():
+                        dateMatch = ele
+                        break
+
+                        occupancy = ele["occupancy"]
+                        occupancy -= 1
+                        occupancyRef = seminarRef.child("{}/locations/{}/{}".format(str(seminar_id),
+                                        city.capitalize(),str(seminarDates.index(dateMatch)))).update({"occupancy": occupancy})
+                  except:
+                    print('Seminar date is not in the database. No occupancy update!')
+                
+                  res += "Your seminar booking for {} on {} in {} has been cancelled. \n".format(course, seminar_date, city)
+           
+          if res == "":
+            # bot message if cancellation was not successful      
+            dispatcher.utter_message("There are no bookings according to your request or the requested booking \
+                                  is in the past and cannot be cancelled anymore.")
+            return  [SlotSet("cancellation_confirmed","False"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
+
+          else:
+            res +="You will receive a cancellation confirmation."
+            dispatcher.utter_message(res)
+            return [SlotSet("cancellation_confirmed","True"), SlotSet("course",None), SlotSet("location",None), SlotSet("date",None)]
+
+    # no employee ID --> User Verification was not successful
+    else:
+      dispatcher.utter_message("You are not in the database. Please contact HR.")
+      return [SlotSet("cancellation_confirmed","False")]
 
 class ActionProvideDescription(Action):
   def name(self):
