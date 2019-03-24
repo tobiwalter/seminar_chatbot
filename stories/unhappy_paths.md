@@ -1075,3 +1075,30 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	
+## book seminar unhappy path only city given
+* book_seminar{"location": "Frankfurt"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_display_seminar
+	- utter_ask_course_book
+* inform{"course": "Python"}
+	- action_query_date
+	- slot{"dates": "07/03/19, 21/03/19"}
+    - slot{"title": "Python for beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+* other_smalltalk 
+	- utter_no_chitchat
+	- seminar_form
+    - form{"name": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course" : null}
