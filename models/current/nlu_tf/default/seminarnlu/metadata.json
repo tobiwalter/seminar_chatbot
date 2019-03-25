@@ -107,12 +107,12 @@
             ],
             "url": "http://localhost:8000",
             "locale": null,
-            "timezone": null,
+            "timezone": "Europe/Berlin",
             "name": "ner_duckling_http",
             "class": "rasa_nlu.extractors.duckling_http_extractor.DucklingHTTPExtractor"
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20190305-211004",
+    "trained_at": "20190325-140409",
     "rasa_nlu_version": "0.13.8"
 }
