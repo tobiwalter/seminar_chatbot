@@ -138,9 +138,8 @@ class ActionShowBookings(Action):
 
     # Check if temporal expression extracted by duckling is an interval, i.e. has a "from" and "two" value
     if isinstance(time, dict):
-      start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
-      end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()
-
+      start = dateparser.parse(time["from"]).date()
+      end = dateparser.parse(time["to"]).date()  
     #   If bookings between start and end, add them to the list of matched seminars
       matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]) for ele in bookings 
         if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
@@ -177,7 +176,7 @@ class ActionShowBookings(Action):
 
   def showBoookingsAtLocation(self,city, matchingID, bookings):
     matchedSeminars = ["{} on {}".format(ele["seminar_title"],ele["date"]) for ele in bookings
-        if ele["location"].lower() == city.lower() if not "cancellation" in ele]
+        if not "cancellation" in ele if ele["location"].lower() == city.lower()]
 
     if len(matchedSeminars) != 0:
       return "Your booked seminars in {} : {}".format(city.capitalize(),', '.join(matchedSeminars))
@@ -196,6 +195,7 @@ class ActionBookSeminar(Action):
     course = tracker.get_slot('course')
     city = tracker.get_slot('location')
     userGivenDate = tracker.get_slot('date')
+    time = tracker.get_slot('time')
 
     """ retrieves data snapshots """
     if matchingID is not None:
@@ -236,14 +236,22 @@ class ActionBookSeminar(Action):
         for ele in seminarDates:
           semdate = ele["date"]
           if userGivenDate:
-            if dateparser.parse(userGivenDate).date() == dateparser.parse(semdate).date():
+            if dateparser.parse(userGivenDate,settings={'DATE_ORDER': 'DMY'}).date() == \
+            dateparser.parse(semdate,settings={'DATE_ORDER': 'DMY'}).date():
             # or dateComparison(time, semdate) == 0:
+              dateMatch = ele
+              userGivenDate = str(semdate)
+              break
+          elif time:
+            if dateparser.parse(time).date() == dateparser.parse(semdate,
+              settings={'DATE_ORDER': 'DMY'}).date():
               dateMatch = ele
               userGivenDate = str(semdate)
               break
 
       if dateMatch is None:
-        dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"], userGivenDate))
+        dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],
+        dateparser.parse(time).date()))
         return [SlotSet("booking_confirmed", "False"),SlotSet("date", None)]
 
       #check if spot still available at given date and location      
@@ -358,8 +366,8 @@ class ActionCancelSeminar(Action):
                 elif date_period is not None:
                   # Check if temporal expression extracted by duckling is an interval, i.e. has a "from" and "two" value
                   if isinstance(time, dict):
-                    start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
-                    end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()
+                    start = dateparser.parse(time["from"]).date()
+                    end = dateparser.parse(time["to"]).date()  
 
                     dateEqual = (start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end)
 
@@ -461,6 +469,7 @@ class ActionDisplaySeminar(Action):
     if course is not None:
       seminar_id = matchingSeminar(seminars,course)
 
+      # If seminar could be matched, display seminar dates and locations of only this seminar
       if seminar_id is not None:
         seminarRef = db.reference('seminars/' + str(seminar_id))
         seminar = seminarRef.get()
@@ -469,21 +478,20 @@ class ActionDisplaySeminar(Action):
         dates = {}
 
         for loc in locs:
+          # Check if date-period was given by user
           if date_period is None:
             dates[loc] = [ele["date"] for ele in seminar["locations"][loc] 
             if ele["occupancy"] < seminar["capacity"]]
 
-          # only display dates in requested period
+          # If date-period was given by user, only display dates in requested period
           else:
-            dates[loc] = []
             
             if isinstance(time, dict):
-              start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
-              end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()  
+              start = dateparser.parse(time["from"]).date()
+              end = dateparser.parse(time["to"]).date()  
 
-              for ele in seminar["locations"][loc]:
-                if ele["occupancy"] < seminar["capacity"] and start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end:
-                  dates[loc].append(ele["date"])
+              dates[loc] = [ele["date"] for ele in seminar["locations"][loc] if ele["occupancy"] < seminar["capacity"] 
+              if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
 
             elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
               start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
@@ -494,23 +502,25 @@ class ActionDisplaySeminar(Action):
               elif "year" or "Year" in date_period:
                 end = start + relativedelta(day=365)
 
-              for ele in seminar["locations"][loc]:
-                if ele["occupancy"] < seminar["capacity"] and start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end:
-                  dates[loc].append(ele["date"])
+              dates[loc] = [ele["date"] for ele in seminar["locations"][loc] if ele["occupancy"] < seminar["capacity"] 
+              if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]    
 
             else:
-              for ele in seminar["locations"][loc]:
-                if ele["occupancy"] < seminar["capacity"] and period_check(date_period, ele["date"]):
-                  dates[loc].append(ele["date"])
+              dates[loc] = [ele["date"] for ele in seminar["locations"][loc] if ele["occupancy"] < seminar["capacity"] 
+              if period_check(date_period, ele["date"])]
 
           if len(dates[loc]) > 0:
             dates[loc] = sorted(dates[loc], key=lambda x: datetime.strptime(x, '%d/%m/%y'))
 
+        if len(dates) != 0:      
         #do not display locations that are fully booked for all dates
-        dates = dict( [(k,v) for k,v in dates.items() if len(v)>0])
-        res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
-        res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in dates.items()])
+          dates = dict( [(k,v) for k,v in dates.items() if len(v)>0])
+          res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
+          res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in dates.items()])
+        else:
+          res = "The seminar {} is not offered in the period you specified.".format(seminar["title"])
 
+                
         dispatcher.utter_message(res)
         return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id)] 
 
@@ -523,7 +533,7 @@ class ActionDisplaySeminar(Action):
       available_seminars = [ele["category"] for ele in seminars if city.capitalize() in ele["locations"]]
           
       if len(available_seminars) != 0:
-        res = "We have seminars in the following categories in {} :\n{}".format(
+        res = "We offer seminars in the following categories in {} :\n{}".format(
                                   city.capitalize(), ', '.join(available_seminars))
         dispatcher.utter_message(res)
         return []
@@ -535,8 +545,8 @@ class ActionDisplaySeminar(Action):
       available_seminars = []
 
       if isinstance(time, dict):
-        start = dateparser.parse(time["from"],settings={'DATE_ORDER': 'DMY'}).date()
-        end = dateparser.parse(time["to"],settings={'DATE_ORDER': 'DMY'}).date()  
+        start = dateparser.parse(time["from"]).date()
+        end = dateparser.parse(time["to"]).date()  
 
         for sem in seminars:
           cities = []
@@ -545,8 +555,7 @@ class ActionDisplaySeminar(Action):
               if start <= dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() <= end:
                 cities.append(loc)
                 break
-
-          seminar = sem["category"] + " in {}".format(", ".join(cities))
+          seminar = "{} in {}".format(sem["category"],", ".join(cities))
           available_seminars.append(seminar)
 
       elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
@@ -565,7 +574,6 @@ class ActionDisplaySeminar(Action):
               if start <= dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() <= end:
                 cities.append(loc)
                 break
-
           seminar = sem["category"] + " in {}".format(", ".join(cities))
           available_seminars.append(seminar)
 
@@ -577,7 +585,6 @@ class ActionDisplaySeminar(Action):
               if period_check(date_period, ele["date"]):
                 cities.append(loc)
                 break
-
           seminar = sem["category"] + " in {}".format(", ".join(cities))
           available_seminars.append(seminar)
 
@@ -625,7 +632,7 @@ class ActionLocationButtons(Action):
             return [FollowupAction('action_listen')] 
 
 
-          if tracker.latest_message == '/inform':
+          if tracker.latest_message.get('text') == 'I prefer a different location':
             buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} for loc in locations]
             dispatcher.utter_button_message("Please select a button:", buttons)
             return []
@@ -673,7 +680,7 @@ class ActionLocationButtons(Action):
             for x in list(loc_buttons)[0:3]:
               buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
 
-            buttons.append({'title': "other location", 'payload': "other location"})
+            buttons.append({'title': "other location", 'payload': "I prefer a different location"})
             dispatcher.utter_button_message("Please select a button:", buttons)
             return []
 
@@ -711,7 +718,7 @@ class ActionDateButtons(Action):
     if seminar_id is not None:
       seminar = seminars[seminar_id]
       if city in seminar["locations"]:
-        if tracker.latest_message == 'other date':
+        if tracker.latest_message.get('text') == 'I prefer a different date':
           buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'} for ele["date"] in seminar["locations"][city]]
         else:
           #displaying top 2 dates with the fewest participant number
@@ -729,7 +736,7 @@ class ActionDateButtons(Action):
           for x in list(date_occupancy)[0:2]: 
             buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
 
-          buttons.append({'title': "other date", 'payload': "/inform"})
+          buttons.append({'title': "other date", 'payload': "I prefer a different date"})
       
           dispatcher.utter_button_message("Please select a button:", buttons)
           return []
@@ -876,7 +883,7 @@ class SeminarForm(FormAction):
   @staticmethod
   def required_slots(tracker):
      
-    if tracker.get_slot('time'):
+    if tracker.get_slot('time') and not isinstance(tracker.get_slot('time'),dict):
       return ["location"]
     else:
       return ["location", "date"]
