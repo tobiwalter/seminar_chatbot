@@ -508,8 +508,12 @@ class ActionDisplaySeminar(Action):
 
         #do not display locations that are fully booked for all dates
         dates = dict( [(k,v) for k,v in dates.items() if len(v)>0])
-        res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
-        res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in dates.items()])
+
+        if dates:
+          res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
+          res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in dates.items()])
+        else:
+          res = "There are no booking dates available for the seminar {}".format(seminar["title"])
 
         dispatcher.utter_message(res)
         return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id)] 
