@@ -156,6 +156,7 @@
 ## cancel seminar no course specified - fail
 * cancel_seminar
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -175,6 +176,7 @@
 ## cancel seminar no course specified - succeed 
 * cancel_seminar
 	- utter_ask_course_cancel
+	- action_show_bookings
 * inform{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
@@ -188,6 +190,8 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+* thank+bye
+	- utter_thanks_bye
 	
 ## cancel seminar loc specified - succeed 
 * cancel_seminar{"location":"Berlin"}
@@ -206,6 +210,9 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+* praise
+	- utter_thanks
+
 	
 ## cancel seminar loc specified - fail
 * cancel_seminar{"location":"Berlin"}
@@ -246,7 +253,7 @@
 	- slot{"date": null}
 	
 ## cancel seminar date specified - fail
-* cancel_seminar{"location":"March 20"}
+* cancel_seminar{"date":"March 20"}
 	- utter_ask_course_cancel
 	- action_show_bookings
 * inform{"course":"Data Science"}

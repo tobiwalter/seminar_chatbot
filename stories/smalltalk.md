@@ -50,3 +50,18 @@
 	- action_verify_user
 * get_help
 	- utter_get_help
+	
+## thank and goodbye
+* thank+bye
+	- utter_thanks_bye
+	
+## praise
+* praise
+	- utter_thanks
+	
+## praise, thanks and goodbye
+* praise
+	- utter_thanks
+* thank+bye
+	- utter_thanks_bye
+	
