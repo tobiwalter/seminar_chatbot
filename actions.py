@@ -519,13 +519,13 @@ class ActionDisplaySeminar(Action):
         if dates:
           res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
           res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in dates.items()])
+          dispatcher.utter_message(res)
+          return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id),
+          SlotSet('time', None)] 
         else:
           res = "There are no booking dates available for the seminar {}".format(seminar["title"])
-                
-        dispatcher.utter_message(res)
-        return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id),
-        SlotSet('time', None)] 
-
+          dispatcher.utter_message(res)
+          return[SlotSet('date-period', None), SlotSet('time', None)]
       else:
         res = "We don't offer {} seminars.".format(course)
         dispatcher.utter_message(res)
@@ -538,10 +538,10 @@ class ActionDisplaySeminar(Action):
         res = "We offer seminars in the following categories in {} :\n{}".format(
                                   city.capitalize(), ', '.join(available_seminars))
         dispatcher.utter_message(res)
-        return []
+        return [SlotSet('categories', available_seminars)]
       else: 
         dispatcher.utter_message("There are no seminars offered in {}".format(city))
-        return []
+        return [SlotSet('location', None)]
 
     elif date_period is not None:
       available_seminars = []
@@ -594,7 +594,7 @@ class ActionDisplaySeminar(Action):
         res = "We offer the following seminars in the specified period:\n{}".format(
           '\n'.join(available_seminars))
         dispatcher.utter_message(res)
-        return []
+        return [SlotSet('categories', available_seminars)]
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return []
@@ -609,139 +609,21 @@ class ActionCourseOffering(Action):
     return "action_course_offering"
 
   def run(self, dispatcher, tracker, domain):
-    """ retrieves slot values """
-    cats = {ele["category"] for ele in seminars}
-    res = "We offer seminars in the following categories: \n\n" + ", ".join(cats)
-    dispatcher.utter_message(res)
-    return []
 
-class ActionLocationButtons(Action):
+    intent = tracker.latest_message['intent'].get('name')
 
-    def name(self):
-        """returns name of the action """
-        return "action_location_buttons"
+    if intent == 'get_course_offering':
+      cats = {ele["category"] for ele in seminars}
+      res = "We offer seminars in the following categories: \n\n" + ", ".join(cats)
+      dispatcher.utter_message(res)
+      return []
 
-    def run(self, dispatcher, tracker, domain):
-
-        course = tracker.get_slot('course')
-        seminars = db.reference('seminars').get()
-        seminar_id = matchingSeminar(seminars,course)
-
-        if seminar_id is not None:
-          if tracker.get_slot("locations"):
-            locations = tracker.get_slot("locations")      
-          else:
-            return [FollowupAction('action_listen')] 
-
-
-          if tracker.latest_message.get('text') == 'I prefer a different location':
-            buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} for loc in locations]
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return []
-          else:
-            seminar = seminars[seminar_id]
-            # locations = seminar.get("locations")
-
-            loc_occupancy = {}
-            buttons = []
-
-            employee_id = tracker.get_slot("employee_id")
-            home_city = employees[employee_id]["location"]
-
-            for loc in locations:
-              occ = 0
-              count = 0
-              for ele in seminar["locations"][loc]:
-                occ += ele["occupancy"]
-                count += 1
-            #do not display locations that are fully booked
-              if occ < count*seminar["capacity"]:
-                loc_occupancy[loc] = []
-                loc_occupancy[loc].append(round(occ/count,2))
-                if round(occ/count,2) > 0.7:
-                    loc_occupancy[loc].append(float('inf'))
-                else:
-                    loc_distance = self.locDistance(home_city, loc)
-                    loc_occupancy[loc].append(loc_distance)
-
-            # primary, display locations with occupancy < 70% and sort by distance
-            # then display locations with occupancy > 70 % and sort by average occupancy
-            sort_by_dis = {}
-            sort_by_occ = {}
-
-            for l in list(loc_occupancy):
-                if loc_occupancy[l][1] < float('inf'):
-                   sort_by_dis[l] = loc_occupancy[l][1]
-                else:
-                   sort_by_occ[l] = loc_occupancy[l][1]
-
-            loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
-            loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
-
-            #displaying top 3 locations
-            for x in list(loc_buttons)[0:3]:
-              buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
-
-            buttons.append({'title': "other location", 'payload': "I prefer a different location"})
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return []
-
-    def locDistance(self, homecity, destination):
-        # Install Module geopy
-      from geopy.geocoders import Nominatim
-      from geopy import distance
-
-      geolocator = Nominatim(user_agent='myapplication')
-
-      try:
-          location = geolocator.geocode(homecity)
-          sem_city = geolocator.geocode(destination)
-          dis = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude)).km
-
-      except:
-          print(destination, "not found.")
-          dis = float('inf')
-      return dis
-
-class ActionDateButtons(Action):
-
-  def name(self):
-    """returns name of the action """
-    return "action_date_buttons"
-
-  def run(self, dispatcher, tracker, domain):
-    seminars = db.reference('seminars').get()
-    city = tracker.get_slot("location").capitalize()
-    course = tracker.get_slot("course")
-
-    seminars = db.reference('seminars').get()
-    seminar_id = matchingSeminar(seminars,course)
-
-    if seminar_id is not None:
-      seminar = seminars[seminar_id]
-      if city in seminar["locations"]:
-        if tracker.latest_message.get('text') == 'I prefer a different date':
-          buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'} for ele["date"] in seminar["locations"][city]]
-        else:
-          #displaying top 2 dates with the fewest participant number
-          date_occupancy = {}
-          buttons = []
-
-          for ele in seminar["locations"][city]:
-            occ = ele["occupancy"]
-            date = ele["date"]
-          #do not display dates that are fully booked
-            if occ < seminar["capacity"]:
-              date_occupancy[date] = occ
-
-          date_occupancy = sorted(date_occupancy.items(), key=lambda x: x[1])
-          for x in list(date_occupancy)[0:2]: 
-            buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
-
-          buttons.append({'title': "other date", 'payload': "I prefer a different date"})
-      
-          dispatcher.utter_button_message("Please select a button:", buttons)
-          return []
+      ## TO-DO: add intent to domain file and training data to NLU/core
+    elif intent == 'get_course_offering_with_locations':
+      cities = {loc for sem in seminars for loc in sem["locations"]}
+      res = "We offer seminars in the following cities: \n\n" + ", ".join(cities)
+      dispatcher.utter_message(res)
+      return [] 
 
 class ActionQueryDate(Action):
     def name(self):
@@ -780,6 +662,7 @@ class ActionQueryDate(Action):
                     return [SlotSet("location",next_loc)]
                 else:
                     dispatcher.utter_message(res)
+                    return []
 
     def nextLocation(self, city, seminar_id):
     # Install Module geopy
@@ -871,7 +754,11 @@ class ActionQueryDuration(Action):
     seminar_id = matchingSeminar(seminars,course)
     if seminar_id is not None:
         duration = seminars[seminar_id]["duration (days)"]
-        dispatcher.utter_message("The seminar is scheduled over {} days from 9 am to 5 pm.".format(duration))
+        if duration == 1:
+          res = "The seminar is scheduled over one day from 9 am to 5 pm.".format(duration)
+        elif duration > 1:
+          res = "The seminar is scheduled over {} days from 9 am to 5 pm.".format(duration)
+        dispatcher.utter_message(res)
         return []
     else:
       dispatcher.utter_message("The duration could not be retrieved.")
@@ -973,3 +860,132 @@ class SeminarForm(FormAction):
   def submit(self, dispatcher, tracker, domain):
     dispatcher.utter_template('utter_submit', tracker)
     return [FollowupAction('action_book_seminar')]
+
+class ActionLocationButtons(Action):
+
+    def name(self):
+        """returns name of the action """
+        return "action_location_buttons"
+
+    def run(self, dispatcher, tracker, domain):
+
+        course = tracker.get_slot('course')
+        seminars = db.reference('seminars').get()
+        seminar_id = matchingSeminar(seminars,course)
+
+        if seminar_id is not None:
+          if tracker.get_slot("locations"):
+            locations = tracker.get_slot("locations")      
+          else:
+            return [FollowupAction('action_listen')] 
+
+
+          if tracker.latest_message['intent'].get('name') == 'other_loc_date':
+            buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} for loc in locations]
+            dispatcher.utter_button_message("Please select a button:", buttons)
+            return []
+          else:
+            seminar = seminars[seminar_id]
+            # locations = seminar.get("locations")
+
+            loc_occupancy = {}
+            buttons = []
+
+            employee_id = tracker.get_slot("employee_id")
+            home_city = employees[employee_id]["location"]
+
+            for loc in locations:
+              occ = 0
+              count = 0
+              for ele in seminar["locations"][loc]:
+                occ += ele["occupancy"]
+                count += 1
+            #do not display locations that are fully booked
+              if occ < count*seminar["capacity"]:
+                loc_occupancy[loc] = []
+                loc_occupancy[loc].append(round(occ/count,2))
+                if round(occ/count,2) > 0.7:
+                    loc_occupancy[loc].append(float('inf'))
+                else:
+                    loc_distance = self.locDistance(home_city, loc)
+                    loc_occupancy[loc].append(loc_distance)
+
+            # primary, display locations with occupancy < 70% and sort by distance
+            # then display locations with occupancy > 70 % and sort by average occupancy
+            sort_by_dis = {}
+            sort_by_occ = {}
+
+            for l in list(loc_occupancy):
+                if loc_occupancy[l][1] < float('inf'):
+                   sort_by_dis[l] = loc_occupancy[l][1]
+                else:
+                   sort_by_occ[l] = loc_occupancy[l][1]
+
+            loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
+            loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
+
+            #displaying top 3 locations
+            for x in list(loc_buttons)[0:3]:
+              buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
+
+            buttons.append({'title': "other location", 'payload': "/other_loc_date"})
+            dispatcher.utter_button_message("Please select a button:", buttons)
+            return []
+
+    def locDistance(self, homecity, destination):
+        # Install Module geopy
+      from geopy.geocoders import Nominatim
+      from geopy import distance
+
+      geolocator = Nominatim(user_agent='myapplication')
+
+      try:
+          location = geolocator.geocode(homecity)
+          sem_city = geolocator.geocode(destination)
+          dis = distance.distance((sem_city.latitude, sem_city.longitude),(location.latitude,location.longitude)).km
+
+      except:
+          print(destination, "not found.")
+          dis = float('inf')
+      return dis
+
+class ActionDateButtons(Action):
+
+  def name(self):
+    """returns name of the action """
+    return "action_date_buttons"
+
+  def run(self, dispatcher, tracker, domain):
+    seminars = db.reference('seminars').get()
+    city = tracker.get_slot("location").capitalize()
+    course = tracker.get_slot("course")
+
+    seminars = db.reference('seminars').get()
+    seminar_id = matchingSeminar(seminars,course)
+
+    if seminar_id is not None:
+      seminar = seminars[seminar_id]
+      if city in seminar["locations"]:
+
+        if tracker.latest_message['intent'].get('name') == 'other_loc_date':
+          buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'} for ele["date"] in seminar["locations"][city]]
+        else:
+          #displaying top 2 dates with the fewest participant number
+          date_occupancy = {}
+          buttons = []
+
+          for ele in seminar["locations"][city]:
+            occ = ele["occupancy"]
+            date = ele["date"]
+          #do not display dates that are fully booked
+            if occ < seminar["capacity"]:
+              date_occupancy[date] = occ
+
+          date_occupancy = sorted(date_occupancy.items(), key=lambda x: x[1])
+          for x in list(date_occupancy)[0:2]: 
+            buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
+
+          buttons.append({'title': "other date", 'payload': "/other_loc_date"})
+      
+          dispatcher.utter_button_message("Please select a button:", buttons)
+          return []
