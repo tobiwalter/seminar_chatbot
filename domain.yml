@@ -79,6 +79,7 @@ intents:
 - age:
     use_entities: false
 - stop:
+- thank+bye
     use_entities: false
 slots:
   booking-type:
@@ -204,3 +205,7 @@ templates:
       following format: dd//mm//yy'
   utter_wrong_location:
   - text: The location you specified is not in our database. Please try again.
+  utter_thanks_bye:
+  - text: You're welcome, see you soon!
+  - text: My pleasure, goodbye!
+  - text: You're welcome, until next time!

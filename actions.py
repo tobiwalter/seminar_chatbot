@@ -300,7 +300,8 @@ class ActionBookSeminar(Action):
                   res += "\n{} in {} on {}.".format(ele["seminar_title"],ele["location"],ele["date"])
                   breaker = False
             if breaker:
-              return [SlotSet("booking_confirmed","True"),SlotSet("date", None),SlotSet("location",None),SlotSet("course",None)]
+              return [SlotSet("booking_confirmed","True"),SlotSet("date", None),SlotSet("location",None),
+              SlotSet("course",None), FollowupAction('action_listen')]
             else:
               buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
               dispatcher.utter_message(res)
@@ -308,7 +309,8 @@ class ActionBookSeminar(Action):
               return [SlotSet("booking_confirmed","True"), SlotSet("location",None),SlotSet("course",None)]
     else:
         dispatcher.utter_message("You are not in our database. Please contact HR.")
-        return [SlotSet('user_verified', 'False'), SlotSet("booking_confirmed","False"), SlotSet("date", None),SlotSet("location",None)]
+        return [SlotSet('user_verified', 'False'), SlotSet("booking_confirmed","False"), SlotSet("date", None),
+        SlotSet("location",None), FollowupAction('utter_suggest_help')]
                     
 class ActionCancelSeminar(Action):
   def name(self):
@@ -511,7 +513,6 @@ class ActionDisplaySeminar(Action):
 
           if len(dates[loc]) > 0:
             dates[loc] = sorted(dates[loc], key=lambda x: datetime.strptime(x, '%d/%m/%y'))
-     
         #do not display locations that are fully booked for all dates
         dates = dict( [(k,v) for k,v in dates.items() if len(v)>0])
 
@@ -522,7 +523,8 @@ class ActionDisplaySeminar(Action):
           res = "There are no booking dates available for the seminar {}".format(seminar["title"])
                 
         dispatcher.utter_message(res)
-        return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id)] 
+        return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id),
+        SlotSet('time', None)] 
 
       else:
         res = "We don't offer {} seminars.".format(course)
@@ -762,7 +764,8 @@ class ActionQueryDate(Action):
               dates = sorted(dates, key=lambda x: datetime.strptime(x, '%d/%m/%y'))
               res = "In {} the seminar takes place on those dates: \n{}".format(city, ", ".join(dates))
               dispatcher.utter_message(res)
-              return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"])]
+              return [SlotSet("dates", ', '.join(dates)), SlotSet("title", seminar["title"],
+                SlotSet('time', None))]
 
             # Suggest closest seminar location if seminar not held in specified city 
             else:

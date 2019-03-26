@@ -12719,7 +12719,7 @@
           {
             "start": 26,
             "end": 31,
-            "value": "Excel ",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -29997,7 +29997,7 @@
           {
             "start": 0,
             "end": 12,
-            "value": "Data Science ",
+            "value": "Data Science",
             "entity": "course"
           }
         ]
@@ -32621,7 +32621,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "management ",
+            "value": "leadership",
             "entity": "course"
           }
         ]
@@ -32813,7 +32813,7 @@
           {
             "start": 12,
             "end": 23,
-            "value": "programming ",
+            "value": "programming",
             "entity": "course"
           },
           {
