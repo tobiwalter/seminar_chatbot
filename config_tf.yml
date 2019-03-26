@@ -36,3 +36,4 @@ pipeline:
   url: http://localhost:8000
   dimensions:
   - time
+  timezone: "Europe/Berlin"

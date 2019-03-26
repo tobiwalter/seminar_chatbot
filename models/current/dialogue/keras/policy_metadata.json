@@ -2,20 +2,16 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "given-name",
+        "user-level",
+        "date-period",
+        "last-name",
+        "display-option",
+        "time",
+        "course",
         "location",
         "requested_slot",
-        "given-name",
-        "last-name",
-        "locations",
-        "display-option",
-        "course",
-        "title",
-        "seminar_id",
-        "date-period",
-        "user-level",
-        "dates",
-        "date",
-        "time"
+        "date"
       ]
     },
     "action_verify_user": {
@@ -26,98 +22,88 @@
     },
     "action_display_seminar": {
       "slots": [
-        "location",
-        "requested_slot",
         "locations",
-        "seminar_id",
         "title",
-        "date"
+        "seminar_id"
       ]
     },
     "seminar_form": {
       "slots": [
-        "location",
-        "requested_slot",
         "time",
-        "date"
+        "requested_slot",
+        "date",
+        "location"
       ]
     },
     "action_book_seminar": {
       "slots": [
+        "course",
+        "date",
         "location",
-        "booking_confirmed",
-        "date"
+        "booking_confirmed"
       ]
     },
-    "utter_no_chitchat": {
+    "action_query_date": {
       "slots": [
+        "title",
         "location",
         "requested_slot",
-        "date"
-      ]
-    },
-    "action_cancel_seminar": {
-      "slots": [
-        "cancellation_confirmed"
+        "dates",
+        "date",
+        "seminar_id"
       ]
     },
     "action_show_bookings": {
       "slots": [
+        "time",
         "location",
-        "date"
+        "date",
+        "date-period"
       ]
     },
-    "utter_no_worries": {
-      "slots": []
-    },
-    "action_deactivate_form": {
-      "slots": []
-    },
-    "action_provide_prerequisites": {
+    "action_cancel_seminar": {
       "slots": [
+        "course",
+        "cancellation_confirmed",
         "location",
-        "requested_slot",
         "date"
       ]
     },
     "utter_get_help": {
       "slots": []
     },
-    "utter_introduction": {
-      "slots": [
-        "requested_slot",
-        "date"
-      ]
+    "utter_no_worries": {
+      "slots": []
+    },
+    "utter_i''m sorry": {
+      "slots": []
+    },
+    "utter_no_chitchat": {
+      "slots": []
     },
     "utter_welcome": {
       "slots": []
     },
-    "action_course_offering": {
-      "slots": []
-    },
-    "action_provide_description": {
-      "slots": [
-        "location",
-        "requested_slot",
-        "date"
-      ]
-    },
     "utter_bye": {
       "slots": []
     },
-    "action_query_level": {
-      "slots": [
-        "location",
-        "requested_slot",
-        "date"
-      ]
+    "action_provide_description": {
+      "slots": []
     },
-    "action_query_date": {
-      "slots": [
-        "requested_slot",
-        "dates",
-        "date"
-      ]
+    "utter_do_something_else": {
+      "slots": []
+    },
+    "action_deactivate_form": {
+      "slots": []
+    },
+    "action_provide_prerequisites": {
+      "slots": []
+    },
+    "action_query_level": {
+      "slots": []
+    },
+    "action_query_duration": {
+      "slots": []
     }
   },
   "rasa_core": "0.12.4",
@@ -135,5 +121,5 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190224-192901"
+  "trained_at": "20190325-105152"
 }
