@@ -148,11 +148,11 @@ class ActionShowBookings(Action):
     #  the value of the date period entity
     elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
       start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
-      if "week" or "Week" in date_period:
+      if "week" in date_period.lower():
         end = start + relativedelta(days = 7)
-      elif "month" or "Month" in date_period:
+      elif "month" in date_period.lower():
         end = start + relativedelta(day=31)
-      elif "year" or "Year" in date_period:
+      elif "year" in date_period.lower():
         end = start + relativedelta(day=365)
 
     # If bookings between start and end, add them to the list of matched seminars
@@ -497,12 +497,12 @@ class ActionDisplaySeminar(Action):
 
             elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
               start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
-              if "week" or "Week" in date_period:
+              if "week" in date_period.lower():
                 end = start + relativedelta(days = 7)
-              elif "month" or "Month" in date_period:
+              elif "month" in date_period.lower():
                 end = start + relativedelta(day=31)
-              elif "year" or "Year" in date_period:
-                end = start + relativedelta(day=365)
+              elif "year" in date_period.lower():
+                end = start + relativedelta(day=365)              
 
               dates[loc] = [ele["date"] for ele in seminar["locations"][loc] if ele["occupancy"] < seminar["capacity"] 
               if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]    
@@ -562,15 +562,15 @@ class ActionDisplaySeminar(Action):
 
       elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
         start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
-        if "week" or "Week" in date_period:
+        if "week" in date_period.lower():
           end = start + relativedelta(days = 7)
-        elif "month" or "Month" in date_period:
+        elif "month" in date_period.lower():
           end = start + relativedelta(day=31)
-        elif "year" or "Year" in date_period:
+        elif "year" in date_period.lower():
           end = start + relativedelta(day=365)
 
         for sem in seminars:
-          cities = []
+          cities = [] 
           for loc in sem["locations"]:
             for ele in sem["locations"][loc]:
               if start <= dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() <= end:
