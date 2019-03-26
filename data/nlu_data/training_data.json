@@ -28258,7 +28258,14 @@
       {
         "text": "In which cities can I register for the seminar?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 39,
+            "end": 46,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Where can I attend it?",
@@ -28268,32 +28275,74 @@
       {
         "text": "Where can I attend this seminar?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "In which locations is the seminar held?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Tell me where I can attend the seminar",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 31,
+            "end": 38,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Where does the seminar take place?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "To which city do I need to go in order to attend the seminar?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 53,
+            "end": 60,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Where do you offer the seminar?",
         "intent": "get_location",
-        "entities": []
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Where can I attend the Machine Learning seminar?",
@@ -28304,6 +28353,12 @@
             "end": 39,
             "value": "Machine Learning",
             "entity": "course"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "seminar",
+            "entity": "course-type"
           }
         ]
       },
@@ -28639,18 +28694,6 @@
             "start": 28,
             "end": 46,
             "value": "data visualization",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Where does the workshop for  take place?",
-        "intent": "get_location",
-        "entities": [
-          {
-            "start": 28,
-            "end": 28,
-            "value": "",
             "entity": "course"
           }
         ]
@@ -31894,6 +31937,41 @@
         "intent": "praise",
         "entities": []
       },
+	  {
+        "text": "Thank you and goodbye",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "Good bye, thank you!",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "alright thanks and goodbye",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "thx and bye bye",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "thanks and see you another time",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "thanks and see you next time",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "thank you very much and see you next time",
+        "intent": "thank+bye",
+        "entities": []
+      },
       {
         "text": "list the seminars I will attend in October",
         "intent": "show_bookings",
@@ -32866,7 +32944,7 @@
           }
         ]
       },
-	{
+      {
         "text": "I prefer a different date",
         "intent": "other_loc_date",
         "entities": []
@@ -32926,8 +33004,8 @@
         "intent": "other_loc_date",
         "entities": []
       },
-	  {
-		"text": "Thank you and goodbye",
+      {
+        "text": "Thank you and goodbye",
         "intent": "thank+bye",
         "entities": []
       },
@@ -33005,6 +33083,73 @@
         "text": "Thanks a lot and goodbye",
         "intent": "thank+bye",
         "entities": []
+      },
+      {
+        "text": "You can tell me where I can book seminars",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where can I book seminars?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "In which cities can I take the seminars?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "You can tell me where I can attend seminars",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Just tell me where I can join a seminar",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Just tell me where I can attend a seminar",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where can I attend seminars?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "At which places can I take part in a seminar?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where can I take them?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "In which cities are your seminars offered?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "In which cities do your seminars take place?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where do you offer workshops?",
+        "intent": "get_location",
+        "entities": [
+          {
+            "start": 19,
+            "end": 28,
+            "value": "workshops",
+            "entity": "course-type"
+          }
+        ]
       }
     ],
     "regex_features": [],
