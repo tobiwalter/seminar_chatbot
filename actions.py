@@ -22,7 +22,7 @@ import json
 
 # Fetch the service account key JSON file contents
 cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+#cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -568,8 +568,9 @@ class ActionDisplaySeminar(Action):
                 cities.append(loc)
                 break
           # Add seminar and cities where it can be booked
-          seminar = "{} in {}".format(sem["category"],", ".join(cities))
-          available_seminars.append(seminar)
+          if cities:
+            seminar = "{} in {}".format(sem["category"],", ".join(cities))
+            available_seminars.append(seminar)
 
       elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
         start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
@@ -587,9 +588,11 @@ class ActionDisplaySeminar(Action):
               if start <= dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() <= end:
                 cities.append(loc)
                 break
+
           # Add seminar and cities where it can be booked
-          seminar = sem["category"] + " in {}".format(", ".join(cities))
-          available_seminars.append(seminar)
+          if cities:
+            seminar = sem["category"] + " in {}".format(", ".join(cities))
+            available_seminars.append(seminar)
 
       else:
         for sem in seminars:
@@ -599,9 +602,11 @@ class ActionDisplaySeminar(Action):
               if period_check(date_period, ele["date"]):
                 cities.append(loc)
                 break
+
           # Add seminar and cities where it can be booked
-          seminar = sem["category"] + " in {}".format(", ".join(cities))
-          available_seminars.append(seminar)
+          if cities:
+            seminar = sem["category"] + " in {}".format(", ".join(cities))
+            available_seminars.append(seminar)
 
       if len(available_seminars) != 0:
         res = "We offer the following seminars in the specified period:\n{}".format(
