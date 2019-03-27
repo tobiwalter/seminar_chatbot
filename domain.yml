@@ -22,7 +22,7 @@ actions:
 - utter_bye
 - utter_thanks
 - utter_thanks_bye
-utter_no_insult
+- utter_no_insult
 - utter_welcome
 - utter_are_you_sure
 - utter_try_again
@@ -48,6 +48,7 @@ entities:
 - given-name
 - display-option
 - date-period
+- user-level
 forms:
 - seminar_form
 intents:
@@ -76,7 +77,7 @@ intents:
 - get_level
 - bad:
     use_entities: false
-- get_help
+- get_help:
     use_entities: false
 - bye
 - cancel_seminar
