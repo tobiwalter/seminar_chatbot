@@ -2,16 +2,19 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "date",
-        "given-name",
-        "display-option",
-        "last-name",
-        "date-period",
         "user-level",
-        "time",
+        "title",
         "location",
+        "date",
+        "seminar_id",
+        "given-name",
+        "date-period",
+        "display-option",
+        "requested_slot",
+        "locations",
+        "time",
         "course",
-        "requested_slot"
+        "last-name"
       ]
     },
     "action_verify_user": {
@@ -22,81 +25,60 @@
     },
     "action_display_seminar": {
       "slots": [
-        "date",
+        "seminar_id",
+        "title",
         "locations",
-        "requested_slot",
+        "date-period",
+        "time",
+        "categories"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "seminar_id",
         "location",
-        "title"
+        "title",
+        "date",
+        "requested_slot",
+        "dates"
       ]
     },
     "seminar_form": {
       "slots": [
         "location",
         "date",
-        "requested_slot"
+        "requested_slot",
+        "time",
+        "booking_confirmed",
+        "course"
       ]
     },
     "action_book_seminar": {
       "slots": [
+        "location",
         "booking_confirmed",
+        "course",
+        "date"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "time",
+        "date-period",
         "location",
         "date"
       ]
     },
     "action_cancel_seminar": {
       "slots": [
-        "cancellation_confirmed"
-      ]
-    },
-    "action_query_date": {
-      "slots": [
-        "date",
-        "requested_slot",
-        "dates"
-      ]
-    },
-    "action_provide_prerequisites": {
-      "slots": [
+        "course",
         "location",
-        "date",
-        "requested_slot"
-      ]
-    },
-    "utter_no_chitchat": {
-      "slots": [
-        "location",
-        "date",
-        "requested_slot"
+        "cancellation_confirmed",
+        "date"
       ]
     },
     "action_deactivate_form": {
       "slots": []
-    },
-    "utter_introduction": {
-      "slots": [
-        "date",
-        "requested_slot"
-      ]
-    },
-    "action_query_level": {
-      "slots": [
-        "location",
-        "date",
-        "requested_slot"
-      ]
-    },
-    "action_show_bookings": {
-      "slots": [
-        "location",
-        "date"
-      ]
-    },
-    "action_provide_description": {
-      "slots": [
-        "location",
-        "date",
-        "requested_slot"
-      ]
     }
   },
   "rasa_core": "0.12.4",
@@ -112,5 +94,5 @@
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190223-204649"
+  "trained_at": "20190326-160625"
 }

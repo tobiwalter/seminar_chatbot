@@ -1,60 +1,65 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_course_book
-- utter_ask_course_cancel
-- action_course_offering
-- utter_i''m sorry
-- action_show_bookings
 - utter_no_worries
-- utter_get_help
+- utter_submit
+- action_show_bookings
+- utter_i''m sorry
 - action_provide_description
-- utter_bye
-- action_book_seminar
-- utter_try_again
+- utter_do_something_else
+- utter_get_help
+- utter_ask_continue
 - action_cancel_seminar
-- action_query_level
-- utter_ask_date
-- action_provide_prerequisites
-- utter_are_you_sure
+- action_query_duration
+- utter_ask_course_cancel
+- utter_book_somewhere_else
+- utter_ask_name
 - utter_suggest_help
 - action_display_seminar
-- utter_no_chitchat
-- utter_ask_name
+- utter_ask_course_book
+- action_query_level
 - utter_introduction
-- utter_wrong_location
-- action_query_date
+- utter_bye
+- utter_thanks
+- utter_thanks_bye
+- utter_no_insult
 - utter_welcome
-- utter_ask_continue
-- action_verify_user
-- utter_submit
-- action_provide_datesWithLocation
+- utter_are_you_sure
+- utter_try_again
+- utter_no_chitchat
+- action_course_offering
 - utter_ask_location
 - utter_wrong_date
-- utter_book_somewhere_else
-- utter_do_something_else
+- action_provide_prerequisites
+- action_verify_user
+- utter_ask_date
+- action_book_seminar
+- utter_wrong_location
+- action_provide_datesWithLocation
+- action_query_date
 config:
   store_entities_as_slots: true
 entities:
-- course
-- date-period
 - last-name
-- display-option
 - date
-- given-name
 - time
 - location
 - course-type
 - booking-type
-- null
+- course
+- given-name
+- display-option
+- date-period
 forms:
 - seminar_form
 intents:
-- get_dates:
+- other_smalltalk:
+    use_entities: false
+- book_seminar:
     use_entities: true
 - inform:
     use_entities: true
-- book_seminar:
+- get_dates:
     use_entities: true
 - book_seminar+get_dates:
     use_entities: true
@@ -64,18 +69,24 @@ intents:
     use_entities: true
 - show_bookings:
     use_entities: true
-- other_smalltalk:
+- insult:
     use_entities: false
 - welcome:
     use_entities: true
 - thank:
     use_entities: true
+- get_duration:
+    use_entities: true
 - get_course_offering:
     use_entities: true
 - get_location:
     use_entities: true
-- negative:
+- other_loc_date:
+    use_entities: true
+- praise:
     use_entities: false
+- negative:
+    use_entities: true
 - get_description:
     use_entities: true
 - get_prerequisites:
@@ -85,7 +96,7 @@ intents:
 - bad:
     use_entities: false
 - get_help:
-    use_entities: true
+    use_entities: false
 - bye:
     use_entities: true
 - cancel_seminar:
@@ -94,8 +105,9 @@ intents:
     use_entities: false
 - age:
     use_entities: false
-- stop:
-    use_entities: false
+- stop: null
+- thank+bye:
+    use_entities: true
 slots:
   booking-type:
     auto_fill: true
@@ -112,6 +124,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  categories:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   course:
     auto_fill: true
     initial_value: null
@@ -155,11 +171,7 @@ slots:
   requested_slot:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.CategoricalSlot
-    values:
-    - date
-    - location
-    - course
+    type: rasa_core.slots.UnfeaturizedSlot
   seminar_id:
     auto_fill: true
     initial_value: null
@@ -187,12 +199,12 @@ templates:
       title: 'yes'
     - payload: /negative
       title: 'no'
-    text: Are you sure?
+    text: Are you sure to cancel your seminar in {course}?
   utter_ask_continue:
   - buttons:
-    - payload: 'yes'
+    - payload: /affirm
       title: 'yes'
-    - payload: 'no'
+    - payload: /negative
       title: 'no'
     text: Do you want to continue?
   utter_ask_course_book:
@@ -237,6 +249,10 @@ templates:
       information about the seminar offering.
   utter_no_chitchat:
   - text: I don't do smalltalk, let's get things done!
+  utter_no_insult:
+  - text: Make peace, not war!
+  - text: No strong language!
+  - text: Don't get offensive!
   utter_no_worries:
   - text: No worries.
   - text: You are welcome.
@@ -244,8 +260,18 @@ templates:
   utter_submit:
   - text: Thanks! I will now attempt to fulfill your request.
   utter_suggest_help:
-  - text: Shall I forward you to the helpdesk?
-  - text: Do you want to reach out to the helpdesk?
+  - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Do you want to reach out to the helpdesk?
+  utter_thanks:
+  - text: Thank you, I try to do my best.
+  utter_thanks_bye:
+  - text: You're welcome, see you soon!
+  - text: My pleasure, goodbye!
+  - text: You're welcome, until next time!
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
