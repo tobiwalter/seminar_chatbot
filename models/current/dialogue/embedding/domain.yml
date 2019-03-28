@@ -105,7 +105,8 @@ intents:
     use_entities: false
 - age:
     use_entities: false
-- stop: null
+- stop:
+    use_entities: false
 - thank+bye:
     use_entities: true
 slots:

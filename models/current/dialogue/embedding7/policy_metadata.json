@@ -1,0 +1,99 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "course",
+        "requested_slot",
+        "locations",
+        "seminar_id",
+        "last-name",
+        "given-name",
+        "date",
+        "time",
+        "title",
+        "date-period",
+        "user-level",
+        "display-option",
+        "location"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "user_verified",
+        "employee_id"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "time",
+        "location",
+        "date",
+        "date-period"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "locations",
+        "seminar_id",
+        "time",
+        "title",
+        "categories",
+        "date-period",
+        "location"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "course",
+        "requested_slot",
+        "date",
+        "booking_confirmed",
+        "time",
+        "location"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "date",
+        "location",
+        "booking_confirmed",
+        "course"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "cancellation_confirmed",
+        "date",
+        "location",
+        "course"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "dates",
+        "requested_slot",
+        "seminar_id",
+        "date",
+        "title",
+        "location"
+      ]
+    },
+    "action_deactivate_form": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.12.4",
+  "python": "3.6.6",
+  "max_histories": [
+    null,
+    null,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190328-104509"
+}
