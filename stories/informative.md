@@ -177,5 +177,17 @@
 * get_description
     - action_provide_description
 	
+## get course offering - loc specified
+* get_course_offering{"location":"Berlin"}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+	
+## get course offering - date-period specified
+* get_course_offering{"date-period":"spring"}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+
+	
+	
 
 	
