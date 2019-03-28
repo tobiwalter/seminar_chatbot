@@ -1,4 +1,4 @@
-import dateparse
+import dateparser
 from datetime import date, datetime
 
 #Helper functions that are needed in actions module
@@ -12,18 +12,18 @@ def matchingSeminar(seminars,course) -> int:
 
 def dateComparison(date1, date2) -> int:
 
-		if isistance(date1, date):
-			if isistance(date2, date):
+		if isinstance(date1, date):
+			if isinstance(date2, date):
 				if date1 == date2: return 0
 				elif date1 < date2: return -1
 				else: return 1
 
 			else:	
-			if date1 == dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-			 return 0
-			elif date1 < dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-				 return -1
-			else: return 1 
+				if date1 == dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+				 return 0
+				elif date1 < dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+					 return -1
+				else: return 1 
 
 		elif isinstance(date2, date):
 			if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == date2:
@@ -33,10 +33,10 @@ def dateComparison(date1, date2) -> int:
 			else: return 1 
 
 		else:
-			if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() ==
+			if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == \
 					dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
 					return 0
-			elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() <
+			elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() < \
 					dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
 					return -1
 			else: return 1

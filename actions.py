@@ -65,13 +65,13 @@ class ActionShowBookings(Action):
         if bookingtype == 'past':
             bookedSeminars = ["{} in {} on {}".format(ele["seminar_title"],ele["location"], ele["date"]) 
                   for ele in bookings if not "cancellation" in ele if \
-                  dateComparison(ele["date"],strftime("%c")) == -1]
+                  dateComparison(ele["date"], date.today()) == -1]
             # res = "These are your booked seminars: \n" + bookedSeminars
 
         elif bookingtype == 'upcoming':
             bookedSeminars = ["{} in {} on {}".format(ele["seminar_title"],ele["location"], ele["date"]) 
                   for ele in bookings if not "cancellation" in ele if \
-                  dateComparison(ele["date"],strftime("%c")) == 1]
+                  dateComparison(ele["date"], date.today()) == 1]
             # res = "These are your booked seminars: \n" + bookedSeminars
 
         else:
@@ -111,8 +111,8 @@ class ActionShowBookings(Action):
     # Initialise date of next booking with first date in the list of booked seminars and iterate through all dates
           
     bookings = [ele for ele in bookings if not 'cancellation' in ele if 
-      dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() > date.today()]
-    sorted(bookings, key = lambda i: datetime.strptime(i['date'],"%d/%m/%y"))
+      dateComparison(ele["date"], date.today()) == 1]
+    bookings = sorted(bookings, key = lambda i: datetime.strptime(i['date'],"%d/%m/%y"))
     return "{} on {} in {}.".format(bookings[0]["seminar_title"],bookings[0]["date"],
       bookings[0]["location"])
 
@@ -120,9 +120,9 @@ class ActionShowBookings(Action):
 
     userGivenDate = dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date()
 
-    matchedSeminars = ["{} in {}".format(ele["seminar_title"],ele["location"]) for ele in bookings 
-      if not 'cancellation' in ele \
-      if dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() == userGivenDate]
+    matchedSeminars = ["{} in {}".format(ele["seminar_title"],ele["location"]) 
+    for ele in bookings 
+    if not 'cancellation' in ele if dateComparison(ele["date"], userGivenDate) == 0]
 
     if len(matchedSeminars) != 0:
       return "Your booked seminars on {} : {}.".format(userGivenDate.strftime("%d.%m.%y"),
@@ -221,7 +221,8 @@ class ActionBookSeminar(Action):
         if not city.capitalize() in seminar["locations"]:
           res = "The seminar {} is not offered in {}.".format(seminar["title"],city.capitalize())
           dispatcher.utter_message(res)
-          return [SlotSet("booking_confirmed","False"),SlotSet("location", None), SlotSet("date", None)]
+          return [SlotSet("booking_confirmed","False"),SlotSet("location", None), SlotSet("date", None),
+          SlotSet("time", None)]
 
       # Check if course is offered at user-given date
       if not (userGivenDate or time):
@@ -232,16 +233,13 @@ class ActionBookSeminar(Action):
         seminarDates = seminar["locations"][city.capitalize()]
         for ele in seminarDates:
           semdate = ele["date"]
-          if userGivenDate:
-            if dateparser.parse(userGivenDate,settings={'DATE_ORDER': 'DMY'}).date() == \
-            dateparser.parse(semdate,settings={'DATE_ORDER': 'DMY'}).date():
-            # or dateComparison(time, semdate) == 0:
+          if userGivenDate is not None:
+            if dateComparison(userGivenDate, semdate) == 0: 
               dateMatch = ele
               userGivenDate = str(semdate)
               break
-          elif time:
-            if dateparser.parse(time).date() == dateparser.parse(semdate,
-              settings={'DATE_ORDER': 'DMY'}).date():
+          elif time is not None:
+            if dateComparison(time, semdate) == 0: 
               dateMatch = ele
               userGivenDate = str(semdate)
               break
@@ -249,12 +247,13 @@ class ActionBookSeminar(Action):
       if not dateMatch:
         dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],
         dateparser.parse(time).date()))
-        return [SlotSet("booking_confirmed", "False"),SlotSet("date", None)]
+        return [SlotSet("booking_confirmed", "False"),SlotSet("date", None), SlotSet("time", None)]
 
       #check if spot still available at given date and location      
       if seminar["capacity"] == dateMatch["occupancy"]:
         dispatcher.utter_message("All seminars about {} are booked out.".format(course))
-        return [SlotSet("booking_confirmed","False"),SlotSet("date", None),SlotSet("location",None)]
+        return [SlotSet("booking_confirmed","False"),SlotSet("date", None), SlotSet("time", None),
+                SlotSet("location",None)]
       else:
         #check if seminar already booked by user 
         if bookings:
@@ -264,8 +263,8 @@ class ActionBookSeminar(Action):
               dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date() > date.today():
                 res = "You have already booked the seminar {} in {} on {}.".format(course,ele["location"],ele["date"])
                 dispatcher.utter_message(res)
-                return [SlotSet("booking_confirmed","False"), SlotSet("date", None),SlotSet("location",None),
-                SlotSet("course",None)]
+                return [SlotSet("booking_confirmed","False"), SlotSet("date", None), SlotSet("time", None),
+                        SlotSet("location",None), SlotSet("course",None)]
 
         # If not booked, perform booking from here on: First, update occupancy on matched date 
         occupancy = dateMatch["occupancy"]
@@ -299,8 +298,8 @@ class ActionBookSeminar(Action):
                   res += "\n{} in {} on {}.".format(ele["seminar_title"],ele["location"],ele["date"])
                   breaker = False
             if breaker:
-              return [SlotSet("booking_confirmed","True"),SlotSet("date", None),SlotSet("location",None),
-              SlotSet("course",None), FollowupAction('action_listen')]
+              return [SlotSet("booking_confirmed","True"),SlotSet("date", None), SlotSet("time", None),
+                      SlotSet("location",None), SlotSet("course",None), FollowupAction('action_listen')]
             # If date clash, ask if user wants to cancel one of the seminars  
             else:
               buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
@@ -310,7 +309,8 @@ class ActionBookSeminar(Action):
     else:
         dispatcher.utter_message("You are not in our database. Please contact HR.")
         return [SlotSet('user_verified', 'False'), SlotSet("booking_confirmed","False"),
-                SlotSet("date", None), SlotSet("location",None), FollowupAction('utter_suggest_help')]
+                SlotSet("date", None), SlotSet("time", None), SlotSet("location",None),
+                 FollowupAction('utter_suggest_help')]
                     
 class ActionCancelSeminar(Action):
   def name(self):
@@ -350,16 +350,14 @@ class ActionCancelSeminar(Action):
           for ele in bookings:
             # ignore cancelled bookings
             if not "cancellation" in ele:
-              if ele["seminar_id"]== seminar_id and dateparser.parse(ele["date"],
-                settings={'DATE_ORDER': 'DMY'}).date() > date.today():
+              if ele["seminar_id"]== seminar_id and dateComparison(ele["date"], date.today()) == 1:
 
                 dateEqual = True
                 locEqual  = True
 
                 #check date in case user defined date or period
                 if userGivenDate:
-                  dateEqual = (dateparser.parse(userGivenDate,settings={'DATE_ORDER': 'DMY'}).date() 
-                    == dateparser.parse(ele["date"],settings={'DATE_ORDER': 'DMY'}).date())
+                  dateEqual = (dateComparison(userGivenDate, ele["date"]) == 0)
 
                 elif date_period:
                   # Check if temporal expression extracted by duckling is an interval, i.e. has a "from" and "two" value
@@ -399,7 +397,7 @@ class ActionCancelSeminar(Action):
                     seminarDates = seminars[seminar_id]["locations"][city.capitalize()]
                     for ele in seminarDates:
                       semdate = ele["date"]
-                      if dateparser.parse(seminar_date).date() == dateparser.parse(semdate).date():
+                      if dateComparison(seminar_date, semdate) == 0:
                         dateMatch = ele
                         occupancy = ele["occupancy"]
                         occupancy -= 1
