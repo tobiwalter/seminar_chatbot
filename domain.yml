@@ -85,7 +85,7 @@ intents:
     use_entities: false
 - age:
     use_entities: false
-- stop:
+- stop
 - thank+bye
 slots:
   booking-type:
