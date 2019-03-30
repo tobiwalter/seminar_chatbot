@@ -340,7 +340,7 @@ class ActionCancelSeminar(Action):
         if not seminar_id:
           dispatcher.utter_message("There is no seminar matching your request.")
           return [SlotSet("cancellation_confirmed","False"), SlotSet("course",None),
-           SlotSet("location",None), SlotSet("date",None)]
+           SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
         #search for corresponding booking
         if not bookings:
@@ -417,7 +417,7 @@ class ActionCancelSeminar(Action):
         dispatcher.utter_message("There are no bookings according to your request or the requested booking \
                                     is already past and cannot be cancelled anymore.")
         return  [SlotSet("cancellation_confirmed","False"), SlotSet("course",None),
-                 SlotSet("location",None), SlotSet("date",None)]
+                 SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
     # no employee ID --> User Verification was not successful
     else:
@@ -531,11 +531,12 @@ class ActionDisplaySeminar(Action):
         else:
           res = "There are no booking dates available for {} in the given period".format(seminar["title"])
           dispatcher.utter_message(res)
-          return[SlotSet('date-period', None), SlotSet('time', None)]
+          return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
       else:
         res = "We don't offer {} seminars.".format(course)
         dispatcher.utter_message(res)
-        return []
+        return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
+        SlotSet('time', None)]
 
     # Second priority: If no course, but location could be extracted, find seminars at that location
     elif city:
@@ -548,7 +549,7 @@ class ActionDisplaySeminar(Action):
         return [SlotSet('categories', available_seminars)]
       else: 
         dispatcher.utter_message("There are no seminars offered in {}".format(city))
-        return [SlotSet('location', None)]
+        return [SlotSet('location', None), FollowupAction('utter_do_something_else')]
 
     # Third priority: If no course and loc, but date period could be extracted, find seminars within this period
     elif date_period:
@@ -613,10 +614,10 @@ class ActionDisplaySeminar(Action):
         return [SlotSet('categories', available_seminars)]
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
-        return[SlotSet('date-period', None), SlotSet('time', None)]
+        return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
     else: 
       dispatcher.utter_message("We do not offer courses in the category you specified.")
-      return []
+      return [FollowupAction('utter_do_something_else')]
 
 class ActionCourseOffering(Action):
 
