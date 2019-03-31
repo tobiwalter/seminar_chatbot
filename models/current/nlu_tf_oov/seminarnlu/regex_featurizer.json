@@ -1,0 +1,6 @@
+[
+    {
+        "name": "course",
+        "pattern": "(?i)(\\bprogramming\\b|\\bmachine\\ learning\\b|\\bexcel\\b|\\bcommunication\\b|\\brhetoric\\b|\\bpython\\b|\\br\\b|\\bjava\\b|\\bdata\\ science\\b|\\bpersuasion\\b|\\bnegotation\\b|\\bleadership\\b|\\bdata\\ visualization\\b|\\btableau\\b|\\bmath\\b|\\bdeep\\ learning\\b|\\bstorytelling\\b|\\bbusiness\\ english\\b)"
+    }
+]
