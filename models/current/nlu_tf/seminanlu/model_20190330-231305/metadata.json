@@ -50,14 +50,6 @@
             "class": "rasa_nlu.extractors.entity_synonyms.EntitySynonymMapper"
         },
         {
-            "entities": [
-                "given-name",
-                "last-name"
-            ],
-            "name": "titlecase_named_entities",
-            "class": "TitlecaseNamedEntities.TitlecaseNamedEntities"
-        },
-        {
             "token_pattern": "(?u)\\b\\w\\w+\\b",
             "strip_accents": null,
             "stop_words": null,
@@ -121,6 +113,6 @@
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20190331-123250",
+    "trained_at": "20190330-231306",
     "rasa_nlu_version": "0.13.8"
 }
