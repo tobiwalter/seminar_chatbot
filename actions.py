@@ -1,3 +1,4 @@
+import logging
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
@@ -15,6 +16,8 @@ from dateutil.relativedelta import relativedelta
 import dateparser
 from time import strftime
 import json
+
+logger = logging.getLogger(__name__)
 
 # =============================================================================
 # Initialize Firebase database instance
@@ -214,7 +217,7 @@ class ActionBookSeminar(Action):
       #  In case necessary slots were not filled previously, ask user to fill them
       if not city:
         dispatcher.utter_template('utter_ask_location', tracker)
-        return [SlotSet("booking_confirmed","False")]
+        return [SlotSet("booking_confirmed","False"), FollowupAction('action_location_buttons')]
       else:  
         # Otherwise, check if course is offered at user-given location
         seminar = seminars[seminar_id]
@@ -227,7 +230,7 @@ class ActionBookSeminar(Action):
       # Check if course is offered at user-given date
       if not (userGivenDate or time):
         dispatcher.utter_template('utter_ask_date', tracker)
-        return [SlotSet("booking_confirmed","False")]
+        return [SlotSet("booking_confirmed","False"), FollowupAction('action_date_buttons')]
       else: 
         dateMatch = None
         seminarDates = seminar["locations"][city.capitalize()]
@@ -264,7 +267,7 @@ class ActionBookSeminar(Action):
                 res = "You have already booked the seminar {} in {} on {}.".format(course,ele["location"],ele["date"])
                 dispatcher.utter_message(res)
                 return [SlotSet("booking_confirmed","False"), SlotSet("date", None), SlotSet("time", None),
-                        SlotSet("location",None), SlotSet("course",None)]
+                        SlotSet("location",None), SlotSet("course",None), SlotSet('date-period'), None]
 
         # If not booked, perform booking from here on: First, update occupancy on matched date 
         occupancy = dateMatch["occupancy"]
@@ -536,7 +539,7 @@ class ActionDisplaySeminar(Action):
         res = "We don't offer {} seminars.".format(course)
         dispatcher.utter_message(res)
         return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-        SlotSet('time', None)]
+        SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
     # Second priority: If no course, but location could be extracted, find seminars at that location
     elif city:
@@ -761,10 +764,12 @@ class VerifyUser(Action):
         if e["First_name"].lower() == firstname.lower():
           if e["Last_name"].lower() == lastname.lower():
             dispatcher.utter_message("Hello {}.".format(firstname.capitalize()))
-            return [SlotSet("user_verified","True"), SlotSet("employee_id",e["employee_id"])]
+            return [SlotSet("user_verified","True"), SlotSet("employee_id",e["employee_id"])] 
 
     # Prompt user to input name again in case verification fails
     dispatcher.utter_template('utter_try_again', tracker)
+    ## TO-DO: add user_verified(false) and if slot set already, that means bot ask for the 2nd time,
+    ## so if verification fails again, utter_suggest_help
     return []
 
 class ActionQueryDuration(Action):
@@ -1022,3 +1027,37 @@ class ActionDateButtons(Action):
       
           dispatcher.utter_button_message("Please select a button:", buttons)
           return []
+
+class ActionShowAllButtons(Action):
+
+  def name(self):
+      """returns name of the action """
+      return "action_show_all_buttons"
+
+  def run(self, dispatcher, tracker, domain):
+
+      course = tracker.get_slot('course')
+      city = tracker.get_slot('location')
+      otherLoc = tracker.get_slot('other_location')
+      otherDate = tracker.get_slot('other_date')
+      seminars = db.reference('seminars').get()
+
+      if tracker.latest_message['intent'].get('name') == 'other_loc_date':
+
+        seminar_id = matchingSeminar(seminars,course)
+        if seminar_id:
+          if otherLoc is not None:
+            locations = tracker.get_slot("locations")   
+          # If user clicked on other locations, display all locations 
+            buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} 
+            for loc in locations]
+            dispatcher.utter_button_message("Please select a button:", buttons)
+            return []
+          elif otherDate is not None:
+            if city is not None:
+              if city in seminar["locations"]:
+              # If user clicked on other dates, display all dates 
+                buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'}
+                for ele["date"] in seminar["locations"][city]]
+                dispatcher.utter_button_message("Please select a button:", buttons)
+                return []
