@@ -14,6 +14,7 @@
 	- slot{"date": null}
 * bye
 	- utter_bye
+	- action_restart
 
 ## cancel a seminar - deny	
 * cancel_seminar{"course":"rhetoric"}
@@ -22,6 +23,7 @@
 	- utter_do_something_else
 * negative
 	- utter_bye
+	- action_restart
 
 ## cancel a seminar - deny	
 * cancel_seminar{"course":"rhetoric"}
@@ -192,6 +194,7 @@
 	- slot{"date": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## cancel seminar loc specified - succeed 
 * cancel_seminar{"location":"Berlin"}
@@ -291,6 +294,7 @@
 	- slot{"date": null}
 * bye
 	- utter_bye
+	- action_restart
 
 ## cancel seminar affirm but then stop
 * cancel_seminar{"course":"rhetoric"}

@@ -17,7 +17,6 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
-	- slot{"time": null}
 	
 ## multi-intent: book seminar & get dates 
 * book_seminar+get_dates{"course":"programming", "location":"Munich"}
@@ -35,7 +34,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	
@@ -56,6 +54,5 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
