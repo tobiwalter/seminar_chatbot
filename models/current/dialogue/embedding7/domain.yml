@@ -37,6 +37,7 @@ actions:
 - utter_wrong_location
 - action_provide_datesWithLocation
 - action_query_date
+- action_show_all_buttons
 config:
   store_entities_as_slots: true
 entities:
@@ -51,6 +52,8 @@ entities:
 - display-option
 - date-period
 - user-level
+- other_date
+- other_location
 forms:
 - seminar_form
 intents:
@@ -107,7 +110,7 @@ intents:
 - age:
     use_entities: false
 - stop:
-    use_entities: false
+    use_entities: true
 - thank+bye:
     use_entities: true
 slots:
@@ -170,6 +173,14 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.ListSlot
+  other_date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  other_location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   requested_slot:
     auto_fill: true
     initial_value: null
@@ -234,7 +245,8 @@ templates:
   - text: Sorry, I didn't understand that.
   utter_do_something_else:
   - text: Can I do something else for you? Remember I can help you to book seminars,
-      show seminar bookings and get information about the seminar offering.
+      show seminar bookings, cancel seminars and get information about the seminar
+      offering.
   utter_get_help:
   - buttons:
     - payload: Call helpdesk
@@ -277,8 +289,10 @@ templates:
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
-  - text: 'Hello! I can do the following for you: Booking seminars, showing seminar
-      bookings and getting information about the seminar offering.'
+  - text: 'Hello! I can do the following tasks for you: Book a seminar, show your
+      seminar bookings, cancel a seminar or get information about the seminar offering.'
+  - text: Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar
+      bookings, cancel seminars or show information about the seminar offering.
   utter_wrong_date:
   - text: 'The date you entered could not be verified. Please enter the date in the
       following format: dd//mm//yy'
