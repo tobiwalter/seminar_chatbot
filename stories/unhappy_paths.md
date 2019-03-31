@@ -872,9 +872,7 @@
 ## unhappy_path stop - cancel_seminar
 * cancel_seminar{"course": "machine learning"}
     - slot{"course": "machine learning"}
-    - utter_are_you_sure
-* affirm
-    - utter_ask_name
+	- utter_ask_name
 * stop
 	- utter_ask_continue
 * negative
@@ -883,8 +881,6 @@
 ## unhappy_path smalltalk - cancel_seminar
 * cancel_seminar{"course": "machine learning"}
     - slot{"course": "machine learning"}
-    - utter_are_you_sure
-* affirm
     - utter_ask_name
 * other_smalltalk
 	- utter_no_chitchat
@@ -895,6 +891,8 @@
     - action_verify_user
     - slot{"user_verified": "True"}
     - slot{"employee_id": 0}
+	- utter_are_you_sure
+* affirm
     - action_cancel_seminar
     - slot{"cancellation_confirmed": "True"}
 	- slot{"course": null}		
@@ -1147,7 +1145,8 @@
     - slot{"location": null}	
 	- slot{"date" : null}
 	- slot{"time": null}
-## stop booking seminar before seminar form gets activated
+	
+## stop but continue booking seminar before seminar form gets activated
 * book_seminar
     - utter_ask_name
 * inform{"given-name": "Ron", "last-name": "Moore"}
@@ -1187,7 +1186,7 @@
 	- slot{"time": null}
 	- slot{"date": null}
 	
-## stop booking seminar before seminar form gets activated
+## stop and really stop booking seminar before seminar form gets activated
 * book_seminar
     - utter_ask_name
 * inform{"given-name": "Ron", "last-name": "Moore"}
@@ -1202,3 +1201,85 @@
 	- utter_ask_continue
 * negative
 	- utter_do_something_else
+	
+## unhappy_path_seminar get_dates
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* get_dates{"location":"Munich"}		
+    - action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+	- slot{"title": "blabla"}
+    - seminar_form
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Berlin"}
+    - slot{"location": "Berlin"}
+    - seminar_form
+    - slot{"location": "Berlin"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "19th February"}
+    - slot{"date": "19th February"}
+    - seminar_form
+    - slot{"date": "19th February"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+	- slot{"time": null}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	
+## unhappy_path_seminar get_dates
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Berlin"}
+    - slot{"location": "Berlin"}
+    - seminar_form
+    - slot{"location": "Berlin"}
+    - slot{"requested_slot": "date"}
+* get_location
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+* form: inform{"date": "19th February"}
+    - slot{"date": "19th February"}
+    - seminar_form
+    - slot{"date": "19th February"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+	- slot{"time": null}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}

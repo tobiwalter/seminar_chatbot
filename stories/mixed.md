@@ -553,13 +553,13 @@
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
-	- utter_are_you_sure
-* affirm
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_are_you_sure
+* affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
@@ -591,13 +591,13 @@
 	
 ## cancel_then show bookings
 * cancel_seminar{"course":"rhetoric"}
-	- utter_are_you_sure
-* affirm
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_are_you_sure
+* affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
@@ -612,13 +612,13 @@
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
-	- utter_are_you_sure
-* affirm
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_are_you_sure
+* affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
@@ -855,6 +855,11 @@
 	
 ## show_book_cancel with get_course_offering
 * cancel_seminar{"course":"Machine Learning"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
 	- utter_are_you_sure
 * negative
 	- utter_do_something_else
@@ -877,13 +882,13 @@
 	
 ## cancel_show_get_infos
 * cancel_seminar{"course":"rhetoric"}
-	- utter_are_you_sure
-* affirm
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_are_you_sure
+* affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
@@ -1102,7 +1107,7 @@
 	- action_query_date
 	- slot{"dates": "18/02/19, 29/02/19, 27/03/19"}
 	- slot{"title": "blabla"}
-* book_seminar{"18/02/19"}
+* book_seminar{"date" : "18/02/19"}
     - seminar_form
     - form{"name": "seminar_form"}
     - form{"name": null}
