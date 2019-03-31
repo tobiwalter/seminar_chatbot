@@ -13958,13 +13958,26 @@
             "end": 45,
             "value": "beginners",
             "entity": "user-level"
+          },
+          {
+            "start": 24,
+            "end": 31,
+            "value": "courses",
+            "entity": "course-type"
           }
         ]
       },
       {
         "text": "What seminars do you offer?",
         "intent": "get_course_offering",
-        "entities": []
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Do you offer courses in Programming?",
@@ -16936,6 +16949,354 @@
             "end": 10,
             "value": "Miller",
             "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "on January 8",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "January 8",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on the 4th of May",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "4th of May",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "next Friday",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "next Friday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on September 18",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 15,
+            "value": "September 18",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on the 8th of May",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "8th of May",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "16.03.19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "16.03.19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on 16.03",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "16.03",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on May 3",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "May 3",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on June 4",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "June 4",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "4th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "4th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "2nd July",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "2nd July",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "23.05",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "23.05",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "June 15",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "June 15",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "July 3",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "July 3",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "July 31",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "July 31",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "31.03",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "31.03",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "23.05",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "23.05",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "24.04",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "24.04",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "14.05",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "14.05",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "19.05",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "19.05",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "20.07",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "20.07",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "13.08",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "13.08",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "14.06",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "14.06",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "12.05",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "12.05",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "August 21",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "August 21",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "13th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "13th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "22nd April",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "22nd April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "October 31st",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "October 31st",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "November 23",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "November 23",
+            "entity": "date"
           }
         ]
       },
@@ -27284,18 +27645,6 @@
         ]
       },
       {
-        "text": "Is it a  seminar?",
-        "intent": "get_level",
-        "entities": [
-          {
-            "start": 8,
-            "end": 8,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ]
-      },
-      {
         "text": "Is it a advanced seminar?",
         "intent": "get_level",
         "entities": [
@@ -27764,18 +28113,6 @@
         ]
       },
       {
-        "text": "Do you recommend it for ?",
-        "intent": "get_level",
-        "entities": [
-          {
-            "start": 24,
-            "end": 24,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ]
-      },
-      {
         "text": "Do you recommend it for advanced?",
         "intent": "get_level",
         "entities": [
@@ -27998,18 +28335,6 @@
           {
             "start": 31,
             "end": 43,
-            "value": "beginners",
-            "entity": "user-level"
-          }
-        ]
-      },
-      {
-        "text": "Is the seminar recommended for ?",
-        "intent": "get_level",
-        "entities": [
-          {
-            "start": 31,
-            "end": 31,
             "value": "beginners",
             "entity": "user-level"
           }
@@ -31937,7 +32262,7 @@
         "intent": "praise",
         "entities": []
       },
-	  {
+      {
         "text": "Thank you and goodbye",
         "intent": "thank+bye",
         "entities": []
@@ -32941,6 +33266,12 @@
             "end": 14,
             "value": "seminars",
             "entity": "course-type"
+          },
+          {
+            "start": 32,
+            "end": 38,
+            "value": "Berlin",
+            "entity": "location"
           }
         ]
       },
@@ -33148,6 +33479,887 @@
             "end": 28,
             "value": "workshops",
             "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is it recommended for beginners?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "beginners",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "What level does the seminar have?",
+        "intent": "get_level",
+        "entities": []
+      },
+      {
+        "text": "Would you recommended it for beginners?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 29,
+            "end": 38,
+            "value": "beginners",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Cool and when is it offered?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "I want to book it ",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to attend it",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to book this seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to attend this seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to join this seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to take part in this seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to book a seminar in Paris",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "Paris",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "You can tell me where I can book seminars",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Paris",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Paris",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "When does the seminar take place in Munich?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 36,
+            "end": 42,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "When is it possible to take the seminar in Hamburg?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 43,
+            "end": 50,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": " I want to see the courses you offer.",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Then tell me about the seminar offering.",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "What skills are necessary in order to take it?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "Sounds good. I want to book it in Leipzig.",
+        "intent": "",
+        "entities": [
+          {
+            "start": 34,
+            "end": 41,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Hey bot, still alive?",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "I want to attend another seminar.",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 25,
+            "end": 32,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars do you offer?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "My name is Juste Walter",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "Juste",
+            "entity": "given-name"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Walter",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I am Josh Fraser",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Josh",
+            "entity": "given-name"
+          },
+          {
+            "start": 10,
+            "end": 16,
+            "value": "Fraser",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I'm Lucy Carson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 8,
+            "value": "Lucy",
+            "entity": "given-name"
+          },
+          {
+            "start": 9,
+            "end": 15,
+            "value": "Carson",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "People call me Greg Multon",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "value": "Greg",
+            "entity": "given-name"
+          },
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Multon",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "It's David Müller",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "David",
+            "entity": "given-name"
+          },
+          {
+            "start": 11,
+            "end": 17,
+            "value": "Müller",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Usually people call me Brad Ashton",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "Brad",
+            "entity": "given-name"
+          },
+          {
+            "start": 28,
+            "end": 34,
+            "value": "Ashton",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "My name is Roberta Barella",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "Roberta",
+            "entity": "given-name"
+          },
+          {
+            "start": 19,
+            "end": 26,
+            "value": "Barella",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "You can call me Thomas Ward",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Thomas",
+            "entity": "given-name"
+          },
+          {
+            "start": 23,
+            "end": 27,
+            "value": "Ward",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Please call me Linda McCarthy",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "Linda",
+            "entity": "given-name"
+          },
+          {
+            "start": 21,
+            "end": 29,
+            "value": "McCarthy",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "My name ist Tom Dooley",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 12,
+            "end": 15,
+            "value": "Tom",
+            "entity": "given-name"
+          },
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Dooley",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I am Richard Socher",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Richard",
+            "entity": "given-name"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "Socher",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I'm Tracy Weber",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Tracy",
+            "entity": "given-name"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "Weber",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Call me Sally Laughton",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "Sally",
+            "entity": "given-name"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "value": "Laughton",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I am Philipp McDonald",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Philipp",
+            "entity": "given-name"
+          },
+          {
+            "start": 13,
+            "end": 21,
+            "value": "McDonald",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I am Charlie Sheen",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Charlie",
+            "entity": "given-name"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "value": "Sheen",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I am Ben Kingsley",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 8,
+            "value": "Ben",
+            "entity": "given-name"
+          },
+          {
+            "start": 9,
+            "end": 17,
+            "value": "Kingsley",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Call me Susan Jackson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "Susan",
+            "entity": "given-name"
+          },
+          {
+            "start": 14,
+            "end": 21,
+            "value": "Jackson",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "name is Pete O'Neill",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "Pete",
+            "entity": "given-name"
+          },
+          {
+            "start": 13,
+            "end": 20,
+            "value": "O'Neill",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I Stan Chiarelli",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 2,
+            "end": 6,
+            "value": "Stan",
+            "entity": "given-name"
+          },
+          {
+            "start": 7,
+            "end": 16,
+            "value": "Chiarelli",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Ross McNulton is my name",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Ross",
+            "entity": "given-name"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "McNulton",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Everyone calls me Ganesh Gupta",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "Ganesh",
+            "entity": "given-name"
+          },
+          {
+            "start": 25,
+            "end": 30,
+            "value": "Gupta",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "My name is Dan Sedovsky",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "Dan",
+            "entity": "given-name"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "value": "Sedovsky",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "I'm Laura Croft",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "Laura",
+            "entity": "given-name"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "Croft",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars are available in oov?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Do you have oov courses?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "courses",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there any seminars in oov?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Do you have courses in oov?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Does the company offer training in oov?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Are there any oov courses?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "I'm interested in oov",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Show me the course offering in oov",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "I want to cancel the seminar in oov",
+        "intent": "cancel_seminar",
+        "entities": []
+      },
+      {
+        "text": "I need to cancel my oov seminar",
+        "intent": "cancel_seminar",
+        "entities": []
+      },
+      {
+        "text": "Cancel my oov",
+        "intent": "cancel_seminar",
+        "entities": []
+      },
+      {
+        "text": "I have to cancel the seminar in oov",
+        "intent": "cancel_seminar",
+        "entities": []
+      },
+      {
+        "text": "Please cancel my seminar in Munich oov",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "i want to book a seminar about oov",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "You can book the oov seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "Can you book oov for me?",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "Can you reserve oov for me?",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to register for oov",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to book the oov oov",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to attend the oov seminar ",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "Book the seminar about oov",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to book a seminar in oov",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "Where can I attend the oov seminar?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where does the workshop for oov take place?",
+        "intent": "",
+        "entities": []
+      },
+      {
+        "text": "Just tell me where I can join oov",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "In which cities is the oov oov offered?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where can I book oov?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Do you recommend it for oov?",
+        "intent": "get_level",
+        "entities": []
+      },
+      {
+        "text": "Do you recommend it for oov oov?",
+        "intent": "get_level",
+        "entities": []
+      },
+      {
+        "text": "Is the seminar recommended for oov?",
+        "intent": "get_level",
+        "entities": []
+      },
+      {
+        "text": "When does oov take place?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "On what days can I take oov?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "Tell me the dates of oov",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "Tell me the dates of Python",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are there any prerequisites for oov?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What are the requirements of oov?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What are the requirements for oov?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What skills are necessary for oov?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "prerequisites oov",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "oov requirements",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "oov 31",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "I'm oov oov",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "I am oov oov",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "oov oov",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "My name is oov oov",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "My name is oov Croft",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "Croft",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "My name is Tom oov",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "Tom",
+            "entity": "given-name"
+          }
+        ]
+      },
+      {
+        "text": "Tom oov",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 7,
+            "value": "oov",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "oov Anderson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "Anderson",
+            "entity": "last-name"
           }
         ]
       }
