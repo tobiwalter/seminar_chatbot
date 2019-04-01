@@ -1,4 +1,3 @@
-import logging
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
@@ -16,8 +15,6 @@ from dateutil.relativedelta import relativedelta
 import dateparser
 from time import strftime
 import json
-
-logger = logging.getLogger(__name__)
 
 # =============================================================================
 # Initialize Firebase database instance
@@ -910,60 +907,60 @@ class ActionLocationButtons(Action):
             return [FollowupAction('action_listen')] 
 
           # If user clicked on other locations, display all locations 
-          if tracker.latest_message['intent'].get('name') == 'other_loc_date':
-            buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} 
-            for loc in locations]
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return []
+          # if tracker.latest_message['intent'].get('name') == 'other_loc_date':
+          #   buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} 
+          #   for loc in locations]
+          #   dispatcher.utter_button_message("Please select a button:", buttons)
+          #   return []
           # Otherwise, only display 3 locations
-          else:
-            seminar = seminars[seminar_id]
-            # locations = seminar.get("locations")
+          # else:
+          seminar = seminars[seminar_id]
+          # locations = seminar.get("locations")
 
-            loc_occupancy = {}
-            buttons = []
+          loc_occupancy = {}
+          buttons = []
 
-            # Get working location of employee to give closer locations higher priority
-            employee_id = tracker.get_slot("employee_id")
-            home_city = employees[employee_id]["location"]
+          # Get working location of employee to give closer locations higher priority
+          employee_id = tracker.get_slot("employee_id")
+          home_city = employees[employee_id]["location"]
 
-            for loc in locations:
-              occ = 0
-              count = 0
-              for ele in seminar["locations"][loc]:
-                occ += ele["occupancy"]
-                count += 1
-            #do not display locations that are fully booked
-              if occ < count*seminar["capacity"]:
-                loc_occupancy[loc] = []
-                loc_occupancy[loc].append(round(occ/count,2))
-                if round(occ/count,2) > 0.7:
-                    loc_occupancy[loc].append(float('inf'))
-                else:
-                    loc_distance = self.locDistance(home_city, loc)
-                    loc_occupancy[loc].append(loc_distance)
+          for loc in locations:
+            occ = 0
+            count = 0
+            for ele in seminar["locations"][loc]:
+              occ += ele["occupancy"]
+              count += 1
+          #do not display locations that are fully booked
+            if occ < count*seminar["capacity"]:
+              loc_occupancy[loc] = []
+              loc_occupancy[loc].append(round(occ/count,2))
+              if round(occ/count,2) > 0.7:
+                  loc_occupancy[loc].append(float('inf'))
+              else:
+                  loc_distance = self.locDistance(home_city, loc)
+                  loc_occupancy[loc].append(loc_distance)
 
-            # primary, display locations with occupancy < 70% and sort by distance
-            # then display locations with occupancy > 70 % and sort by average occupancy
-            sort_by_dis = {}
-            sort_by_occ = {}
+          # primary, display locations with occupancy < 70% and sort by distance
+          # then display locations with occupancy > 70 % and sort by average occupancy
+          sort_by_dis = {}
+          sort_by_occ = {}
 
-            for l in list(loc_occupancy):
-                if loc_occupancy[l][1] < float('inf'):
-                   sort_by_dis[l] = loc_occupancy[l][1]
-                else:
-                   sort_by_occ[l] = loc_occupancy[l][1]
+          for l in list(loc_occupancy):
+              if loc_occupancy[l][1] < float('inf'):
+                 sort_by_dis[l] = loc_occupancy[l][1]
+              else:
+                 sort_by_occ[l] = loc_occupancy[l][1]
 
-            loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
-            loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
+          loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
+          loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
 
-            #displaying top 3 locations
-            for x in list(loc_buttons)[0:3]:
-              buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
+          #displaying top 3 locations
+          for x in list(loc_buttons)[0:3]:
+            buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
 
-            buttons.append({'title': "other location", 'payload': "/other_loc_date"})
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return []
+          buttons.append({'title': "other location", 'payload': "/other_loc_date{\"other_location\":\"True\"}"})
+          dispatcher.utter_button_message("Please select a button:", buttons)
+          return []
 
     def locDistance(self, homecity, destination):
         # Install Module geopy
@@ -1000,33 +997,32 @@ class ActionDateButtons(Action):
       seminar = seminars[seminar_id]
       if city in seminar["locations"]:
 
+        #displaying top 2 dates with the fewest participant number
+        date_occupancy = {}
+        buttons = []
+
+        for ele in seminar["locations"][city]:
+          occ = ele["occupancy"]
+          date = ele["date"]
+        #do not display dates that are fully booked
+          if occ < seminar["capacity"]:
+            date_occupancy[date] = occ
+
+        date_occupancy = sorted(date_occupancy.items(), key=lambda x: x[1])
+
         # If user clicked on other dates, display all dates 
-        if tracker.latest_message['intent'].get('name') == 'other_loc_date':
-          buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'}
-          for ele["date"] in seminar["locations"][city]]
-          dispatcher.utter_button_message("Please select a button:", buttons)
-          return []
+        # if tracker.latest_message['intent'].get('name') == 'other_loc_date':
+        #   for x in list(date_occupancy):
+        #     buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
+        #     dispatcher.utter_button_message("Please select a button:", buttons)
+        #   return []
 
-        else:
-          #displaying top 2 dates with the fewest participant number
-          date_occupancy = {}
-          buttons = []
+        for x in list(date_occupancy)[0:2]: 
+          buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
 
-          for ele in seminar["locations"][city]:
-            occ = ele["occupancy"]
-            date = ele["date"]
-          #do not display dates that are fully booked
-            if occ < seminar["capacity"]:
-              date_occupancy[date] = occ
-
-          date_occupancy = sorted(date_occupancy.items(), key=lambda x: x[1])
-          for x in list(date_occupancy)[0:2]: 
-            buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
-
-          buttons.append({'title': "other date", 'payload': "/other_loc_date"})
-      
-          dispatcher.utter_button_message("Please select a button:", buttons)
-          return []
+        buttons.append({'title': "other date", 'payload': "/other_loc_date{\"other_date\":\"True\"}"})
+        dispatcher.utter_button_message("Please select a button:", buttons)
+        return []
 
 class ActionShowAllButtons(Action):
 
@@ -1046,18 +1042,19 @@ class ActionShowAllButtons(Action):
 
         seminar_id = matchingSeminar(seminars,course)
         if seminar_id:
+          seminar = seminars[seminar_id]
           if otherLoc is not None:
             locations = tracker.get_slot("locations")   
           # If user clicked on other locations, display all locations 
             buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} 
             for loc in locations]
             dispatcher.utter_button_message("Please select a button:", buttons)
-            return []
+            return [FollowupAction('action_listen'), SlotSet("other_location", None)]
           elif otherDate is not None:
             if city is not None:
               if city in seminar["locations"]:
               # If user clicked on other dates, display all dates 
-                buttons = [{'title': loc, 'payload': '/inform{"date": \"' + loc + '\"}'}
-                for ele["date"] in seminar["locations"][city]]
+                buttons = [{'title': ele["date"], 'payload': '/inform{"date": \"' + ele["date"] + '\"}'}
+                for ele in seminar["locations"][city]]
                 dispatcher.utter_button_message("Please select a button:", buttons)
-                return []
+                return [FollowupAction('action_listen'),SlotSet("other_date", None)]
