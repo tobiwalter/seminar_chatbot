@@ -36,7 +36,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -58,7 +57,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}

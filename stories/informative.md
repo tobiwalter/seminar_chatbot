@@ -218,8 +218,4 @@
 * get_occupancy
 	- action_query_occupancy
 
-
-	
-	
-
 	

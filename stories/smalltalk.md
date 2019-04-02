@@ -21,6 +21,7 @@
 ## goodbye
 * bye
 	- utter_bye
+	- action_restart
 
 ## bad 
 * bad
@@ -54,6 +55,7 @@
 ## thank and goodbye
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## praise
 * praise
@@ -64,4 +66,5 @@
 	- utter_thanks
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	

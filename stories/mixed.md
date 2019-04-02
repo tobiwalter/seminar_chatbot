@@ -1,4 +1,4 @@
-## mixed 1 
+## 	
 * show_bookings
 	- utter_ask_name
 * inform{"given-name":"Tim","last-name":"Miller"}
@@ -75,8 +75,8 @@
 	- slot{"course": null}
 	- slot{"date-period": null}
 
-## inform_then_bookSeminar
-* get_course_offering{"course":"Excel"} OR get_location{"course":"Excel"} OR get_dates{"course":"Excel"}
+## inform_then_bookSeminar 
+* get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
 	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
@@ -93,13 +93,12 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
 	
 ## inform_then_bookSeminar_Fail_then_GetHelp
-* get_course_offering{"course":"Excel"} OR get_location{"course":"Excel"} OR get_dates{"course":"Excel"}
+* get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
 	- slot{"locations":"[Erfurt, Berlin, Stuttgart]"}
@@ -115,9 +114,9 @@
 	- utter_get_help
 
 ## inform_bookSeminar_showBookings_cancelSeminar	
-* get_course_offering{"course":"Tableau"} OR get_location{"course":"Tableau"} OR get_dates{"course":"Tableau"}
+* get_course_offering{"course":"Tableau"}
 	- action_display_seminar
-* get_course_offering{"course":"Python"} OR get_location{"course":"Python"} OR get_dates{"course":"Python"}
+* get_course_offering{"course":"Python"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
 	- slot{"locations":"Munich, Berlin, Frankfurt"}
@@ -134,7 +133,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -152,8 +150,6 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}		
-* thank+bye
-	- utter_thanks_bye
 
 ## story14
 * get_course_offering
@@ -175,7 +171,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -201,7 +196,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -226,10 +220,8 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}		
-* book_seminar
-	- action_course_offering
-	- utter_ask_course_book
-* inform{"course": "Machine Learning"}
+* book_seminar{"course":"Data Science"}
+	- action_display_seminar
 	- slot{"seminar_id":"4"}
 	- slot{"locations":"Munich, Berlin, Frankfurt"}
 	- slot{"title": "Machine Learning"}
@@ -239,7 +231,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -268,7 +259,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}	
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -310,7 +300,6 @@
     - action_book_seminar
 	- slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}	
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -353,7 +342,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -391,7 +379,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -434,7 +421,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -463,7 +449,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -500,7 +485,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -529,7 +513,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -562,7 +545,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -595,7 +577,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -658,7 +639,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -686,7 +666,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -704,8 +683,6 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
-* praise
-	- utter_thanks
 	
 ## show_book_cancel
 * show_bookings
@@ -730,7 +707,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -760,7 +736,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -829,7 +804,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -861,7 +835,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -873,8 +846,6 @@
 	- slot{"location": null}		
 	- slot{"date": null}		
 	- slot{"cancellation_confirmed":"True"}
-* thank+bye
-	- utter_thanks_bye
 	
 ## show_book_cancel with get_course_offering
 * cancel_seminar{"course":"Machine Learning"}
@@ -899,7 +870,6 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -960,7 +930,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -997,7 +966,6 @@
 	- action_book_seminar
 	- slot{"booking_confirmed": "True"}
 	- slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -1011,6 +979,7 @@
 	- slot{"date": null}		
 * thank+bye
 	- utter_thanks_bye
+    - action_restart
 
 ## Generated Story 6392539147915856992
 * show_bookings
@@ -1150,6 +1119,7 @@
 	- utter_thanks
 * thank+bye
 	- utter_thanks_bye
+    - action_restart
 	
 ## Generated Story -6463177690486665439
 * get_course_offering{"course": "Tableau"}

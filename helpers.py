@@ -82,3 +82,24 @@ def period_check(date_period, date_time):
     else:
       return False
 
+def location_check(seminar, location):
+    occ = 0
+    count = 0
+    for ele in seminar["locations"][location]:
+        occ += ele["occupancy"]
+        count += 1
+    if occ < count*seminar["capacity"]:
+        return True
+    else:
+        return False
+
+def date_check(seminar, location, date):
+    for i in range(len(seminar["locations"][location])):
+        if seminar["locations"][location][i]["date"] == date:
+            occ = seminar["locations"][location][i]["occupancy"]
+
+    if occ < seminar["capacity"]:
+        return True
+    else:
+        return False
+

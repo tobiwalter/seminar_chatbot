@@ -32,7 +32,6 @@
     - slot{"requested_slot": null}
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
-	- slot{"time": null}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -73,7 +72,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}	
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -113,7 +111,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -153,7 +150,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -193,7 +189,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -235,7 +230,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -277,7 +271,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -317,7 +310,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -357,7 +349,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -405,7 +396,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -453,7 +443,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -501,7 +490,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -542,7 +530,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -583,7 +570,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -742,7 +728,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -783,7 +768,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -824,7 +808,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -864,7 +847,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -884,8 +866,6 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
-* praise
-	- utter_thanks
 	
 ## unhappy_path stop - cancel_seminar
 * cancel_seminar{"course": "machine learning"}
@@ -951,7 +931,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -994,7 +973,6 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
@@ -1035,10 +1013,57 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}	
 	- slot{"date-period": null}
+	
+	
+## unhappy_path_no loc or date fits
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* negative
+    - action_deactivate_form
+	- utter_do_something_else
+	
+## unhappy_path_no loc 
+* book_seminar{"course": "programming"}
+    - slot{"course": "programming"}
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 9}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* negative
+    - action_deactivate_form
+	- utter_do_something_else
 	
 ## unhappy path with action_query_date
 * book_seminar{"course": "Data Science", "location": "Munich"}
@@ -1071,12 +1096,11 @@
     - action_book_seminar
     - slot{"booking_confirmed": "False"}
     - slot{"date": null}
-	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
 	
-## 	
+## book seminar unhappy path only city given
 * book_seminar{"location": "Frankfurt"}
     - utter_ask_name
 * inform{"given-name": "Teresa", "last-name": "Williams"}
@@ -1093,7 +1117,7 @@
     - slot{"title": "Python for beginners"}
     - seminar_form
     - form{"name": "seminar_form"}
-* other_smalltalk OR age
+* other_smalltalk 
 	- utter_no_chitchat
 	- seminar_form
     - form{"name": null}

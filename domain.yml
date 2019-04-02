@@ -1,147 +1,156 @@
-%YAML 1.1
----
-actions:
-- utter_no_worries
-- utter_submit
-- action_show_bookings
-- utter_i''m sorry
-- action_provide_description
-- utter_do_something_else
-- utter_get_help
-- utter_ask_continue
-- action_cancel_seminar
-- action_query_duration
-- utter_ask_course_cancel
-- utter_book_somewhere_else
-- utter_ask_name
-- utter_suggest_help
-- action_display_seminar
-- utter_ask_course_book 
-- action_query_level
-- utter_introduction
-- utter_bye
-- utter_thanks
-- utter_thanks_bye
-- utter_no_insult
-- utter_welcome
-- utter_are_you_sure
-- utter_try_again
-- utter_no_chitchat
-- action_course_offering
-- utter_ask_location
-- utter_wrong_date
-- action_provide_prerequisites
-- action_verify_user
-- utter_ask_date
-- action_book_seminar
-- utter_wrong_location
-- action_provide_datesWithLocation
-- action_query_date
-- action_query_occupancy
-- action_show_all_buttons
-- action_location_buttons
-- action_date_buttons
-entities:
-- last-name
-- date
-- time
-- location
-- course-type
-- booking-type
-- course
-- given-name
-- display-option
-- date-period
-- user-level
-- other_date
-- other_location
-forms:
-- seminar_form
-intents:
-- other_smalltalk:
-    use_entities: false
-- book_seminar
-- inform
-- get_dates
-- book_seminar+get_dates
-- book_seminar+get_location
-- affirm
-- show_bookings
-- insult:
-    use_entities: false
-- welcome
-- thank
-- get_duration
-- get_occupancy 
-- get_course_offering
-- get_location
-- other_loc_date
-- praise:
-    use_entities: false
-- negative
-- get_description
-- get_prerequisites
-- get_level
-- bad:
-    use_entities: false
-- get_help:
-    use_entities: false
-- bye
-- cancel_seminar
-- introduction:
-    use_entities: false
-- age:
-    use_entities: false
-- stop
-- thank+bye
-slots:
+actions: 
+  - action_book_seminar
+  - action_cancel_seminar
+  - action_course_offering
+  - action_date_buttons
+  - action_default_ask_affirmation
+  - action_default_fallback
+  - action_display_seminar
+  - action_location_buttons
+  - action_provide_datesWithLocation
+  - action_provide_description
+  - action_provide_prerequisites
+  - action_query_date
+  - action_query_duration
+  - action_query_level
+  - action_query_occupancy
+  - action_show_all_buttons
+  - action_show_bookings
+  - action_verify_user
+  - utter_are_you_sure
+  - utter_ask_continue
+  - utter_ask_course_book
+  - utter_ask_course_cancel
+  - utter_ask_date
+  - utter_ask_location
+  - utter_ask_name
+  - utter_book_somewhere_else
+  - utter_bye
+  - utter_default
+  - utter_do_something_else
+  - utter_get_help
+  - utter_i''m sorry
+  - utter_introduction
+  - utter_no_chitchat
+  - utter_no_worries
+  - utter_restart_with_button
+  - utter_submit
+  - utter_suggest_help
+  - utter_thanks
+  - utter_thanks_bye
+  - utter_try_again
+  - utter_welcome
+  - utter_wrong_date
+  - utter_wrong_location
+
+entities: 
+  - booking-type
+  - course
+  - course-type
+  - date
+  - date-period
+  - display-option
+  - given-name
+  - last-name
+  - location
+  - other_date
+  - other_location
+  - time
+  - user-level
+
+forms: 
+  - seminar_form
+
+intents: 
+  - affirm
+  - age: 
+      use_entities: false
+  - bad: 
+      use_entities: false    
+  - book_seminar
+  - book_seminar+get_dates
+  - book_seminar+get_location
+  - bye
+  - cancel_seminar
+  - deny
+  - get_course_offering
+  - get_dates
+  - get_description
+  - get_duration
+  - get_help
+  - get_level
+  - get_location
+  - get_occupancy
+  - get_prerequisites
+  - inform
+  - insult:
+      use_entities: false
+  - introduction: 
+      use_entities: false
+  - negative: 
+      use_entities: false
+  - other_loc_date
+  - out_of_scope: 
+      use_entities: false
+  - praise
+  - show_bookings
+  - stop
+  - thank
+  - thank+bye: 
+      use_entities: false
+  - welcome
+  - other_smalltalk: 
+      use_entities: false
+
+slots: 
   booking-type:
     type: categorical
-    values:
-    - upcoming
-    - past
-  booking_confirmed:
+    values: 
+      - upcoming
+      - past
+  booking_confirmed: 
     type: bool
-  cancellation_confirmed:
+  cancellation_confirmed: 
     type: bool
-  course:
-    type: text
-  date:
-    type: unfeaturized
-  date-period:
-    type: text
-  dates:
-    type: list
   categories:
     type: list
-  display-option:
+  course: 
     type: text
-  employee_id:
-    type: text
-  given-name:
-    type: text
-  last-name:
-    type: text
-  location:
+  date: 
     type: unfeaturized
-  locations:
+  date-period: 
+    type: text
+  dates: 
     type: list
-  requested_slot:
+  display-option: 
+    type: text
+  employee_id: 
+    type: text
+  given-name: 
+    type: text
+  last-name: 
+    type: text
+  location: 
     type: unfeaturized
-  seminar_id:
-    type: text
-  time:
-    type: text
-  title:
-    type: text
-  user-level:
-    type: text
-  user_verified:
-    type: bool
+  locations: 
+    type: list
   other_location:
     type: bool
   other_date:
     type: bool 
+  requested_slot: 
+    type: unfeaturized
+  seminar_id: 
+    type: text
+  time: 
+    type: text
+  title: 
+    type: text
+  user-level: 
+    type: text
+  user_verified: 
+    type: bool
+
 templates:
   utter_are_you_sure:
   - buttons:
@@ -179,7 +188,7 @@ templates:
   utter_bye:
   - text: Goodbye
   utter_default:
-  - text: Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?
+  - text: Sorry, I didn't get that. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
   - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
@@ -197,7 +206,7 @@ templates:
     text: To get help, please reach out to helpdesk@company.com by mail or call +49
       621 66566.
   utter_i''m sorry:
-  - text: I am sorry I could not satisfy your request. Can I help you in any other
+  - text: I am sorry that I could not satisfy your request. Can I help you in any other
       way?
   utter_introduction:
   - text: I am Sam. I can help you to book seminars, show seminar bookings and get
@@ -224,7 +233,7 @@ templates:
   utter_welcome:    
   - text: 'Hello! I can do the following tasks for you: Book a seminar, show your seminar
       bookings, cancel a seminar or get information about the seminar offering.'
-  - text: 'Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar bookings,
+  - text: 'Hi, I am Sam, your seminar chatbot. I can book seminars, show your seminar bookings,
       cancel seminars or show information about the seminar offering.'
   utter_wrong_date:
   - text: 'The date you entered could not be verified. Please enter the date in the
@@ -239,3 +248,10 @@ templates:
   - text: Make peace, not war!
   - text: No strong language!
   - text: Don't get offensive!
+  utter_restart_with_button: 
+    - buttons: 
+      - payload: /restart
+        title: Restart
+      - payload: /out_of_scope
+        title: Continue
+      text: "Unfortunately, I can not help you. Do you want to start over?"
