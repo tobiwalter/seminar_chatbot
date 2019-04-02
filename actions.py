@@ -777,14 +777,14 @@ class VerifyUser(Action):
             return [SlotSet("user_verified","True"), SlotSet("employee_id",e["employee_id"])]
 
     ## if slot set already, that means bot ask for the 2nd time,
-    ## so if verification fails again, utter_suggest_help
-    if verification == False:
+    ## so if verification fails again, suggest_help
+    if verification is False:
       dispatcher.utter_message("You are not in our database. Please contact HR.")
-      return [SlotSet('user_verified', None), FollowupAction('utter_suggest_help')]
+      return [SlotSet('user_verified', False), FollowupAction('utter_suggest_help')]
     else:
-      # Prompt user to input name again in case verification fails
+      # Prompt user to input name again in case verification fails for 1st time
       dispatcher.utter_template('utter_try_again', tracker)
-      return [SlotSet('user_verified', None), FollowupAction('action_listen')]
+      return [SlotSet('user_verified', False), FollowupAction('action_listen')]
 
 class ActionQueryDuration(Action):
   def name(self):
@@ -1134,7 +1134,7 @@ class ActionDefaultAskAffirmation(Action):
           button_title = utterances[0]
       else:
           utterances = (
-              self.intent_mappings[utterance_query]
+              self.intent_mappings[utterance_query] 
                   .button.tolist())
           button_title = utterances[0] if len(utterances) > 0 else intent
 
