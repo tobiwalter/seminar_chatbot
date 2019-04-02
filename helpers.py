@@ -3,6 +3,8 @@ from datetime import date, datetime
 
 #Helper functions that are needed in actions module
 
+SETTINGS = "{'DATE_ORDER': 'DMY'}"
+
 def matchingSeminar(seminars,course) -> int:
 
 		for ele in seminars:

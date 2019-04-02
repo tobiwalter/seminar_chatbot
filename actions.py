@@ -1060,32 +1060,6 @@ class ActionShowAllButtons(Action):
                 dispatcher.utter_button_message("Please select a button:", buttons)
                 return [FollowupAction('action_listen'),SlotSet("other_date", None)]
 
-
-# class ActionStoreDate(Action):
-
-# """Stores the budget in a slot"""
-
-# def name(self):
-# return "action_store_budget"
-
-# def run(self, dispatcher, tracker, domain):
-
-# # the entity can be one of two entities from duckling,
-# # number or amount-of-money
-# budget = next(tracker.get_latest_entity_values('number'), None)
-# if not budget:
-# budget = next(tracker.get_latest_entity_values('amount-of-money'),
-# None)
-
-# # as a fallback, if no entity is recognised (e.g. in a sentence
-# # like "I have no money") we store the whole user utterance in the slot
-# # In future this should be stored in a `budget_unconfirmed` slot where
-# # the user will then be asked to confirm this is there budget
-# if not budget:
-# budget = tracker.latest_message.get('text')
-
-# return [SlotSet('budget', budget)]
-
 class ActionQueryOccupancy(Action):
   def name(self):
       return "action_query_occupancy"
@@ -1109,8 +1083,8 @@ class ActionQueryOccupancy(Action):
           if userGivenDate:
             for ele in seminar["locations"][city]:
               if dateComparison(ele["date"],userGivenDate) == 0:
-                occupancy = ele["occupancy"]
-                res = "{} slot(s) are left for grabs in {} on {}".format(occupancy, city, ele["date"]) 
+                left_slots = capacity - ele["occupancy"]
+                res = "{} slot(s) are left for grabs in {} on {}".format(left_slots, city, ele["date"])
           else:
             occ_at_dates = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
               for ele in seminar["locations"][city]]

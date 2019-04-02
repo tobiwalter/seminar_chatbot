@@ -220,7 +220,7 @@ templates:
       title: 'no'
     text: Do you want to reach out to the helpdesk?
   utter_try_again:
-  - text: This name is not in our database. Please specify your name again.
+  - text: Your name could not be verified against our database. Please specify your name again.
   utter_welcome:    
   - text: 'Hello! I can do the following tasks for you: Book a seminar, show your seminar
       bookings, cancel a seminar or get information about the seminar offering.'
