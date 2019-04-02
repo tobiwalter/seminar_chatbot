@@ -39,6 +39,8 @@
     "entity_display-option",
     "entity_date-period",
     "entity_user-level",
+    "entity_other_date",
+    "entity_other_location",
     "slot_booking-type_0",
     "slot_booking-type_1",
     "slot_booking_confirmed_0",
@@ -54,6 +56,10 @@
     "slot_given-name_0",
     "slot_last-name_0",
     "slot_locations_0",
+    "slot_other_date_0",
+    "slot_other_date_1",
+    "slot_other_location_0",
+    "slot_other_location_1",
     "slot_seminar_id_0",
     "slot_time_0",
     "slot_title_0",
@@ -100,6 +106,7 @@
     "prev_utter_wrong_location",
     "prev_action_provide_datesWithLocation",
     "prev_action_query_date",
+    "prev_action_show_all_buttons",
     "prev_seminar_form",
     "active_form_seminar_form"
   ]

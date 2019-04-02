@@ -2,83 +2,99 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "course",
-        "requested_slot",
-        "locations",
-        "seminar_id",
         "last-name",
+        "date-period",
         "given-name",
+        "other_date",
+        "title",
+        "locations",
+        "user-level",
+        "course",
+        "other_location",
+        "seminar_id",
         "date",
         "time",
-        "title",
-        "date-period",
-        "user-level",
         "display-option",
+        "requested_slot",
         "location"
       ]
     },
     "action_verify_user": {
       "slots": [
-        "user_verified",
-        "employee_id"
+        "employee_id",
+        "course",
+        "user_verified"
       ]
     },
-    "action_show_bookings": {
+    "action_cancel_seminar": {
       "slots": [
-        "time",
-        "location",
         "date",
-        "date-period"
+        "cancellation_confirmed",
+        "course",
+        "location"
       ]
     },
     "action_display_seminar": {
       "slots": [
+        "date-period",
+        "categories",
         "locations",
+        "title",
+        "course",
         "seminar_id",
         "time",
+        "date",
+        "location"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "dates",
         "title",
-        "categories",
-        "date-period",
+        "seminar_id",
+        "date",
+        "requested_slot",
         "location"
       ]
     },
     "seminar_form": {
       "slots": [
         "course",
-        "requested_slot",
         "date",
-        "booking_confirmed",
         "time",
+        "requested_slot",
+        "booking_confirmed",
         "location"
       ]
     },
     "action_book_seminar": {
       "slots": [
+        "course",
         "date",
-        "location",
+        "time",
         "booking_confirmed",
-        "course"
+        "location"
       ]
     },
-    "action_cancel_seminar": {
+    "action_show_bookings": {
       "slots": [
-        "cancellation_confirmed",
         "date",
-        "location",
-        "course"
-      ]
-    },
-    "action_query_date": {
-      "slots": [
-        "dates",
-        "requested_slot",
-        "seminar_id",
-        "date",
-        "title",
+        "time",
+        "date-period",
         "location"
       ]
     },
     "action_deactivate_form": {
+      "slots": []
+    },
+    "null": {
+      "slots": [
+        "time",
+        "date-period",
+        "course"
+      ]
+    },
+    "action_show_all_buttons": {
       "slots": []
     }
   },
@@ -95,5 +111,5 @@
     "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190328-104509"
+  "trained_at": "20190330-223701"
 }

@@ -1,0 +1,29 @@
+﻿intent;button
+other_smalltalk;I want to do some chitchat.
+book_seminar;I want to book a seminar.
+inform;I want to give you the requested information.
+get_dates;On which dates do you offer the seminar?
+affirm;Agreed.
+deny;Disagreed.
+show_bookings;Please show me my booked seminars.
+welcome;Hello!
+thank;Thank you!
+get_duration;What is the seminar's total duration of seminar?
+get_course_offering;Do you offer seminars about this topic?
+get_location;At which location does the seminar take place?
+other_loc_date;I prefer another date or location.
+praise;You did a perfect job.
+negative;No.
+get_description;What is the seminar {course }about?
+get_prerequisites;What are the prerequisites for the seminar?
+get_level;Which user-level is expected for the seminar?
+bad;I am feeling bad.
+get_help;I need help.
+bye;Bye!
+cancel_seminar;I want to cancel a seminar.
+introduction;I want to know who you are.
+age;This is my age.
+stop;Please stop the conversation.
+thank+bye;Thank you and goodbye!
+book_seminar+get_dates;I want to book the seminar. Please tell me possible dates.
+book_seminar+get_location;I want to book the seminar. Please tell me offered locations.
