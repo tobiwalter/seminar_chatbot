@@ -34362,7 +34362,1731 @@
             "entity": "last-name"
           }
         ]
+      },
+      {
+        "text": "Can I take a course in deep learning?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 23,
+            "end": 36,
+            "value": "deep learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is someone giving courses in calculus?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 29,
+            "end": 37,
+            "value": "calculus",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Any workshops in public speaking?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 32,
+            "value": "public speaking",
+            "entity": "course"
+          },
+          {
+            "start": 4,
+            "end": 13,
+            "value": "workshops",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Do you offer somethig about neural networks?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 28,
+            "end": 43,
+            "value": "neural networks",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you offer somethig about deep networks?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "deep networks",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you offer something about public speaking?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 29,
+            "end": 44,
+            "value": "public speaking",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is deep learning in the portfolio?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 16,
+            "value": "deep learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is psychology in the portfolio?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "psychology ",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is psychology included in the offering?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "psychology ",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is deep learning included in the offering?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 16,
+            "value": "deep learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I'm interested in neural networks",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 18,
+            "end": 33,
+            "value": "neural networks",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I'm interested in learning something about deep networks",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 43,
+            "end": 56,
+            "value": "deep networks",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I'm interested in learning something about negotiation",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 43,
+            "end": 54,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+	    {
+        "text": "How many slots are left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many slots are left for Machine Learning?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 44,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for ML?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 30,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for Data Science?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for programming?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for Python?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for R?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for Java?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for rhetoric?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for communication?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for persuasion?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for excel?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for negotiation?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for leadership?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for management?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left for data visualization?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 28,
+            "end": 46,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are left in Munich?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this seminar?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 38,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this workshop?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 39,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this class?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this lecture?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 38,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this lab?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 34,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this coding lab?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 41,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this hackathon?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 40,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this coding challenge?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 47,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in this case study?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 31,
+            "end": 41,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this seminar or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this course or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this workshop or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this class or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this lecture or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this lab or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 19,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this coding lab or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this hackathon or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this coding challenge or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 32,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I take this case study or is it full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the course already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the workshop already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the class already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the lecture already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the lab already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the coding lab already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the hackathon already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the coding challenge already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 23,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the case study already full?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is it fully booked?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Show me the availabilities",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Show me the availabilities of Machine Learning",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 46,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of ML",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 32,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of Data Science",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 42,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of programming",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of Python",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of R",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of Java",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of rhetoric",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of communication",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 43,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of persuasion",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of excel",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 35,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of negotiation",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of leadership",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of management",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Show me the availabilities of data visualization",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 48,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are there still slots in this seminar?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Show me the availabilities in Munich",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I still book?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Any seats left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Any places left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How much places are left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Is it still up for grabs?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many slots are up for grabs still?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Are there still slots in this seminar?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Still places disposable?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many places are still disposable?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Is the seminar already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the course already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the workshop already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the class already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the lecture already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "class",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the lab already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the coding lab already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "lab",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the hackathon already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the coding challenge already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 23,
+            "value": "hackathon",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is the case study already booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "case study",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the Machine Learning course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 41,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the ML course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 27,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the Data Science course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the programming course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the Python course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the R course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 26,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the Java course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 29,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the rhetoric course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 33,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the communication course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the persuasion course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the excel course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 30,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the negotiation course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the leadership course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the management course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still get into the data visualization course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 43,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the Machine Learning course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the ML course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 23,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the Data Science course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the programming course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the Python course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the R course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 22,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the Java course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the rhetoric course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the communication course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 34,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the persuasion course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the excel course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the negotiation course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the leadership course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the management course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can I still join the data visualization course?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 21,
+            "end": 39,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free spots do you still have?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Are there free spots left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Are there free places left?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Is it still possible to take this seminar?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many free slots are left for Machine Learning?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 49,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for ML?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 35,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for Data Science?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 45,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for programming?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 44,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for Python?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 39,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for R?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 34,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for Java?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 37,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for rhetoric?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 41,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for communication?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 46,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for persuasion?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 43,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for excel?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 38,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for negotiation?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 44,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for leadership?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 43,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for management?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 43,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left for data visualization?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 51,
+            "value": "data visualization",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you still have free spots on the 2nd April",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 36,
+            "end": 45,
+            "value": "2nd April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Still some spots left on 17/03/19?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 25,
+            "end": 33,
+            "value": "17/03/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Any places left for the seminar on 27/04?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 35,
+            "end": 40,
+            "value": "27/04",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Any places left for the seminar in Munich on 27/04?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 45,
+            "end": 50,
+            "value": "27/04",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "How many free slots are left on 8th May?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 32,
+            "end": 39,
+            "value": "8th May",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "How many slots are available on August 22?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 32,
+            "end": 41,
+            "value": "August 22",
+            "entity": "date"
+          }
+        ]
       }
+	  
     ],
     "regex_features": [],
     "lookup_tables": [
