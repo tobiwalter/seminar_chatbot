@@ -35,6 +35,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_2
 * book_seminar{"course": "leadership"}
@@ -73,6 +74,7 @@
     - slot{"date": null}
     - slot{"location": null}	
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_2.1
 * book_seminar{"course": "leadership"}
@@ -111,6 +113,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## unhappy_path_seminar_form_3
 * book_seminar{"course": "leadership"}
@@ -149,6 +152,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_3.1
 * book_seminar{"course": "leadership"}
@@ -187,6 +191,9 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+* thank+bye
+	- utter_thanks_bye
 	
 ## unhappy_path_seminar_form_4
 * book_seminar{"course": "programming"}
@@ -225,6 +232,9 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+* praise
+	- utter_thanks
 	
 ## unhappy_path_seminar_form_4.1
 * book_seminar{"course": "programming"}
@@ -263,6 +273,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_5
 * book_seminar{"course": "programming"}
@@ -301,6 +312,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_5.1
 * book_seminar{"course": "programming"}
@@ -339,6 +351,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## verry_unhappy_path_seminar_form_1
 * book_seminar{"course": "leadership"}
@@ -385,6 +398,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## verry_unhappy_path_seminar_form_1
 * book_seminar{"course": "leadership"}
@@ -431,6 +445,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## verry_unhappy_path_seminar_form_1.1
 * book_seminar{"course": "leadership"}
@@ -477,6 +492,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## stop_but_continue_path_form
 * book_seminar{"course": "leadership"}
@@ -516,6 +532,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## stop_but_continue_path_form date
 * book_seminar{"course": "leadership"}
@@ -555,6 +572,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## chitchat stop and really stop path
 * book_seminar{"course": "leadership"}
@@ -712,6 +730,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path: stop but continue loc
 * book_seminar{"course": "programming"}
@@ -751,6 +770,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path: stop, continue and ask for dates
 * book_seminar{"course": "programming"}
@@ -790,6 +810,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar_form_17
 * book_seminar{"course": "programming"}
@@ -828,6 +849,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path - show_bookings
 * show_bookings
@@ -911,6 +933,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## book seminar wo course - smalltalk intent 
 * book_seminar
@@ -952,6 +975,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## get_level
 * book_seminar{"course": "Machine Learning"}
@@ -991,6 +1015,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}	
+	- slot{"date-period": null}
 	
 	
 ## unhappy_path_no loc or date fits
@@ -1073,6 +1098,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## book seminar unhappy path only city given
 * book_seminar{"location": "Frankfurt"}
@@ -1098,8 +1124,48 @@
     - action_book_seminar
     - slot{"booking_confirmed": "True"}
     - slot{"date": null}
+	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course" : null}
+	- slot{"date-period": null}
+	
+## unhappy path seminar form get duration book with loc specified
+* book_seminar{"location": "Leipzig"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+	- utter_ask_course_book
+* inform{"course": "Python"}
+	- action_query_date
+	- slot{"dates": "07/03/19, 21/03/19"}
+    - slot{"title": "Python for beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* get_duration
+	- action_query_duration
+	- seminar_form
+	- slot{"requested_slot": "date"}
+* form: inform{"date": "March 21", "time": "2019-03-21T00:00:00.000-07:00"}
+    - slot{"date": "March 21"}
+    - slot{"time": "2019-03-21T00:00:00.000-07:00"}
+    - form: seminar_form
+    - slot{"date": "March 21"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course" : null}
+	- slot{"date-period": null}
 	
 ## unhappy path seminar form get duration book with date specified
 * book_seminar{"date-period": "April"}
@@ -1127,6 +1193,7 @@
     - slot{"location": null}	
 	- slot{"date" : null}
 	- slot{"time": null}
+	- slot{"date-period": null}
 	
 ## stop but continue booking seminar before seminar form gets activated
 * book_seminar
@@ -1224,6 +1291,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## unhappy_path_seminar get_dates
 * book_seminar{"course": "programming"}
@@ -1265,3 +1333,45 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+	
+## get_occupancy
+* book_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Smith"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Smith"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 2}
+    - action_display_seminar
+	- slot{"seminar_id":"4"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - slot{"seminar_id": 1}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* get_occupancy
+    - action_query_occupancy
+    - seminar_form
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "24/03/19"}
+    - slot{"date": "24/03/19"}
+    - seminar_form
+    - slot{"date": "24/03/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}	
+	- slot{"date-period": null}

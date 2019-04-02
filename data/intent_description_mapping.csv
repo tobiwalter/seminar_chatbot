@@ -14,7 +14,7 @@ get_location;At which location does the seminar take place?
 other_loc_date;I prefer another date or location.
 praise;You did a perfect job.
 negative;No.
-get_description;What is the seminar {course }about?
+get_description;What is the seminar about?
 get_prerequisites;What are the prerequisites for the seminar?
 get_level;Which user-level is expected for the seminar?
 bad;I am feeling bad.

@@ -15,6 +15,7 @@
     "intent_get_help",
     "intent_get_level",
     "intent_get_location",
+    "intent_get_occupancy",
     "intent_get_prerequisites",
     "intent_inform",
     "intent_insult",
@@ -106,7 +107,10 @@
     "prev_utter_wrong_location",
     "prev_action_provide_datesWithLocation",
     "prev_action_query_date",
+    "prev_action_query_occupancy",
     "prev_action_show_all_buttons",
+    "prev_action_location_buttons",
+    "prev_action_date_buttons",
     "prev_seminar_form",
     "active_form_seminar_form"
   ]

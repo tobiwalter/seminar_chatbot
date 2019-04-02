@@ -13,6 +13,7 @@ actions:
   - action_query_date
   - action_query_duration
   - action_query_level
+  - action_query_occupancy
   - action_show_all_buttons
   - action_show_bookings
   - action_verify_user
@@ -79,6 +80,7 @@ intents:
   - get_help
   - get_level
   - get_location
+  - get_occupancy
   - get_prerequisites
   - inform
   - insult:
@@ -101,7 +103,7 @@ intents:
       use_entities: false
 
 slots: 
-  booking-type: 
+  booking-type:
     type: categorical
     values: 
       - upcoming
@@ -186,12 +188,12 @@ templates:
   utter_bye:
   - text: Goodbye
   utter_default:
-  - text: "Sorry, I didn't get that. Could you please rephrase?"
-  - text: "I didn't understand, could you rephrase that?"
-  - text: "I'm sorry, but I didn't understand you. Could you please rephrase what you just said?"
-  - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"
-  - text: "I didn't quite get that, could you rephrase your message?"
-  - text: "Could you rephrase your message? I didn't get it, I'm sorry."
+  - text: Sorry, I didn't get that. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_do_something_else:
   - text: Can I do something else for you? Remember I can help you to book seminars,
       show seminar bookings, cancel seminars and get information about the seminar offering.

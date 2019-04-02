@@ -29,8 +29,51 @@
 	- action_book_seminar 
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
+	- slot{"time": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+	
+## mixed 2 
+* show_bookings
+	- utter_ask_name
+* inform{"given-name":"Tim","last-name":"Miller"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"91"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+* cancel_seminar
+	- utter_ask_course_cancel
+	- action_show_bookings
+* inform{"course":"Excel"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}			
+* book_seminar{"location":"Frankfurt"}
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Python for beginners"}
+	- utter_ask_course_book
+* inform{"course":"Excel"}
+	- seminar_form
+	- form{"name":"seminar_form"}
+	- form{"name":null}
+	- action_book_seminar 
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## inform_then_bookSeminar 
 * get_course_offering{"course":"Excel"}
@@ -52,6 +95,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## inform_then_bookSeminar_Fail_then_GetHelp
 * get_course_offering{"course":"Excel"}
@@ -90,6 +134,8 @@
 	- slot{"booking_confirmed":"True"}
 	- slot{"date": null}
     - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
 * show_bookings
 	- action_show_bookings
     - slot{"date": null}
@@ -127,6 +173,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## story17
 * get_course_offering
@@ -151,6 +198,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## story20
 * show_bookings
@@ -185,6 +233,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## get_description_and_locations_of_course_andBook
 * get_description{"course":"Machine Learning"}
@@ -212,6 +261,7 @@
     - slot{"date": null}
     - slot{"location": null}	
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## show_bookings then book_seminar
 * show_bookings{"course-type": "seminars"}
@@ -252,6 +302,7 @@
     - slot{"date": null}
     - slot{"location": null}	
 	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## Generated Story 769974900844405482
 * show_bookings{"course-type": "seminars"}
@@ -293,6 +344,9 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+* praise	
+	- utter_thanks
 	
 ## Generated Story -6463177690486665439
 * get_course_offering{"course": "Tableau"}
@@ -327,6 +381,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 
 ## Generated Story 5080578068932025922
 * show_bookings{"display-option": "next"}
@@ -368,6 +423,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## Generated Story -3751396503439969687
 * get_course_offering
@@ -395,6 +451,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * get_help
     - utter_get_help
 
@@ -430,6 +487,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## Generated Story -7543584780551948522
 * get_dates{"course": "Machine Learning"}
@@ -457,6 +515,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## Generated Story -1047672868992554109
 * get_dates{"course": "rhetoric"}
@@ -488,6 +547,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## cancel_show_book
 * cancel_seminar{"course":"rhetoric"}
@@ -519,6 +579,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * show_bookings
 	- action_show_bookings
     - slot{"date": null}
@@ -580,6 +641,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## show_book_cancel_show
 * show_bookings
@@ -606,6 +668,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -646,6 +709,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -674,6 +738,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -741,6 +806,9 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
+* praise
+	- utter_thanks
 	
 ## show_book_cancel with get_course_offering
 * show_bookings
@@ -769,6 +837,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * cancel_seminar{"course":"programming"}
 	- utter_are_you_sure
 * affirm
@@ -803,6 +872,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## cancel_show_get_infos
 * cancel_seminar{"course":"rhetoric"}
@@ -862,6 +932,7 @@
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * thank
     - utter_no_worries
 	
@@ -897,6 +968,7 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 * cancel_seminar{"course":"Excel"}
 	- utter_are_you_sure
 * affirm
@@ -990,6 +1062,7 @@
     - slot{"date": null}
 	- slot{"time": null}
 
+
 ## booking two seminars
 * book_seminar{"date-period": "spring", "time": {"from": "2019-03-20T00:00:00.000+01:00", "to": "2019-06-22T00:00:00.000+02:00"}}
     - slot{"date-period": "spring"}
@@ -1019,6 +1092,7 @@
 	- slot{"time": null}
     - slot{"location": null}
     - slot{"course": null}
+	- slot{"date-period": null}
 * get_course_offering{"location":"Frankfurt"}
 	- action_display_seminar
 	- slot{"categories":"[x,y,z]"}
@@ -1040,12 +1114,127 @@
 	- slot{"time": null}
     - slot{"location": null}
     - slot{"course": null}
+	- slot{"date-period": null}
 * praise
 	- utter_thanks
 * thank+bye
 	- utter_thanks_bye
     - action_restart
-
+	
+## Generated Story -6463177690486665439
+* get_course_offering{"course": "Tableau"}
+    - slot{"course": "Tableau"}
+    - action_display_seminar
+* get_course_offering{"course": "programming"}
+    - slot{"course": "programming"}
+    - action_display_seminar
+	- slot{"seminar_id":"4"}
+    - slot{"locations": "Berlin, Munich, Frankfurt"}
+    - slot{"title": "Python for Beginners"}
+* get_occupancy
+	- action_query_occupancy
+* book_seminar{"location":"Munich"}
+	- seminar_form
+	- form: seminar_form
+	- form{"name": null}
+	- action_book_seminar
+	- slot{"booking_confirmed": "True"}
+	- slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
+	
+## show_book_cancel with get_course_offering
+* show_bookings
+	- utter_ask_name
+* inform{"given-name":"Tim","last-name":"Miller"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"91"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+* get_course_offering
+	- action_course_offering
+* get_occupancy{"course": Machine Learning"}
+	- action_query_occupancy
+* book_seminar{"course":"Machine Learning"}
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Python for beginners"}
+	- seminar_form
+	- form{"name":"seminar_form"}
+	- form{"name":null}
+	- action_book_seminar 
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
+* cancel_seminar{"course":"programming"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}		
+	- slot{"cancellation_confirmed":"True"}
+* thank+bye
+	- utter_thanks_bye
+	
+## show_bookings then book_seminar
+* show_bookings{"course-type": "seminars"}
+    - utter_ask_name
+* inform{"given-name": "max", "last-name": "smith"}
+    - slot{"given-name": "max"}
+    - slot{"last-name": "smith"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 2}
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+* get_occupancy{"course": "Excel"}
+	- action_query_occupancy
+* thank
+	- utter_no_worries
+	
+## show_book_cancel with get_course_offering and get_occupancy
+* cancel_seminar{"course":"Machine Learning"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- utter_are_you_sure
+* negative
+	- utter_do_something_else
+* get_course_offering
+	- action_course_offering
+* get_occupancy{"course":"programming"}
+	- action_query_occupancy
+* book_seminar{"course":"Machine Learning"}
+	- action_display_seminar
+	- slot{"seminar_id":"4"}
+	- slot{"locations":"Munich, Berlin, Frankfurt"}
+	- slot{"title": "Python for beginners"}
+	- seminar_form
+	- form{"name":"seminar_form"}
+	- form{"name":null}
+	- action_book_seminar 
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
 	
 	
 

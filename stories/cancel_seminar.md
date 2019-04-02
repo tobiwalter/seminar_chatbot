@@ -258,3 +258,82 @@
 	- utter_ask_continue
 * negative
 	- utter_do_something_else
+	
+## cancel seminar no course specified - succeed 2
+* cancel_seminar
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
+	- action_show_bookings
+* inform{"course":"Data Science"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+* thank+bye
+	- utter_thanks_bye
+
+## cancel seminar no course specified - cancel_seminar intent x 2
+* cancel_seminar
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
+	- action_show_bookings
+* cancel_seminar{"course":"Data Science"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+* thank+bye
+	- utter_thanks_bye
+	
+## cancel seminar date specified - succeed 
+* cancel_seminar{"date":"March 20"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
+	- action_show_bookings
+* cancel_seminar{"course":"Data Science"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+
+## cancel seminar loc specified - succeed 
+* cancel_seminar{"location":"Berlin"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
+	- action_show_bookings
+* cancel_seminar{"course":"Data Science"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+* thank+bye
+	- utter_thanks_bye
+	- utter_thanks_bye

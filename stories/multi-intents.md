@@ -17,6 +17,8 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"time": null}
+	- slot{"date-period": null}
 	
 ## multi-intent: book seminar & get dates 
 * book_seminar+get_dates{"course":"programming", "location":"Munich"}
@@ -36,12 +38,13 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}
 	
 ## multi-intent: book seminar cour& get locations
 * book_seminar+get_location{"course":"programming"}
 	- utter_ask_name
 * inform{"given-name":"Rob","last-name":"Cook"}
-	- action_verify_user
+	- action_verify_user	
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"94"}
 	- action_display_seminar
@@ -56,3 +59,4 @@
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
+	- slot{"date-period": null}

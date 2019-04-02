@@ -177,5 +177,45 @@
 * get_description
     - action_provide_description
 	
+## get course offering - loc specified
+* get_course_offering{"location":"Berlin"}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+	
+## get course offering - date-period specified
+* get_course_offering{"date-period":"spring"}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+	
+## get course offering - loc specified but no offering at first location
+* get_course_offering{"location":"Braunschweig"}
+	- action_display_seminar
+* get_course_offering
+	- action_course_offering
+	
+## get occupancy
+* get_occupancy{"course":"Excel"}
+	- action_query_occupancy
+
+## get course offering and occupancy	
+* get_course_offering
+    - action_course_offering
+* get_occupancy{"course": "rhetoric"}
+    - slot{"course": "rhetoric"}
+    - action_query_occupancy
+* get_description
+    - action_provide_description
+
+## get course offering, description and occupancy	
+* get_course_offering{"course-type": "seminars"}
+    - action_course_offering
+* get_description{"course": "machine learning"}
+    - slot{"course": "machine learning"}
+    - action_provide_description
+* get_description{"course": "Excel"}
+    - slot{"course": "Excel"}
+    - action_provide_description
+* get_occupancy
+	- action_query_occupancy
 
 	
