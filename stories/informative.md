@@ -237,6 +237,10 @@
 	- action_display_seminar
 	- slot{"categories": "[x,y,z]"}
 
+## insult
+* insult
+    - utter_no_insult
+
 	
 	
 

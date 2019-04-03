@@ -3,7 +3,7 @@
 	- utter_ask_name
 * inform{"given-name":"Rob","last-name":"Cook"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"94"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -13,7 +13,7 @@
 	- form{"name":"seminar_form"}
 	- form{"name":null}
 	- action_book_seminar
-	- slot{"booking_confirmed":"True"}
+	- slot{"booking_confirmed":True}
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -25,7 +25,7 @@
 	- utter_ask_name
 * inform{"given-name":"Rob","last-name":"Cook"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"94"}
 	- action_query_date
 	- slot{"dates":"Munich, Berlin, Frankfurt"}
@@ -34,7 +34,7 @@
 	- form{"name":"seminar_form"}
 	- form{"name":null}
 	- action_book_seminar
-	- slot{"booking_confirmed":"True"}
+	- slot{"booking_confirmed":True}
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -45,7 +45,7 @@
 	- utter_ask_name
 * inform{"given-name":"Rob","last-name":"Cook"}
 	- action_verify_user	
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"94"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -55,7 +55,7 @@
 	- form{"name":"seminar_form"}
 	- form{"name":null}
 	- action_book_seminar
-	- slot{"booking_confirmed":"True"}
+	- slot{"booking_confirmed":True}
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
