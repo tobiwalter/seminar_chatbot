@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import unicode_literals
 from typing import Text, Dict, Any, List
 from rasa_core_sdk import Action, Tracker
-from rasa_core_sdk.events import SlotSet, FollowupAction, UserUtteranceReverted
+from rasa_core_sdk.events import SlotSet, FollowupAction, UserUtteranceReverted, Restarted
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import ActionExecutionRejection
@@ -213,19 +213,19 @@ class ActionBookSeminar(Action):
       if not seminar_id:
         res = "The seminar you requested is not being offered."
         dispatcher.utter_message(res)
-        return [SlotSet("booking_confirmed","False")]
+        return [SlotSet("booking_confirmed",False)]
       #  In case necessary slots were not filled previously, ask user to fill them
       if not city:
         dispatcher.utter_template('utter_ask_location', tracker)
-        return [SlotSet("booking_confirmed","False"), FollowupAction('action_location_buttons')]
+        return [SlotSet("booking_confirmed",False), FollowupAction('action_location_buttons')]
       else:  
         # Otherwise, check if course is offered at user-given location
         seminar = seminars[seminar_id]
         if not city.capitalize() in seminar["locations"]:
           res = "The seminar {} is not offered in {}.".format(seminar["title"],city.capitalize())
           dispatcher.utter_message(res)
-          return [SlotSet("booking_confirmed","False"),SlotSet("location", None), SlotSet("date", None),
-          SlotSet("time", None), SlotSet("date-period", None)]
+          return [SlotSet("booking_confirmed",False),SlotSet("location", None), SlotSet("date", None),
+          SlotSet("time", None), SlotSet("date-period", None), FollowupAction('utter_do_something_else')]
 
       # the entity representing the date can be one of two entities, 
       # 1) self-defined entity date or 2) time from duckling
@@ -234,7 +234,7 @@ class ActionBookSeminar(Action):
         userGivenDate = tracker.get_slot("time")
       if not userGivenDate:
         dispatcher.utter_template('utter_ask_date', tracker)
-        return [SlotSet("booking_confirmed","False"), FollowupAction('action_date_buttons')]
+        return [SlotSet("booking_confirmed",False), FollowupAction('action_date_buttons')]
       else: 
         dateMatch = None
         seminarDates = seminar["locations"][city.capitalize()]
@@ -254,13 +254,14 @@ class ActionBookSeminar(Action):
       if not dateMatch:
         dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],
         dateparser.parse(time).date()))
-        return [SlotSet("booking_confirmed", "False"),SlotSet("date", None), SlotSet("time", None)]
+        return [SlotSet("booking_confirmed", False),SlotSet("date", None), SlotSet("time", None),
+        FollowupAction('utter_do_something_else')]
 
       #check if spot still available at given date and location      
       if seminar["capacity"] == dateMatch["occupancy"]:
         dispatcher.utter_message("All seminars about {} are booked out.".format(course))
-        return [SlotSet("booking_confirmed","False"),SlotSet("date", None), SlotSet("time", None),
-                SlotSet("location",None), SlotSet('date-period', None)]
+        return [SlotSet("booking_confirmed",False),SlotSet("date", None), SlotSet("time", None),
+                SlotSet("location",None), SlotSet('date-period', None), FollowupAction('utter_do_something_else')]
       else:
         #check if seminar already booked by user 
         if bookings:
@@ -270,8 +271,9 @@ class ActionBookSeminar(Action):
               dateComparison(ele["date"], date.today()) == 1:
                 res = "You have already booked the seminar {} in {} on {}.".format(course,ele["location"],ele["date"])
                 dispatcher.utter_message(res)
-                return [SlotSet("booking_confirmed","False"), SlotSet("date", None), SlotSet("time", None),
-                        SlotSet("location",None), SlotSet("course",None), SlotSet('date-period',None)]
+                return [SlotSet("booking_confirmed",False), SlotSet("date", None), SlotSet("time", None),
+                        SlotSet("location",None), SlotSet("course",None), SlotSet('date-period',None),
+                        FollowupAction('utter_do_something_else')]
 
         # If not booked, perform booking from here on: First, update occupancy on matched date 
         occupancy = dateMatch["occupancy"]
@@ -305,7 +307,7 @@ class ActionBookSeminar(Action):
                   res += "\n{} in {} on {}.".format(ele["seminar_title"],ele["location"],ele["date"])
                   breaker = False
             if breaker:
-              return [SlotSet("booking_confirmed","True"),SlotSet("date", None), SlotSet("time", None),
+              return [SlotSet("booking_confirmed",True),SlotSet("date", None), SlotSet("time", None),
                       SlotSet('date-period',None), SlotSet("location",None), SlotSet("course",None), 
                       FollowupAction('action_listen')]
             # If date clash, ask if user wants to cancel one of the seminars  
@@ -313,7 +315,7 @@ class ActionBookSeminar(Action):
               buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
               dispatcher.utter_message(res)
               dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
-              return [SlotSet("booking_confirmed","True"), SlotSet("location",None),SlotSet("course",None)]
+              return [SlotSet("booking_confirmed",True), SlotSet("location",None),SlotSet("course",None)]
 
 class ActionCancelSeminar(Action):
   def name(self):
@@ -342,7 +344,7 @@ class ActionCancelSeminar(Action):
         
         if not seminar_id:
           dispatcher.utter_message("There is no seminar matching your request.")
-          return [SlotSet("cancellation_confirmed","False"), SlotSet("course",None),
+          return [SlotSet("cancellation_confirmed",False), SlotSet("course",None),
            SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
         #search for corresponding booking
@@ -413,19 +415,19 @@ class ActionCancelSeminar(Action):
                   res = "Your seminar booking for {} on {} in {} has been cancelled. \n \
                   You will receive a cancellation confirmation by mail.".format(course, seminar_date, city)
                   dispatcher.utter_message(res)
-                  return [SlotSet("cancellation_confirmed","True"), SlotSet("course",None),
+                  return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
                    SlotSet("location",None), SlotSet("date",None)]
 
         # bot message if cancellation was not successful      
         dispatcher.utter_message("There are no bookings according to your request or the requested booking \
                                     is already past and cannot be cancelled anymore.")
-        return  [SlotSet("cancellation_confirmed","False"), SlotSet("course",None),
+        return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None),
                  SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
     # no employee ID --> User Verification was not successful
     else:
       dispatcher.utter_message("You are not in the database. Please contact HR.")
-      return [SlotSet("cancellation_confirmed","False")]
+      return [SlotSet("cancellation_confirmed",False)]
 
 class ActionProvideDescription(Action):
   def name(self):
@@ -535,11 +537,11 @@ class ActionDisplaySeminar(Action):
           res = "There are no booking dates available for {} in the given period".format(seminar["title"])
           dispatcher.utter_message(res)
           return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
-      else:
-        res = "We don't offer {} seminars.".format(course)
-        dispatcher.utter_message(res)
-        return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-        SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
+      # else:
+      #   res = "We don't offer {} seminars.".format(course)
+      #   dispatcher.utter_message(res)
+      #   return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
+      #   SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
     # Second priority: If no course, but location could be extracted, find seminars at that location
     elif city:
@@ -619,8 +621,10 @@ class ActionDisplaySeminar(Action):
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
     else: 
-      dispatcher.utter_message("We do not offer courses in the category you specified.")
-      return [FollowupAction('utter_do_something_else')]
+      res = "We don't offer {} seminars.".format(course)
+      dispatcher.utter_message(res)
+      return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
+      SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
 class ActionCourseOffering(Action):
 
@@ -765,7 +769,7 @@ class VerifyUser(Action):
         if e["First_name"].lower() == firstname.lower():
           if e["Last_name"].lower() == lastname.lower():
             dispatcher.utter_message("Hello {}.".format(firstname.capitalize()))
-            return [SlotSet("user_verified","True"), SlotSet("employee_id",e["employee_id"])]
+            return [SlotSet("user_verified",True), SlotSet("employee_id",e["employee_id"])]
 
     ## if slot set already, that means bot ask for the 2nd time,
     ## so if verification fails again, suggest_help
@@ -906,8 +910,10 @@ class ActionLocationButtons(Action):
     def run(self, dispatcher, tracker, domain):
 
         course = tracker.get_slot('course')
-        seminars = db.reference('seminars').get()
-        seminar_id = matchingSeminar(seminars,course)
+
+        if course: 
+          seminars = db.reference('seminars').get()
+          seminar_id = matchingSeminar(seminars,course)
 
         if seminar_id:
           seminar = seminars[seminar_id]
@@ -966,9 +972,9 @@ class ActionLocationButtons(Action):
           for x in list(loc_buttons)[0:3]:
             buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
 
-          buttons.append({'title': "other location", 'payload': "/other_loc_date{\"other_location\":\"True\"}"})
+          buttons.append({"title": "other location", 'payload': "/other_loc_date{\"other_location\":\"True\"}"})
           dispatcher.utter_button_message("Please select a button:", buttons)
-          return []
+          return [FollowupAction, ('action_listen')]
 
     def locDistance(self, homecity, destination):
         # Install Module geopy
@@ -1024,11 +1030,13 @@ class ActionDateButtons(Action):
         #   res = "These are all available dates. Please select a button:"
 
         for x in list(date_occupancy)[0:2]: 
-          buttons.append({'title': x[0], 'payload': '/inform{"date": \"' + x[0] + '\"}'})
+          buttons.append({"title": x[0], 'payload': "/inform{\"date\": \"' + x[0] + '\"}"})
 
         buttons.append({'title': "other date", 'payload': "/other_loc_date{\"other_date\":\"True\"}"})
         dispatcher.utter_button_message("Please select a button:", buttons)
-        return []
+        return [FollowupAction, ('action_listen')]
+        ## wird glaube ich nicht benötigt, da erster requested slot immer location ist und hier
+        ## die location bereits gecheckt wird 
       else:
           res = "We do not offer {} seminars in {}.".format(course,city)
           next_loc = self.nextLocation(city,seminar_id)
@@ -1037,12 +1045,8 @@ class ActionDateButtons(Action):
             buttons=[{'title': 'Yes', 'payload': "/affirm}"},{'title': 'No', 'payload': '/negative'}]
             dispatcher.utter_message(res)
             dispatcher.utter_button_message("Do you agree with this location?", buttons)
-            return [SlotSet("location",next_loc)]
+            return [SlotSet("location",next_loc), FollowupAction('action_listen')]
           dispatcher.utter_message(res)
-    else:    
-      dispatcher.utter_template("utter_ask_course_book", tracker)
-      return []
-
 
 class ActionShowAllButtons(Action):
 
@@ -1218,3 +1222,30 @@ class ActionDefaultFallback(Action):
       else:
           dispatcher.utter_template('utter_default', tracker)
           return [UserUtteranceReverted()]
+
+class ActionResetSlots(Action):  
+    def name(self):     
+      return 'action_reset_slots' 
+
+    def run(self, dispatcher, tracker, domain): 
+      booking_confirmed = tracker.get_slot('booking_confirmed')
+
+      slots_to_keep = ['employee_id', 'user_verified', 'booking_confirmed', 'cancellation_confirmed']
+      # Keep course slot if booking was not successful as user might ask follow-up questions
+      # like where/when does it take place
+      if booking_confirmed is False:
+        slots_to_keep.append('course')    
+      return_slots = [SlotSet(slot, None) for slot in tracker.slots if slot not in slots_to_keep]
+      return return_slots
+
+class ActionRestarted(Action):
+    def name(self):
+      return 'action_restart'
+
+    def run(self, dispatcher, tracker, domain): 
+
+      # Restart conversation but keep employee_id 
+      # employee_id = tracker.get_slot('employee_id')
+      # tracker.trigger_followup_action(ACTION_LISTEN_NAME)
+      # tracker.set_slot('employee_id', employee_id)
+      return [Restarted(), FollowupAction('action_listen')]

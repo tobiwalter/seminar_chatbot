@@ -9,7 +9,7 @@ def matchingSeminar(seminars,course) -> int:
 
 		for ele in seminars:
 			if course.lower() in (d.lower() for d in ele["description"]):
-				seminar_id = ele["seminar_id"]
+				seminar_id = int(ele["seminar_id"])
 				return seminar_id 
 
 def dateComparison(date1, date2) -> int:
