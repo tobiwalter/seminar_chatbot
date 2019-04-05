@@ -6,7 +6,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -31,7 +31,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -45,7 +45,7 @@
     - slot{"given-name": "Max"}
     - slot{"last-name": "Thompson"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 3}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -70,7 +70,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}	
 	- slot{"course": null}
@@ -84,7 +84,7 @@
     - slot{"given-name": "Max"}
     - slot{"last-name": "Thompson"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 3}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -109,7 +109,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -123,7 +123,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -148,7 +148,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -162,7 +162,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -187,7 +187,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -203,7 +203,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -228,7 +228,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -244,7 +244,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -269,7 +269,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -283,7 +283,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -308,7 +308,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -322,7 +322,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -347,7 +347,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -361,7 +361,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -394,7 +394,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -408,7 +408,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -441,7 +441,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -455,7 +455,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -488,7 +488,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -502,7 +502,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -528,7 +528,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -542,7 +542,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -568,7 +568,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -582,7 +582,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -610,7 +610,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -643,7 +643,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -667,7 +667,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -696,7 +696,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -726,7 +726,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -740,7 +740,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -766,7 +766,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -780,7 +780,7 @@
     - slot{"given-name": "Hugo"}	
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -806,7 +806,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -820,7 +820,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -845,7 +845,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -859,7 +859,7 @@
 	- utter_ask_name
 * inform{"given-name":"Max","last-name":"Smith"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"2"}
 	- action_show_bookings
     - slot{"date": null}
@@ -887,12 +887,12 @@
     - slot{"given-name": "Sam"}
     - slot{"last-name": "Brown"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 0}
 	- utter_are_you_sure
 * affirm
     - action_cancel_seminar
-    - slot{"cancellation_confirmed": "True"}
+    - slot{"cancellation_confirmed": True}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -908,7 +908,7 @@
 	- slot{"given-name": "Hugo"}
 	- slot{"last-name": "Garcia"}
 	- action_verify_user
-	- slot{"user_verified": "True"}
+	- slot{"user_verified": True}
 	- slot{"employee_id": 9}
 	- action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -929,7 +929,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -942,7 +942,7 @@
     - slot{"given-name": "Ron"}
     - slot{"last-name": "Moore"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 4}
     - action_course_offering
     - utter_ask_course_book
@@ -971,7 +971,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -985,7 +985,7 @@
     - slot{"given-name": "Max"}
     - slot{"last-name": "Smith"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 2}
     - action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -1011,7 +1011,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "False"}
+    - slot{"booking_confirmed": False}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}	
@@ -1026,7 +1026,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -1047,7 +1047,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -1074,7 +1074,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_query_date
     - slot{"dates": "24/03/19, 02/04/19"}
@@ -1094,7 +1094,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "False"}
+    - slot{"booking_confirmed": False}
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"course": null}
@@ -1107,7 +1107,7 @@
     - slot{"given-name": "Teresa"}
     - slot{"last-name": "Williams"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 10}
 	- action_display_seminar
 	- utter_ask_course_book
@@ -1122,7 +1122,7 @@
 	- seminar_form
     - form{"name": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
 	- slot{"time": null}
     - slot{"location": null}
@@ -1136,7 +1136,7 @@
     - slot{"given-name": "Teresa"}
     - slot{"last-name": "Williams"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 10}
 	- action_display_seminar
 	- slot{"categories": "[x,y,z]"}
@@ -1160,7 +1160,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"date": null}
 	- slot{"time": null}
     - slot{"location": null}
@@ -1175,7 +1175,7 @@
     - slot{"given-name": "Teresa"}
     - slot{"last-name": "Williams"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 10}
 	- action_display_seminar
 	- slot{"categories": "[x,y,z]"}
@@ -1188,7 +1188,7 @@
 	- seminar_form
     - form{"name": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
     - slot{"course": null}
     - slot{"location": null}	
 	- slot{"date" : null}
@@ -1202,7 +1202,7 @@
     - slot{"given-name": "Ron"}
     - slot{"last-name": "Moore"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 4}
     - action_course_offering
     - utter_ask_course_book
@@ -1231,7 +1231,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "False"}
+    - slot{"booking_confirmed": False}
 	- slot{"time": null}
 	- slot{"date": null}
 	
@@ -1242,7 +1242,7 @@
     - slot{"given-name": "Ron"}
     - slot{"last-name": "Moore"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 4}
     - action_course_offering
     - utter_ask_course_book
@@ -1259,7 +1259,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -1286,7 +1286,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
 	- slot{"time": null}
     - slot{"date": null}
     - slot{"location": null}
@@ -1301,7 +1301,7 @@
     - slot{"given-name": "Hugo"}
     - slot{"last-name": "Garcia"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 9}
     - action_display_seminar
 	- slot{"seminar_id":"7"}
@@ -1328,7 +1328,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "True"}
+    - slot{"booking_confirmed": True}
 	- slot{"time": null}
     - slot{"date": null}
     - slot{"location": null}
@@ -1343,7 +1343,7 @@
     - slot{"given-name": "Max"}
     - slot{"last-name": "Smith"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 2}
     - action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -1369,7 +1369,48 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - action_book_seminar
-    - slot{"booking_confirmed": "False"}
+    - slot{"booking_confirmed": False}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}	
+	- slot{"date-period": null}
+	
+## whatspossible
+* book_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Smith"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Smith"}
+    - action_verify_user
+    - slot{"user_verified": True}
+    - slot{"employee_id": 2}
+    - action_display_seminar
+	- slot{"seminar_id":"4"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - slot{"seminar_id": 1}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* ask_whatspossible
+	- utter_whatspossible
+    - seminar_form
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "24/03/19"}
+    - slot{"date": "24/03/19"}
+    - seminar_form
+    - slot{"date": "24/03/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": False}
     - slot{"date": null}
 	- slot{"time": null}
     - slot{"location": null}

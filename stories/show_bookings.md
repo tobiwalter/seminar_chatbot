@@ -3,7 +3,7 @@
 	- utter_ask_name
 * inform{"given-name":"Max","last-name":"Smith"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"2"}
 	- action_show_bookings
     - slot{"date": null}
@@ -16,7 +16,7 @@
 	- utter_ask_name
 * inform{"given-name":"Sam","last-name":"Brown"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"0"}
 	- action_show_bookings
     - slot{"date": null}
@@ -29,7 +29,7 @@
 	- utter_ask_name
 * inform{"given-name":"Mary","last-name":"Grey"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"13"}
 	- action_show_bookings
     - slot{"date": null}
@@ -44,7 +44,7 @@
 	- action_verify_user
 * inform{"given-name":"Thomas","last-name":"Anderson"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"18"}
 	- action_show_bookings
     - slot{"date": null}
@@ -57,7 +57,7 @@
 	- utter_ask_name
 * inform{"given-name":"Jim","last-name":"Paul"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"421"}
 	- action_show_bookings
     - slot{"date": null}
@@ -79,7 +79,7 @@
 	- action_verify_user
 *inform{"given-name":"Fred","last-name":"Baker"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"15"}
 	- action_show_bookings
     - slot{"date": null}
@@ -103,7 +103,7 @@
     - slot{"given-name": "Patricia"}
     - slot{"last-name": "Grey"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 7}
     - action_show_bookings
     - slot{"date": null}
@@ -116,7 +116,7 @@
 	- utter_ask_name
 * inform{"given-name": "judith", "last-name": "anderson"}
 	- action_verify_user
-	- slot{"user_verified": "True"}
+	- slot{"user_verified": True}
     - slot{"employee_id": 10}
 	- action_show_bookings
     - slot{"date": null}
@@ -132,7 +132,7 @@
     - slot{"given-name": "Teresa"}
     - slot{"last-name": "Williams"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 10}
     - action_show_bookings
     - slot{"date": null}
@@ -148,7 +148,7 @@
     - slot{"given-name": "Ron"}
     - slot{"last-name": "Moore"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 4}
     - action_show_bookings
     - slot{"date": null}
@@ -193,7 +193,7 @@
 	- utter_no_chitchat
 * inform{"given-name":"Mak","last-name":"Miller"}
 	- action_verify_user
-	- slot{"user_verified": "True"}
+	- slot{"user_verified": True}
     - slot{"employee_id": 48}
 	- action_show_bookings
     - slot{"date": null}
@@ -206,7 +206,7 @@
 	- utter_ask_name
 * inform{"given-name":"Tony","last-name":"Blair"}
 	- action_verify_user
-	- slot{"user_verified":"True"}
+	- slot{"user_verified":True}
 	- slot{"employee_id":"10"}
 	- action_show_bookings
     - slot{"date": null}
@@ -221,7 +221,7 @@
     - slot{"given-name": "Max"}
     - slot{"last-name": "Smith"}	
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 2}
     - action_show_bookings
     - slot{"date": null}
@@ -240,11 +240,25 @@
     - slot{"given-name": "Judith"}
     - slot{"last-name": "Anderson"}
     - action_verify_user
-    - slot{"user_verified": "True"}
+    - slot{"user_verified": True}
     - slot{"employee_id": 8}
     - action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
-		
+* praise
+	- utter_thanks
+
+## show bookings in date-period	
+* show_bookings{"date-period":"summer"}
+	- utter_ask_name
+* inform{"given-name":"Sam","last-name":"Brown"}
+	- action_verify_user
+	- slot{"user_verified":True}
+	- slot{"employee_id":"0"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}

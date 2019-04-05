@@ -217,5 +217,32 @@
     - action_provide_description
 * get_occupancy
 	- action_query_occupancy
+	
+## what's possible
+* ask_whatspossible
+	- utter_whatspossible
+	
+## what' possible and course offering
+* ask_whatspossible
+	- utter_whatspossible
+* get_course_offering
+	- action_course_offering
+	
+## what' possible, location and course offering
+* ask_whatspossible
+	- utter_whatspossible
+* get_location	
+	- action_course_offering
+* get_course_offering{"location":"Munich"}
+	- action_display_seminar
+	- slot{"categories": "[x,y,z]"}
+
+## insult
+* insult
+    - utter_no_insult
+
+	
+	
+
 
 	

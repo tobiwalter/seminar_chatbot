@@ -34459,7 +34459,7 @@
         "entities": [
           {
             "start": 3,
-            "end": 14,
+            "end": 13,
             "value": "psychology ",
             "entity": "course"
           }
@@ -34471,7 +34471,7 @@
         "entities": [
           {
             "start": 3,
-            "end": 14,
+            "end": 13,
             "value": "psychology ",
             "entity": "course"
           }
