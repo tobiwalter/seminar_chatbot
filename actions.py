@@ -210,7 +210,7 @@ class ActionBookSeminar(Action):
       #matching seminar ID
       seminar_id = matchingSeminar(seminars,course)
 
-      if not seminar_id:
+      if seminar_id == None:
         res = "The seminar you requested is not being offered."
         dispatcher.utter_message(res)
         return [SlotSet("booking_confirmed",False)]
@@ -342,7 +342,7 @@ class ActionCancelSeminar(Action):
       else: 
         seminar_id = matchingSeminar(seminars,course)
         
-        if not seminar_id:
+        if seminar_id == None:
           dispatcher.utter_message("There is no seminar matching your request.")
           return [SlotSet("cancellation_confirmed",False), SlotSet("course",None),
            SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
