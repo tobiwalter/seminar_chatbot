@@ -1203,7 +1203,7 @@ class ActionShowAllButtons(Action):
                 if date_check(seminar,city,ele["date"]):
                   buttons.append({'title': ele["date"], 'payload': '/inform{"date": \"' + ele["date"] + '\"}'})
             if buttons:  
-              dispatcher.utter_button_message("These are all available dates.Please select a button:", buttons)
+              dispatcher.utter_button_message("These are all available dates. Please select a button:", buttons)
       else:
         dispatcher.utter_template("utter_ask_course_book", tracker)
     return [FollowupAction('action_listen'),SlotSet("other_date", None),SlotSet("other_location",None)]

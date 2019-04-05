@@ -4,6 +4,7 @@ actions:
   - action_course_offering
   - action_date_buttons
   - action_default_ask_affirmation
+  - action_default_ask_rephrase
   - action_default_fallback
   - action_display_seminar
   - action_location_buttons
