@@ -27,3 +27,5 @@ stop;Please stop the conversation.
 thank+bye;Thank you and goodbye!
 book_seminar+get_dates;I want to book the seminar. Please tell me possible dates.
 book_seminar+get_location;I want to book the seminar. Please tell me offered locations.
+get_occupancy;Do you have free slots?
+ask_whatspossible;What can you do for me?
