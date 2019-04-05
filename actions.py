@@ -196,7 +196,7 @@ class ActionBookSeminar(Action):
     city = tracker.get_slot('location')
 
     """ retrieves data snapshots """
-    if matchingID != None:
+    if matchingID == None:
       dispatcher.utter_template('utter_ask_name', tracker)
       return[FollowupAction('action_listen')]
     else:  
@@ -413,7 +413,7 @@ class ActionCancelSeminar(Action):
                     print('Seminar date is not in the database. No occupancy update!')
                 
                   res = "Your seminar booking for {} on {} in {} has been cancelled. \n \
-                  You will receive a cancellation confirmation by mail.".format(course, seminar_date, city)
+                  You will receive a cancellation confirmation by mail.".format(course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
                    SlotSet("location",None), SlotSet("date",None)]
@@ -1031,7 +1031,7 @@ class ActionDateButtons(Action):
         #   res = "These are all available dates. Please select a button:"
 
         for x in list(date_occupancy)[0:2]: 
-          buttons.append({"title": x[0], 'payload': "/inform{\"date\": \"'" + x[0] + "'\"}"})
+          buttons.append({"title": x[0], 'payload': '/inform{\"date\": \"' + x[0] + '\"}'})
 
         buttons.append({'title': "other date", 'payload': "/other_loc_date{\"other_date\":\"True\"}"})
         dispatcher.utter_button_message("Please select a button:", buttons)
