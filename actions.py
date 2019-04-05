@@ -1117,12 +1117,16 @@ class ActionQueryOccupancy(Action):
             res += '\n'.join(occ_at_dates)
         else:
           for loc in locs:    
-              occ_at_dates[loc] = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
+              # occ_at_dates[loc] = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
+              #   for ele in seminar["locations"][loc]]
+              occ_at_dates[loc] = [(capacity - ele["occupancy"])
                 for ele in seminar["locations"][loc]]
-              occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
+              # occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
+          availableLocs = {k : sum(v) for (k,v) in occ_at_dates.items() if sum(v) > 0}
+          res = "There are free slots left for {} in {}".format(course,', '.join(k for k in availableLocs))
 
-          res = "This is how many slots are left for {} at our seminar locations:\n\n".format(course)
-          res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in occ_at_dates.items()])
+          # seminar locations:\n\n".format(course)
+          # res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in occ_at_dates.items()])
 
         dispatcher.utter_message(res)
         return []  
