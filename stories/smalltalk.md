@@ -2,9 +2,9 @@
 * other_smalltalk
 	- utter_no_chitchat
 
-## introduction
-* introduction
-	- utter_introduction
+## ask_whatspossible
+* ask_whatspossible
+	- utter_whatspossible
 	
 ## age
 * age
@@ -67,4 +67,8 @@
 * thank+bye
 	- utter_thanks_bye
 	- action_restart
+	
+## insult
+* insult
+	- utter_no_insult 	
 	

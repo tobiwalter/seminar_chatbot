@@ -3,12 +3,12 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -21,7 +21,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_are_you_sure
 * negative
@@ -35,7 +35,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_are_you_sure
 * negative
@@ -47,12 +47,12 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
     - utter_are_you_sure
 * affirm
     - action_cancel_seminar
-    - slot{"cancellation_confirmed": True}
+    - slot{"cancellation_confirmed": "True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -63,12 +63,12 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
     - utter_are_you_sure
 * affirm
     - action_cancel_seminar
-	- slot{"cancellation_confirmed":False}
+	- slot{"cancellation_confirmed":"False"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -82,12 +82,12 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
     - utter_are_you_sure
 * affirm
     - action_cancel_seminar
-	- slot{"cancellation_confirmed":False}
+	- slot{"cancellation_confirmed":"False"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -101,12 +101,12 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
     - utter_are_you_sure
 * affirm
     - action_cancel_seminar
-    - slot{"cancellation_confirmed": True}
+    - slot{"cancellation_confirmed": "True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -133,7 +133,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
     - slot{"course": "Machine Learning"}
     - utter_are_you_sure
@@ -176,7 +176,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -184,7 +184,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -197,7 +197,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -205,7 +205,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -217,7 +217,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -225,7 +225,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -235,7 +235,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_are_you_sure
 * other_smalltalk
@@ -243,7 +243,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -264,7 +264,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -272,7 +272,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -284,7 +284,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -292,7 +292,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -304,7 +304,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -312,7 +312,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -322,7 +322,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -330,7 +330,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
@@ -345,7 +345,7 @@
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
 	- action_verify_user
-	- slot{"user_verified":True}
+	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
@@ -353,7 +353,7 @@
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
-	- slot{"cancellation_confirmed":True}
+	- slot{"cancellation_confirmed":"True"}
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
