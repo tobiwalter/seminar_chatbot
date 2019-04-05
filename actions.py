@@ -56,7 +56,7 @@ class ActionShowBookings(Action):
     display_option = tracker.get_slot('display-option')
 
   # Find booked seminars if a matching ID was extracted from user verification
-    if matchingID:
+    if matchingID != None:
       bookingRef = db.reference('bookings/' + str(matchingID))
       bookings = bookingRef.get()
       bookedSeminars = set([])
@@ -196,7 +196,7 @@ class ActionBookSeminar(Action):
     city = tracker.get_slot('location')
 
     """ retrieves data snapshots """
-    if not matchingID:
+    if matchingID != None:
       dispatcher.utter_template('utter_ask_name', tracker)
       return[FollowupAction('action_listen')]
     else:  
@@ -331,7 +331,7 @@ class ActionCancelSeminar(Action):
     date_period = tracker.get_slot('date-period')
     time = tracker.get_slot('time')
 
-    if matchingID:  
+    if matchingID != None:  
       bookingRef = db.reference('bookings/' + str(matchingID))
       bookings = bookingRef.get()
 
@@ -439,7 +439,7 @@ class ActionProvideDescription(Action):
     course = tracker.get_slot('course')
     seminar_id = matchingSeminar(seminars,course)
 
-    if seminar_id:
+    if seminar_id != None:
       seminar = seminars[seminar_id]
       attachment = json.dumps([{
           "fallback": seminar['text'], #only if client doesn't show formatted text
@@ -473,7 +473,8 @@ class ActionDisplaySeminar(Action):
       seminar_id = matchingSeminar(seminars,course)
 
       # If seminar could be matched, display seminar dates and locations of only this seminar
-      if seminar_id:
+      if seminar_id != None:
+        print("HERE", seminar_id)
         seminarRef = db.reference('seminars/' + str(seminar_id))
         seminar = seminarRef.get()
 
@@ -662,7 +663,7 @@ class ActionQueryDate(Action):
         if course:
           seminar_id = matchingSeminar(seminars,course)
 
-        if seminar_id:
+        if seminar_id != None:
             seminar = seminars[seminar_id]
 
         # Collect dates of seminar in the corresponding city
@@ -725,7 +726,7 @@ class ActionProvidePrerequisites(Action):
     course = tracker.get_slot('course')
     seminar_id = matchingSeminar(seminars,course)
     
-    if seminar_id:
+    if seminar_id != None:
       prqs = seminars[seminar_id]["prerequisites"]
         
     if prqs == "none":
@@ -744,7 +745,7 @@ class ActionQueryLevel(Action):
     course = tracker.get_slot('course')
     seminar_id = matchingSeminar(seminars,course)
 
-    if seminar_id:
+    if seminar_id != None:
         level = seminars[seminar_id]["level"]
         dispatcher.utter_message("This is the level of the course: {}".format(level))
         return []
@@ -791,7 +792,7 @@ class ActionQueryDuration(Action):
     course = tracker.get_slot('course')
     seminar_id = matchingSeminar(seminars,course)
 
-    if seminar_id:
+    if seminar_id != None:
         duration = seminars[seminar_id]["duration (days)"]
         if duration == 1:
           res = "The seminar is scheduled over one day from 9 am to 5 pm.".format(duration)
@@ -915,7 +916,7 @@ class ActionLocationButtons(Action):
           seminars = db.reference('seminars').get()
           seminar_id = matchingSeminar(seminars,course)
 
-        if seminar_id:
+        if seminar_id != None:
           seminar = seminars[seminar_id]
           if tracker.get_slot("locations"):
             locations = tracker.get_slot("locations")      
@@ -1007,7 +1008,7 @@ class ActionDateButtons(Action):
     seminars = db.reference('seminars').get()
     seminar_id = matchingSeminar(seminars,course)
 
-    if seminar_id:
+    if seminar_id != None:
       seminar = seminars[seminar_id]
       if city in seminar["locations"]:
 
@@ -1065,7 +1066,7 @@ class ActionShowAllButtons(Action):
       if tracker.latest_message['intent'].get('name') == 'other_loc_date':
 
         seminar_id = matchingSeminar(seminars,course)
-        if seminar_id:
+        if seminar_id != None:
           seminar = seminars[seminar_id]
           if otherLoc is not None:
             locations = tracker.get_slot("locations")   
@@ -1241,8 +1242,8 @@ class ActionShowAllButtons(Action):
       seminar_id = matchingSeminar(seminars,course)
       seminar = seminars[seminar_id]
       buttons =[]
-      if seminar_id:
-        if otherLoc is not None:
+      if seminar_id != None:
+        if otherLoc != None:
           locs = sorted(seminar["locations"]) 
         # If user clicked on other locations, display all available locations 
           for loc in locs:
