@@ -1,0 +1,204 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "sam brown",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "sam",
+            "entity": "given-name"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "value": "brown",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "david wagner",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "david",
+            "entity": "given-name"
+          },
+          {
+            "start": 6,
+            "end": 12,
+            "value": "wagner",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "max smith",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "max",
+            "entity": "given-name"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "value": "smith",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "max thompson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "max",
+            "entity": "given-name"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "thompson",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "ron moore",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "ron",
+            "entity": "given-name"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "value": "moore",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "jane love",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "jane",
+            "entity": "given-name"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "value": "love",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "mary grey",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "mary",
+            "entity": "given-name"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "value": "grey",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "patricia grey",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "patricia",
+            "entity": "given-name"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "value": "grey",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "judith anderson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "anderson",
+            "entity": "last-name"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "judith",
+            "entity": "given-name"
+          }
+        ]
+      },
+      {
+        "text": "hugo gracia",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "hugo",
+            "entity": "given-name"
+          },
+          {
+            "start": 5,
+            "end": 11,
+            "value": "gracia",
+            "entity": "last-name"
+          }
+        ]
+      },
+      {
+        "text": "teresa williams",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "teresa",
+            "entity": "given-name"
+          },
+          {
+            "start": 7,
+            "end": 15,
+            "value": "williams",
+            "entity": "last-name"
+          }
+        ]
+      }
+    ]
+  }
+}

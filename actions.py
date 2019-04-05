@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-#cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -1030,7 +1030,7 @@ class ActionDateButtons(Action):
         #   res = "These are all available dates. Please select a button:"
 
         for x in list(date_occupancy)[0:2]: 
-          buttons.append({"title": x[0], 'payload': "/inform{\"date\": \"' + x[0] + '\"}"})
+          buttons.append({"title": x[0], 'payload': "/inform{\"date\": \"'" + x[0] + "'\"}"})
 
         buttons.append({'title': "other date", 'payload': "/other_loc_date{\"other_date\":\"True\"}"})
         dispatcher.utter_button_message("Please select a button:", buttons)
