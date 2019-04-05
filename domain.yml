@@ -1,6 +1,8 @@
 %YAML 1.1
 ---
 actions:
+- action_restart
+- action_reset_slots
 - action_book_seminar
 - action_cancel_seminar
 - action_course_offering
@@ -22,6 +24,7 @@ actions:
 - utter_ask_continue
 - utter_ask_course_book
 - utter_ask_course_cancel
+- utter_no_insult
 - utter_ask_date
 - utter_ask_location
 - utter_ask_name
@@ -35,6 +38,7 @@ actions:
 - utter_no_chitchat
 - utter_no_worries
 - utter_restart_with_button
+- action_query_occupancy
 - utter_submit
 - utter_suggest_help
 - utter_thanks
@@ -44,6 +48,7 @@ actions:
 - utter_wrong_date
 - utter_wrong_location
 - utter_ask_rephrase
+- utter_whatspossible
 
 config:
   store_entities_as_slots: true
@@ -102,8 +107,6 @@ intents:
     use_entities: true
 - insult:
     use_entities: false
-- introduction:
-    use_entities: false
 - negative:
     use_entities: false
 - other_loc_date:
@@ -124,6 +127,10 @@ intents:
     use_entities: true
 - other_smalltalk:
     use_entities: false
+- ask_whatspossible:
+    use_entities: true
+- get_occupancy:
+    use_entities: true
 slots:
   booking-type:
     auto_fill: true
@@ -158,7 +165,7 @@ slots:
     type: rasa_core.slots.ListSlot
   categories:
     auto_fill: true
-    initial_value: nukk
+    initial_value: null
     type: rasa_core.slots.ListSlot
   display-option:
     auto_fill: true
@@ -322,5 +329,8 @@ templates:
   - text: The location you specified is not in our database. Please try again.
   utter_ask_rephrase:
   - text: Could you rephrase your message please?
+  utter_whatspossible:
+  - text: "I can do the following tasks for you: Book a seminar, show your
+      seminar bookings, cancel a seminar or get information about the seminar offering."
   
   

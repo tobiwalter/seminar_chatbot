@@ -2,92 +2,17 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "- tell me some stuff about you",
+        "text": "tell me some stuff about you",
         "intent": "introduction",
         "entities": []
       },
       {
-        "text": "- talk some stuff about yourself",
+        "text": "talk some stuff about yourself",
         "intent": "introduction",
         "entities": []
       },
       {
-        "text": "- I want to know you better",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- I want to know more about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- who are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- describe yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- introduce yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- say about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- what are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- define yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- what is your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- all about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- why are you here",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- talk about yourself",
+        "text": "I want to know more about you",
         "intent": "introduction",
         "entities": []
       },
@@ -132,17 +57,7 @@
         "entities": []
       },
       {
-        "text": "- pretty bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
         "text": "- not good enough",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "- that was lame",
         "intent": "bad",
         "entities": []
       },
@@ -153,11 +68,6 @@
       },
       {
         "text": "- it is bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "- that's bad",
         "intent": "bad",
         "entities": []
       },
@@ -523,47 +433,47 @@
       },
       {
         "text": "good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great job",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "way to good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "well done",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "nice work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "amazing work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "bravo",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "good work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
@@ -1677,16 +1587,6 @@
         "entities": []
       },
       {
-        "text": "talk some stuff about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "I want to know you better",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "I want to know more about you",
         "intent": "introduction",
         "entities": []
@@ -1697,17 +1597,7 @@
         "entities": []
       },
       {
-        "text": "tell me about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "tell me about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "about yourself",
         "intent": "introduction",
         "entities": []
       },
@@ -1722,17 +1612,7 @@
         "entities": []
       },
       {
-        "text": "say about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "what are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "define yourself",
         "intent": "introduction",
         "entities": []
       },
@@ -1748,16 +1628,6 @@
       },
       {
         "text": "tell me about your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "why are you here",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "talk about yourself",
         "intent": "introduction",
         "entities": []
       },
@@ -1823,11 +1693,6 @@
       },
       {
         "text": "it is bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "that's bad",
         "intent": "bad",
         "entities": []
       },
@@ -2193,47 +2058,47 @@
       },
       {
         "text": "good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great job",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "way to good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "well done",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "nice work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "amazing work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "bravo",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "good work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
@@ -3342,92 +3207,7 @@
         "entities": []
       },
       {
-        "text": "- tell me some stuff about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- talk some stuff about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- I want to know you better",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- I want to know more about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- who are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- describe yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- introduce yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- say about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- what are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- define yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- what is your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- all about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- tell me about your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- why are you here",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "- talk about yourself",
+        "text": "what is your personality",
         "intent": "introduction",
         "entities": []
       },
@@ -3472,17 +3252,7 @@
         "entities": []
       },
       {
-        "text": "- pretty bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
         "text": "- not good enough",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "- that was lame",
         "intent": "bad",
         "entities": []
       },
@@ -3493,11 +3263,6 @@
       },
       {
         "text": "- it is bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "- that's bad",
         "intent": "bad",
         "entities": []
       },
@@ -3863,47 +3628,47 @@
       },
       {
         "text": "good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great job",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "way to good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "well done",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "nice work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "amazing work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "bravo",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "good work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
@@ -5017,11 +4782,6 @@
         "entities": []
       },
       {
-        "text": "talk some stuff about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "I want to know you better",
         "intent": "introduction",
         "entities": []
@@ -5032,72 +4792,12 @@
         "entities": []
       },
       {
-        "text": "who are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "tell me about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "tell me about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "about yourself",
         "intent": "introduction",
         "entities": []
       },
       {
-        "text": "describe yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "introduce yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "say about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "what are you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "define yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "what is your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "all about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "tell me about your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "why are you here",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "talk about yourself",
         "intent": "introduction",
         "entities": []
       },
@@ -5142,17 +4842,7 @@
         "entities": []
       },
       {
-        "text": "pretty bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
         "text": "not good enough",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "that was lame",
         "intent": "bad",
         "entities": []
       },
@@ -5163,11 +4853,6 @@
       },
       {
         "text": "it is bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "that's bad",
         "intent": "bad",
         "entities": []
       },
@@ -5533,47 +5218,47 @@
       },
       {
         "text": "good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great job",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "way to good",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "well done",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "nice work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "great work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "amazing work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "bravo",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
         "text": "good work",
-        "intent": "well_done",
+        "intent": "praise",
         "entities": []
       },
       {
@@ -12797,30 +12482,6 @@
         ]
       },
       {
-        "text": "Over how many days is the Python course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 32,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Over how many days is the R course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 27,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "Over how many days is the Java course scheduled?",
         "intent": "get_duration",
         "entities": [
@@ -12845,42 +12506,6 @@
         ]
       },
       {
-        "text": "Over how many days is the communication course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 39,
-            "value": "rhetoric",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Over how many days is the persuasion course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 36,
-            "value": "rhetoric",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Over how many days is the excel course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 31,
-            "value": "excel",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "Over how many days is the negotiation course scheduled?",
         "intent": "get_duration",
         "entities": [
@@ -12893,42 +12518,6 @@
         ]
       },
       {
-        "text": "Over how many days is the leadership course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 36,
-            "value": "leadership",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Over how many days is the management course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 36,
-            "value": "leadership",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Over how many days is the data visualization course scheduled?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 26,
-            "end": 44,
-            "value": "data visualization",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "At what time does Machine Learning take place?",
         "intent": "get_duration",
         "entities": [
@@ -12936,42 +12525,6 @@
             "start": 18,
             "end": 34,
             "value": "Machine Learning",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "At what time does ML take place?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 18,
-            "end": 20,
-            "value": "Machine Learning",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "At what time does Data Science take place?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 18,
-            "end": 30,
-            "value": "Machine Learning",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "At what time does programming take place?",
-        "intent": "get_duration",
-        "entities": [
-          {
-            "start": 18,
-            "end": 29,
-            "value": "programming",
             "entity": "course"
           }
         ]
@@ -15743,202 +15296,202 @@
       },
       {
         "text": "right allright yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes yes sir si correcto",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "affirmative right allright yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "si yep right ok",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "affirmative correct yes to that yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes sir right yes sir right",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes si si allright",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright si right",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes to that correcto yes yes",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes sir right si",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes affirmative affirmative affirmative",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright si si yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right yes correcto yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right allright si correct",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "correcto allright right right",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright right right correcto",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "correct allright allright yes sir",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes correct right yes",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes to that yes right si",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes to that ok yes sir yep",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "si yes right yes",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes ok si right",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right ok allright allright",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right right correcto si",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yep i desire that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right yes sir si",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "correct si yes to that yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right right yes to that si",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes yes sir right correct",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes affirmative yes to that",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright affirmative yep correcto",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "correcto correct right allright",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright ok correcto correcto",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "ok correct allright",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right allright right",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "right ok correct yes sir",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yes to that ok correct yes sir",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright allright yes sir yep",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "allright yes sir yes to that affirmative",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
         "text": "yep yes right yep",
-        "intent": "affirmative",
+        "intent": "affirm",
         "entities": []
       },
       {
@@ -24361,18 +23914,6 @@
         ]
       },
       {
-        "text": "Book the seminar about  please",
-        "intent": "book_seminar",
-        "entities": [
-          {
-            "start": 23,
-            "end": 23,
-            "value": "",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "Make a reservation for the Machine Learning seminar",
         "intent": "book_seminar",
         "entities": [
@@ -26818,30 +26359,6 @@
         ]
       },
       {
-        "text": "I'm interested in persuasion.",
-        "intent": "get_course_offering",
-        "entities": [
-          {
-            "start": 18,
-            "end": 28,
-            "value": "rhetoric",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Can I take seminars in Erfurt as well?",
-        "intent": "get_course_offering",
-        "entities": [
-          {
-            "start": 23,
-            "end": 29,
-            "value": "Erfurt",
-            "entity": "location"
-          }
-        ]
-      },
-      {
         "text": "I would like to see the courses next month",
         "intent": "get_course_offering",
         "entities": [
@@ -27261,18 +26778,6 @@
           {
             "start": 16,
             "end": 29,
-            "value": "rhetoric",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Any training in persuasion available?",
-        "intent": "get_course_offering",
-        "entities": [
-          {
-            "start": 16,
-            "end": 26,
             "value": "rhetoric",
             "entity": "course"
           }
@@ -29060,30 +28565,6 @@
         ]
       },
       {
-        "text": "In which cities is the programming workshop offered?",
-        "intent": "get_location",
-        "entities": [
-          {
-            "start": 23,
-            "end": 34,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "In which cities is the Python workshop offered?",
-        "intent": "get_location",
-        "entities": [
-          {
-            "start": 23,
-            "end": 29,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "In which cities is the R workshop offered?",
         "intent": "get_location",
         "entities": [
@@ -29156,18 +28637,6 @@
         ]
       },
       {
-        "text": "In which cities is the negotiation workshop offered?",
-        "intent": "get_location",
-        "entities": [
-          {
-            "start": 23,
-            "end": 34,
-            "value": "negotiation",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "In which cities is the leadership workshop offered?",
         "intent": "get_location",
         "entities": [
@@ -29175,18 +28644,6 @@
             "start": 23,
             "end": 33,
             "value": "leadership",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "In which cities is the data visualization workshop offered?",
-        "intent": "get_location",
-        "entities": [
-          {
-            "start": 23,
-            "end": 41,
-            "value": "data visualization",
             "entity": "course"
           }
         ]
@@ -29857,22 +29314,7 @@
         "entities": []
       },
       {
-        "text": "talk some stuff about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "I want to know you better",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "I want to know more about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "who are you",
         "intent": "introduction",
         "entities": []
       },
@@ -29882,32 +29324,7 @@
         "entities": []
       },
       {
-        "text": "tell me about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "about yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "describe yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "introduce yourself",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "say about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "what are you",
         "intent": "introduction",
         "entities": []
       },
@@ -29922,22 +29339,7 @@
         "entities": []
       },
       {
-        "text": "all about you",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "tell me about your personality",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
         "text": "why are you here",
-        "intent": "introduction",
-        "entities": []
-      },
-      {
-        "text": "talk about yourself",
         "intent": "introduction",
         "entities": []
       },
@@ -29982,17 +29384,7 @@
         "entities": []
       },
       {
-        "text": "pretty bad",
-        "intent": "bad",
-        "entities": []
-      },
-      {
         "text": "not good enough",
-        "intent": "bad",
-        "entities": []
-      },
-      {
-        "text": "that was lame",
         "intent": "bad",
         "entities": []
       },
@@ -31460,7 +30852,7 @@
       },
       {
         "text": " Show my registrations in Cologne",
-        "intent": "book_seminar",
+        "intent": "show_bookings",
         "entities": [
           {
             "start": 26,
@@ -33616,7 +33008,7 @@
       },
       {
         "text": "Sounds good. I want to book it in Leipzig.",
-        "intent": "",
+        "intent": "book_seminar",
         "entities": [
           {
             "start": 34,
@@ -34200,7 +33592,7 @@
       },
       {
         "text": "Where does the workshop for oov take place?",
-        "intent": "",
+        "intent": "get_location",
         "entities": []
       },
       {
@@ -34525,7 +33917,7 @@
           }
         ]
       },
-	    {
+      {
         "text": "How many slots are left?",
         "intent": "get_occupancy",
         "entities": []
@@ -34585,30 +33977,6 @@
           {
             "start": 28,
             "end": 34,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "How many slots are left for R?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 28,
-            "end": 29,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "How many slots are left for Java?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 28,
-            "end": 32,
             "value": "programming",
             "entity": "course"
           }
@@ -34694,18 +34062,6 @@
             "start": 28,
             "end": 38,
             "value": "leadership",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "How many slots are left for data visualization?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 28,
-            "end": 46,
-            "value": "data visualization",
             "entity": "course"
           }
         ]
@@ -35371,18 +34727,6 @@
         ]
       },
       {
-        "text": "Is the class already booked out?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 7,
-            "end": 12,
-            "value": "class",
-            "entity": "course-type"
-          }
-        ]
-      },
-      {
         "text": "Is the lecture already booked out?",
         "intent": "get_occupancy",
         "entities": [
@@ -35509,18 +34853,6 @@
           {
             "start": 25,
             "end": 31,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "Can I still get into the R course?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 25,
-            "end": 26,
             "value": "programming",
             "entity": "course"
           }
@@ -35671,18 +35003,6 @@
         ]
       },
       {
-        "text": "Can I still join the programming course?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 21,
-            "end": 32,
-            "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "Can I still join the Python course?",
         "intent": "get_occupancy",
         "entities": [
@@ -35803,18 +35123,6 @@
         ]
       },
       {
-        "text": "Can I still join the data visualization course?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 21,
-            "end": 39,
-            "value": "data visualization",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "How many free spots do you still have?",
         "intent": "get_occupancy",
         "entities": []
@@ -35914,18 +35222,6 @@
             "start": 33,
             "end": 37,
             "value": "programming",
-            "entity": "course"
-          }
-        ]
-      },
-      {
-        "text": "How many free slots are left for rhetoric?",
-        "intent": "get_occupancy",
-        "entities": [
-          {
-            "start": 33,
-            "end": 41,
-            "value": "rhetoric",
             "entity": "course"
           }
         ]
@@ -36085,8 +35381,874 @@
             "entity": "date"
           }
         ]
+      },
+      {
+        "text": "What do we do in Excel?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can you describe the seminar?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Can you explain the seminar a bit?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "What can I expect from the seminar?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to take it.",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "That was a bad experience",
+        "intent": "bad",
+        "entities": []
+      },
+      {
+        "text": "show me what's possible",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "so what can you do",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "so what can you help me with?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what are you good at?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what can I do here",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what can I do with this bot",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what is this bot for",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "cool! can I do something else here?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "talk to me!",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "how can you help me",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what else can i do",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "are there any other options?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "is there anything else you can do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what can i do here",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what can i do now",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "um what now",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "so now what",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Great, is there anything else you can do, bot?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what can you do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "how can you help me?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "can you do anything else?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "i asked you if you can do anything else",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "so what next?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what else can I do here?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Can you explain me in one sentence what you are doing?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "what are the options?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Hello again",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hi mate",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "Hey bot what's up?",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hey mister bot",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hey mister chatbot",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hola",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hallo",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "hi mi friend",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "no thanks",
+        "intent": "negative",
+        "entities": []
+      },
+      {
+        "text": "no thanks i'm good",
+        "intent": "negative",
+        "entities": []
+      },
+      {
+        "text": "no",
+        "intent": "negative",
+        "entities": []
+      },
+      {
+        "text": "gracias",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "merci",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "thank you a lot",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "of course",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "cool",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "go for it",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "oh awesome!",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "accept",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "alright",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yop",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "oki doki",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "jo",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "nice",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "coolio",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "definitely yes without a doubt",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "definitely",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sure thing",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ja",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "amazing!",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "how nice!",
+        "intent": "praise",
+        "entities": []
+      },
+      {
+        "text": "fine",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "What can I do with this bot?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What is this bot able to do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What are the skills of this bot?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Tell me what you are able to do",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What can you perform?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What is it you can do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What is it you can do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "I want to take this seminar, when can I take it?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "Book it please, when is that possible?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "I'd like to join this seminar, on which dates can I?",
+        "intent": "book_seminar+get_dates",
+        "entities": []
+      },
+      {
+        "text": "I want to book it, tell me when it is offered",
+        "intent": "book_seminar+get_dates",
+        "entities": []
+      },
+      {
+        "text": " I want to book Pyhton when can I take it? -",
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Pyhton",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to attend leadership in on which days is that possible?",
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "leadership ",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "cheers bro",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "cheers bro bye bye",
+        "intent": "thank+bye",
+        "entities": []
+      },
+      {
+        "text": "cheers",
+        "intent": "thank",
+        "entities": []
+      },
+      {
+        "text": "ciao",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "gotta go",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "goodnight",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "good night",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "I'm here to delete my registration for Data Science",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 39,
+            "end": 51,
+            "value": "Data Science",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I'm here to delete my registration for programming",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 39,
+            "end": 50,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "You need to help me cancelling a seminar.",
+        "intent": "cancel_seminar",
+        "entities": []
+      },
+      {
+        "text": "Is there a description available?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Can I take a seminar in Machine Learning?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "seminar ",
+            "entity": "course-type"
+          },
+          {
+            "start": 24,
+            "end": 40,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is it possible to take seminars in May?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 35,
+            "end": 38,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Display the contents of the seminar",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "How would you describe the seminar?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Tell me about the seminar content",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "I want to know more specifics",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "I want to know more details",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "More details about this seminar please",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Do you have more details for me?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "What are the details of Python?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What are the details of ML?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 24,
+            "end": 26,
+            "value": "ML",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Tell me more about the specifics please",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Can you give some details about the seminar?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Can you give me more details?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "What is rhetoric about?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What is Excel about?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me a bit about the seminar?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "I need your help to show my booked seminars",
+        "intent": "show_bookings",
+        "entities": []
+      },
+      {
+        "text": "What is programming about?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 8,
+            "end": 19,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Does it only last one day?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Does it last more than day?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Is it a multi-day seminar?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Is Data Science a multi-day seminar?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 3,
+            "end": 15,
+            "value": "Data Science",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How long does this seminar take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long does this course take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How long is it?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "When does it start and end?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Is it a seminar that extends over several days?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How many days does the seminar take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "seminar ",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I am a Python beginner, so can I take this seminar?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "beginner",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Would you recommend it for experts?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "experts",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Would you recommend it for laymen?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "laymen",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "I am a beginner, can I take it?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "beginner",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar suitable for intermediate users?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "intermediate",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "need to know oov ovv",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know to qualify for the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know so I can take the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do you require people to know to take it?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "I want to take that course",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Awesome I want to join it",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "Register myself for Data Science",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 32,
+            "value": "Data Science",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Register myself for management",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "management",
+            "entity": "course"
+          }
+        ]
       }
-	  
     ],
     "regex_features": [],
     "lookup_tables": [
@@ -36150,6 +36312,9 @@
         "synonyms": [
           "ML",
           "Data Science",
+          "Mahcine Learning",
+          "Artificial Intelligence",
+          "AI",
           "Big Data",
           "Data Mining",
           "Statistics"
@@ -36159,6 +36324,11 @@
         "value": "programming",
         "synonyms": [
           "Python",
+          "Pyhton",
+          "Pythno",
+          "programning",
+          "porgramming",
+          "programmign",
           "R",
           "Java"
         ]
@@ -36179,7 +36349,8 @@
       {
         "value": "rhetoric",
         "synonyms": [
-          "Communcation",
+          "Communication",
+          "rheotric",
           "Persuasion",
           "Influence"
         ]
