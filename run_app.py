@@ -8,9 +8,9 @@ from rasa_core.utils import EndpointConfig
 #action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
 #agent = Agent.load('.\\models\\current\\dialogue\\embedding5', interpreter = nlu_interpreter,action_endpoint = action_endpoint) #train rasa_core
 
-nlu_interpreter =RasaNLUInterpreter('./models/newmodel/nlu') #train rasa_nlu
+nlu_interpreter =RasaNLUInterpreter('./models/current/nlu_tf_oov/seminarnlu') #train rasa_nlu
 action_endpoint = EndpointConfig(url="http://localhost:5055/webhook")
-agent = Agent.load('./models/newmodel/dialogue', interpreter = nlu_interpreter,action_endpoint = action_endpoint)
+agent = Agent.load('./models/newModel2', interpreter = nlu_interpreter,action_endpoint = action_endpoint)
 
 input_channel = SlackInput( #'xoxp-464508724117-465710727574-540189494177-4f95904a55f64408089532920b798a80',
 							'xoxb-464508724117-540995397493-gmwJLQZBEkAcUvpSIJF5fV4J')

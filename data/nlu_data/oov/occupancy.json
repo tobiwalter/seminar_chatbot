@@ -1,0 +1,46 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Do you still have free seats?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many participants will you still accepting?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "How many seats are still available?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Is the course already full?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "how many persons can still participate?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Can I join the seminar?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Is it still possible to register for the course?",
+        "intent": "get_occupancy",
+        "entities": []
+      },
+      {
+        "text": "Do you accept any more participants?",
+        "intent": "get_occupancy",
+        "entities": []
+      }
+    ]
+  }
+}
