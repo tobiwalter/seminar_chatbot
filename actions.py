@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -416,7 +416,7 @@ class ActionCancelSeminar(Action):
                   You will receive a cancellation confirmation by mail.".format(course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
-                   SlotSet("location",None), SlotSet("date",None)]
+                   SlotSet("location",None), SlotSet("date",None), FollowupAction('action_listen')]
 
         # bot message if cancellation was not successful      
         dispatcher.utter_message("There are no bookings according to your request or the requested booking \
@@ -474,7 +474,6 @@ class ActionDisplaySeminar(Action):
 
       # If seminar could be matched, display seminar dates and locations of only this seminar
       if seminar_id != None:
-        print("HERE", seminar_id)
         seminarRef = db.reference('seminars/' + str(seminar_id))
         seminar = seminarRef.get()
 
@@ -538,13 +537,14 @@ class ActionDisplaySeminar(Action):
           res = "There are no booking dates available for {} in the given period".format(seminar["title"])
           dispatcher.utter_message(res)
           return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
-      # else:
-      #   res = "We don't offer {} seminars.".format(course)
-      #   dispatcher.utter_message(res)
-      #   return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-      #   SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
+      # If course, but no matching seminar id could be found
+      else:
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
+        return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
+        SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
-    # Second priority: If no course, but location could be extracted, find seminars at that location
+    #Second priority: If no course, but location could be extracted, find seminars at that location
     elif city:
       available_seminars = [ele["category"] for ele in seminars if city.capitalize() in ele["locations"]]
           
@@ -621,11 +621,11 @@ class ActionDisplaySeminar(Action):
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
+
+    # Show the course offering if no course entity or anything else could be extracted 
     else: 
-      res = "We don't offer {} seminars.".format(course)
-      dispatcher.utter_message(res)
-      return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-      SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
+      dispatcher.utter_message("You need to specify a course for your request.")
+      return [FollowupAction('action_course_offering'), SlotSet('location', None), SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
 class ActionCourseOffering(Action):
 
@@ -638,9 +638,9 @@ class ActionCourseOffering(Action):
     intent = tracker.latest_message['intent'].get('name')
 
     # If user wants to know what courses are offered  
-    if intent == 'get_course_offering':
+    if intent != 'get_location':
       cats = {ele["category"] for ele in seminars}
-      res = "We offer seminars in the following categories: \n\n" + ", ".join(cats)
+      res = "We offer the following seminars: \n\n" + ", ".join(cats)
       dispatcher.utter_message(res)
       return []
 
@@ -1141,11 +1141,13 @@ class ActionDefaultAskAffirmation(Action):
   def name(self):
       return "action_default_ask_affirmation"
 
-  def __init__(self):
+  def __init__(self) ->None:
       import pandas as pd
 
       self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';')
       self.intent_mappings.fillna("", inplace=True)
+      self.intent_mappings.entities = self.intent_mappings.entities.map(
+        lambda entities: {e.strip() for e in entities.split(';')})
 
       col_name = self.intent_mappings.columns[0]
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
@@ -1173,11 +1175,16 @@ class ActionDefaultAskAffirmation(Action):
     
           message = ("Sorry, I'm not sure I've understood you correctly. Do you mean ... ")
 
+          entities = tracker.latest_message.get("entities", [])
+          entities = {e["entity"]: e["value"] for e in entities}
+
+          entities_json = json.dumps(entities)
+
           buttons = []
           for intent in first_intent_names:
             #print("HERE: buttons:", self.get_button_title(intent))
-            buttons.append({'title': self.get_button_title(intent),
-                          'payload': '/{}'.format(intent)})
+            buttons.append({'title': self.get_button_title(intent, entities),
+                          'payload': '/{}{}'.format(intent, entities_json)})
 
           buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
@@ -1186,9 +1193,12 @@ class ActionDefaultAskAffirmation(Action):
 
         return []
 
-  def get_button_title(self, intent: Text
-                       ) -> Text:
-      utterance_query = self.intent_mappings.intent == intent
+  def get_button_title(self, intent: Text, entities: Dict[Text, Text]
+                         ) -> Text:
+      default_utterance_query = self.intent_mappings.intent == intent
+      utterance_query = (
+                      (self.intent_mappings.entities == entities.keys()) &
+                      default_utterance_query)
 
       utterances = self.intent_mappings[utterance_query].button.tolist()
 
@@ -1196,11 +1206,11 @@ class ActionDefaultAskAffirmation(Action):
           button_title = utterances[0]
       else:
           utterances = (
-              self.intent_mappings[utterance_query] 
+              self.intent_mappings[default_utterance_query] 
                   .button.tolist())
           button_title = utterances[0] if len(utterances) > 0 else intent
 
-      return button_title
+      return button_title.format(**entities)
 
 
 class ActionDefaultFallback(Action):
