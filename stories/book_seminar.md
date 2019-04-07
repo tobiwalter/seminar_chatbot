@@ -712,6 +712,25 @@
     - utter_get_help
 	
 ## book seminar verification fails	
+* book_seminar
+    - utter_ask_name
+* inform
+    - action_verify_user
+* inform
+    - action_verify_user
+    - utter_suggest_help
+* affirm
+    - utter_get_help
+	
+## book seminar verification fails	
+* book_seminar
+    - utter_ask_name
+* inform
+    - action_verify_user
+* get_help
+    - utter_get_help
+	
+## book seminar verification fails	
 * book_seminar{"course":"Machine Learning", "location":"Berlin"}
     - utter_ask_name
 * inform{"given-name": "Tim", "last-name": "Miller"}
@@ -1020,6 +1039,7 @@
 	- form{"name": "seminar_form"}
 * other_loc_date{"other_location":"True"}
 	- action_show_all_buttons
+* inform{"course":"Machine Learning"}
 	- seminar_form
 	- form{"name": null}
 	- action_book_seminar
@@ -1052,6 +1072,7 @@
     - slot{"requested_slot": "location"}
 * other_loc_date{"other_location":"True"}
 	- action_show_all_buttons
+* inform{"course":"Machine Learning"}
 	- seminar_form
 	- slot{"requested_slot": "location"}
 * inform{"location": "Munich"}
@@ -1100,6 +1121,7 @@
     - slot{"requested_slot": "date"}
 * other_loc_date{"other_date":"True"}
 	- action_show_all_buttons
+* inform{"date":"15/03/19"}
 	- seminar_form
 	- slot{"requested_slot": "date"}
 * form: inform{"date": "02/04/19", "time": "2019-02-04T00:00:00.000-08:00"}
@@ -1134,6 +1156,7 @@
     - slot{"requested_slot": "date"}
 * other_loc_date{"other_date":"True"}
 	- action_show_all_buttons
+* inform{"date":"15/03/19"}
 	- seminar_form
 	- slot{"requested_slot": "date"}
 * form: inform{"date": "24.03.19"}
@@ -1186,8 +1209,13 @@
 * cancel_seminar
 	- utter_ask_course_cancel
 * inform{"course": "Excel"}
+	- utter_are_you_sure
+* affirm
 	- action_cancel_seminar
 	- slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
 
 ## book seminar date clash - cancel seminar no
 * book_seminar{"location": "Frankfurt"}
@@ -1504,6 +1532,7 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 9}
     - action_display_seminar
+	- slot{"categories": "[x,y,z]"}
     - utter_ask_course_book
 * get_description{"course": "Excel"}
     - slot{"course": "Excel"}
@@ -1551,6 +1580,7 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 6}
     - action_display_seminar
+	- slot{"categories": "[x,y,z]"}
     - utter_ask_course_book
 * inform{"course": "Machine Learning"}
     - slot{"course": "Machine Learning"}
@@ -1604,6 +1634,7 @@
     - slot{"user_verified": "True"}
     - slot{"employee_id": 9}
     - action_display_seminar
+	- slot{"categories": "[x,y,z]"}
     - utter_ask_course_book
 * inform{"course": "Machine Learning", "location": "Frankfurt"}
     - slot{"course": "Machine Learning"}
@@ -2064,5 +2095,342 @@
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
+	
+## Zwischenfrage bei Seminarbuchung: Description
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_description{"course": "Excel"}
+    - slot{"course": "Excel"}
+    - action_provide_description
+	- utter_ask_course_book
+* get_dates OR get_location
+    - action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+	- utter_ask_course_book
+* book_seminar{"date": "May 15", "location": "Berlin"}
+    - slot{"date": "May 15"}
+    - slot{"location": "Berlin"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "Berlin"}
+    - slot{"date": "May 15"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	
+## Zwischenfrage bei Seminarbuchung: Level
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_level{"course": "Excel"}
+    - slot{"course": "Excel"}
+    - action_query_level
+	- utter_ask_course_book
+* inform{"course":"Excel"}
+	- action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "Berlin"}
+    - slot{"date": "May 15"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+	- slot{"time": null}
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	
+## Zwischenfrage bei Seminarbuchung	get_location
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_location
+	- action_course_offering
+	- utter_ask_course_book
+* get_dates{"course":"Python"}
+	- action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+* book_seminar{"date": "May 15", "location": "Berlin"}
+    - slot{"date": "May 15"}
+    - slot{"location": "Berlin"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "Berlin"}
+    - slot{"date": "May 15"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	
+## Zwischenfrage bei Seminarbuchung	ask_whatspossible
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* ask_whatspossible
+	- utter_whatspossible
+	- utter_ask_course_book
+* inform{"course":"Excel"} OR book_seminar{"course":"Excel"}
+	- action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "Berlin"}
+    - slot{"date": "May 15"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+* praise	
+	- utter_thanks
+	
+## Zwischenfrage bei Seminarbuchung	get_occupancy
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_occupancy{"course":"rhetoric"}
+	- action_query_occupancy
+	- utter_ask_course_book
+* get_dates{"course":"Excel"} OR get_location{"course":"Excel}
+	- action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+	- utter_ask_course_book
+* inform{"course":"Excel"} OR book_seminar{"location":"Hamburg"} OR book_seminar{"location":"Munich", "date":"18/05/19"} 
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+* praise	
+	- utter_thanks
+	
+## Zwischenfrage bei Seminarbuchung	get_location
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_location
+	- action_course_offering
+	- utter_ask_course_book
+* book_seminar{"course":"programming","location":"Frankfurt"}
+	- action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+    - slot{"title": "blabla"}
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	- utter_do_something_else
+* show_bookings
+	- action_show_bookings
+* get_course_offering
+	- action_course_offering
+* get_location{"course":programming", "location":"Frankfurt"}
+	- action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+    - slot{"title": "blabla"}
+* book_seminar{"date":"26th April"}
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+* thank+bye
+	- utter_thanks_bye
+
+## Zwischenfrage bei Seminarbuchung	get_location not available at given location
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_location
+	- action_course_offering
+	- utter_ask_course_book
+* book_seminar{"course":"Machine Learning","location":"Erfurt"}
+	- action_query_date
+    - slot{"location":"Erfurt"}
+* negative
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Erfurt, Berlin, Stuttgart"}
+    - slot{"title": "Advanced Excel functions and formulas"}
+	- utter_book_somewhere_else
+* inform{"location":"Berlin"} OR affirm
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	- utter_do_something_else
+* show_bookings
+	- action_show_bookings
+* get_course_offering
+	- action_course_offering
+* get_location{"course":programming", "location":"Frankfurt"}
+	- action_query_date
+    - slot{"dates": "24/03/19, 02/04/19"}
+    - slot{"title": "blabla"}
+* book_seminar{"date":"26th April"}
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+* praise
+	- utter_thanks
+	
+## Zwischenfrage bei Seminarbuchung	get_dates not available at given location
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_course_offering{"date-period":"May"}
+	- action_display_seminar
+	- slot{"categories":"[x,y,z]"}
+	- utter_ask_course_book	
+* get_description{"course":"Excel"}
+	- action_provide_description
+* get_occupancy{"location":"Stuttgart"}
+	- action_query_occupancy
+* book_seminar{"date":"18th May"}
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	- utter_do_something_else
+* show_bookings
+	- action_show_bookings
+* cancel_seminar{"course":"Python"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+	
+	
+	
+	
+	
+
+	
 	
 	

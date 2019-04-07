@@ -71,4 +71,11 @@
 ## insult
 * insult
 	- utter_no_insult 	
+
+## ask name with smalltalk intent 
+* show_bookings
+    - utter_ask_name
+* other_smalltalk
+    - utter_no_chitchat
+    - utter_ask_name
 	

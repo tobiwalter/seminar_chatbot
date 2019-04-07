@@ -1416,3 +1416,30 @@
     - slot{"location": null}
 	- slot{"course": null}	
 	- slot{"date-period": null}
+	
+## get_help
+* book_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Smith"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Smith"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 2}
+    - action_display_seminar
+	- slot{"seminar_id":"4"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - slot{"seminar_id": 1}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* get_help
+	- action_deactivate_form
+    - utter_get_help

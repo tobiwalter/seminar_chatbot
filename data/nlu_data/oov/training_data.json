@@ -1,19 +1,264 @@
 ﻿{
   "rasa_nlu_data": {
     "common_examples": [
+	      {
+        "text": "What level do I need for Machine Learning?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 41,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for Data Science?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for programming?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for Python?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for negotiation?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for leadership?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is there a minimum level for this seminar?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 34,
+            "end": 41,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is there a minimum level for this course?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 34,
+            "end": 40,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for Data Science?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for programming?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 43,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for Python?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for rhetoric?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for communication?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 45,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for excel?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 37,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for management?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Please tell me about the course offering",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "When is leadership offered?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to take that seminar",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are Python courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are rhetoric courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are communication courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 17,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "talk some stuff about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -1583,52 +1828,52 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "who are you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "describe yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "introduce yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what are you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "all about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -3208,7 +3453,7 @@
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -4778,27 +5023,27 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know you better",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -26832,7 +27077,14 @@
       {
         "text": "What level is the seminar intended for?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Is the seminar for beginners?",
@@ -27087,7 +27339,14 @@
       {
         "text": "What skill level should I have for the seminar?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 39,
+            "end": 46,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Is it a beginners seminar?",
@@ -28028,12 +28287,26 @@
       {
         "text": "On what days can I take the course?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "When is the course scheduled?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "On what dates does the seminar take place?",
@@ -28053,7 +28326,14 @@
       {
         "text": "When is the seminar offered?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "I want to know the dates of the seminar",
@@ -29310,37 +29590,37 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "say about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "define yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "why are you here",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -30049,6 +30329,21 @@
             "entity": "booking-type"
           }
         ]
+      },
+      {
+        "text": "What are the requirements to take this seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know to qualify for the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know so I can take the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
       },
       {
         "text": "I want to see my past seminars",
@@ -31026,6 +31321,11 @@
         ]
       },
       {
+        "text": "What are the dates in oov?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
         "text": "When does it take place in Munich?",
         "intent": "get_dates",
         "entities": [
@@ -31085,6 +31385,16 @@
       },
       {
         "text": "Which courses do you have in your portfolio?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Which courses do you have in oov?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Which courses are available in oov?",
         "intent": "get_course_offering",
         "entities": []
       },
@@ -31447,8 +31757,8 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 22,
-            "end": 34,
+            "start": 23,
+            "end": 35,
             "value": " 3rd of April",
             "entity": "date"
           }
@@ -32848,6 +33158,11 @@
         "entities": []
       },
       {
+        "text": "At which places can I register for the seminar?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
         "text": "Where can I take them?",
         "intent": "get_location",
         "entities": []
@@ -32861,6 +33176,30 @@
         "text": "In which cities do your seminars take place?",
         "intent": "get_location",
         "entities": []
+      },
+      {
+        "text": "Then where can I take programming?",
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Then where can I take leadership?",
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 22,
+            "end": 32,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
       },
       {
         "text": "Where do you offer workshops?",
@@ -32889,7 +33228,14 @@
       {
         "text": "What level does the seminar have?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Would you recommended it for beginners?",
@@ -35777,12 +36123,12 @@
       },
       {
         "text": "I want to take this seminar, when can I take it?",
-        "intent": "get_dates",
+        "intent": "book_seminar+get_dates",
         "entities": []
       },
       {
         "text": "Book it please, when is that possible?",
-        "intent": "get_dates",
+        "intent": "book_seminar+get_dates",
         "entities": []
       },
       {
@@ -35813,7 +36159,7 @@
         "entities": [
           {
             "start": 17,
-            "end": 28,
+            "end": 27,
             "value": "leadership ",
             "entity": "course"
           }
@@ -35899,7 +36245,7 @@
         "entities": [
           {
             "start": 13,
-            "end": 21,
+            "end": 20,
             "value": "seminar ",
             "entity": "course-type"
           },
@@ -36122,7 +36468,7 @@
         "entities": [
           {
             "start": 23,
-            "end": 31,
+            "end": 30,
             "value": "seminar ",
             "entity": "course-type"
           }
@@ -36177,18 +36523,6 @@
         ]
       },
       {
-        "text": "Is the seminar suitable for intermediate users?",
-        "intent": "get_level",
-        "entities": [
-          {
-            "start": 28,
-            "end": 40,
-            "value": "intermediate",
-            "entity": "user-level"
-          }
-        ]
-      },
-      {
         "text": "need to know oov ovv",
         "intent": "get_prerequisites",
         "entities": []
@@ -36196,12 +36530,26 @@
       {
         "text": "What do I need to know to qualify for the seminar?",
         "intent": "get_prerequisites",
-        "entities": []
+        "entities": [
+          {
+            "start": 42,
+            "end": 49,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "What do I need to know so I can take the seminar?",
         "intent": "get_prerequisites",
-        "entities": []
+        "entities": [
+          {
+            "start": 41,
+            "end": 48,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "What do you require people to know to take it?",
@@ -36238,6 +36586,18 @@
         ]
       },
       {
+        "text": "Nice can I book the seminar please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
         "text": "Register myself for management",
         "intent": "book_seminar",
         "entities": [
@@ -36248,6 +36608,386 @@
             "entity": "course"
           }
         ]
+      },
+      {
+        "text": "I want to take part in that course please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to join this seminar in Frankfurt",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "What else can you do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Book it for me in Leipzig",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to book it on the May 22",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "May 22",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Let me attend it in Munich then",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Enough for today, bye bye",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "Give me more information about programming",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 31,
+            "end": 42,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "And in which cities is it hosted?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where is it hosted?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Are there still spaces in Leipzig?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Leipzig",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you have free slots in the programming seminar or is it booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "seminar ",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "30 April",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "30 April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "What courses can I book here?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When is the next seminar in Data Science?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "Data Science",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "When is the next seminar for Data Science?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 29,
+            "end": 41,
+            "value": "Data Science",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "When is the next Excel seminar?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "When is the next Excel seminar offerred?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": " What can this bot do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": " What else can I book?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "I want information about the seminar offering",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is Excel offered in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars exist?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars exist?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I am a Python beginner, so can I take this seminar?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "beginner",
+            "entity": "user-level"
+          },
+          {
+            "start": 7,
+            "end": 13,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar suitable for intermediate users?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "intermediate",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar appropriate for first time users?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 31,
+            "end": 41,
+            "value": "first time",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Can I take it on Wednesday?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 26,
+            "value": "Wednesday",
+            "entity": "date"
+          }
+        ]
+      },
+	    {
+        "text": "I want to speak with helpdesk",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "Please connect me to someone from HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I want to get in touch with HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I would like to talk to someone from HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "request a call with HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "request a call with helpdesk",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I need support",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I don't understand this I need help",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I don't understand this I need support",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "i want to be connected to HR",
+        "intent": "get_help",
+        "entities": []
       }
     ],
     "regex_features": [],
@@ -36313,6 +37053,7 @@
           "ML",
           "Data Science",
           "Mahcine Learning",
+          "machine learning",
           "Artificial Intelligence",
           "AI",
           "Big Data",
@@ -36373,6 +37114,12 @@
         "value": "booked",
         "synonyms": [
           "book"
+        ]
+      },
+      {
+        "value": "Munich",
+        "synonyms": [
+          "munich"
         ]
       },
       {
