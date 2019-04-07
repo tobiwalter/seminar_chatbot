@@ -199,7 +199,13 @@ class ActionBookSeminar(Action):
     if matchingID == None:
       dispatcher.utter_template('utter_ask_name', tracker)
       return[FollowupAction('action_listen')]
-    else:  
+
+    if not course:
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
+    else:
+      #retrieve data snapshots
       countRef = db.reference('counts/booking_count')
       counts = countRef.child(str(matchingID)).get()
       bookingRef = db.reference('bookings/' + str(matchingID))
@@ -981,6 +987,8 @@ class ActionLocationButtons(Action):
 
           # Get working location of employee to give closer locations higher priority
           employee_id = tracker.get_slot("employee_id")
+          if employee_id is None:
+            return FollowupAction('action_verify_user')
           home_city = employees[employee_id]["location"]
 
           for loc in locations:
@@ -1314,3 +1322,4 @@ class ActionRestarted(Action):
       # tracker.trigger_followup_action(ACTION_LISTEN_NAME)
       # tracker.set_slot('employee_id', employee_id)
       return [Restarted(), FollowupAction('action_listen')]
+      
