@@ -2,13 +2,14 @@
 other_smalltalk;I want to do some chitchat.;
 book_seminar;I want to book a seminar.;
 book_seminar;I want to book a seminar in {location}.;location
-book_seminar;I want to book the {course} seminar;course
-book_seminar;I want to book the seminar on {date};date
-book_seminar;I want to book a seminar in {date-period};date-period
+book_seminar;I want to book the {course} seminar.;course
+book_seminar;I want to book the seminar on {date}.;date
+book_seminar;I want to book a seminar in {date-period}.;date-period
 inform;I want to give you the requested information.;
-inform;I want to book {course};course
-inform;I want to book in {location};location
-inform;I want to book on {date};date
+inform;My choice is {course};course
+inform;My choice is {location};location
+inform;My choice is {date};date
+"inform;My name is {given-name} {last-name};given-name,last-name"
 get_dates;On which dates do you offer the seminar?;
 get_dates;On which dates do you offer {course}?;course
 affirm;Agreed.;
@@ -20,28 +21,38 @@ show_bookings;Please show me my booked seminars on {date};date
 show_bookings;Please show me my {display-option} seminar;display-option
 welcome;Hello!;
 thank;Thank you!;
-get_duration;What is the seminar's total duration of {course}?;course
+get_duration;What is the seminar's total duration?;
+get_duration;What is the total duration of {course}?;course
 get_course_offering;Which seminars are offered?;
 get_course_offering;Are any seminars about {course} offered?;course
 get_course_offering;Which seminars are offered in {date-period}?;date-period
 get_course_offering;Which seminars are offered in {location}?;location
+get_location;Where does the seminar take place?
 get_location;At which location does {course} take place?;course
 other_loc_date;I prefer another date or location.;
 praise;You did a good job.;
 negative;I want to deny.;
-get_description;What is the {course} about?;course
+get_description;I want more details about the seminar.;
+get_description;What is {course} about?;course
+get_prerequisites;What are the prerequisites?;
 get_prerequisites;What are the prerequisites for {course}?;course
+get_level;Which user-level is expected?;
 get_level;Which user-level is expected for {course}?;course
 bad;That was a bad experience.;
 get_help;I want to get in touch with the helpdesk.;
 bye;Bye!;
 cancel_seminar;I want to cancel a seminar.;
+cancel_seminar;I want to cancel a seminar in {date-period}.;date-period
+cancel_seminar;I want to cancel a seminar at {location}.;location
 cancel_seminar;I want to cancel a seminar in {course}.;course
 age;I want to know your age.;
 stop;Please stop the conversation.;
 thank+bye;Thank you and goodbye!;
 book_seminar+get_dates;I want to book the seminar. Please tell me possible dates.;
+book_seminar+get_dates;I want to book the {course} seminar. Please tell me possible dates.;course
 book_seminar+get_location;I want to book the seminar. Please tell me offered locations.;
+book_seminar+get_location;I want to book the {course} seminar. Please tell me offered locations.;course
+get_occupancy;Do you have free slots?;
 get_occupancy;Do you have free slots for {course}?;course
 get_occupancy;Do you have free slots in {location}?;location
 get_occupancy;Do you have free slots in {date-period}?;date-period
