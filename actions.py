@@ -200,7 +200,13 @@ class ActionBookSeminar(Action):
     if matchingID == None:
       dispatcher.utter_template('utter_ask_name', tracker)
       return[FollowupAction('action_listen')]
-    else:  
+
+    if not course:
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
+    else:
+      #retrieve data snapshots
       countRef = db.reference('counts/booking_count')
       counts = countRef.child(str(matchingID)).get()
       bookingRef = db.reference('bookings/' + str(matchingID))
@@ -430,7 +436,7 @@ class ActionCancelSeminar(Action):
                   You will receive a cancellation confirmation by mail.".format(course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
-                   SlotSet("location",None), SlotSet("date",None)]
+                   SlotSet("location",None), SlotSet("date",None), FollowupAction('action_listen')]
 
         # bot message if cancellation was not successful      
         dispatcher.utter_message("There are no bookings according to your request or the requested booking \
@@ -488,7 +494,6 @@ class ActionDisplaySeminar(Action):
 
       # If seminar could be matched, display seminar dates and locations of only this seminar
       if seminar_id != None:
-        print("HERE", seminar_id)
         seminarRef = db.reference('seminars/' + str(seminar_id))
         seminar = seminarRef.get()
 
@@ -552,13 +557,14 @@ class ActionDisplaySeminar(Action):
           res = "There are no booking dates available for {} in the given period".format(seminar["title"])
           dispatcher.utter_message(res)
           return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
-      # else:
-      #   res = "We don't offer {} seminars.".format(course)
-      #   dispatcher.utter_message(res)
-      #   return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-      #   SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
+      # If course, but no matching seminar id could be found
+      else:
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
+        return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
+        SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
-    # Second priority: If no course, but location could be extracted, find seminars at that location
+    #Second priority: If no course, but location could be extracted, find seminars at that location
     elif city:
       available_seminars = [ele["category"] for ele in seminars if city.capitalize() in ele["locations"]]
           
@@ -635,11 +641,11 @@ class ActionDisplaySeminar(Action):
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
+
+    # Show the course offering if no course entity or anything else could be extracted 
     else: 
-      res = "We don't offer {} seminars.".format(course)
-      dispatcher.utter_message(res)
-      return [FollowupAction('utter_do_something_else'), SlotSet('course', None), SlotSet('location', None),
-      SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
+      dispatcher.utter_message("You need to specify a course for your request.")
+      return [FollowupAction('action_course_offering'), SlotSet('location', None), SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
 class ActionCourseOffering(Action):
 
@@ -652,9 +658,9 @@ class ActionCourseOffering(Action):
     intent = tracker.latest_message['intent'].get('name')
 
     # If user wants to know what courses are offered  
-    if intent == 'get_course_offering':
+    if intent != 'get_location':
       cats = {ele["category"] for ele in seminars}
-      res = "We offer seminars in the following categories: \n\n" + ", ".join(cats)
+      res = "We offer the following seminars: \n\n" + ", ".join(cats)
       dispatcher.utter_message(res)
       return []
 
@@ -676,6 +682,10 @@ class ActionQueryDate(Action):
 
         if course:
           seminar_id = matchingSeminar(seminars,course)
+        else: 
+          res = 'You need to specify a course for your request'
+          dispatcher.utter_message(res)
+          return []
 
         if seminar_id != None:
             seminar = seminars[seminar_id]
@@ -717,17 +727,27 @@ class ActionProvidePrerequisites(Action):
   def run(self, dispatcher, tracker, domain):
     """ retrieves slot values """
     course = tracker.get_slot('course')
-    seminar_id = matchingSeminar(seminars,course)
-    
+
+    if course:
+      seminar_id = matchingSeminar(seminars,course)
+    else: 
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
+
     if seminar_id != None:
       prqs = seminars[seminar_id]["prerequisites"]
         
-    if prqs == "none":
-          dispatcher.utter_message("There are no prerequisites.")
-          return []
-    else:
-          dispatcher.utter_message("The prerequisites are {}.".format(", ".join(prqs)))
-          return []
+      if prqs == "none":
+            dispatcher.utter_message("There are no prerequisites.")
+            return []
+      else:
+            dispatcher.utter_message("The prerequisites are {}.".format(", ".join(prqs)))
+            return []
+    else: 
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
+        return []
   
 class ActionQueryLevel(Action):
   def name(self):
@@ -736,15 +756,22 @@ class ActionQueryLevel(Action):
 
   def run(self, dispatcher, tracker, domain):
     course = tracker.get_slot('course')
-    seminar_id = matchingSeminar(seminars,course)
+
+    if course:
+      seminar_id = matchingSeminar(seminars,course)
+    else: 
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
 
     if seminar_id != None:
         level = seminars[seminar_id]["level"]
         dispatcher.utter_message("This is the level of the course: {}".format(level))
         return []
-    else:
-      dispatcher.utter_message("The level is not specified.")
-      return []
+    else: 
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
+        return []
 
 class VerifyUser(Action):
   def name(self):
@@ -783,7 +810,13 @@ class ActionQueryDuration(Action):
 
   def run(self, dispatcher, tracker, domain):
     course = tracker.get_slot('course')
-    seminar_id = matchingSeminar(seminars,course)
+
+    if course:
+      seminar_id = matchingSeminar(seminars,course)
+    else: 
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
 
     if seminar_id != None:
         duration = seminars[seminar_id]["duration (days)"]
@@ -794,7 +827,8 @@ class ActionQueryDuration(Action):
         dispatcher.utter_message(res)
         return []
     else:
-      dispatcher.utter_message("The duration could not be retrieved.")
+      res = "We don't offer {} seminars.".format(course)
+      dispatcher.utter_message(res)
       return []
 
 class SeminarForm(FormAction):
@@ -817,12 +851,24 @@ class SeminarForm(FormAction):
         "location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
    
   @staticmethod 
-  def is_date(val):
+  def is_date(val,tracker):
+    course = tracker.get_slot('course')
+    city = tracker.get_slot('location')
+    seminar_id = matchingSeminar(seminars,course)
+    seminar = seminars[seminar_id]
+
     isDate = False
-    if isinstance(val, str):
-      if isinstance(dateparser.parse(val),datetime):
+    for ele in seminar["locations"][city]:
+      if dateComparison(val, ele["date"]) == 0:
         isDate = True
+        break
     return isDate
+
+    # isDate = False
+    # if isinstance(val, str):
+    #   if isinstance(dateparser.parse(val),datetime):
+    #     isDate = True
+    # return isDate
        
   @staticmethod         
   def loc_in_database(val,tracker):
@@ -865,7 +911,7 @@ class SeminarForm(FormAction):
     # to add appropriate utterances
     for slot, value in slot_values.items():
       if slot == "date" or slot == "time":
-        if not self.is_date(value):
+        if not self.is_date(value,tracker):
           dispatcher.utter_template("utter_wrong_date", tracker)
           # validation failed, set slot to None
           slot_values[slot] = None
@@ -909,8 +955,9 @@ class ActionLocationButtons(Action):
           seminars = db.reference('seminars').get()
           seminar_id = matchingSeminar(seminars,course)
         else:
-          dispatcher.utter_template('utter_ask_course_cancel', tracker)
-          return [FollowupAction('action_show_bookings')]
+          res = 'You need to specify a course for your request'
+          dispatcher.utter_message(res)
+          return []
 
         if seminar_id != None:
           seminar = seminars[seminar_id]
@@ -933,50 +980,50 @@ class ActionLocationButtons(Action):
 
           # Get working location of employee to give closer locations higher priority
           employee_id = tracker.get_slot("employee_id")
-          if employee_id == None:
-            dispatcher.utter_template('utter_ask_name', tracker)
-            return[FollowupAction('action_listen')]
-          else:
-            home_city = employees[employee_id]["location"]
 
-            for loc in locations:
-              occ = 0
-              count = 0
-              print("HERE", seminar)
-              for ele in seminar["locations"][loc]:
-                occ += ele["occupancy"]
-                count += 1
-            #do not display locations that are fully booked
-              if occ < count*seminar["capacity"]:
-                loc_occupancy[loc] = []
-                loc_occupancy[loc].append(round(occ/count,2))
-                if round(occ/count,2) > 0.7:
-                    loc_occupancy[loc].append(float('inf'))
-                else:
-                    loc_distance = self.locDistance(home_city, loc)
-                    loc_occupancy[loc].append(loc_distance)
+          if employee_id is None:
+            return FollowupAction('action_verify_user')
+          home_city = employees[employee_id]["location"]
 
-            # primary, display locations with occupancy < 70% and sort by distance
-            # then display locations with occupancy > 70 % and sort by average occupancy
-            sort_by_dis = {}
-            sort_by_occ = {}
+          for loc in locations:
+            occ = 0
+            count = 0
+            for ele in seminar["locations"][loc]:
+              occ += ele["occupancy"]
+              count += 1
+          #do not display locations that are fully booked
+            if occ < count*seminar["capacity"]:
+              loc_occupancy[loc] = []
+              loc_occupancy[loc].append(round(occ/count,2))
+              if round(occ/count,2) > 0.7:
+                  loc_occupancy[loc].append(float('inf'))
+              else:
+                  loc_distance = self.locDistance(home_city, loc)
+                  loc_occupancy[loc].append(loc_distance)
 
-            for l in list(loc_occupancy):
-                if loc_occupancy[l][1] < float('inf'):
-                   sort_by_dis[l] = loc_occupancy[l][1]
-                else:
-                   sort_by_occ[l] = loc_occupancy[l][1]
+          # primary, display locations with occupancy < 70% and sort by distance
+          # then display locations with occupancy > 70 % and sort by average occupancy
+          sort_by_dis = {}
+          sort_by_occ = {}
 
-            loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
-            loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
+          for l in list(loc_occupancy):
+              if loc_occupancy[l][1] < float('inf'):
+                 sort_by_dis[l] = loc_occupancy[l][1]
+              else:
+                 sort_by_occ[l] = loc_occupancy[l][1]
 
-            #displaying top 3 locations
-            for x in list(loc_buttons)[0:3]:
-              buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
+          loc_buttons = sorted(sort_by_dis.items(), key=lambda x: x[1])
+          loc_buttons += sorted(sort_by_occ.items(), key=lambda x: x[1])
 
-            buttons.append({"title": "other location", 'payload': "/other_loc_date{\"other_location\":\"True\"}"})
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return [FollowupAction, ('action_listen')]
+          #displaying top 3 locations
+          for x in list(loc_buttons)[0:3]:
+            buttons.append({'title': x[0], 'payload': '/inform{"location": \"' + x[0].capitalize() + '\"}'})
+
+          buttons.append({"title": "other location", 'payload': "/other_loc_date{\"other_location\":\"True\"}"})
+          dispatcher.utter_button_message("Please select a button:", buttons)
+          return [FollowupAction, ('action_listen')]
+        else:
+          dispatcher.utter_template('utter_ask_course_book',tracker)
 
     def locDistance(self, homecity, destination):
         # Install Module geopy
@@ -1006,8 +1053,13 @@ class ActionDateButtons(Action):
     city = tracker.get_slot("location").capitalize()
     course = tracker.get_slot("course")
 
-    seminars = db.reference('seminars').get()
-    seminar_id = matchingSeminar(seminars,course)
+    if course:
+      seminars = db.reference('seminars').get()
+      seminar_id = matchingSeminar(seminars,course)
+    else: 
+      res = 'You need to specify a course for your request'
+      dispatcher.utter_message(res)
+      return []
 
     if seminar_id != None:
       seminar = seminars[seminar_id]
@@ -1049,41 +1101,8 @@ class ActionDateButtons(Action):
             dispatcher.utter_button_message("Do you agree with this location?", buttons)
             return [SlotSet("location",next_loc), FollowupAction('action_listen')]
           dispatcher.utter_message(res)
-
-class ActionShowAllButtons(Action):
-
-  def name(self):
-      """returns name of the action """
-      return "action_show_all_buttons"
-
-  def run(self, dispatcher, tracker, domain):
-
-      course = tracker.get_slot('course')
-      city = tracker.get_slot('location')
-      otherLoc = tracker.get_slot('other_location')
-      otherDate = tracker.get_slot('other_date')
-      seminars = db.reference('seminars').get()
-
-      if tracker.latest_message['intent'].get('name') == 'other_loc_date':
-
-        seminar_id = matchingSeminar(seminars,course)
-        if seminar_id != None:
-          seminar = seminars[seminar_id]
-          if otherLoc is not None:
-            locations = tracker.get_slot("locations")   
-          # If user clicked on other locations, display all locations 
-            buttons = [{'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'} 
-            for loc in locations]
-            dispatcher.utter_button_message("Please select a button:", buttons)
-            return [FollowupAction('action_listen'), SlotSet("other_location", None)]
-          elif otherDate is not None:
-            if city is not None:
-              if city in seminar["locations"]:
-              # If user clicked on other dates, display all dates 
-                buttons = [{'title': ele["date"], 'payload': '/inform{"date": \"' + ele["date"] + '\"}'}
-                for ele in seminar["locations"][city]]
-                dispatcher.utter_button_message("Please select a button:", buttons)
-                return [FollowupAction('action_listen'),SlotSet("other_date", None)]
+    else:
+      dispatcher.utter_template('utter_ask_course_book',tracker)
 
 
 class ActionQueryOccupancy(Action):
@@ -1100,7 +1119,12 @@ class ActionQueryOccupancy(Action):
       if course:
         seminar_id = matchingSeminar(seminars,course)
         seminar = seminars[seminar_id]
+      else: 
+        res = 'You need to specify a course for your request'
+        dispatcher.utter_message(res)
+        return []
 
+      if seminar_id != None:
         locs = sorted(seminar["locations"])
         occ_at_dates = {}
         capacity = seminar["capacity"]
@@ -1109,7 +1133,7 @@ class ActionQueryOccupancy(Action):
           if userGivenDate:
             for ele in seminar["locations"][city]:
               if dateComparison(ele["date"],userGivenDate) == 0:
-                occupancy = ele["occupancy"]
+                occupancy = capacity - ele["occupancy"]
                 res = "{} slot(s) are left for grabs in {} on {}".format(occupancy, city, ele["date"]) 
           else:
             occ_at_dates = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
@@ -1133,20 +1157,22 @@ class ActionQueryOccupancy(Action):
         dispatcher.utter_message(res)
         return []  
       else:
-        dispatcher.utter_message("I could not find a course in your message.")
-        return []
-
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
+        return []        
 
 class ActionDefaultAskAffirmation(Action):
 
   def name(self):
       return "action_default_ask_affirmation"
 
-  def __init__(self):
+  def __init__(self) ->None:
       import pandas as pd
 
       self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';')
       self.intent_mappings.fillna("", inplace=True)
+      self.intent_mappings.entities = self.intent_mappings.entities.map(
+        lambda entities: {e.strip() for e in entities.split(';')})
 
       col_name = self.intent_mappings.columns[0]
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
@@ -1174,11 +1200,16 @@ class ActionDefaultAskAffirmation(Action):
     
           message = ("Sorry, I'm not sure I've understood you correctly. Do you mean ... ")
 
+          entities = tracker.latest_message.get("entities", [])
+          entities = {e["entity"]: e["value"] for e in entities}
+
+          entities_json = json.dumps(entities)
+
           buttons = []
           for intent in first_intent_names:
             #print("HERE: buttons:", self.get_button_title(intent))
-            buttons.append({'title': self.get_button_title(intent),
-                          'payload': '/{}'.format(intent)})
+            buttons.append({'title': self.get_button_title(intent, entities),
+                          'payload': '/{}{}'.format(intent, entities_json)})
 
           buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
@@ -1187,9 +1218,12 @@ class ActionDefaultAskAffirmation(Action):
 
         return []
 
-  def get_button_title(self, intent: Text
-                       ) -> Text:
-      utterance_query = self.intent_mappings.intent == intent
+  def get_button_title(self, intent: Text, entities: Dict[Text, Text]
+                         ) -> Text:
+      default_utterance_query = self.intent_mappings.intent == intent
+      utterance_query = (
+                      (self.intent_mappings.entities == entities.keys()) &
+                      default_utterance_query)
 
       utterances = self.intent_mappings[utterance_query].button.tolist()
 
@@ -1197,11 +1231,11 @@ class ActionDefaultAskAffirmation(Action):
           button_title = utterances[0]
       else:
           utterances = (
-              self.intent_mappings[utterance_query] 
+              self.intent_mappings[default_utterance_query] 
                   .button.tolist())
           button_title = utterances[0] if len(utterances) > 0 else intent
 
-      return button_title
+      return button_title.format(**entities)
 
 
 class ActionDefaultFallback(Action):
@@ -1309,7 +1343,12 @@ class ActionQueryOccupancy(Action):
       if course:
         seminar_id = matchingSeminar(seminars,course)
         seminar = seminars[seminar_id]
+      else: 
+        res = 'You need to specify a course for your request'
+        dispatcher.utter_message(res)
+        return []
 
+      if seminar_id != None:
         locs = sorted(seminar["locations"])
         occ_at_dates = {}
         capacity = seminar["capacity"]
@@ -1318,7 +1357,7 @@ class ActionQueryOccupancy(Action):
           if userGivenDate:
             for ele in seminar["locations"][city]:
               if dateComparison(ele["date"],userGivenDate) == 0:
-                occupancy = ele["occupancy"]
+                occupancy = capacity - ele["occupancy"]
                 res = "{} slot(s) are left for grabs in {} on {}".format(occupancy, city, ele["date"]) 
           else:
             occ_at_dates = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
@@ -1328,17 +1367,22 @@ class ActionQueryOccupancy(Action):
             res += '\n'.join(occ_at_dates)
         else:
           for loc in locs:    
-              occ_at_dates[loc] = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
+              # occ_at_dates[loc] = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
+              #   for ele in seminar["locations"][loc]]
+              occ_at_dates[loc] = [(capacity - ele["occupancy"])
                 for ele in seminar["locations"][loc]]
-              occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
+              # occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
+          availableLocs = {k : sum(v) for (k,v) in occ_at_dates.items() if sum(v) > 0}
+          res = "There are free slots left for {} in {}".format(course,', '.join(k for k in availableLocs))
 
-          res = "This is how many slots are left for {} at our seminar locations:\n\n".format(course)
-          res += '\n'.join(["{:10}: {:<10}".format(key, ', \t'.join(value)) for key, value in occ_at_dates.items()])
+          # seminar locations:\n\n".format(course)
+          # res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in occ_at_dates.items()])
 
         dispatcher.utter_message(res)
         return []  
       else:
-        dispatcher.utter_message("I could not find a course in your message.")
+        res = "We don't offer {} seminars.".format(course)
+        dispatcher.utter_message(res)
         return []
 
 class ActionResetSlots(Action):  
@@ -1367,3 +1411,4 @@ class ActionRestarted(Action):
       # tracker.trigger_followup_action(ACTION_LISTEN_NAME)
       # tracker.set_slot('employee_id', employee_id)
       return [Restarted(), FollowupAction('action_listen')]
+      

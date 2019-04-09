@@ -262,3 +262,16 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	
+## show_bookings_bookingtype
+* show_bookings{"booking-type":"past"}
+	- utter_ask_name
+* inform{"given-name":"Max","last-name":"Smith"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"2"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	

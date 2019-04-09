@@ -1,19 +1,2509 @@
 ﻿{
   "rasa_nlu_data": {
     "common_examples": [
+	{
+        "text": "Is Machine Learning available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 19,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is Data Science available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 15,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 29,
+            "end": 35,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is programming available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 28,
+            "end": 34,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is Python available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is rhetoric available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 11,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 25,
+            "end": 31,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is communication available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 16,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is excel available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 22,
+            "end": 28,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is negotiation available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 28,
+            "end": 34,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is leadership available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 13,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 27,
+            "end": 33,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is management available in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 3,
+            "end": 13,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 27,
+            "end": 33,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I take the seminar in Excel in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the Machine Learning seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 33,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 45,
+            "end": 52,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the Data Science seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 29,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 41,
+            "end": 48,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the programming seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the Python seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 35,
+            "end": 42,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the rhetoric seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 25,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 37,
+            "end": 44,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the communication seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 30,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the excel seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 34,
+            "end": 41,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the negotiation seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the leadership seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 39,
+            "end": 46,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can I attend the management seminar in Hamburg?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 39,
+            "end": 46,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Is it possible to take Python in summer?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Can I take negotiation in winter?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Do you have seminars in calculus?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Do you have seminars in August?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Do you have seminars in Berlin?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Do you have Python seminars in Berlin?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "17/03/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "17/03/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "15/02/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "15/02/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "16/02",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "16/02",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "August 8",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "August 8",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "October 7th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "October 7th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on May 2nd",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "May 2nd",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on January 1st",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "January 1st",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "on January 23rd",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 15,
+            "value": "January 23rd",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "17 February",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "17 February",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "next Friday",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "next Friday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "in May",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 6,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "next spring",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "spring",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "20.03.19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "20.03.19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "15.02.19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "15.02.19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "27.7.",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "27.7.",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "16.02.18",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "16.02.18",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Paris",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Paris",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bonn",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Bonn",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Weimar",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Weimar",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Ulm",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Ulm",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Augsburg",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Augsburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Mannheim",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Mannheim",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Ludwigshafen",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Ludwigshafen",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Saarbrücken",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Saarbrücken",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Dortmund",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Dortmund",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Würzburg",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Würzburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Potsdam",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Potsdam",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Machine Learning in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Data Science in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "programming in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Python in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 10,
+            "end": 16,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "rhetoric in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 18,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "communication in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "excel in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 9,
+            "end": 15,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "negotiation in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "leadership in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 20,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "management in Munich",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 20,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Machine Learning on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 28,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Data Science on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 16,
+            "end": 24,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "programming on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Python on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 10,
+            "end": 18,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "rhetoric on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 20,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "communication on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "excel on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 9,
+            "end": 17,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "negotiation on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "leadership on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "management on 17/10/19",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "value": "17/10/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Machine Learning on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Data Science on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 16,
+            "end": 25,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "programming on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 24,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Python on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 10,
+            "end": 19,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "rhetoric on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 21,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "communication on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 17,
+            "end": 26,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "excel on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 9,
+            "end": 18,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "negotiation on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 24,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "leadership on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 23,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "management on June 16th",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 23,
+            "value": "June 16th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Machine Learning on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 24,
+            "end": 33,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Data Science on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "programming on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 19,
+            "end": 28,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Python on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 23,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "rhetoric on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 16,
+            "end": 25,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "communication on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 21,
+            "end": 30,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "excel on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 13,
+            "end": 22,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "negotiation on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 19,
+            "end": 28,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "leadership on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 18,
+            "end": 27,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "management on the 16th June",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 18,
+            "end": 27,
+            "value": "16th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Nice can I book the seminar please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Nice can I book the course please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to take part in that seminar please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 35,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to take part in that course please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to join this seminar in Frankfurt",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 31,
+            "end": 40,
+            "value": "Frankfurt",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to join this course in Frankfurt",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "value": "Frankfurt",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to book it in Munich on the 29th August",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 35,
+            "end": 46,
+            "value": "29th August",
+            "entity": "date"
+          },
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Let me attend it in Munich then on 17/06/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "17/06/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I want to visit this seminar",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to visit this course",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in Machine Learning",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 46,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in Data Science",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 42,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in programming",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in Python",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in rhetoric",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 38,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in communication",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 43,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the seminar in leadership",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 30,
+            "end": 40,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      
+      {
+        "text": "I want to join the course in negotiation",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 29,
+            "end": 40,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the course in leadership",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 29,
+            "end": 39,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to join the course in management",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 29,
+            "end": 39,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Book Machine Learning in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 21,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 25,
+            "end": 34,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book Data Science in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "Machine Learning",
+            "entity": "course"
+          },
+          {
+            "start": 21,
+            "end": 30,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book programming in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 16,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book Python in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 24,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book rhetoric in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 17,
+            "end": 26,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book communication in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 18,
+            "value": "rhetoric",
+            "entity": "course"
+          },
+          {
+            "start": 22,
+            "end": 31,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book excel in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "excel",
+            "entity": "course"
+          },
+          {
+            "start": 14,
+            "end": 23,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book negotiation in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 16,
+            "value": "negotiation",
+            "entity": "course"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book leadership in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 15,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 19,
+            "end": 28,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Book management in Stuttgart",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 15,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 19,
+            "end": 28,
+            "value": "Stuttgart",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Reserve a slot for me on the 26th June in Berlin please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 42,
+            "end": 48,
+            "value": "Berlin",
+            "entity": "location"
+          },
+          {
+            "start": 29,
+            "end": 38,
+            "value": "26th June",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Reserve a spot for me in Frankfurt for it",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 25,
+            "end": 34,
+            "value": "Frankfurt",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I need your help to book a seminar",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "I want to book it in Munich on 17/08/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 31,
+            "end": 39,
+            "value": "17/08/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I'd like to book in Franfkurt on the 21st September",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 37,
+            "end": 51,
+            "value": "21st September",
+            "entity": "date"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "Franfkurt",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to join on 27/05/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "27/05/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I like to book it on 16/05/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "16/05/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Okay so book it on 27th April please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "27th April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Alright I like to attend on 12th April please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 38,
+            "value": "12th April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Can you register me in Munich on 14/05/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "14/05/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Book it on 28th August",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 11,
+            "end": 22,
+            "value": "28th August",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I want to book in Hamburg on 19th August",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "Hamburg",
+            "entity": "location"
+          },
+          {
+            "start": 29,
+            "end": 40,
+            "value": "19th August",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I prefer to book in Munich",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I prefer to book it in Berlin on April 25",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "Berlin",
+            "entity": "location"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "April 25",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I like to book it on June 19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "June 19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Please book on 28th May",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "28th May",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I like to join on 31st May in Hamburg",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "31st May",
+            "entity": "date"
+          },
+          {
+            "start": 30,
+            "end": 37,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I like to join on 29/04 in Hamburg",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "29/04",
+            "entity": "date"
+          },
+          {
+            "start": 27,
+            "end": 34,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Then I book it on 18/05/19 in Frankfurt",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "18/05/19",
+            "entity": "date"
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "value": "Frankfurt",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Okay let me book it in Berlin on 18/05/19",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "Berlin",
+            "entity": "location"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "18/05/19",
+            "entity": "date"
+          }
+        ]
+      },
+	
+      {
+        "text": "What level do I need for Machine Learning?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 41,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for Data Science?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 37,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for programming?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for Python?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for negotiation?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 36,
+            "value": "negotiation",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What level do I need for leadership?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is there a minimum level for this seminar?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 34,
+            "end": 41,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is there a minimum level for this course?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 34,
+            "end": 40,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for Data Science?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "Machine Learning",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for programming?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 43,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for Python?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for rhetoric?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for communication?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 45,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for excel?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 37,
+            "value": "excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How high should my level be for management?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 32,
+            "end": 42,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Please tell me about the course offering",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "When is leadership offered?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to take that seminar",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Are Python courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are rhetoric courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are communication courses available?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 17,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "talk some stuff about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -1583,52 +4073,52 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "who are you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "describe yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "introduce yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what are you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "all about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -3208,7 +5698,7 @@
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -4778,27 +7268,27 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know you better",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -26832,7 +29322,14 @@
       {
         "text": "What level is the seminar intended for?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Is the seminar for beginners?",
@@ -27087,7 +29584,14 @@
       {
         "text": "What skill level should I have for the seminar?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 39,
+            "end": 46,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Is it a beginners seminar?",
@@ -28028,12 +30532,26 @@
       {
         "text": "On what days can I take the course?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "When is the course scheduled?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "On what dates does the seminar take place?",
@@ -28053,7 +30571,14 @@
       {
         "text": "When is the seminar offered?",
         "intent": "get_dates",
-        "entities": []
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "I want to know the dates of the seminar",
@@ -29310,37 +31835,37 @@
       },
       {
         "text": "tell me some stuff about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "I want to know more about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "tell me about yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "say about you",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "define yourself",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "what is your personality",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
         "text": "why are you here",
-        "intent": "introduction",
+        "intent": "ask_whatspossible",
         "entities": []
       },
       {
@@ -30049,6 +32574,21 @@
             "entity": "booking-type"
           }
         ]
+      },
+      {
+        "text": "What are the requirements to take this seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know to qualify for the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "What do I need to know so I can take the seminar?",
+        "intent": "get_prerequisites",
+        "entities": []
       },
       {
         "text": "I want to see my past seminars",
@@ -31026,6 +33566,11 @@
         ]
       },
       {
+        "text": "What are the dates in oov?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
         "text": "When does it take place in Munich?",
         "intent": "get_dates",
         "entities": [
@@ -31085,6 +33630,16 @@
       },
       {
         "text": "Which courses do you have in your portfolio?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Which courses do you have in oov?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Which courses are available in oov?",
         "intent": "get_course_offering",
         "entities": []
       },
@@ -32854,6 +35409,11 @@
         "entities": []
       },
       {
+        "text": "At which places can I register for the seminar?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
         "text": "Where can I take them?",
         "intent": "get_location",
         "entities": []
@@ -32867,6 +35427,30 @@
         "text": "In which cities do your seminars take place?",
         "intent": "get_location",
         "entities": []
+      },
+      {
+        "text": "Then where can I take programming?",
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Then where can I take leadership?",
+        "intent": "get_locations",
+        "entities": [
+          {
+            "start": 22,
+            "end": 32,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
       },
       {
         "text": "Where do you offer workshops?",
@@ -32895,7 +35479,14 @@
       {
         "text": "What level does the seminar have?",
         "intent": "get_level",
-        "entities": []
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "Would you recommended it for beginners?",
@@ -35783,12 +38374,12 @@
       },
       {
         "text": "I want to take this seminar, when can I take it?",
-        "intent": "get_dates",
+        "intent": "book_seminar+get_dates",
         "entities": []
       },
       {
         "text": "Book it please, when is that possible?",
-        "intent": "get_dates",
+        "intent": "book_seminar+get_dates",
         "entities": []
       },
       {
@@ -35809,6 +38400,18 @@
             "start": 16,
             "end": 22,
             "value": "Pyhton",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to attend leadership in on which days is that possible?",
+        "intent": "book_seminar+get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "leadership",
             "entity": "course"
           }
         ]
@@ -35894,7 +38497,7 @@
           {
             "start": 13,
             "end": 20,
-            "value": "seminar",
+            "value": "seminar ",
             "entity": "course-type"
           },
           {
@@ -36117,7 +38720,7 @@
           {
             "start": 23,
             "end": 30,
-            "value": "seminar",
+            "value": "seminar ",
             "entity": "course-type"
           }
         ]
@@ -36171,18 +38774,6 @@
         ]
       },
       {
-        "text": "Is the seminar suitable for intermediate users?",
-        "intent": "get_level",
-        "entities": [
-          {
-            "start": 28,
-            "end": 40,
-            "value": "intermediate",
-            "entity": "user-level"
-          }
-        ]
-      },
-      {
         "text": "need to know oov ovv",
         "intent": "get_prerequisites",
         "entities": []
@@ -36190,12 +38781,26 @@
       {
         "text": "What do I need to know to qualify for the seminar?",
         "intent": "get_prerequisites",
-        "entities": []
+        "entities": [
+          {
+            "start": 42,
+            "end": 49,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "What do I need to know so I can take the seminar?",
         "intent": "get_prerequisites",
-        "entities": []
+        "entities": [
+          {
+            "start": 41,
+            "end": 48,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
       },
       {
         "text": "What do you require people to know to take it?",
@@ -36232,6 +38837,18 @@
         ]
       },
       {
+        "text": "Nice can I book the seminar please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
         "text": "Register myself for management",
         "intent": "book_seminar",
         "entities": [
@@ -36240,6 +38857,995 @@
             "end": 30,
             "value": "management",
             "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to take part in that course please",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to join this seminar in Frankfurt",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "What else can you do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Book it for me in Leipzig",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to book it on the May 22",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "May 22",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Let me attend it in Munich then",
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Enough for today, bye bye",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "Give me more information about programming",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 31,
+            "end": 42,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "And in which cities is it hosted?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Where is it hosted?",
+        "intent": "get_location",
+        "entities": []
+      },
+      {
+        "text": "Are there still spaces in Leipzig?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Do you have free slots in the programming seminar or is it booked out?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "seminar ",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "30 April",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "30 April",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "What courses can I book here?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "When is the next seminar in Data Science?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "Data Science",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "When is the next seminar for Data Science?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 29,
+            "end": 41,
+            "value": "Data Science",
+            "entity": "course"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "When is the next Excel seminar?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "When is the next Excel seminar offerred?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "next",
+            "entity": "display-option"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": " What can this bot do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": " What else can I book?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "I want information about the seminar offering",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "Is Excel offered in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Which seminars exist?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I am a Python beginner, so can I take this seminar?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "beginner",
+            "entity": "user-level"
+          },
+          {
+            "start": 7,
+            "end": 13,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar suitable for intermediate users?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "intermediate",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Is the seminar appropriate for first time users?",
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 31,
+            "end": 41,
+            "value": "first time",
+            "entity": "user-level"
+          }
+        ]
+      },
+      {
+        "text": "Can I take it on Wednesday?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 26,
+            "value": "Wednesday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "I want to speak with helpdesk",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "Please connect me to someone from HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I want to get in touch with HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I would like to talk to someone from HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "request a call with HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "request a call with helpdesk",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I need support",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I don't understand this I need help",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "I don't understand this I need support",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "i want to be connected to HR",
+        "intent": "get_help",
+        "entities": []
+      },
+      {
+        "text": "Which funtions can you fulfill?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Which tasks are you built for?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Which tasks can you do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What kind of tasks can you do?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "What tasks can you do bot?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "Do you have more information?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "Show my bookings in May",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 23,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "I want to cancel my next seminar",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 24,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "I want to cancel my upcoming seminar",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "upcoming",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "Cancel my next seminar",
+        "intent": "cancel_seminar",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "next",
+            "entity": "display-option"
+          }
+        ]
+      },
+      {
+        "text": "Show my bookings in spring",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "spring",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Show my bookings in Hamburg",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": " Show my registrations in summer",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ]
+      },{
+
+        "text": "cheers bro",
+        "intent": "thank",
+        "entities": []
+      },{
+        "text": "List my bookings in January",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "January",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Tell me which seminars I booked in June",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 35,
+            "end": 39,
+            "value": "June",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Retrieve my seminars in November",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "November",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Show the bookings I have in July",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 28,
+            "end": 32,
+            "value": "July",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Can you show me my booked seminars in spring",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 38,
+            "end": 44,
+            "value": "spring",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Show my seminars in oov",
+        "intent": "show_bookings",
+        "entities": []
+      },
+      {
+        "text": "list my seminar registrations in Cologne",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 33,
+            "end": 40,
+            "value": "Cologne",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Give back my bookings in June",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 25,
+            "end": 29,
+            "value": "June",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "Give back my bookings",
+        "intent": "show_bookings",
+        "entities": []
+      },
+      {
+        "text": "Show me my bookings ",
+        "intent": "show_bookings",
+        "entities": []
+      },
+      {
+        "text": "Show me my bookings in Hamburg",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "Hamburg",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Show me my bookings on May 18th",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "May 18th",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "Show me my bookings next month",
+        "intent": "show_bookings",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "next month",
+            "entity": "date-period"
+          }
+        ]
+      },
+      {
+        "text": "oov data science workshop available",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 4,
+            "end": 16,
+            "value": "data science",
+            "entity": "course"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "workshop",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "oov data science seminar available",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "seminar",
+            "entity": "course-type"
+          },
+          {
+            "start": 4,
+            "end": 16,
+            "value": "data science",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How long do the seminars take?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Register a seminar for me",
+        "intent": "book_seminar",
+        "entities": []
+      },
+      {
+        "text": "What modules can I take?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "Is Python offered in Munich?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 3,
+            "end": 9,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you offer programming labs?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 13,
+            "end": 24,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "When does it take place again?",
+        "intent": "get_dates",
+        "entities": []
+      },
+      {
+        "text": "When does Python take place again?",
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "And do you offer programming hackathons?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 29,
+            "end": 39,
+            "value": "hackathons",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "And what about programming seminars?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 15,
+            "end": 26,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "And what about Excel seminars?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "And what about leadership workshops?",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 15,
+            "end": 25,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "I want to know which seminars exist",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to know which seminars I can take",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "I want to know which seminars are available",
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "seminars",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "What modules are available?",
+        "intent": "get_course_offering",
+        "entities": []
+      },
+      {
+        "text": "How is the seminar organised?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How is it organised?",
+        "intent": "get_description",
+        "entities": []
+      },
+      {
+        "text": "How is the Python seminar organised?",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "Python",
+            "entity": "course"
+          },
+          {
+            "start": 18,
+            "end": 25,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "From when to when is this course?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "course",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will this seminar take?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "seminar",
+            "entity": "course-type"
+          }
+        ]
+      },
+      {
+        "text": "How much time will it take?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "Which skills are required exactly?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "Which skills are needed exactly?",
+        "intent": "get_prerequisites",
+        "entities": []
+      },
+      {
+        "text": "How long do the seminars take?",
+        "intent": "get_duration",
+        "entities": []
+      },
+      {
+        "text": "How many days is Python?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Python",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "How long does ML last?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 14,
+            "end": 16,
+            "value": "ML",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "What is the length of rhetoric?",
+        "intent": "get_duration",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Do you have free slots in Leipzig?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Leipzig",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Are there still places in Excel?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 26,
+            "end": 31,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are there free spots left for programming?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "Are there free spots left on the 16/03/19?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 33,
+            "end": 41,
+            "value": "16/03/19",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "How many free spots do you still have on the 17/03/19?",
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 45,
+            "end": 53,
+            "value": "17/03/19",
+            "entity": "date"
           }
         ]
       }
@@ -36368,6 +39974,7 @@
           "Data Science",
           "Mahcine Learning",
           "mchine learning",
+          "machine learning",
           "Artificial Intelligence",
           "AI",
           "Big Data",
@@ -36431,6 +40038,18 @@
         "value": "booked",
         "synonyms": [
           "book"
+        ]
+      },
+      {
+        "value": "Munich",
+        "synonyms": [
+          "munich"
+        ]
+      },
+      {
+        "value": "completed",
+        "synonyms": [
+          "complete"
         ]
       },
       {

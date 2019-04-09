@@ -114,8 +114,13 @@
 	- utter_get_help
 
 ## inform_bookSeminar_showBookings_cancelSeminar	
-* 	
+* get_course_offering{"course":"Tableau"}
 	- action_display_seminar
+	- slot{"course": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+	- slot{"location": null}
+	- slot{"date": null}
 * get_course_offering{"course":"Python"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -1636,6 +1641,84 @@
 	- slot{"course": null}
 	- slot{"date-period": null}
 	- utter_suggest_help
+
+## 05/04
+* book_seminar{"course": "excel", "location": "Frankfurt"}
+    - slot{"course": "excel"}
+    - slot{"location": "Frankfurt"}
+    - utter_ask_name
+* inform{"given-name": "teresa", "last-name": "williams"}
+    - slot{"given-name": "teresa"}
+    - slot{"last-name": "williams"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 10}
+    - action_query_date
+    - slot{"location": "Stuttgart"}
+* affirm
+    - action_query_date
+    - slot{"dates": "30/04/19, 10/05/19, 20/05/19, 30/05/19"}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "30 April"}
+    - slot{"date": "30 April"}
+    - form: seminar_form
+    - slot{"date": "30 April"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else
+* ask_whatspossible
+    - utter_whatspossible
+* get_description{"course": "programming"}
+    - slot{"course": "programming"}
+    - action_provide_description
+* get_location
+    - action_display_seminar
+    - slot{"locations": ["Berlin", "Frankfurt", "Hamburg", "Leipzig", "Munich"]}
+    - slot{"title": "Python for Beginners"}
+    - slot{"seminar_id": 2}
+    - slot{"time": null}
+* get_occupancy{"course": "programming"}
+    - action_query_occupancy
+* book_seminar{"location": "Leipzig", "date": "18/05/19"}
+    - slot{"date": "18/05/19"}
+    - slot{"location": "Leipzig"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "Leipzig"}
+    - slot{"date": "18/05/19"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else
+* show_bookings
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+* bye
+    - utter_bye
+    - action_restart
 
 	
 

@@ -336,7 +336,6 @@
 	- slot{"date": null}
 * thank+bye
 	- utter_thanks_bye
-	- utter_thanks_bye
 	
 ## cancel seminar date specified - succeed 
 * ask_whatspossible
@@ -357,6 +356,29 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	
+## Generated Story 9169648817034199185
+* cancel_seminar{"course": "Excel", "date-period": "next week"}
+    - slot{"course": "Excel"}
+    - slot{"date-period": "next week"}
+    - utter_ask_name
+* inform{"given-name": "Sam", "last-name": "Brown"}
+    - slot{"given-name": "Sam"}
+    - slot{"last-name": "Brown"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 0}
+    - utter_are_you_sure
+* affirm
+    - action_cancel_seminar
+    - slot{"cancellation_confirmed": false}
+    - slot{"course": null}
+    - slot{"location": null}
+    - slot{"date": null}
+    - followup{"name": "utter_suggest_help"}
+    - utter_suggest_help
+* affirm
+    - utter_get_help
 
 
 

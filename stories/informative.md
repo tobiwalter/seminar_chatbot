@@ -130,7 +130,7 @@
 * get_dates{"course":"programming","location":"Berlin"}
 	- action_query_date
 	- slot{"dates":"12/02/19"}
-	- slot{"title": " "}
+	- slot{"title": "xyy"}
 
 ## query date when location already given
 * get_course_offering
@@ -150,10 +150,6 @@
     - slot{"course": "Machine Learning"}
     - action_query_duration
 	
-## get duration
-* get_duration
-    - action_query_duration
-
 ## get course offering - course specified	
 * get_course_offering{"course":"Python"}
 	- action_display_seminar
@@ -169,6 +165,7 @@
 * get_course_offering{"course": "linear algebra"}
     - slot{"course": "linear algebra"}
     - action_display_seminar
+	
 * get_course_offering
     - action_course_offering
 * get_level{"course": "rhetoric"}
@@ -240,6 +237,82 @@
 ## insult
 * insult
     - utter_no_insult
+	
+## what' possible, location and course offering
+* ask_whatspossible
+	- utter_whatspossible
+* goodbye
+	- utter_bye
+	- action_restart
+	
+## what' possible, location and course offering
+* ask_whatspossible
+	- utter_whatspossible
+* thank+bye
+	- utter_thanks_bye
+	
+# get_help
+* get_help
+    - utter_get_help
+	
+
+## what' possible and bad
+* ask_whatspossible
+	- utter_whatspossible
+* bad
+	- utter_i''m sorry
+* negative
+	- utter_bye
+	- action_restart
+	
+## bad
+* bad
+	- utter_i''m sorry
+	
+## bad and bye
+* bad
+	- utter_i''m sorry
+* negative
+	- utter_bye
+	- action_restart
+	
+## smalltalk and bad
+* other_smalltalk
+	- utter_no_chitchat
+* bad
+	- utter_i''m sorry
+
+	
+## smalltalk and insult
+* other_smalltalk
+	- utter_no_chitchat
+* insult
+	- utter_no_insult
+	
+## welcome
+* welcome
+	- utter_welcome
+* bad
+	- utter_i''m sorry
+	
+## book seminar no name extracted	
+* book_seminar
+    - utter_ask_name
+* inform
+    - action_verify_user
+	
+## show bookings no name extracted	
+* show_bookings
+    - utter_ask_name
+* inform
+    - action_verify_user
+	
+## book seminar no name extracted	
+* cancel_seminar
+    - utter_ask_name
+* inform
+    - action_verify_user
+	
 
 	
 	

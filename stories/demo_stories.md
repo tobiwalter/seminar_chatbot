@@ -267,3 +267,84 @@
     - utter_thanks
 * bye
     - utter_bye
+
+## Generated Story -8114647200784749199
+* welcome
+    - utter_welcome
+* ask_whatspossible
+    - utter_whatspossible
+* get_description{"course": "leadership "}
+    - slot{"course": "leadership "}
+    - action_provide_description
+* get_course_offering{"course": "Math"}
+    - slot{"course": "Math"}
+    - action_display_seminar
+    - slot{"course": null}
+    - slot{"location": null}
+    - slot{"time": null}
+    - slot{"date": null}
+    - slot{"date-period": null}
+    - utter_do_something_else
+* book_seminar{"date-period": "June"}
+    - slot{"date-period": "June"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Thompson"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Thompson"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 3}
+    - action_display_seminar
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else
+* negative
+    - utter_bye
+	
+## Generated Story -938838891292
+* get_location
+    - action_course_offering
+* get_course_offering{"location": "Leipzig"}
+    - slot{"location": "Leipzig"}
+	- action_display_seminar
+	- slot{"categories":"[x,y,z]"}
+* get_dates{"course": "Excel"}
+    - slot{"course": "Excel"}
+    - action_query_date
+    - slot{"dates": ["x,y,z"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+* get_occupancy
+    - action_query_occupancy
+* get_duration
+    - action_query_duration
+* other_smalltalk
+    - utter_no_chitchat
+* get_prerequisites
+    - action_provide_prerequisites
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "Hugo", "last-name": "Garcia"}
+    - slot{"given-name": "Hugo"}
+    - slot{"last-name": "Garcia"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 9}
+    - seminar_form
+    - form{"name": "seminar_form"}
+* other_loc_date{"other_date": "True"}
+    - action_show_all_buttons
+    - slot{"other_date": null}
+    - slot{"other_location": null}
+* form: inform{"date": "07/05/19"}
+    - seminar_form
+    - form{"name": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else

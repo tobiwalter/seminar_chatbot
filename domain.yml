@@ -32,7 +32,6 @@ actions:
 - utter_do_something_else
 - utter_get_help
 - utter_i''m sorry
-- utter_introduction
 - utter_no_chitchat
 - utter_no_worries
 - utter_restart_with_button
@@ -242,8 +241,8 @@ templates:
   utter_ask_course_cancel:
   - text: Please specify which one you want to cancel (course, date, location).
   utter_ask_date:
-  - text: On which date do you want to take the {course} seminar?
-  - text: When do you want to take the {course} seminar?
+  - text: On which date do you want to take the {course} seminar in {location}?
+  - text: When do you want to take the {course} seminar in {location}?
   utter_ask_location:
   - text: Where do you want to take the seminar in {course}?
   - text: In which city do you want to take the {course} seminar?
@@ -256,7 +255,7 @@ templates:
   - text: Do you want to book the seminar somewhere else? If yes, please specify the
       location.
   utter_bye:
-  - text: Goodbye
+  - text: See you soon, goodbye!
   utter_default:
   - text: Sorry, I didn't get that. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
@@ -269,18 +268,15 @@ templates:
   - text: Can I do something else for you?
   utter_get_help:
   - buttons:
-    - payload: Call helpdesk
+    - payload: /restart
       title: Call helpdesk
-    - payload: Write email
+    - payload: /restart
       title: Write email
     text: To get help, please reach out to helpdesk@company.com by mail or call +49
       621 66566.
   utter_i''m sorry:
   - text: I am sorry I could not satisfy your request. Can I help you in any other
       way?
-  utter_introduction:
-  - text: I am Sam. I can help you to book seminars, show seminar bookings and get
-      information about the seminar offering.
   utter_no_chitchat:
   - text: I don't do smalltalk, let's get things done!
   utter_no_insult:
@@ -312,7 +308,7 @@ templates:
   - text: My pleasure, goodbye!
   - text: You're welcome, until next time!
   utter_try_again:
-  - text: This name is not in our database. Please specify your name again.
+  - text: I could not find your name in the database. Please specify your name again.
   utter_welcome:
   - text: |
           Hello! I can do the following tasks for you: 
