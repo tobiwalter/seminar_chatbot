@@ -44,7 +44,7 @@
           {
             "start": 3,
             "end": 14,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -62,7 +62,7 @@
           {
             "start": 3,
             "end": 9,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -80,7 +80,7 @@
           {
             "start": 3,
             "end": 11,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -98,7 +98,7 @@
           {
             "start": 3,
             "end": 16,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -236,7 +236,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -254,7 +254,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -272,7 +272,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -290,7 +290,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -770,7 +770,7 @@
           {
             "start": 0,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -788,7 +788,7 @@
           {
             "start": 0,
             "end": 6,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -806,7 +806,7 @@
           {
             "start": 0,
             "end": 8,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -824,7 +824,7 @@
           {
             "start": 0,
             "end": 13,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -950,7 +950,7 @@
           {
             "start": 0,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -968,7 +968,7 @@
           {
             "start": 0,
             "end": 6,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -986,7 +986,7 @@
           {
             "start": 0,
             "end": 8,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1004,7 +1004,7 @@
           {
             "start": 0,
             "end": 13,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1130,7 +1130,7 @@
           {
             "start": 0,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1148,7 +1148,7 @@
           {
             "start": 0,
             "end": 6,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1166,7 +1166,7 @@
           {
             "start": 0,
             "end": 8,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1184,7 +1184,7 @@
           {
             "start": 0,
             "end": 13,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1310,7 +1310,7 @@
           {
             "start": 0,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1328,7 +1328,7 @@
           {
             "start": 0,
             "end": 6,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1346,7 +1346,7 @@
           {
             "start": 0,
             "end": 8,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1364,7 +1364,7 @@
           {
             "start": 0,
             "end": 13,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1640,7 +1640,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -1658,7 +1658,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -1676,7 +1676,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -1694,7 +1694,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -1815,7 +1815,7 @@
           {
             "start": 5,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1833,7 +1833,7 @@
           {
             "start": 5,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -1851,7 +1851,7 @@
           {
             "start": 5,
             "end": 13,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -1869,7 +1869,7 @@
           {
             "start": 5,
             "end": 18,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -2277,7 +2277,7 @@
           {
             "start": 25,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -2289,7 +2289,7 @@
           {
             "start": 25,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -2361,7 +2361,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -2373,7 +2373,7 @@
           {
             "start": 32,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -2385,7 +2385,7 @@
           {
             "start": 32,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -2397,7 +2397,7 @@
           {
             "start": 32,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -2462,7 +2462,7 @@
           {
             "start": 4,
             "end": 10,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -2474,7 +2474,7 @@
           {
             "start": 4,
             "end": 12,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -2486,7 +2486,7 @@
           {
             "start": 4,
             "end": 17,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -8878,7 +8878,7 @@
           {
             "start": 31,
             "end": 39,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -9430,7 +9430,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9448,7 +9448,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9466,7 +9466,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9484,7 +9484,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9502,7 +9502,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9520,7 +9520,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9538,7 +9538,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9556,7 +9556,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9574,7 +9574,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9592,7 +9592,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9610,7 +9610,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9628,7 +9628,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9646,7 +9646,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9664,7 +9664,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9682,7 +9682,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9700,7 +9700,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9718,7 +9718,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9736,7 +9736,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9754,7 +9754,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9772,7 +9772,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9790,7 +9790,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9808,7 +9808,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9826,7 +9826,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9844,7 +9844,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9862,7 +9862,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9880,7 +9880,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9898,7 +9898,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9916,7 +9916,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9934,7 +9934,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9952,7 +9952,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9970,7 +9970,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -9988,7 +9988,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10006,7 +10006,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10024,7 +10024,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10042,7 +10042,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10060,7 +10060,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10078,7 +10078,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10096,7 +10096,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10114,7 +10114,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10132,7 +10132,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -10150,7 +10150,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10168,7 +10168,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10186,7 +10186,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10204,7 +10204,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10222,7 +10222,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10240,7 +10240,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10258,7 +10258,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10276,7 +10276,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10294,7 +10294,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10312,7 +10312,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10330,7 +10330,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10348,7 +10348,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10366,7 +10366,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10384,7 +10384,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10402,7 +10402,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10420,7 +10420,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10438,7 +10438,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10456,7 +10456,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10474,7 +10474,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10492,7 +10492,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10510,7 +10510,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10528,7 +10528,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10546,7 +10546,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10564,7 +10564,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10582,7 +10582,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10600,7 +10600,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10618,7 +10618,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10636,7 +10636,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10654,7 +10654,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -10672,7 +10672,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -12430,7 +12430,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12448,7 +12448,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12466,7 +12466,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12484,7 +12484,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12502,7 +12502,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12520,7 +12520,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12538,7 +12538,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12556,7 +12556,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12574,7 +12574,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12592,7 +12592,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12610,7 +12610,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12628,7 +12628,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12646,7 +12646,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12664,7 +12664,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12682,7 +12682,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12700,7 +12700,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12718,7 +12718,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12736,7 +12736,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12754,7 +12754,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12772,7 +12772,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12790,7 +12790,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12808,7 +12808,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12826,7 +12826,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12844,7 +12844,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12862,7 +12862,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12880,7 +12880,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12898,7 +12898,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12916,7 +12916,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12934,7 +12934,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12952,7 +12952,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12970,7 +12970,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -12988,7 +12988,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13006,7 +13006,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13024,7 +13024,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13042,7 +13042,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13060,7 +13060,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13078,7 +13078,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13096,7 +13096,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13114,7 +13114,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13132,7 +13132,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -13150,7 +13150,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13168,7 +13168,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13186,7 +13186,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13204,7 +13204,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13222,7 +13222,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13240,7 +13240,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13258,7 +13258,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13276,7 +13276,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13294,7 +13294,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13312,7 +13312,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13330,7 +13330,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13348,7 +13348,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13366,7 +13366,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13384,7 +13384,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13402,7 +13402,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13420,7 +13420,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13438,7 +13438,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13456,7 +13456,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13474,7 +13474,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13492,7 +13492,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13510,7 +13510,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13528,7 +13528,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13546,7 +13546,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13564,7 +13564,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13582,7 +13582,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13600,7 +13600,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13618,7 +13618,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13636,7 +13636,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13654,7 +13654,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -13672,7 +13672,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -14775,7 +14775,7 @@
           {
             "start": 0,
             "end": 8,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -14792,7 +14792,7 @@
           {
             "start": 22,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -14828,7 +14828,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -14892,7 +14892,7 @@
           {
             "start": 18,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -14976,7 +14976,7 @@
           {
             "start": 26,
             "end": 37,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -14988,7 +14988,7 @@
           {
             "start": 26,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -15000,7 +15000,7 @@
           {
             "start": 26,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -15036,7 +15036,7 @@
           {
             "start": 18,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -15048,7 +15048,7 @@
           {
             "start": 18,
             "end": 19,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -15060,7 +15060,7 @@
           {
             "start": 18,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -15072,7 +15072,7 @@
           {
             "start": 18,
             "end": 26,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -15084,7 +15084,7 @@
           {
             "start": 18,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -15096,7 +15096,7 @@
           {
             "start": 18,
             "end": 28,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -15955,7 +15955,7 @@
           {
             "start": 11,
             "end": 19,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -15979,7 +15979,7 @@
           {
             "start": 18,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -15991,7 +15991,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16003,7 +16003,7 @@
           {
             "start": 12,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -16039,7 +16039,7 @@
           {
             "start": 24,
             "end": 35,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16123,7 +16123,7 @@
           {
             "start": 41,
             "end": 52,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16135,7 +16135,7 @@
           {
             "start": 41,
             "end": 47,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16147,7 +16147,7 @@
           {
             "start": 41,
             "end": 42,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16159,7 +16159,7 @@
           {
             "start": 41,
             "end": 45,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16171,7 +16171,7 @@
           {
             "start": 41,
             "end": 49,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16183,7 +16183,7 @@
           {
             "start": 41,
             "end": 54,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16195,7 +16195,7 @@
           {
             "start": 41,
             "end": 51,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16315,7 +16315,7 @@
           {
             "start": 27,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16327,7 +16327,7 @@
           {
             "start": 27,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16339,7 +16339,7 @@
           {
             "start": 27,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16351,7 +16351,7 @@
           {
             "start": 27,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -16363,7 +16363,7 @@
           {
             "start": 27,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16375,7 +16375,7 @@
           {
             "start": 27,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16387,7 +16387,7 @@
           {
             "start": 27,
             "end": 37,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16591,7 +16591,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -16603,7 +16603,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20140,7 +20140,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20152,7 +20152,7 @@
           {
             "start": 32,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20164,7 +20164,7 @@
           {
             "start": 32,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20176,7 +20176,7 @@
           {
             "start": 32,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20188,7 +20188,7 @@
           {
             "start": 32,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20200,7 +20200,7 @@
           {
             "start": 32,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20212,7 +20212,7 @@
           {
             "start": 32,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20272,7 +20272,7 @@
           {
             "start": 20,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20284,7 +20284,7 @@
           {
             "start": 20,
             "end": 26,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20296,7 +20296,7 @@
           {
             "start": 20,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20308,7 +20308,7 @@
           {
             "start": 20,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20320,7 +20320,7 @@
           {
             "start": 20,
             "end": 28,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20332,7 +20332,7 @@
           {
             "start": 20,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20344,7 +20344,7 @@
           {
             "start": 20,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20402,7 +20402,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20414,7 +20414,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20426,7 +20426,7 @@
           {
             "start": 30,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20438,7 +20438,7 @@
           {
             "start": 30,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20450,7 +20450,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20462,7 +20462,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20474,7 +20474,7 @@
           {
             "start": 30,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20522,7 +20522,7 @@
           {
             "start": 33,
             "end": 44,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20534,7 +20534,7 @@
           {
             "start": 33,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20546,7 +20546,7 @@
           {
             "start": 33,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20558,7 +20558,7 @@
           {
             "start": 33,
             "end": 37,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20570,7 +20570,7 @@
           {
             "start": 33,
             "end": 41,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20582,7 +20582,7 @@
           {
             "start": 33,
             "end": 46,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20594,7 +20594,7 @@
           {
             "start": 33,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20733,7 +20733,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20745,7 +20745,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20757,7 +20757,7 @@
           {
             "start": 30,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20769,7 +20769,7 @@
           {
             "start": 30,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20781,7 +20781,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20793,7 +20793,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20805,7 +20805,7 @@
           {
             "start": 30,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20853,7 +20853,7 @@
           {
             "start": 21,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20865,7 +20865,7 @@
           {
             "start": 21,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20877,7 +20877,7 @@
           {
             "start": 21,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20889,7 +20889,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -20901,7 +20901,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20913,7 +20913,7 @@
           {
             "start": 21,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20925,7 +20925,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -20991,7 +20991,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21009,7 +21009,7 @@
           {
             "start": 32,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21027,7 +21027,7 @@
           {
             "start": 32,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21045,7 +21045,7 @@
           {
             "start": 32,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21063,7 +21063,7 @@
           {
             "start": 32,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21081,7 +21081,7 @@
           {
             "start": 32,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21099,7 +21099,7 @@
           {
             "start": 32,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21189,7 +21189,7 @@
           {
             "start": 9,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21207,7 +21207,7 @@
           {
             "start": 9,
             "end": 15,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21225,7 +21225,7 @@
           {
             "start": 9,
             "end": 10,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21243,7 +21243,7 @@
           {
             "start": 9,
             "end": 13,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21261,7 +21261,7 @@
           {
             "start": 9,
             "end": 17,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21279,7 +21279,7 @@
           {
             "start": 9,
             "end": 22,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21297,7 +21297,7 @@
           {
             "start": 9,
             "end": 19,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -21399,7 +21399,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -21411,7 +21411,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -21423,7 +21423,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -21435,7 +21435,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -21447,7 +21447,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -21459,7 +21459,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -21471,7 +21471,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -21951,7 +21951,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21969,7 +21969,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -21987,7 +21987,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22005,7 +22005,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22023,7 +22023,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22041,7 +22041,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22059,7 +22059,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22077,7 +22077,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22095,7 +22095,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22113,7 +22113,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22131,7 +22131,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22149,7 +22149,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22167,7 +22167,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22185,7 +22185,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22203,7 +22203,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22221,7 +22221,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22239,7 +22239,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22257,7 +22257,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22275,7 +22275,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22293,7 +22293,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22311,7 +22311,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22329,7 +22329,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22347,7 +22347,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22365,7 +22365,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22383,7 +22383,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22401,7 +22401,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22419,7 +22419,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22437,7 +22437,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22455,7 +22455,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22473,7 +22473,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22491,7 +22491,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22509,7 +22509,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22527,7 +22527,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22545,7 +22545,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22563,7 +22563,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22581,7 +22581,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22599,7 +22599,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22617,7 +22617,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22635,7 +22635,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22653,7 +22653,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -22671,7 +22671,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22689,7 +22689,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22707,7 +22707,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22725,7 +22725,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22743,7 +22743,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22761,7 +22761,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22779,7 +22779,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22797,7 +22797,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22815,7 +22815,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22833,7 +22833,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22851,7 +22851,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22869,7 +22869,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22887,7 +22887,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22905,7 +22905,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22923,7 +22923,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22941,7 +22941,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22959,7 +22959,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22977,7 +22977,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -22995,7 +22995,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23013,7 +23013,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23031,7 +23031,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23049,7 +23049,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23067,7 +23067,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23085,7 +23085,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23103,7 +23103,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23121,7 +23121,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23139,7 +23139,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23157,7 +23157,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23175,7 +23175,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23193,7 +23193,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -23859,7 +23859,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23877,7 +23877,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23895,7 +23895,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23913,7 +23913,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23931,7 +23931,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23949,7 +23949,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23967,7 +23967,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -23985,7 +23985,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24003,7 +24003,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24021,7 +24021,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24039,7 +24039,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24057,7 +24057,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24075,7 +24075,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24093,7 +24093,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24111,7 +24111,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24129,7 +24129,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24147,7 +24147,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24165,7 +24165,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24183,7 +24183,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24201,7 +24201,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24219,7 +24219,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24237,7 +24237,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24255,7 +24255,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24273,7 +24273,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24291,7 +24291,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24309,7 +24309,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24327,7 +24327,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24345,7 +24345,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24363,7 +24363,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24381,7 +24381,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24399,7 +24399,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24417,7 +24417,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24435,7 +24435,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24453,7 +24453,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24471,7 +24471,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24489,7 +24489,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24507,7 +24507,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24525,7 +24525,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24543,7 +24543,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24561,7 +24561,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -24579,7 +24579,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24597,7 +24597,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24615,7 +24615,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24633,7 +24633,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24651,7 +24651,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24669,7 +24669,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24687,7 +24687,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24705,7 +24705,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24723,7 +24723,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24741,7 +24741,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24759,7 +24759,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24777,7 +24777,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24795,7 +24795,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24813,7 +24813,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24831,7 +24831,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24849,7 +24849,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -24908,7 +24908,7 @@
           {
             "start": 24,
             "end": 35,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -24920,7 +24920,7 @@
           {
             "start": 24,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -24932,7 +24932,7 @@
           {
             "start": 24,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -24944,7 +24944,7 @@
           {
             "start": 24,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -24956,7 +24956,7 @@
           {
             "start": 24,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -24968,7 +24968,7 @@
           {
             "start": 24,
             "end": 37,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -24980,7 +24980,7 @@
           {
             "start": 24,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25028,7 +25028,7 @@
           {
             "start": 21,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25040,7 +25040,7 @@
           {
             "start": 21,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25052,7 +25052,7 @@
           {
             "start": 21,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25064,7 +25064,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25076,7 +25076,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25088,7 +25088,7 @@
           {
             "start": 21,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25100,7 +25100,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25160,7 +25160,7 @@
           {
             "start": 22,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25172,7 +25172,7 @@
           {
             "start": 22,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25184,7 +25184,7 @@
           {
             "start": 22,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25196,7 +25196,7 @@
           {
             "start": 22,
             "end": 26,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25208,7 +25208,7 @@
           {
             "start": 22,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25220,7 +25220,7 @@
           {
             "start": 22,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25232,7 +25232,7 @@
           {
             "start": 22,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25292,7 +25292,7 @@
           {
             "start": 47,
             "end": 58,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25304,7 +25304,7 @@
           {
             "start": 47,
             "end": 53,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25316,7 +25316,7 @@
           {
             "start": 47,
             "end": 48,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25328,7 +25328,7 @@
           {
             "start": 47,
             "end": 51,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -25340,7 +25340,7 @@
           {
             "start": 47,
             "end": 55,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25352,7 +25352,7 @@
           {
             "start": 47,
             "end": 60,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25364,7 +25364,7 @@
           {
             "start": 47,
             "end": 57,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -25442,7 +25442,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25460,7 +25460,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25478,7 +25478,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25496,7 +25496,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25514,7 +25514,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25532,7 +25532,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25550,7 +25550,7 @@
           {
             "start": 19,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25622,7 +25622,7 @@
           {
             "start": 15,
             "end": 26,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25640,7 +25640,7 @@
           {
             "start": 15,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25658,7 +25658,7 @@
           {
             "start": 15,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25676,7 +25676,7 @@
           {
             "start": 15,
             "end": 19,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25694,7 +25694,7 @@
           {
             "start": 15,
             "end": 23,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25712,7 +25712,7 @@
           {
             "start": 15,
             "end": 28,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25730,7 +25730,7 @@
           {
             "start": 15,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25820,7 +25820,7 @@
           {
             "start": 15,
             "end": 26,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25838,7 +25838,7 @@
           {
             "start": 15,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25856,7 +25856,7 @@
           {
             "start": 15,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25874,7 +25874,7 @@
           {
             "start": 15,
             "end": 19,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -25892,7 +25892,7 @@
           {
             "start": 15,
             "end": 23,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25910,7 +25910,7 @@
           {
             "start": 15,
             "end": 28,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -25928,7 +25928,7 @@
           {
             "start": 15,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26018,7 +26018,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26036,7 +26036,7 @@
           {
             "start": 17,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26054,7 +26054,7 @@
           {
             "start": 17,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26072,7 +26072,7 @@
           {
             "start": 17,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26090,7 +26090,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26108,7 +26108,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26126,7 +26126,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26198,7 +26198,7 @@
           {
             "start": 23,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26216,7 +26216,7 @@
           {
             "start": 23,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26234,7 +26234,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26252,7 +26252,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26270,7 +26270,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26288,7 +26288,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26306,7 +26306,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26360,7 +26360,7 @@
           {
             "start": 23,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26372,7 +26372,7 @@
           {
             "start": 23,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26384,7 +26384,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26396,7 +26396,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26408,7 +26408,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26420,7 +26420,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26432,7 +26432,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26480,7 +26480,7 @@
           {
             "start": 27,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26492,7 +26492,7 @@
           {
             "start": 27,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26504,7 +26504,7 @@
           {
             "start": 27,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26516,7 +26516,7 @@
           {
             "start": 27,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26528,7 +26528,7 @@
           {
             "start": 27,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26540,7 +26540,7 @@
           {
             "start": 27,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26552,7 +26552,7 @@
           {
             "start": 27,
             "end": 37,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26600,7 +26600,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26612,7 +26612,7 @@
           {
             "start": 32,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26624,7 +26624,7 @@
           {
             "start": 32,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26636,7 +26636,7 @@
           {
             "start": 32,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26648,7 +26648,7 @@
           {
             "start": 32,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26660,7 +26660,7 @@
           {
             "start": 32,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26672,7 +26672,7 @@
           {
             "start": 32,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -26738,7 +26738,7 @@
           {
             "start": 23,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26756,7 +26756,7 @@
           {
             "start": 23,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26774,7 +26774,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26792,7 +26792,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -26810,7 +26810,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26828,7 +26828,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26846,7 +26846,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -26943,7 +26943,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26955,7 +26955,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26967,7 +26967,7 @@
           {
             "start": 30,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26979,7 +26979,7 @@
           {
             "start": 30,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -26991,7 +26991,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27003,7 +27003,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27015,7 +27015,7 @@
           {
             "start": 30,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27063,7 +27063,7 @@
           {
             "start": 12,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27075,7 +27075,7 @@
           {
             "start": 12,
             "end": 18,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27087,7 +27087,7 @@
           {
             "start": 12,
             "end": 13,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27099,7 +27099,7 @@
           {
             "start": 12,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27111,7 +27111,7 @@
           {
             "start": 12,
             "end": 20,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27123,7 +27123,7 @@
           {
             "start": 12,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27135,7 +27135,7 @@
           {
             "start": 12,
             "end": 22,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27198,7 +27198,7 @@
           {
             "start": 23,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27210,7 +27210,7 @@
           {
             "start": 23,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27222,7 +27222,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27234,7 +27234,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -27246,7 +27246,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27258,7 +27258,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27270,7 +27270,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -27294,7 +27294,7 @@
           {
             "start": 60,
             "end": 61,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28103,7 +28103,7 @@
           {
             "start": 26,
             "end": 37,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28115,7 +28115,7 @@
           {
             "start": 26,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28127,7 +28127,7 @@
           {
             "start": 26,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -28145,7 +28145,7 @@
           {
             "start": 26,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -28163,7 +28163,7 @@
           {
             "start": 26,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28175,7 +28175,7 @@
           {
             "start": 26,
             "end": 39,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28187,7 +28187,7 @@
           {
             "start": 26,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28235,7 +28235,7 @@
           {
             "start": 10,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28247,7 +28247,7 @@
           {
             "start": 10,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -28265,7 +28265,7 @@
           {
             "start": 10,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -28283,7 +28283,7 @@
           {
             "start": 10,
             "end": 14,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28295,7 +28295,7 @@
           {
             "start": 10,
             "end": 18,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28307,7 +28307,7 @@
           {
             "start": 10,
             "end": 23,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28319,7 +28319,7 @@
           {
             "start": 10,
             "end": 20,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28367,7 +28367,7 @@
           {
             "start": 27,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28379,7 +28379,7 @@
           {
             "start": 27,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28391,7 +28391,7 @@
           {
             "start": 27,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28403,7 +28403,7 @@
           {
             "start": 27,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28415,7 +28415,7 @@
           {
             "start": 27,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28427,7 +28427,7 @@
           {
             "start": 27,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28439,7 +28439,7 @@
           {
             "start": 27,
             "end": 37,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28487,7 +28487,7 @@
           {
             "start": 21,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28499,7 +28499,7 @@
           {
             "start": 21,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28511,7 +28511,7 @@
           {
             "start": 21,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28523,7 +28523,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28535,7 +28535,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28547,7 +28547,7 @@
           {
             "start": 21,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28559,7 +28559,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28607,7 +28607,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28619,7 +28619,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28631,7 +28631,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28643,7 +28643,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28655,7 +28655,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28667,7 +28667,7 @@
           {
             "start": 35,
             "end": 48,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28679,7 +28679,7 @@
           {
             "start": 35,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28817,7 +28817,7 @@
           {
             "start": 18,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28829,7 +28829,7 @@
           {
             "start": 18,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28841,7 +28841,7 @@
           {
             "start": 18,
             "end": 19,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28853,7 +28853,7 @@
           {
             "start": 18,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28865,7 +28865,7 @@
           {
             "start": 18,
             "end": 26,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28877,7 +28877,7 @@
           {
             "start": 18,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -28943,7 +28943,7 @@
           {
             "start": 27,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28955,7 +28955,7 @@
           {
             "start": 27,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28967,7 +28967,7 @@
           {
             "start": 27,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28979,7 +28979,7 @@
           {
             "start": 27,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -28991,7 +28991,7 @@
           {
             "start": 27,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29003,7 +29003,7 @@
           {
             "start": 27,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29015,7 +29015,7 @@
           {
             "start": 27,
             "end": 37,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29069,7 +29069,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29081,7 +29081,7 @@
           {
             "start": 28,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29093,7 +29093,7 @@
           {
             "start": 28,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29170,7 +29170,7 @@
           {
             "start": 28,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29182,7 +29182,7 @@
           {
             "start": 28,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29194,7 +29194,7 @@
           {
             "start": 28,
             "end": 41,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29206,7 +29206,7 @@
           {
             "start": 28,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29254,7 +29254,7 @@
           {
             "start": 16,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29266,7 +29266,7 @@
           {
             "start": 16,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29278,7 +29278,7 @@
           {
             "start": 16,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -29290,7 +29290,7 @@
           {
             "start": 16,
             "end": 24,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -29302,7 +29302,7 @@
           {
             "start": 16,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30438,7 +30438,7 @@
           {
             "start": 10,
             "end": 21,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30450,7 +30450,7 @@
           {
             "start": 10,
             "end": 16,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30462,7 +30462,7 @@
           {
             "start": 10,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30474,7 +30474,7 @@
           {
             "start": 10,
             "end": 14,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30486,7 +30486,7 @@
           {
             "start": 10,
             "end": 18,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30498,7 +30498,7 @@
           {
             "start": 10,
             "end": 23,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30510,7 +30510,7 @@
           {
             "start": 10,
             "end": 20,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30782,7 +30782,7 @@
           {
             "start": 23,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30794,7 +30794,7 @@
           {
             "start": 23,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30806,7 +30806,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30818,7 +30818,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30830,7 +30830,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30842,7 +30842,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30854,7 +30854,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -30962,7 +30962,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30974,7 +30974,7 @@
           {
             "start": 28,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30986,7 +30986,7 @@
           {
             "start": 28,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -30998,7 +30998,7 @@
           {
             "start": 28,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31010,7 +31010,7 @@
           {
             "start": 28,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31022,7 +31022,7 @@
           {
             "start": 28,
             "end": 41,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31034,7 +31034,7 @@
           {
             "start": 28,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31130,7 +31130,7 @@
           {
             "start": 23,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31142,7 +31142,7 @@
           {
             "start": 23,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31154,7 +31154,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31166,7 +31166,7 @@
           {
             "start": 23,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31178,7 +31178,7 @@
           {
             "start": 23,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31214,7 +31214,7 @@
           {
             "start": 19,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31226,7 +31226,7 @@
           {
             "start": 19,
             "end": 20,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31238,7 +31238,7 @@
           {
             "start": 19,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31250,7 +31250,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31262,7 +31262,7 @@
           {
             "start": 19,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31418,7 +31418,7 @@
           {
             "start": 21,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31430,7 +31430,7 @@
           {
             "start": 21,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31442,7 +31442,7 @@
           {
             "start": 21,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31454,7 +31454,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31466,7 +31466,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31502,7 +31502,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31514,7 +31514,7 @@
           {
             "start": 17,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31526,7 +31526,7 @@
           {
             "start": 17,
             "end": 27,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31658,7 +31658,7 @@
           {
             "start": 35,
             "end": 46,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31670,7 +31670,7 @@
           {
             "start": 35,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31682,7 +31682,7 @@
           {
             "start": 35,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31694,7 +31694,7 @@
           {
             "start": 35,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31766,7 +31766,7 @@
           {
             "start": 21,
             "end": 32,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31826,7 +31826,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -31838,7 +31838,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31850,7 +31850,7 @@
           {
             "start": 21,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -31862,7 +31862,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -32328,7 +32328,7 @@
           {
             "start": 0,
             "end": 11,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -32881,7 +32881,7 @@
           {
             "start": 32,
             "end": 43,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -32893,7 +32893,7 @@
           {
             "start": 32,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -32905,7 +32905,7 @@
           {
             "start": 32,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -32917,7 +32917,7 @@
           {
             "start": 32,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -32929,7 +32929,7 @@
           {
             "start": 32,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -32941,7 +32941,7 @@
           {
             "start": 32,
             "end": 45,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -32953,7 +32953,7 @@
           {
             "start": 32,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33073,7 +33073,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33085,7 +33085,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33097,7 +33097,7 @@
           {
             "start": 30,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33109,7 +33109,7 @@
           {
             "start": 30,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33121,7 +33121,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33133,7 +33133,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33145,7 +33145,7 @@
           {
             "start": 30,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33265,7 +33265,7 @@
           {
             "start": 34,
             "end": 45,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33277,7 +33277,7 @@
           {
             "start": 34,
             "end": 40,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33289,7 +33289,7 @@
           {
             "start": 34,
             "end": 35,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33301,7 +33301,7 @@
           {
             "start": 34,
             "end": 38,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33313,7 +33313,7 @@
           {
             "start": 34,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33325,7 +33325,7 @@
           {
             "start": 34,
             "end": 47,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33337,7 +33337,7 @@
           {
             "start": 34,
             "end": 44,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33472,7 +33472,7 @@
           {
             "start": 23,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33489,7 +33489,7 @@
           {
             "start": 24,
             "end": 32,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -33694,7 +33694,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33706,7 +33706,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -33718,7 +33718,7 @@
           {
             "start": 29,
             "end": 40,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -34014,7 +34014,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -34519,7 +34519,7 @@
           {
             "start": 11,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -34579,7 +34579,7 @@
           {
             "start": 19,
             "end": 30,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -34663,7 +34663,7 @@
           {
             "start": 14,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -34902,7 +34902,7 @@
           {
             "start": 34,
             "end": 42,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           },
           {
@@ -34954,7 +34954,7 @@
           {
             "start": 35,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -35029,7 +35029,7 @@
           {
             "start": 25,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -35119,7 +35119,7 @@
           {
             "start": 17,
             "end": 25,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -35203,7 +35203,7 @@
           {
             "start": 12,
             "end": 23,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -35469,7 +35469,7 @@
           {
             "start": 22,
             "end": 33,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -36596,7 +36596,7 @@
           {
             "start": 28,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -36608,7 +36608,7 @@
           {
             "start": 28,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -36620,7 +36620,7 @@
           {
             "start": 28,
             "end": 36,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -36632,7 +36632,7 @@
           {
             "start": 28,
             "end": 41,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -36644,7 +36644,7 @@
           {
             "start": 28,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37122,7 +37122,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37134,7 +37134,7 @@
           {
             "start": 30,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37146,7 +37146,7 @@
           {
             "start": 30,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37158,7 +37158,7 @@
           {
             "start": 30,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37170,7 +37170,7 @@
           {
             "start": 30,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37182,7 +37182,7 @@
           {
             "start": 30,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37194,7 +37194,7 @@
           {
             "start": 30,
             "end": 40,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37472,7 +37472,7 @@
           {
             "start": 25,
             "end": 36,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37484,7 +37484,7 @@
           {
             "start": 25,
             "end": 31,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37496,7 +37496,7 @@
           {
             "start": 25,
             "end": 29,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37508,7 +37508,7 @@
           {
             "start": 25,
             "end": 33,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37520,7 +37520,7 @@
           {
             "start": 25,
             "end": 38,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37532,7 +37532,7 @@
           {
             "start": 25,
             "end": 35,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37640,7 +37640,7 @@
           {
             "start": 21,
             "end": 27,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37652,7 +37652,7 @@
           {
             "start": 21,
             "end": 22,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37664,7 +37664,7 @@
           {
             "start": 21,
             "end": 25,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37676,7 +37676,7 @@
           {
             "start": 21,
             "end": 29,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37688,7 +37688,7 @@
           {
             "start": 21,
             "end": 34,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37700,7 +37700,7 @@
           {
             "start": 21,
             "end": 31,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37816,7 +37816,7 @@
           {
             "start": 33,
             "end": 44,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37828,7 +37828,7 @@
           {
             "start": 33,
             "end": 39,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37840,7 +37840,7 @@
           {
             "start": 33,
             "end": 34,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37852,7 +37852,7 @@
           {
             "start": 33,
             "end": 37,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -37864,7 +37864,7 @@
           {
             "start": 33,
             "end": 46,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -37876,7 +37876,7 @@
           {
             "start": 33,
             "end": 43,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -38509,7 +38509,7 @@
           {
             "start": 39,
             "end": 50,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -38635,7 +38635,7 @@
           {
             "start": 8,
             "end": 16,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -38669,7 +38669,7 @@
           {
             "start": 8,
             "end": 19,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -38971,7 +38971,7 @@
           {
             "start": 31,
             "end": 42,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -39005,7 +39005,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -39591,7 +39591,7 @@
           {
             "start": 13,
             "end": 24,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -39620,7 +39620,7 @@
           {
             "start": 17,
             "end": 28,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           },
           {
@@ -39638,7 +39638,7 @@
           {
             "start": 15,
             "end": 26,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -39818,7 +39818,7 @@
           {
             "start": 22,
             "end": 30,
-            "value": "rhetoric",
+            "value": "Rhetoric",
             "entity": "course"
           }
         ]
@@ -39854,7 +39854,7 @@
           {
             "start": 30,
             "end": 41,
-            "value": "programming",
+            "value": "Programming",
             "entity": "course"
           }
         ]
@@ -40018,7 +40018,7 @@
         ]
       },
       {
-        "value": "programming",
+        "value": "Programming",
         "synonyms": [
           "Python",
           "Pyhton",
@@ -40046,7 +40046,7 @@
         ]
       },
       {
-        "value": "rhetoric",
+        "value": "Rhetoric",
         "synonyms": [
           "Communication",
           "Rheotric",
