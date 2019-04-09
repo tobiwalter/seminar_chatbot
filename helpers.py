@@ -103,3 +103,24 @@ def date_check(seminar, location, date):
     else:
         return False
 
+def nextLocation(city, seminar):
+    # Install Module geopy
+        from geopy.geocoders import Nominatim
+        from geopy import distance
+
+        geolocator = Nominatim(user_agent='myapplication')
+        loc_coordinates = []
+        loc_distance = {}
+        location = geolocator.geocode(city)
+
+         #calculate distance between user's preferred location and seminar locations
+        for loc in seminar["locations"]:
+            sem_city = geolocator.geocode(loc)
+            loc_coordinates.append((sem_city.latitude, sem_city.longitude))
+            loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),
+              (location.latitude,location.longitude))
+
+        next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
+
+        return next_loc
+
