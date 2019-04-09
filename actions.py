@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -316,20 +316,25 @@ class ActionBookSeminar(Action):
                 res2.append("in {} on {}".format(ele["location"],ele["date"]))
                 breaker2 = False
 
-          if breaker1 and breaker2:
-            dispatcher.utter_message(res)
-
           # If date clash, ask if user wants to cancel one of the seminars  
-          elif breaker2:
-            res += "\nYou have another seminar on the same day: {}".format()
-            res += ',\t'.join(res1)
-          else:
+          if not breaker2:
             res += "\nYou have already booked the seminar {}: ".format(course.capitalize())
             res += ',\t'.join(res2)
 
-          buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            dispatcher.utter_message(res)
+            dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
+          elif not breaker1:
+            res += "\nYou have another seminar on the same day: {}".format()
+            res += ',\t'.join(res1)
+
+            buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            dispatcher.utter_message(res)
+            dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
+          else:
+            dispatcher.utter_message(res)
+      else:
           dispatcher.utter_message(res)
-          dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
 
       return [SlotSet("booking_confirmed",True),SlotSet("date", None), SlotSet("time", None),
               SlotSet('date-period',None), SlotSet("location",None), SlotSet("course",None), 
