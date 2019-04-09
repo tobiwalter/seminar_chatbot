@@ -578,7 +578,7 @@ class ActionDisplaySeminar(Action):
         res = "We offer seminars in the following categories in {} :\n{}".format(
                                   city.capitalize(), ', '.join(available_seminars))
         dispatcher.utter_message(res)
-        return [SlotSet('categories', available_seminars)]
+        return [SlotSet('categories', available_seminars),SlotSet('date-period', None), SlotSet('time', None)]
       else: 
         dispatcher.utter_message("There are no seminars offered in {}".format(city))
         return [SlotSet('location', None), FollowupAction('utter_do_something_else')]
@@ -643,7 +643,7 @@ class ActionDisplaySeminar(Action):
         res = "We offer the following seminars in the specified period:\n{}".format(
           '\n'.join(available_seminars))
         dispatcher.utter_message(res)
-        return [SlotSet('categories', available_seminars)]
+        return [SlotSet('categories', available_seminars),SlotSet('date-period', None), SlotSet('time', None)]
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
