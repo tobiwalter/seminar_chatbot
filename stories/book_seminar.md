@@ -1208,7 +1208,14 @@
 	- slot{"date-period": null}
 * cancel_seminar
 	- utter_ask_course_cancel
-* inform{"course": "Excel"}
+	- action_show_bookings
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course":"Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -1216,6 +1223,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 
 ## book seminar date clash - cancel seminar no
 * book_seminar{"location": "Frankfurt"}
@@ -1619,6 +1627,8 @@
     - slot{"location": null}
     - slot{"date-period": null}
     - slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * thank
     - utter_no_worries
 	
@@ -2257,7 +2267,7 @@
 * get_occupancy{"course":"rhetoric"}
 	- action_query_occupancy
 	- utter_ask_course_book
-* get_dates{"course":"Excel"} OR get_location{"course":"Excel}
+* get_dates{"course":"Excel"} OR get_location{"course":"Excel"}
 	- action_display_seminar
     - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
     - slot{"title": "Advanced Excel functions and formulas"}
@@ -2310,7 +2320,7 @@
 	- action_show_bookings
 * get_course_offering
 	- action_course_offering
-* get_location{"course":programming", "location":"Frankfurt"}
+* get_location{"course":"programming","location":"Frankfurt"}
 	- action_query_date
     - slot{"dates": "24/03/19, 02/04/19"}
     - slot{"title": "blabla"}
@@ -2365,9 +2375,15 @@
 	- utter_do_something_else
 * show_bookings
 	- action_show_bookings
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * get_course_offering
 	- action_course_offering
-* get_location{"course":programming", "location":"Frankfurt"}
+* get_location{"course":"programming","location":"Frankfurt"}
 	- action_query_date
     - slot{"dates": "24/03/19, 02/04/19"}
     - slot{"title": "blabla"}
@@ -2385,7 +2401,7 @@
 * praise
 	- utter_thanks
 	
-## Zwischenfrage bei Seminarbuchung	get_dates not available at given location
+## Zwischenfrage bei Seminarbuchung	get_offering(date-period)
 * book_seminar
     - utter_ask_name
 * inform{"given-name": "David", "last-name": "Wagner"}
@@ -2402,8 +2418,10 @@
 	- utter_ask_course_book	
 * get_description{"course":"Excel"}
 	- action_provide_description
+	- utter_ask_course_book
 * get_occupancy{"location":"Stuttgart"}
 	- action_query_occupancy
+	- utter_ask_course_book
 * book_seminar{"date":"18th May"}
 	- seminar_form
     - form{"name": "seminar_form"}
@@ -2418,6 +2436,12 @@
 	- utter_do_something_else
 * show_bookings
 	- action_show_bookings
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * cancel_seminar{"course":"Python"}
 	- utter_are_you_sure
 * affirm
@@ -2426,6 +2450,97 @@
 	- slot{"location": null}		
 	- slot{"date": null}
 	
+## Zwischenfrage bei Seminarbuchung	get_offering(location)
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "David", "last-name": "Wagner"}
+    - slot{"given-name": "David"}
+    - slot{"last-name": "Wagner"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 1}
+    - action_course_offering
+    - utter_ask_course_book
+* get_course_offering{"location":"Munich"}
+	- action_display_seminar
+	- slot{"categories":"[x,y,z]"}
+	- utter_ask_course_book	
+* get_description{"course":"Excel"}
+	- action_provide_description
+	- utter_ask_course_book
+* get_prerequisites
+	- action_provide_prerequisites
+	- utter_ask_course_book
+* get_occupancy
+	- action_query_occupancy
+	- utter_ask_course_book
+* book_seminar{"date":"18th May"}
+	- seminar_form
+    - form{"name": "seminar_form"}
+    - form{"name": null}
+	- action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+	- slot{"date-period": null}
+	- utter_do_something_else
+* negative
+	- utter_bye
+	- action_restart	
+	
+## book seminar without course specified at other loc or date
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "Ron", "last-name": "Moore"}
+    - slot{"given-name": "Ron"}
+    - slot{"last-name": "Moore"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 4}
+    - action_course_offering
+    - utter_ask_course_book
+* inform{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* other_loc_date{"other_location":"True"}
+	- action_show_all_buttons
+* stop
+	- action_deactivate_form
+	- utter_do_something_else
+	
+## book seminar without course specified at other loc or date
+* book_seminar
+    - utter_ask_name
+* inform{"given-name": "Ron", "last-name": "Moore"}
+    - slot{"given-name": "Ron"}
+    - slot{"last-name": "Moore"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 4}
+    - action_course_offering
+    - utter_ask_course_book
+* inform{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_display_seminar
+	- slot{"seminar_id":"7"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* other_loc_date{"other_date":"True"}
+	- action_show_all_buttons
+* stop
+	- action_deactivate_form
+	- utter_do_something_else
 	
 	
 	

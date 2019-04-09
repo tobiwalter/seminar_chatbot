@@ -866,6 +866,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## unhappy_path stop - cancel_seminar
 * cancel_seminar{"course": "machine learning"}
@@ -896,6 +898,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 	
 ## smalltalk when booking seminars
 * book_seminar{"course": "leadership"}

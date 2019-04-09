@@ -10,6 +10,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## show_bookings_location_specified 
 * show_bookings{"location":"Frankfurt"}
@@ -23,6 +25,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## show_bookings_on_specific_date
 * show_bookings{"date":"5th of November"}
@@ -36,6 +40,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## showBookingsInPeriod_firstFail_thenSuccess
 * show_bookings{"date-period":"this year"}
@@ -51,6 +57,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## showBookings_then_getInformation
 * show_bookings{"location":"Berlin"}
@@ -64,6 +72,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * get_course_offering{"course":"Excel"}
 	- action_display_seminar
 	- slot{"seminar_id":"4"}
@@ -86,6 +96,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## story19
 * show_bookings
@@ -110,6 +122,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## show_the_next_booking
 * show_bookings{"display-option":"next"}
@@ -123,6 +137,8 @@
     - slot{"location": null}	
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 
 ## Generated Story 5145335876734410380
 * show_bookings{"location": "Berlin"}
@@ -139,6 +155,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## Generated Story -3630320044724628870
 * show_bookings{"location": "Cologne"}
@@ -155,6 +173,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## Generated Story 261112219490772306
 * show_bookings{"course-type": "seminars"}
@@ -200,6 +220,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## show_bookings in period
 * show_bookings{"date-period":"January"}
@@ -213,6 +235,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## Generated Story -5392053354662535431
 * show_bookings
@@ -228,6 +252,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * other_smalltalk
     - utter_no_chitchat
 	
@@ -247,6 +273,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * praise
 	- utter_thanks
 
@@ -262,6 +290,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 	
 ## show_bookings_bookingtype
 * show_bookings{"booking-type":"past"}
@@ -275,3 +305,5 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
