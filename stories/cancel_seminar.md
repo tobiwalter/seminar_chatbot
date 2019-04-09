@@ -12,6 +12,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * bye
 	- utter_bye
 	- action_restart
@@ -56,6 +57,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 
 ## Generated Story 6806321299963726368
 * cancel_seminar{"course": "leadership"}
@@ -72,6 +74,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 	- utter_suggest_help
 * negative
 	- utter_do_something_else	
@@ -91,6 +94,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 	- utter_suggest_help
 * affirm
 	- utter_get_help
@@ -110,6 +114,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * thank
     - utter_no_worries
 	
@@ -180,7 +185,12 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* inform{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -188,6 +198,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
 	- action_restart
@@ -201,7 +212,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* inform{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -209,6 +226,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * praise
 	- utter_thanks
 	
@@ -221,7 +239,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* inform{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -229,6 +253,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 	
 ## cancel seminar smalltalk intent
 * cancel_seminar{"course":"rhetoric"}
@@ -247,6 +272,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * bye
 	- utter_bye
 	- action_restart
@@ -268,7 +294,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* inform{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -276,6 +308,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
 
@@ -288,7 +321,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* cancel_seminar{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"} OR cancel_seminar{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -296,6 +335,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
 	
@@ -308,7 +348,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* cancel_seminar{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel", "date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"} OR cancel_seminar{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -316,6 +362,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 
 ## cancel seminar loc specified - succeed 
 * cancel_seminar{"location":"Berlin"}
@@ -326,7 +373,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* cancel_seminar{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"} OR cancel_seminar{"course":"Data Science"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -334,6 +387,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
 	
@@ -348,7 +402,13 @@
 	- slot{"employee_id":"310"}	
 	- utter_ask_course_cancel
 	- action_show_bookings
-* cancel_seminar{"course":"Data Science"}
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -356,6 +416,7 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 	
 ## Generated Story 9169648817034199185
 * cancel_seminar{"course": "Excel", "date-period": "next week"}
@@ -375,10 +436,54 @@
     - slot{"course": null}
     - slot{"location": null}
     - slot{"date": null}
+	- slot{"time": null}
     - followup{"name": "utter_suggest_help"}
     - utter_suggest_help
 * affirm
     - utter_get_help
+	
+## Cancel next seminar approve
+* cancel_seminar{"display-option":"next"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed":"True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+	- slot{"time": null}
+* thank+bye
+	- utter_thanks_bye
+
+## Cancel next seminar deny
+* cancel_seminar{"display-option":"next"}
+	- utter_ask_name
+* inform{"given-name":"Paul","last-name":"Moore"}
+	- action_verify_user
+	- slot{"user_verified":"True"}
+	- slot{"employee_id":"310"}	
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+	- utter_are_you_sure
+* negative
+	- utter_do_something_else
 
 
 

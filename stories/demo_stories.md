@@ -1,5 +1,5 @@
 ## Sam Brown
-* book_seminar{"course:"leadership"}
+* book_seminar{"course":"leadership"}	
 	- utter_ask_name
 * inform{"given-name":"John","last-name":"Doe"}
 	- action_verify_user
@@ -25,6 +25,8 @@
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * cancel_seminar{"course":"rhetoric"}
 	- utter_are_you_sure
 * affirm
@@ -33,12 +35,15 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
 * show_bookings
 	- action_show_bookings
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"date-period": null}
 	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * thank+bye
 	- utter_thanks_bye
 	
@@ -77,7 +82,9 @@
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
-* book_seminar{"course": "Machine Learning", "location": "Munich"}
+* get_course_offering
+	- action_course_offering
+* book_seminar{"course": "Machine Learning", "location":"Munich"}
 	- action_query_date
 	- slot{"location": "Stuttgart"}
 * affirm
@@ -87,6 +94,9 @@
 	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
+* get_occupancy{"date":"07/05/19"}
+	- action_query_occupancy
+	- seminar_form
 	- form{"name":null} 
 	- action_book_seminar
 	- slot{"booking_confirmed":"True"}
@@ -97,6 +107,12 @@
 	- slot{"date-period": null}
 * show_bookings
 	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
 * praise
 	- utter_thanks
 	
@@ -117,6 +133,9 @@
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"53"}
+	- action_query_date
+	- slot{"dates":"x,y,z"}
+	- slot{"title": "Python for beginners"}
 	- seminar_form
 	- form{"name":"seminar_form"}
 * other_smalltalk	
@@ -133,6 +152,14 @@
 * cancel_seminar
 	- utter_ask_course_cancel
 * inform{"course":"rhetoric"}
+	- action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course": "Excel", "date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -140,6 +167,11 @@
 	- slot{"course": null}		
 	- slot{"location": null}		
 	- slot{"date": null}
+	- slot{"time": null}
+* praise
+	- utter_thanks
+* thank+bye
+	- utter_thanks_bye
 	
 ## David Wagner 
 * book_seminar{"course":"Excel", "date-period": "spring"}
@@ -164,7 +196,7 @@
 	- seminar_form
 * other_loc_date{"other_date":"True"}
 	- action_show_all_buttons
-* stop
+* stop 
 	- utter_ask_continue
 * negative
 	- utter_do_something_else

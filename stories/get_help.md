@@ -17,24 +17,6 @@
 * get_help
 	- utter_get_help
 	
-## Generated Story 2028561068192250204
-* cancel_seminar{"course": "machine learning"}
-    - slot{"course": "machine learning"}
-	- utter_ask_name
-* inform{"given-name":"Paul","last-name":"Moore"}
-	- action_verify_user
-	- slot{"user_verified":"True"}
-	- slot{"employee_id":"310"}	
-    - utter_are_you_sure
-* affirm
-    - action_cancel_seminar
-    - slot{"cancellation_confirmed": "True"}
-	- slot{"course": null}		
-	- slot{"location": null}		
-	- slot{"date": null}
-* get_help
-	- utter_get_help
-	
 ## get_course_prerequesites
 * get_course_offering
 	- action_course_offering
