@@ -116,7 +116,7 @@
           {
             "start": 3,
             "end": 8,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -308,7 +308,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -842,7 +842,7 @@
           {
             "start": 0,
             "end": 5,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -1022,7 +1022,7 @@
           {
             "start": 0,
             "end": 5,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -1202,7 +1202,7 @@
           {
             "start": 0,
             "end": 5,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -1382,7 +1382,7 @@
           {
             "start": 0,
             "end": 5,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -1887,7 +1887,7 @@
           {
             "start": 5,
             "end": 10,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -2409,7 +2409,7 @@
           {
             "start": 32,
             "end": 37,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -3063,6 +3063,16 @@
       },
       {
         "text": "your birth date",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "i want to smalltalk",
+        "intent": "other_smalltalk",
+        "entities": []
+      },
+      {
+        "text": "I want to talk to you",
         "intent": "other_smalltalk",
         "entities": []
       },
@@ -10680,7 +10690,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10698,7 +10708,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10716,7 +10726,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10734,7 +10744,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10752,7 +10762,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10770,7 +10780,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10788,7 +10798,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10806,7 +10816,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10824,7 +10834,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -10842,7 +10852,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13680,7 +13690,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13698,7 +13708,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13716,7 +13726,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13734,7 +13744,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13752,7 +13762,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13770,7 +13780,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13788,7 +13798,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13806,7 +13816,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13824,7 +13834,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -13842,7 +13852,7 @@
           {
             "start": 35,
             "end": 40,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           },
           {
@@ -15098,7 +15108,7 @@
           {
             "start": 18,
             "end": 23,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -16047,6 +16057,30 @@
         ]
       },
       {
+        "text": "explain me more about the rhetoric content",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Rhetoric",
+            "entity": "course"
+          }
+        ]
+      },
+      {
+        "text": "explain me the python course",
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Programming",
+            "entity": "course"
+          }
+        ]
+      },
+      {
         "text": "Please tell me more about the seminar in Machine Learning",
         "intent": "get_description",
         "entities": [
@@ -16173,7 +16207,7 @@
           {
             "start": 41,
             "end": 46,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -16365,7 +16399,7 @@
           {
             "start": 27,
             "end": 32,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -30488,7 +30522,7 @@
           {
             "start": 10,
             "end": 15,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -30832,7 +30866,7 @@
           {
             "start": 23,
             "end": 28,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -31012,7 +31046,7 @@
           {
             "start": 28,
             "end": 33,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -31156,7 +31190,7 @@
           {
             "start": 23,
             "end": 28,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -31504,7 +31538,7 @@
           {
             "start": 17,
             "end": 22,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -31552,7 +31586,7 @@
           {
             "start": 21,
             "end": 26,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -31744,7 +31778,7 @@
           {
             "start": 21,
             "end": 26,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -32931,7 +32965,7 @@
           {
             "start": 32,
             "end": 37,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -33123,7 +33157,7 @@
           {
             "start": 30,
             "end": 35,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -33315,7 +33349,7 @@
           {
             "start": 34,
             "end": 39,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -36622,7 +36656,7 @@
           {
             "start": 28,
             "end": 33,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -37172,7 +37206,7 @@
           {
             "start": 30,
             "end": 35,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -37510,7 +37544,7 @@
           {
             "start": 25,
             "end": 30,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -37678,7 +37712,7 @@
           {
             "start": 21,
             "end": 26,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]
@@ -37854,7 +37888,7 @@
           {
             "start": 33,
             "end": 38,
-            "value": "excel",
+            "value": "Excel",
             "entity": "course"
           }
         ]

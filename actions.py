@@ -102,8 +102,8 @@ class ActionShowBookings(Action):
                   SlotSet("time",None), SlotSet('display-option',None),
                   SlotSet('booking-type',None) ]
 
-        dispatcher.utter_message("There are no recorded bookings for you.")
-        return []
+      dispatcher.utter_message("There are no recorded bookings for you.")
+      return []
 
     else:
       dispatcher.utter_message("You are not in our database. Please contact HR.")
@@ -1184,6 +1184,8 @@ class ActionDefaultAskAffirmation(Action):
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
       col_name = self.intent_mappings.columns[1]
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'button'})
+      col_name = self.intent_mappings.columns[2]
+      self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'entities'})
 
   def run(self, dispatcher, tracker, domain):
         # get the most likely intent
@@ -1192,11 +1194,8 @@ class ActionDefaultAskAffirmation(Action):
         if last_intent_name == None or last_intent_name == "None" or last_intent_name == "":
           res = "Oh! Its seems like I didn’t get that. Let’s try again or you can call at our Help desk +49621 66566."
           dispatcher.utter_message(res)
-          #print("HERE: ", res)
         else:
           intent_ranking = tracker.latest_message.get('intent_ranking', [])
-          #print("HERE: intent_ranking:", intent_ranking)
-          #print("HERE: latest_message:", tracker.latest_message)
 
         #display top 3 intents
           intent_ranking = intent_ranking[:3]
@@ -1213,7 +1212,6 @@ class ActionDefaultAskAffirmation(Action):
 
           buttons = []
           for intent in first_intent_names:
-            #print("HERE: buttons:", self.get_button_title(intent))
             buttons.append({'title': self.get_button_title(intent, entities),
                           'payload': '/{}{}'.format(intent, entities_json)})
 
