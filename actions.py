@@ -298,8 +298,8 @@ class ActionBookSeminar(Action):
         'seminar_id' : seminar_id,
         'seminar_title': seminar["title"]
         }})
-      res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n \
-      You will receive a confirmation via email.".format(course.capitalize(),city.capitalize(),userGivenDate)
+      res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n You will receive a confirmation via email.".format(
+      	course.capitalize(),city.capitalize(),userGivenDate)
       dispatcher.utter_message(res)
       
       #check for date clashes
@@ -433,8 +433,8 @@ class ActionCancelSeminar(Action):
                   except:
                     print('Seminar date is not in the database. No occupancy update!')
                 
-                  res = "Your seminar booking for {} on {} in {} has been cancelled. \n \
-                  You will receive a cancellation confirmation by mail.".format(course.capitalize(), seminar_date, city.capitalize())
+                  res = "Your seminar booking for {} on {} in {} has been cancelled.\nYou will receive a cancellation confirmation by mail.".format(
+                  	course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
                    SlotSet("location",None), SlotSet("date",None), SlotSet("time", None),
@@ -1291,8 +1291,7 @@ class ActionShowAllButtons(Action):
             if location_check(seminar, loc):
               buttons.append({'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'})
           if buttons:
-            dispatcher.utter_button_message("These are all available locations. Please select a button \
-              or type stop if none of these fits:", buttons)
+            dispatcher.utter_button_message("These are all available locations. Please select a buttons or type stop if none of these fits:", buttons)
 
         elif otherDate is not None:
           if city is not None:
@@ -1302,8 +1301,7 @@ class ActionShowAllButtons(Action):
                 if date_check(seminar,city,ele["date"]):
                   buttons.append({'title': ele["date"], 'payload': '/inform{"date": \"' + ele["date"] + '\"}'})
             if buttons:  
-              dispatcher.utter_button_message("These are all available dates. Please select a button \
-                or type stop if none of these fits:", buttons)
+              dispatcher.utter_button_message("These are all available dates. Please select a button or type stop if none of these fits:", buttons)
       else:
         dispatcher.utter_template("utter_ask_course_book", tracker)
     return [FollowupAction('action_listen'),SlotSet("other_date", None),SlotSet("other_location",None)]
