@@ -775,4 +775,99 @@
 * bye
     - utter_bye
 
+## Generated Story 2328160735027078200
+* welcome
+    - utter_welcome
+* get_course_offering{"course": "excel"}
+    - slot{"course": "excel"}
+    - action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Hamburg", "Stuttgart"]}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - slot{"seminar_id": 3}
+    - slot{"time": null}
+* get_description
+    - action_provide_description
+* book_seminar{"location": "Hamburg"}
+    - slot{"location": "Hamburg"}
+    - utter_ask_name
+* inform{"given-name": "Ron", "last-name": "Moore"}
+    - slot{"given-name": "Ron"}
+    - slot{"last-name": "Moore"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 4}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "30/05/19", "time": "2019-05-19T00:00:00.000+02:00"}
+    - slot{"date": "30/05/19"}
+    - slot{"time": "2019-05-19T00:00:00.000+02:00"}
+    - form: seminar_form
+    - slot{"date": "30/05/19"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": true}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"date-period": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - followup{"name": "action_listen"}
+* cancel_seminar
+    - utter_ask_course_cancel
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - slot{"display-option": null}
+    - slot{"booking-type": null}
+* inform{"course": "Excel", "location": "Erfurt", "date": "27/04/19"}
+    - slot{"course": "Excel"}
+    - slot{"date": "27/04/19"}
+    - slot{"location": "Erfurt"}
+    - utter_are_you_sure
+* affirm
+    - action_cancel_seminar
+    - slot{"cancellation_confirmed": true}
+    - slot{"course": null}
+    - slot{"location": null}
+    - slot{"date": null}
+    - slot{"time": null}
+    - followup{"name": "action_listen"}
+* show_bookings{"booking-type": "upcoming"}
+    - slot{"booking-type": "upcoming"}
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - slot{"display-option": null}
+    - slot{"booking-type": null}
+* cancel_seminar{"course": "excel", "location": "Stuttgart"}
+    - slot{"course": "excel"}
+    - slot{"location": "Stuttgart"}
+    - utter_are_you_sure
+* affirm
+    - action_cancel_seminar
+    - slot{"cancellation_confirmed": true}
+    - slot{"course": null}
+    - slot{"location": null}
+    - slot{"date": null}
+    - slot{"time": null}
+    - followup{"name": "action_listen"}
+* show_bookings{"display-option": "next", "course-type": "seminar "}
+    - slot{"display-option": "next"}
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - slot{"display-option": null}
+    - slot{"booking-type": null}
+* thank
+    - utter_no_worries
+
 
