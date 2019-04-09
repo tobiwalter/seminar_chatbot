@@ -870,4 +870,82 @@
 * thank
     - utter_no_worries
 
+## Generated Story 1248401337004023741
+* get_course_offering{"date-period": "May", "time": "2019-05-01T00:00:00.000+02:00"}
+    - slot{"date-period": "May"}
+    - slot{"time": "2019-05-01T00:00:00.000+02:00"}
+    - action_display_seminar
+    - slot{"categories": ["Rhetoric in Berlin, Cologne, Frankfurt, Munich, Stuttgart", "Data Science in Berlin, Erfurt, Frankfurt, Leipzig, Stuttgart", "Programming in Berlin, Frankfurt, Hamburg, Leipzig, Munich", "Excel in Berlin, Erfurt, Hamburg, Stuttgart", "Management in Bremen, Cologne, Frankfurt, Leipzig, Stuttgart"]}
+    - slot{"date-period": null}
+    - slot{"time": null}
+* book_seminar{"course": "leadership", "location": "Leipzig"}
+    - slot{"course": "leadership"}
+    - slot{"location": "Leipzig"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 10}
+    - action_query_date
+    - slot{"dates": "23/04/19, 03/05/19, 13/05/19, 23/05/19"}
+    - slot{"title": "Leadership Behaviour"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "23/04/19"}
+    - slot{"date": "23/04/19"}
+    - form: seminar_form
+    - slot{"date": "23/04/19"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": true}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"date-period": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - followup{"name": "action_listen"}
+* cancel_seminar
+    - utter_ask_course_cancel
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - slot{"display-option": null}
+    - slot{"booking-type": null}
+* inform{"course": "Leadership", "date": "26/04/19"}
+    - slot{"course": "Leadership"}
+    - slot{"date": "26/04/19"}
+    - utter_are_you_sure
+* affirm
+    - action_cancel_seminar
+    - slot{"cancellation_confirmed": true}
+    - slot{"course": null}
+    - slot{"location": null}
+    - slot{"date": null}
+    - slot{"time": null}
+    - followup{"name": "action_listen"}
+* show_bookings{"display-option": "next"}
+    - slot{"display-option": "next"}
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+    - slot{"display-option": null}
+    - slot{"booking-type": null}
+* get_prerequisites{"course": "excel"}
+    - slot{"course": "excel"}
+    - action_provide_prerequisites
+* other_smalltalk{"location": "Hamburg"}
+    - slot{"location": "Hamburg"}
+    - utter_no_chitchat
+* thank+bye
+    - utter_thanks_bye
+
 
