@@ -7,7 +7,7 @@ from rasa_core_sdk.events import SlotSet, FollowupAction, UserUtteranceReverted,
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import ActionExecutionRejection
-from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check
+from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check, nextLocation
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
