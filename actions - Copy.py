@@ -749,7 +749,7 @@ class ActionProvidePrerequisites(Action):
             dispatcher.utter_message("There are no prerequisites.")
             return []
       else:
-            dispatcher.utter_message("The prerequisites are {}.".format(" & ".join(prqs)))
+            dispatcher.utter_message("The prerequisites are {}.".format(", ".join(prqs)))
             return []
     else: 
         res = "We don't offer {} seminars.".format(course)
@@ -1169,81 +1169,77 @@ class ActionQueryOccupancy(Action):
         return []        
 
 class ActionDefaultAskAffirmation(Action):
+    """Asks for an affirmation of the intent if NLU threshold is not met."""
 
-  def name(self):
-      return "action_default_ask_affirmation"
+    def name(self) -> Text:
+        return "action_default_ask_affirmation"
 
-  def __init__(self) ->None:
-      import pandas as pd
+    def __init__(self) -> None:
+        import csv
 
-      self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';', encoding= 'utf-8')
-      self.intent_mappings.fillna("", inplace=True)
-      self.intent_mappings.entities = self.intent_mappings.entities.map(
-        lambda entities: {e.strip() for e in entities.split(',')})
+        self.intent_mappings = {}
+        with open('data/intent_description_mapping.csv',
+                  newline='',
+                  encoding='utf-8') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                self.intent_mappings[row[0]] = row[1]
 
-      col_name = self.intent_mappings.columns[0]
-      self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
-      col_name = self.intent_mappings.columns[1]
-      self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'button'})
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]
+            ) -> List['Event']:
 
-  def run(self, dispatcher, tracker, domain):
-        # get the most likely intent
-        last_intent_name = tracker.latest_message['intent']['name']
-        
-        if last_intent_name == None or last_intent_name == "None" or last_intent_name == "":
-          res = "Oh! Its seems like I didn’t get that. Let’s try again or you can call at our Help desk +49621 66566."
-          dispatcher.utter_message(res)
-          #print("HERE: ", res)
-        else:
-          intent_ranking = tracker.latest_message.get('intent_ranking', [])
-          #print("HERE: intent_ranking:", intent_ranking)
-          #print("HERE: latest_message:", tracker.latest_message)
+        intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = (intent_ranking[0].get("confidence") -
+                                      intent_ranking[1].get("confidence"))
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
+        first_intent_names = [intent.get('name', '')
+                              for intent in intent_ranking
+                              if intent.get('name', '') != 'out_of_scope']
 
-        #display top 3 intents
-          intent_ranking = intent_ranking[:3]
-          first_intent_names = [intent.get('name', '')
-                               for intent in intent_ranking
-                               if intent.get('name', '') != 'out_of_scope']    
-    
-          message = ("Sorry, I'm not sure I've understood you correctly. Do you mean ... ")
+        message_title = "Sorry, I'm not sure I've understood " \
+                        "you correctly 🤔 Do you mean..."
 
-          entities = tracker.latest_message.get("entities", [])
-          entities = {e["entity"]: e["value"] for e in entities}
+        mapped_intents = [(name, self.intent_mappings.get(name, name))
+                          for name in first_intent_names]
 
-          entities_json = json.dumps(entities)
+        entities = tracker.latest_message.get("entities", [])
+        entities_json, entities_text = get_formatted_entities(entities)
 
-          buttons = []
-          for intent in first_intent_names:
-            #print("HERE: buttons:", self.get_button_title(intent))
-            buttons.append({'title': self.get_button_title(intent, entities),
-                          'payload': '/{}{}'.format(intent, entities_json)})
+        buttons = []
+        for intent in mapped_intents:
+            buttons.append({'title': intent[1] + entities_text,
+                            'payload': '/{}{}'.format(intent[0],
+                                                      entities_json)})
 
-          buttons.append({'title': 'Something else',
+        buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
-          print(buttons)
-          
-          dispatcher.utter_button_message(message, buttons = buttons)
+
+        dispatcher.utter_button_message(message_title, buttons=buttons)
 
         return []
 
-  def get_button_title(self, intent: Text, entities: Dict[Text, Text]
-                         ) -> Text:
-      default_utterance_query = self.intent_mappings.intent == intent
-      utterance_query = (
-                      (self.intent_mappings.entities == entities.keys()) &
-                      default_utterance_query)
 
-      utterances = self.intent_mappings[utterance_query].button.tolist()
+def get_formatted_entities(entities: List[Dict[str, Any]]) -> (Text, Text):
+    key_value_entities = {}
+    for e in entities:
+        key_value_entities[e.get("entity")] = e.get("value")
+    entities_json = ""
+    entities_text = ""
+    if len(entities) > 0:
+        entities_json = json.dumps(key_value_entities)
+        entities_text = ["'{}': '{}'".format(k, key_value_entities[k])
+                         for k in key_value_entities]
+        entities_text = ", ".join(entities_text)
+        entities_text = " ({})".format(entities_text)
 
-      if len(utterances) > 0:
-          button_title = utterances[0]
-      else:
-          utterances = (
-              self.intent_mappings[default_utterance_query] 
-                  .button.tolist())
-          button_title = utterances[0] if len(utterances) > 0 else intent
-
-      return button_title.format(**entities)
+    return entities_json, entities_text
 
 
 class ActionDefaultFallback(Action):
