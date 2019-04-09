@@ -7,7 +7,7 @@ from rasa_core_sdk.events import SlotSet, FollowupAction, UserUtteranceReverted,
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import ActionExecutionRejection
-from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check, nextLocation
+from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -299,8 +299,7 @@ class ActionBookSeminar(Action):
         'seminar_title': seminar["title"]
         }})
       res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n You will receive a confirmation via email.".format(
-      	course.capitalize(),city.capitalize(),userGivenDate)
-      dispatcher.utter_message(res)
+        course.capitalize(),city.capitalize(),userGivenDate)
       
       #check for date clashes
       breaker1 = True
@@ -318,23 +317,23 @@ class ActionBookSeminar(Action):
                 breaker2 = False
 
           if breaker1 and breaker2:
-            return [SlotSet("booking_confirmed",True),SlotSet("date", None), SlotSet("time", None),
-                    SlotSet('date-period',None), SlotSet("location",None), SlotSet("course",None), 
-                    FollowupAction('action_listen')]
+            dispatcher.utter_message(res)
+
           # If date clash, ask if user wants to cancel one of the seminars  
           elif breaker2:
-            res = "You have another seminar on the same day: {}".format()
+            res += "\nYou have another seminar on the same day: {}".format()
             res += ',\t'.join(res1)
           else:
-            res = "You have already booked the seminar {}: ".format(course.capitalize())
+            res += "\nYou have already booked the seminar {}: ".format(course.capitalize())
             res += ',\t'.join(res2)
 
           buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
           dispatcher.utter_message(res)
           dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
-          return [SlotSet("booking_confirmed",True), SlotSet("date", None), SlotSet("time", None), 
-                  SlotSet('date-period',None), SlotSet("location",None),SlotSet("course",None),
-                  FollowupAction('action_listen')]
+
+      return [SlotSet("booking_confirmed",True),SlotSet("date", None), SlotSet("time", None),
+              SlotSet('date-period',None), SlotSet("location",None), SlotSet("course",None), 
+              FollowupAction('action_listen')]
 
 
 class ActionCancelSeminar(Action):
@@ -434,7 +433,7 @@ class ActionCancelSeminar(Action):
                     print('Seminar date is not in the database. No occupancy update!')
                 
                   res = "Your seminar booking for {} on {} in {} has been cancelled.\nYou will receive a cancellation confirmation by mail.".format(
-                  	course.capitalize(), seminar_date, city.capitalize())
+                    course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
                    SlotSet("location",None), SlotSet("date",None), SlotSet("time", None),
@@ -1122,7 +1121,7 @@ class ActionQueryOccupancy(Action):
         seminar_id = matchingSeminar(seminars,course)
         seminar = seminars[seminar_id]
       else: 
-        res = 'You need to specify a course for your request'
+        res = 'You need to specify a course for your request.'
         dispatcher.utter_message(res)
         return []
 
@@ -1151,7 +1150,7 @@ class ActionQueryOccupancy(Action):
                 for ele in seminar["locations"][loc]]
               # occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
           availableLocs = {k : sum(v) for (k,v) in occ_at_dates.items() if sum(v) > 0}
-          res = "There are free slots left for {} in {}".format(course,', '.join(k for k in availableLocs))
+          res = "There are free slots left for {} in {}.".format(course,', '.join(k for k in availableLocs))
 
           # seminar locations:\n\n".format(course)
           # res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in occ_at_dates.items()])
