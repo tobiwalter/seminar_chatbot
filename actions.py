@@ -7,7 +7,7 @@ from rasa_core_sdk.events import SlotSet, FollowupAction, UserUtteranceReverted,
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk import ActionExecutionRejection
-from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check
+from helpers import matchingSeminar, dateComparison, period_check,date_check, location_check, nextLocation
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -102,8 +102,8 @@ class ActionShowBookings(Action):
                   SlotSet("time",None), SlotSet('display-option',None),
                   SlotSet('booking-type',None) ]
 
-        dispatcher.utter_message("There are no recorded bookings for you.")
-        return []
+      dispatcher.utter_message("There are no recorded bookings for you.")
+      return []
 
     else:
       dispatcher.utter_message("You are not in our database. Please contact HR.")
@@ -316,20 +316,25 @@ class ActionBookSeminar(Action):
                 res2.append("in {} on {}".format(ele["location"],ele["date"]))
                 breaker2 = False
 
-          if breaker1 and breaker2:
-            dispatcher.utter_message(res)
-
           # If date clash, ask if user wants to cancel one of the seminars  
-          elif breaker2:
-            res += "\nYou have another seminar on the same day: {}".format()
-            res += ',\t'.join(res1)
-          else:
+          if not breaker2:
             res += "\nYou have already booked the seminar {}: ".format(course.capitalize())
             res += ',\t'.join(res2)
 
-          buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            dispatcher.utter_message(res)
+            dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
+          elif not breaker1:
+            res += "\nYou have another seminar on the same day: {}".format()
+            res += ',\t'.join(res1)
+
+            buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
+            dispatcher.utter_message(res)
+            dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
+          else:
+            dispatcher.utter_message(res)
+      else:
           dispatcher.utter_message(res)
-          dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
 
       return [SlotSet("booking_confirmed",True),SlotSet("date", None), SlotSet("time", None),
               SlotSet('date-period',None), SlotSet("location",None), SlotSet("course",None), 
@@ -579,7 +584,7 @@ class ActionDisplaySeminar(Action):
         res = "We offer seminars in the following categories in {} :\n{}".format(
                                   city.capitalize(), ', '.join(available_seminars))
         dispatcher.utter_message(res)
-        return [SlotSet('categories', available_seminars)]
+        return [SlotSet('categories', available_seminars),SlotSet('date-period', None), SlotSet('time', None)]
       else: 
         dispatcher.utter_message("There are no seminars offered in {}".format(city))
         return [SlotSet('location', None), FollowupAction('utter_do_something_else')]
@@ -644,7 +649,7 @@ class ActionDisplaySeminar(Action):
         res = "We offer the following seminars in the specified period:\n{}".format(
           '\n'.join(available_seminars))
         dispatcher.utter_message(res)
-        return [SlotSet('categories', available_seminars)]
+        return [SlotSet('categories', available_seminars),SlotSet('date-period', None), SlotSet('time', None)]
       else: 
         dispatcher.utter_message("There are no seminars offered in the given period.")
         return[SlotSet('date-period', None), SlotSet('time', None), FollowupAction('utter_do_something_else')]
@@ -1185,6 +1190,8 @@ class ActionDefaultAskAffirmation(Action):
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
       col_name = self.intent_mappings.columns[1]
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'button'})
+      col_name = self.intent_mappings.columns[2]
+      self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'entities'})
 
   def run(self, dispatcher, tracker, domain):
         # get the most likely intent
@@ -1193,11 +1200,8 @@ class ActionDefaultAskAffirmation(Action):
         if last_intent_name == None or last_intent_name == "None" or last_intent_name == "":
           res = "Oh! Its seems like I didn’t get that. Let’s try again or you can call at our Help desk +49621 66566."
           dispatcher.utter_message(res)
-          #print("HERE: ", res)
         else:
           intent_ranking = tracker.latest_message.get('intent_ranking', [])
-          #print("HERE: intent_ranking:", intent_ranking)
-          #print("HERE: latest_message:", tracker.latest_message)
 
         #display top 3 intents
           intent_ranking = intent_ranking[:3]
@@ -1214,7 +1218,6 @@ class ActionDefaultAskAffirmation(Action):
 
           buttons = []
           for intent in first_intent_names:
-            #print("HERE: buttons:", self.get_button_title(intent))
             buttons.append({'title': self.get_button_title(intent, entities),
                           'payload': '/{}{}'.format(intent, entities_json)})
 
