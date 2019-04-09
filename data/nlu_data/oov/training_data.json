@@ -17042,7 +17042,7 @@
           {
             "start": 20,
             "end": 28,
-            "value": "past",
+            "value": "attended",
             "entity": "booking-type"
           },
           {
@@ -32450,7 +32450,7 @@
           {
             "start": 11,
             "end": 20,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -32534,7 +32534,7 @@
           {
             "start": 12,
             "end": 21,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -32633,7 +32633,7 @@
           {
             "start": 17,
             "end": 26,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -34002,9 +34002,9 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 23,
-            "end": 35,
-            "value": " 3rd of April",
+            "start": 24,
+            "end": 36,
+            "value": "3rd of April",
             "entity": "date"
           }
         ]
@@ -35094,6 +35094,12 @@
         "text": "I wish to take Machine learning this November",
         "intent": "book_seminar",
         "entities": [
+          {
+            "start": 15,
+            "end": 31,
+            "value": "Machine learning",
+            "entity": "course"
+          },
           {
             "start": 37,
             "end": 45,
@@ -39335,8 +39341,12 @@
             "entity": "date-period"
           }
         ]
-      },
-      {
+      },{
+
+        "text": "cheers bro",
+        "intent": "thank",
+        "entities": []
+      },{
         "text": "List my bookings in January",
         "intent": "show_bookings",
         "entities": [
@@ -39875,9 +39885,69 @@
         ]
       },
       {
+        "value": "Munich",
+        "synonyms": [
+          "munich",
+          "muinch",
+          "München",
+          "Muinch"
+        ]
+      },{
+        "value": "Leipzig",
+        "synonyms": [
+          "leipzig"
+        ]
+      },{
+        "value": "Hamburg",
+        "synonyms": [
+          "hamburg"
+        ]
+      },{
+        "value": "Berlin",
+        "synonyms": [
+          "berlin"
+        ]
+      },{
+        "value": "Frankfurt",
+        "synonyms": [
+          "frankfurt"
+        ]
+      },{
+        "value": "Erfurt",
+        "synonyms": [
+          "erfurt"
+        ]
+      },{
+        "value": "Cologne",
+        "synonyms": [
+          "Colonge",
+          "cologne",
+          "Köln"
+        ]
+      },{
+        "value": "Stuttgart",
+        "synonyms": [
+          "stuttgart",
+          "stuggi"
+        ]
+      },{
+        "value": "Bremen",
+        "synonyms": [
+          "bremen"
+        ]
+      },{
+        "value": "Hamburg",
+        "synonyms": [
+          "hamburg"
+        ]
+      },
+      {
         "value": "past",
         "synonyms": [
-          "previous"
+          "previous",
+          "completed",
+          "attended",
+          "complete"
         ]
       },
       {
@@ -39903,12 +39973,14 @@
           "ML",
           "Data Science",
           "Mahcine Learning",
+          "mchine learning",
           "machine learning",
           "Artificial Intelligence",
           "AI",
           "Big Data",
           "Data Mining",
-          "Statistics"
+          "Statistics",
+          "Machine learning"
         ]
       },
       {
@@ -39928,7 +40000,9 @@
         "value": "deep learning",
         "synonyms": [
           "neural networks",
-          "deep networks"
+          "deep networks",
+          "RNN",
+          "rnn"
         ]
       },
       {
@@ -39941,7 +40015,7 @@
         "value": "rhetoric",
         "synonyms": [
           "Communication",
-          "rheotric",
+          "Rheotric",
           "Persuasion",
           "Influence"
         ]

@@ -1,5 +1,8 @@
+%YAML 1.1
+---
 actions:
 - action_restart
+- action_reset_slots
 - action_book_seminar
 - action_cancel_seminar
 - action_course_offering
@@ -8,6 +11,7 @@ actions:
 - action_default_fallback
 - action_display_seminar
 - action_location_buttons
+- action_provide_datesWithLocation
 - action_provide_description
 - action_provide_prerequisites
 - action_query_date
@@ -44,7 +48,6 @@ actions:
 - utter_wrong_location
 - utter_ask_rephrase
 - utter_whatspossible
-
 config:
   store_entities_as_slots: true
 entities:
@@ -141,7 +144,11 @@ slots:
   cancellation_confirmed:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.BooleanSlot 
+    type: rasa_core.slots.BooleanSlot
+  categories:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   course:
     auto_fill: true
     initial_value: null
@@ -155,10 +162,6 @@ slots:
     initial_value: null
     type: rasa_core.slots.TextSlot
   dates:
-    auto_fill: true
-    initial_value: null
-    type: rasa_core.slots.ListSlot
-  categories:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.ListSlot
@@ -234,10 +237,10 @@ templates:
       title: 'no'
     text: Do you want to continue?
   utter_ask_course_book:
-  - text: Which seminar do you want to take?
+  - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
   utter_ask_course_cancel:
-  - text: Please specify which one you want to cancel (course, date, location).
+  - text: In which category?
   utter_ask_date:
   - text: On which date do you want to take the {course} seminar in {location}?
   - text: When do you want to take the {course} seminar in {location}?
@@ -246,9 +249,11 @@ templates:
   - text: In which city do you want to take the {course} seminar?
   - text: Please select the city where you want to take the {course} seminar.
   utter_ask_name:
-  - text: Please give me your first and last name.
-  - text: Please provide your first and last name.
-  - text: Please tell me your first and last name.
+  - text: Please give me your first and last name
+  - text: Please provide your first and last name
+  - text: Please tell me your first and last name
+  utter_ask_rephrase:
+  - text: Could you rephrase your message please?
   utter_book_somewhere_else:
   - text: Do you want to book the seminar somewhere else? If yes, please specify the
       location.
@@ -263,7 +268,9 @@ templates:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_do_something_else:
-  - text: Can I do something else for you?
+  - text: Can I do something else for you? Remember I can help you to book seminars,
+      show seminar bookings, cancel seminars and get information about the seminar
+      offering.
   utter_get_help:
   - buttons:
     - payload: /restart
@@ -306,33 +313,17 @@ templates:
   - text: My pleasure, goodbye!
   - text: You're welcome, until next time!
   utter_try_again:
-  - text: This name is not in our database. Please specify your full name again.
+  - text: This name is not in our database. Please specify your name again.
   utter_welcome:
-  - text: |
-          Hello! I can do the following tasks for you: 
-          - book a seminar
-          - show your seminar bookings
-          - cancel a seminar
-          - get information about the seminar offering
-  - text: |
-          Hi, I am Sam, your seminar chatbot. I can 
-          - book seminars
-          - show your seminar bookings
-          - cancel seminars
-          - show information about the seminar offering
-  utter_wrong_date:
-  - text: 'The date you entered could not be verified. Please enter the date in the following format: 
-            dd/mm/yy'
-  utter_wrong_location:
-  - text: The seminar {course} is not offered in {location}. Please choose another.
-  utter_ask_rephrase:
-  - text: Could you rephrase your message please?
+  - text: 'Hello! I can do the following tasks for you: Book a seminar, show your
+      seminar bookings, cancel a seminar or get information about the seminar offering.'
+  - text: Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar
+      bookings, cancel seminars or show information about the seminar offering.
   utter_whatspossible:
-  - text: |
-          I can do the following tasks for you:
-          - book a seminar
-          - show your seminar bookings
-          - cancel a seminar
-          - get information about the seminar offering
-  
-  
+  - text: 'I can do the following tasks for you: Book a seminar, show your seminar
+      bookings, cancel a seminar or get information about the seminar offering.'
+  utter_wrong_date:
+  - text: 'The date you entered could not be verified. Please enter the date in the
+      following format: dd/mm/yy'
+  utter_wrong_location:
+  - text: The location you specified is not in our database. Please try again.
