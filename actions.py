@@ -99,7 +99,8 @@ class ActionShowBookings(Action):
 
           dispatcher.utter_message(res)
           return [SlotSet("date", None),SlotSet("location",None), SlotSet("date-period",None), 
-                  SlotSet("time",None)]
+                  SlotSet("time",None), SlotSet('display-option',None),
+                  SlotSet('booking-type',None) ]
 
         dispatcher.utter_message("There are no recorded bookings for you.")
         return []
@@ -258,8 +259,7 @@ class ActionBookSeminar(Action):
               break
 
       if not dateMatch:
-        dispatcher.utter_message("The seminar {} is not offered on {}".format(seminar["title"],
-        dateparser.parse(time).date()))
+        dispatcher.utter_message("The seminar {} is not offered on the specified date".format(seminar["title"]))
         return [SlotSet("booking_confirmed", False),SlotSet("date", None), SlotSet("time", None),
         FollowupAction('utter_do_something_else')]
 
@@ -351,7 +351,8 @@ class ActionCancelSeminar(Action):
         if seminar_id == None:
           dispatcher.utter_message("There is no seminar matching your request.")
           return [SlotSet("cancellation_confirmed",False), SlotSet("course",None),
-           SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
+           SlotSet("location",None), SlotSet("date",None), SlotSet("time", None),
+            FollowupAction('utter_suggest_help')]
 
         #search for corresponding booking
         if not bookings:
@@ -422,12 +423,13 @@ class ActionCancelSeminar(Action):
                   You will receive a cancellation confirmation by mail.".format(course.capitalize(), seminar_date, city.capitalize())
                   dispatcher.utter_message(res)
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
-                   SlotSet("location",None), SlotSet("date",None), FollowupAction('action_listen')]
+                   SlotSet("location",None), SlotSet("date",None), SlotSet("time", None),
+                   FollowupAction('action_listen')]
 
         # bot message if cancellation was not successful      
         dispatcher.utter_message("There are no bookings according to your request or the requested booking \
                                     is already past and cannot be cancelled anymore.")
-        return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None),
+        return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None), SlotSet("time", None),
                  SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
     # no employee ID --> User Verification was not successful
@@ -1178,7 +1180,7 @@ class ActionDefaultAskAffirmation(Action):
       self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';')
       self.intent_mappings.fillna("", inplace=True)
       self.intent_mappings.entities = self.intent_mappings.entities.map(
-        lambda entities: {e.strip() for e in entities.split(';')})
+        lambda entities: {e.strip() for e in entities.split(',')})
 
       col_name = self.intent_mappings.columns[0]
       self.intent_mappings = self.intent_mappings.rename(columns = {col_name:'intent'})
@@ -1295,7 +1297,8 @@ class ActionShowAllButtons(Action):
             if location_check(seminar, loc):
               buttons.append({'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'})
           if buttons:
-            dispatcher.utter_button_message("These are all available locations. Please select a button:", buttons)
+            dispatcher.utter_button_message("These are all available locations. Please select a button \
+              or type stop if none of these fits:", buttons)
 
         elif otherDate is not None:
           if city is not None:
@@ -1305,7 +1308,8 @@ class ActionShowAllButtons(Action):
                 if date_check(seminar,city,ele["date"]):
                   buttons.append({'title': ele["date"], 'payload': '/inform{"date": \"' + ele["date"] + '\"}'})
             if buttons:  
-              dispatcher.utter_button_message("These are all available dates. Please select a button:", buttons)
+              dispatcher.utter_button_message("These are all available dates. Please select a button \
+                or type stop if none of these fits:", buttons)
       else:
         dispatcher.utter_template("utter_ask_course_book", tracker)
     return [FollowupAction('action_listen'),SlotSet("other_date", None),SlotSet("other_location",None)]

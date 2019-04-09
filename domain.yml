@@ -1,6 +1,5 @@
 actions:
 - action_restart
-- action_reset_slots
 - action_book_seminar
 - action_cancel_seminar
 - action_course_offering
@@ -9,7 +8,6 @@ actions:
 - action_default_fallback
 - action_display_seminar
 - action_location_buttons
-- action_provide_datesWithLocation
 - action_provide_description
 - action_provide_prerequisites
 - action_query_date
@@ -236,7 +234,7 @@ templates:
       title: 'no'
     text: Do you want to continue?
   utter_ask_course_book:
-  - text: In which category do you want to take a seminar?
+  - text: Which seminar do you want to take?
   - text: Which seminar would you like to book?
   utter_ask_course_cancel:
   - text: In which category?
@@ -248,9 +246,9 @@ templates:
   - text: In which city do you want to take the {course} seminar?
   - text: Please select the city where you want to take the {course} seminar.
   utter_ask_name:
-  - text: Please give me your first and last name
-  - text: Please provide your first and last name
-  - text: Please tell me your first and last name
+  - text: Please give me your first and last name.
+  - text: Please provide your first and last name.
+  - text: Please tell me your first and last name.
   utter_book_somewhere_else:
   - text: Do you want to book the seminar somewhere else? If yes, please specify the
       location.
@@ -265,9 +263,7 @@ templates:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_do_something_else:
-  - text: Can I do something else for you? Remember I can help you to book seminars,
-      show seminar bookings, cancel seminars and get information about the seminar
-      offering.
+  - text: Can I do something else for you?
   utter_get_help:
   - buttons:
     - payload: /restart
@@ -310,15 +306,15 @@ templates:
   - text: My pleasure, goodbye!
   - text: You're welcome, until next time!
   utter_try_again:
-  - text: This name is not in our database. Please specify your name again.
+  - text: This name is not in our database. Please specify your full name again.
   utter_welcome:
   - text: 'Hello! I can do the following tasks for you: Book a seminar, show your
       seminar bookings, cancel a seminar or get information about the seminar offering.'
   - text: Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar
       bookings, cancel seminars or show information about the seminar offering.
   utter_wrong_date:
-  - text: 'The date you entered could not be verified. Please enter the date in the
-      following format: dd/mm/yy'
+  - text: 'The date you entered could not be verified. Please enter the date in the following format: 
+            dd/mm/yy'
   utter_wrong_location:
   - text: The location you specified is not in our database. Please try again.
   utter_ask_rephrase:
