@@ -240,7 +240,7 @@ templates:
   - text: In which category do you want to take a seminar?
   - text: Which seminar would you like to book?
   utter_ask_course_cancel:
-  - text: In which category?
+  - text: Please specify which one you want to cancel (course, date, location).
   utter_ask_date:
   - text: On which date do you want to take the {course} seminar?
   - text: When do you want to take the {course} seminar?
@@ -266,9 +266,7 @@ templates:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_do_something_else:
-  - text: Can I do something else for you? Remember I can help you to book seminars,
-      show seminar bookings, cancel seminars and get information about the seminar
-      offering.
+  - text: Can I do something else for you?
   utter_get_help:
   - buttons:
     - payload: Call helpdesk
@@ -316,19 +314,31 @@ templates:
   utter_try_again:
   - text: This name is not in our database. Please specify your name again.
   utter_welcome:
-  - text: 'Hello! I can do the following tasks for you: Book a seminar, show your
-      seminar bookings, cancel a seminar or get information about the seminar offering.'
-  - text: Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar
-      bookings, cancel seminars or show information about the seminar offering.
+  - text: |
+          Hello! I can do the following tasks for you: 
+          - book a seminar
+          - show your seminar bookings
+          - cancel a seminar
+          - get information about the seminar offering
+  - text: |
+          Hi, I am Sam, your seminar chatbot. I can 
+          - book seminars
+          - show your seminar bookings
+          - cancel seminars
+          - show information about the seminar offering
   utter_wrong_date:
   - text: 'The date you entered could not be verified. Please enter the date in the
-      following format: dd//mm//yy'
+      following format: dd/mm/yy'
   utter_wrong_location:
-  - text: The location you specified is not in our database. Please try again.
+  - text: The seminar {course} is not offered in {location}. Please choose another.
   utter_ask_rephrase:
   - text: Could you rephrase your message please?
   utter_whatspossible:
-  - text: "I can do the following tasks for you: Book a seminar, show your
-      seminar bookings, cancel a seminar or get information about the seminar offering."
+  - text: |
+          I can do the following tasks for you:
+          - book a seminar
+          - show your seminar bookings
+          - cancel a seminar
+          - get information about the seminar offering
   
   

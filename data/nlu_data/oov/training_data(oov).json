@@ -14552,7 +14552,7 @@
           {
             "start": 20,
             "end": 28,
-            "value": "past",
+            "value": "attended",
             "entity": "booking-type"
           },
           {
@@ -29925,7 +29925,7 @@
           {
             "start": 11,
             "end": 20,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -30009,7 +30009,7 @@
           {
             "start": 12,
             "end": 21,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -30093,7 +30093,7 @@
           {
             "start": 17,
             "end": 26,
-            "value": "past",
+            "value": "completed",
             "entity": "booking-type"
           }
         ]
@@ -31447,9 +31447,9 @@
         "intent": "book_seminar",
         "entities": [
           {
-            "start": 22,
-            "end": 34,
-            "value": " 3rd of April",
+            "start": 24,
+            "end": 36,
+            "value": "3rd of April",
             "entity": "date"
           }
         ]
@@ -32539,6 +32539,12 @@
         "text": "I wish to take Machine learning this November",
         "intent": "book_seminar",
         "entities": [
+          {
+            "start": 15,
+            "end": 31,
+            "value": "Machine learning",
+            "entity": "course"
+          },
           {
             "start": 37,
             "end": 45,
@@ -35808,18 +35814,6 @@
         ]
       },
       {
-        "text": "I want to attend leadership in on which days is that possible?",
-        "intent": "book_seminar+get_dates",
-        "entities": [
-          {
-            "start": 17,
-            "end": 28,
-            "value": "leadership ",
-            "entity": "course"
-          }
-        ]
-      },
-      {
         "text": "cheers bro",
         "intent": "thank",
         "entities": []
@@ -35899,8 +35893,8 @@
         "entities": [
           {
             "start": 13,
-            "end": 21,
-            "value": "seminar ",
+            "end": 20,
+            "value": "seminar",
             "entity": "course-type"
           },
           {
@@ -36122,8 +36116,8 @@
         "entities": [
           {
             "start": 23,
-            "end": 31,
-            "value": "seminar ",
+            "end": 30,
+            "value": "seminar",
             "entity": "course-type"
           }
         ]
@@ -36285,9 +36279,69 @@
         ]
       },
       {
+        "value": "Munich",
+        "synonyms": [
+          "munich",
+          "muinch",
+          "München",
+          "Muinch"
+        ]
+      },{
+        "value": "Leipzig",
+        "synonyms": [
+          "leipzig"
+        ]
+      },{
+        "value": "Hamburg",
+        "synonyms": [
+          "hamburg"
+        ]
+      },{
+        "value": "Berlin",
+        "synonyms": [
+          "berlin"
+        ]
+      },{
+        "value": "Frankfurt",
+        "synonyms": [
+          "frankfurt"
+        ]
+      },{
+        "value": "Erfurt",
+        "synonyms": [
+          "erfurt"
+        ]
+      },{
+        "value": "Cologne",
+        "synonyms": [
+          "Colonge",
+          "cologne",
+          "Köln"
+        ]
+      },{
+        "value": "Stuttgart",
+        "synonyms": [
+          "stuttgart",
+          "stuggi"
+        ]
+      },{
+        "value": "Bremen",
+        "synonyms": [
+          "bremen"
+        ]
+      },{
+        "value": "Hamburg",
+        "synonyms": [
+          "hamburg"
+        ]
+      },
+      {
         "value": "past",
         "synonyms": [
-          "previous"
+          "previous",
+          "completed",
+          "attended",
+          "complete"
         ]
       },
       {
@@ -36313,11 +36367,13 @@
           "ML",
           "Data Science",
           "Mahcine Learning",
+          "mchine learning",
           "Artificial Intelligence",
           "AI",
           "Big Data",
           "Data Mining",
-          "Statistics"
+          "Statistics",
+          "Machine learning"
         ]
       },
       {
@@ -36337,7 +36393,9 @@
         "value": "deep learning",
         "synonyms": [
           "neural networks",
-          "deep networks"
+          "deep networks",
+          "RNN",
+          "rnn"
         ]
       },
       {
@@ -36350,7 +36408,7 @@
         "value": "rhetoric",
         "synonyms": [
           "Communication",
-          "rheotric",
+          "Rheotric",
           "Persuasion",
           "Influence"
         ]
@@ -36373,12 +36431,6 @@
         "value": "booked",
         "synonyms": [
           "book"
-        ]
-      },
-      {
-        "value": "completed",
-        "synonyms": [
-          "complete"
         ]
       },
       {

@@ -1,4 +1,4 @@
-## Ron Moore
+## Sam Brown
 * book_seminar{"course:"leadership"}
 	- utter_ask_name
 * inform{"given-name":"John","last-name":"Doe"}
@@ -171,24 +171,99 @@
 * bad 
 	- utter_i''m sorry
 	
-
-	
-	
-
-
-	
-	
-
-
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
+## Generated Story -317345961313127700
+* welcome
+    - utter_welcome
+* get_course_offering
+    - action_course_offering
+* get_course_offering{"course": "programming"}
+    - slot{"course": "programming"}
+    - action_display_seminar
+    - slot{"locations": ["Berlin", "Frankfurt", "Hamburg", "Leipzig", "Munich"]}
+    - slot{"title": "Python for Beginners"}
+    - slot{"seminar_id": 2}
+    - slot{"time": null}
+* get_description
+    - action_provide_description
+* get_duration
+    - action_query_duration
+* get_occupancy
+    - action_query_occupancy
+* book_seminar{"location": "munich"}
+    - slot{"location": "munich"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"location": "munich"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "15/05/19"}
+    - slot{"date": "15/05/19"}
+    - form: seminar_form
+    - slot{"date": "15/05/19"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - followup{"name": "action_listen"}
+* inform{"given-name": "Jane", "last-name": "Love"}
+    - slot{"given-name": "Jane"}
+    - slot{"last-name": "Love"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 5}
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else
+* get_course_offering{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - action_display_seminar
+    - slot{"locations": ["Berlin", "Erfurt", "Frankfurt", "Leipzig", "Stuttgart"]}
+    - slot{"title": "Machine Learning"}
+    - slot{"seminar_id": 1}
+    - slot{"time": null}
+* book_seminar{"location": "Munich"}
+    - slot{"location": "Munich"}
+    - seminar_form
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"location": "Stuttgart"}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+* affirm
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "17/04/19"}
+    - slot{"date": "17/04/19"}
+    - form: seminar_form
+    - slot{"date": "17/04/19"}
+    - form: followup{"name": "action_book_seminar"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": false}
+    - slot{"date": null}
+    - slot{"time": null}
+    - slot{"location": null}
+    - slot{"course": null}
+    - slot{"date-period": null}
+    - followup{"name": "utter_do_something_else"}
+    - utter_do_something_else
+* show_bookings{"display-option": "all"}
+    - slot{"display-option": "all"}
+    - action_show_bookings
+    - slot{"date": null}
+    - slot{"location": null}
+    - slot{"date-period": null}
+    - slot{"time": null}
+* praise
+    - utter_thanks
+* bye
+    - utter_bye
