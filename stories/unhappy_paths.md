@@ -1,9 +1,9 @@
-## unhappy_path_seminar_form_1
+## unhappy_path_seminar_form_1 
 * book_seminar{"course": "programming"}
     - slot{"course": "programming"}
-    - utter_ask_name
+    - utter_ask_name  
 * inform{"given-name": "Hugo", "last-name": "Garcia"}
-    - slot{"given-name": "Hugo"}
+    - slot{"given-name": "Hugo"}   
     - slot{"last-name": "Garcia"}
     - action_verify_user
     - slot{"user_verified": "True"}
@@ -194,6 +194,7 @@
 	- slot{"date-period": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## unhappy_path_seminar_form_4
 * book_seminar{"course": "programming"}
@@ -1420,6 +1421,46 @@
 	- slot{"course": null}	
 	- slot{"date-period": null}
 	
+## whatinformation
+* book_seminar{"course": "Machine Learning"}
+    - slot{"course": "Machine Learning"}
+    - utter_ask_name
+* inform{"given-name": "Max", "last-name": "Smith"}
+    - slot{"given-name": "Max"}
+    - slot{"last-name": "Smith"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 2}
+    - action_display_seminar
+	- slot{"seminar_id":"4"}
+    - slot{"locations": "Berlin, Frankfurt, Munich"}
+    - slot{"title": "Machine Learning"}
+    - slot{"seminar_id": 1}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "location"}
+* form: inform{"location": "Frankfurt"}
+    - slot{"location": "Frankfurt"}
+    - seminar_form
+    - slot{"location": "Frankfurt"}
+    - slot{"requested_slot": "date"}
+* what_information
+	- utter_what_information
+    - seminar_form
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "24/03/19"}
+    - slot{"date": "24/03/19"}
+    - seminar_form
+    - slot{"date": "24/03/19"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "False"}
+    - slot{"date": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course": null}	
+	- slot{"date-period": null}
 ## get_help
 * book_seminar{"course": "Machine Learning"}
     - slot{"course": "Machine Learning"}

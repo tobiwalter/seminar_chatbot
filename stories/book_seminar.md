@@ -1,4 +1,4 @@
-## book_seminar_specifying_course       
+## book_seminar_specifying_course         
 * book_seminar{"course":"programming"}
 	- utter_ask_name
 * inform{"given-name":"John","last-name":"Doe"}
@@ -447,6 +447,10 @@
 	- slot{"date-period": null}
 	
 ## Generated Story 2746093808326620672
+* ask_whatspossible
+	- utter_whatspossible
+* what_information
+	- utter_what_information
 * book_seminar
     - utter_ask_name
 * inform{"given-name": "Ron", "last-name": "Moore"}
@@ -2081,6 +2085,7 @@
 	- slot{"date-period": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## book seminar what's possible
 * ask_whatspossible
@@ -2337,6 +2342,7 @@
 	- slot{"date-period": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 
 ## Zwischenfrage bei Seminarbuchung	get_location not available at given location
 * book_seminar
@@ -2541,6 +2547,58 @@
 * stop
 	- action_deactivate_form
 	- utter_do_something_else
+	
+## book seminar date clash - cancel seminar yes
+* book_seminar{"location": "Frankfurt"}
+    - utter_ask_name
+* inform{"given-name": "Teresa", "last-name": "Williams"}
+    - slot{"given-name": "Teresa"}
+    - slot{"last-name": "Williams"}
+    - action_verify_user
+    - slot{"user_verified": "True"}
+    - slot{"employee_id": 10}
+	- action_display_seminar
+	- slot{"categories":"[x,y,z]"}
+	- utter_ask_course_book
+* inform{"course": "Python"}
+	- action_query_date
+	- slot{"dates": "07/03/19, 21/03/19"}
+    - slot{"title": "Python for beginners"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+    - slot{"requested_slot": "date"}
+* form: inform{"date": "March 21", "time": "2019-03-21T00:00:00.000-07:00"}
+    - slot{"date": "March 21"}
+    - slot{"time": "2019-03-21T00:00:00.000-07:00"}
+    - form: seminar_form
+    - slot{"date": "March 21"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_book_seminar
+    - slot{"booking_confirmed": "True"}
+    - slot{"course": null}
+	- slot{"time": null}
+    - slot{"location": null}
+	- slot{"course" : null}
+	- slot{"date-period": null}
+* cancel_seminar
+	- utter_ask_course_cancel
+	- action_show_bookings
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}	
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* inform{"course": "Excel"} OR inform{"course":"Excel","date":"18/09/19"} OR inform{"course": "Excel", "location":"Munich"}
+	- utter_are_you_sure
+* affirm
+	- action_cancel_seminar
+	- slot{"cancellation_confirmed": "True"}
+	- slot{"course": null}		
+	- slot{"location": null}		
+	- slot{"date": null}
+	- slot{"time": null}
 	
 	
 	

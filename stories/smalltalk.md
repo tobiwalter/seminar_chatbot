@@ -1,4 +1,4 @@
-## smalltalk
+## smalltalk   
 * other_smalltalk
 	- utter_no_chitchat
 
