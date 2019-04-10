@@ -1,4 +1,4 @@
-## cancel a seminar
+## cancel a seminar  
 * cancel_seminar{"course":"rhetoric"}
 	- utter_ask_name
 * inform{"given-name":"Paul","last-name":"Moore"}
@@ -311,6 +311,7 @@
 	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 
 ## cancel seminar no course specified - cancel_seminar intent x 2
 * cancel_seminar
@@ -338,6 +339,8 @@
 	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
+	
 	
 ## cancel seminar date specified - succeed 
 * cancel_seminar{"date":"March 20"}
@@ -390,6 +393,7 @@
 	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## cancel seminar date specified - succeed 
 * ask_whatspossible
@@ -449,6 +453,7 @@
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
@@ -456,6 +461,7 @@
 	- slot{"time": null}	
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* inform{"course":"Python"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -466,6 +472,7 @@
 	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 
 ## Cancel next seminar deny
 * cancel_seminar{"display-option":"next"}
@@ -474,6 +481,7 @@
 	- action_verify_user
 	- slot{"user_verified":"True"}
 	- slot{"employee_id":"310"}	
+	- utter_ask_course_cancel
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
@@ -481,6 +489,7 @@
 	- slot{"time": null}	
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* inform{"course":"Python"}
 	- utter_are_you_sure
 * negative
 	- utter_do_something_else

@@ -241,7 +241,7 @@
 ## what' possible, location and course offering
 * ask_whatspossible
 	- utter_whatspossible
-* goodbye
+* bye
 	- utter_bye
 	- action_restart
 	
@@ -250,6 +250,7 @@
 	- utter_whatspossible
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 # get_help
 * get_help
@@ -312,6 +313,16 @@
     - utter_ask_name
 * inform
     - action_verify_user
+	
+## 
+* what_information
+	- utter_what_information
+	
+## what' possible, location and course offering
+* ask_whatspossible
+	- utter_whatspossible
+* what_information
+	- utter_what_information
 	
 
 	

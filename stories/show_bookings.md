@@ -1,5 +1,5 @@
-## show_bookings_basic
-* show_bookings
+## show_bookings_basic 
+* show_bookings  
 	- utter_ask_name
 * inform{"given-name":"Max","last-name":"Smith"}
 	- action_verify_user
@@ -42,6 +42,8 @@
 	- slot{"time": null}
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* what_information
+	- utter_what_information
 	
 ## showBookingsInPeriod_firstFail_thenSuccess
 * show_bookings{"date-period":"this year"}

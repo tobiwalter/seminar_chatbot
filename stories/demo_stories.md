@@ -1,4 +1,4 @@
-## Sam Brown
+## Sam Brown  
 * book_seminar{"course":"leadership"}	
 	- utter_ask_name
 * inform{"given-name":"John","last-name":"Doe"}
@@ -46,6 +46,7 @@
 	- slot{"booking-type": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## Jane Love
 * welcome
@@ -71,7 +72,7 @@
 	- slot{"employee_id":"53"}
 	- seminar_form
 	- form{"name":"seminar_form"}
-* get_prerequisities
+* get_prerequisites
 	- action_provide_prerequisites
 	- seminar_form
 	- form{"name":null} 
@@ -172,6 +173,7 @@
 	- utter_thanks
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## David Wagner 
 * book_seminar{"course":"Excel", "date-period": "spring"}
@@ -299,6 +301,7 @@
     - utter_thanks
 * bye
     - utter_bye
+	- action_restart
 
 ## Generated Story -8114647200784749199
 * welcome
@@ -333,6 +336,7 @@
     - utter_do_something_else
 * negative
     - utter_bye
+	- action_restart
 	
 ## Generated Story -938838891292
 * get_location

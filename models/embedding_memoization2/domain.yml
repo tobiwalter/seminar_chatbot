@@ -1,10 +1,12 @@
+%YAML 1.1
+---
 actions:
 - action_restart
 - action_book_seminar
 - action_cancel_seminar
 - action_course_offering
 - action_date_buttons
-- action_default_ask_affirmation 
+- action_default_ask_affirmation
 - action_default_fallback
 - action_display_seminar
 - action_location_buttons
@@ -45,7 +47,6 @@ actions:
 - utter_wrong_location
 - utter_ask_rephrase
 - utter_whatspossible
-
 config:
   store_entities_as_slots: true
 entities:
@@ -143,7 +144,11 @@ slots:
   cancellation_confirmed:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.BooleanSlot 
+    type: rasa_core.slots.BooleanSlot
+  categories:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   course:
     auto_fill: true
     initial_value: null
@@ -157,10 +162,6 @@ slots:
     initial_value: null
     type: rasa_core.slots.TextSlot
   dates:
-    auto_fill: true
-    initial_value: null
-    type: rasa_core.slots.ListSlot
-  categories:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.ListSlot
@@ -251,6 +252,8 @@ templates:
   - text: Please give me your first and last name.
   - text: Please provide your first and last name.
   - text: Please tell me your first and last name.
+  utter_ask_rephrase:
+  - text: Could you rephrase your message please?
   utter_book_somewhere_else:
   - text: Do you want to book the seminar somewhere else? If yes, please specify the
       location.
@@ -310,45 +313,20 @@ templates:
   utter_try_again:
   - text: This name is not in our database. Please specify your full name again.
   utter_welcome:
-  - text: |
-          Hello! I can do the following tasks for you: 
-          - book a seminar
-          - show your seminar bookings
-          - cancel a seminar
-          - get information about the seminar offering
-  - text: |
-          Hi, I am Sam, your seminar chatbot. I can 
-          - book seminars
-          - show your seminar bookings
-          - cancel seminars
-          - show information about the seminar offering
+  - text: "Hello! I can do the following tasks for you: \n- book a seminar\n- show\
+      \ your seminar bookings\n- cancel a seminar\n- get information about the seminar\
+      \ offering\n"
+  - text: "Hi, I am Sam, your seminar chatbot. I can \n- book seminars\n- show your\
+      \ seminar bookings\n- cancel seminars\n- show information about the seminar\
+      \ offering\n"
+  utter_what_information:
+  - text: "You can ask about:\n- dates\n- locations\n- description\n- duration\n-\
+      \ occupancy\n- prerequisites\n- level\nof seminars \n               \n"
+  utter_whatspossible:
+  - text: "I can do the following tasks for you:\n- book a seminar\n- show your seminar\
+      \ bookings\n- cancel a seminar\n- get information about the seminar offering\n"
   utter_wrong_date:
-  - text: 'The date you entered could not be verified. Please enter the date in the following format: 
-            dd/mm/yy'
+  - text: 'The date you entered could not be verified. Please enter the date in the
+      following format: dd/mm/yy'
   utter_wrong_location:
   - text: The seminar {course} is not offered in {location}. Please choose another.
-  utter_ask_rephrase:
-  - text: Could you rephrase your message please?
-  utter_whatspossible:
-  - text: |
-          I can do the following tasks for you:
-          - book a seminar
-          - show your seminar bookings
-          - cancel a seminar
-          - get information about the seminar offering
-  utter_what_information:
-  - text: |
-          You can ask about:
-          - dates
-          - locations
-          - description
-          - duration
-          - occupancy
-          - prerequisites
-          - level
-          of seminars 
-                         
-         
-        
-  
-  

@@ -1,5 +1,5 @@
-## 	mixed 1
-* show_bookings
+## 	mixed 1   
+* show_bookings          
 	- utter_ask_name
 * inform{"given-name":"Tim","last-name":"Miller"}
 	- action_verify_user
@@ -1253,6 +1253,7 @@
 	- slot{"time": null}
 * thank+bye
 	- utter_thanks_bye
+	- action_restart
 	
 ## show_bookings then book_seminar
 * show_bookings{"course-type": "seminars"}
@@ -1270,6 +1271,8 @@
 	- slot{"time": null}
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* what_information
+	- utter_what_information
 * get_occupancy{"course": "Excel"}
 	- action_query_occupancy
 * thank
@@ -1421,6 +1424,8 @@
 ## ask_whatspossible
 * ask_whatspossible
 	- utter_whatspossible
+* what_information
+	- utter_what_information
 * show_bookings
 	- utter_ask_name
 * inform{"given-name":"Tim","last-name":"Miller"}
@@ -1463,6 +1468,8 @@
 ## get bunch of info than book
 * ask_whatspossible	
 	- utter_whatspossible
+* what_information
+	- utter_what_information
 * get_course_offering{"course":"Python"}
 	- action_display_seminar
     - slot{"locations": ["Cologne", "Frankfurt", "Leipzig", "Stuttgart"]}
@@ -1505,6 +1512,8 @@
 ## get bunch of info than book
 * ask_whatspossible	
 	- utter_whatspossible
+* what_information
+	- utter_what_information
 * get_course_offering{"course":"Python"}
 	- action_display_seminar
     - slot{"locations": ["Cologne", "Frankfurt", "Leipzig", "Stuttgart"]}
@@ -1624,6 +1633,8 @@
 	- utter_welcome
 * ask_whatspossible
 	- utter_whatspossible
+* what_information
+	- utter_what_information
 * book_seminar
 	- utter_ask_name
 * inform{"given-name":"Tom","last-name":"Reid"}
@@ -1767,6 +1778,8 @@
 * get_description{"course": "programming"}
     - slot{"course": "programming"}
     - action_provide_description
+* what_information
+	- utter_what_information
 * get_location
     - action_display_seminar
     - slot{"locations": ["Berlin", "Frankfurt", "Hamburg", "Leipzig", "Munich"]}
@@ -1900,6 +1913,7 @@
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
 * cancel_seminar{"display-option":"next"}
+	- utter_ask_course_cancel
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
@@ -1907,6 +1921,7 @@
 	- slot{"time": null}	
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* inform{"course":"Python"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -1915,17 +1930,21 @@
 	- slot{"location": null}		
 	- slot{"date": null}
 	- slot{"time": null}
+* what_information
+	- utter_what_information
 * thank+bye
 	- utter_thanks_bye
 	
 ## Generated Story -1047672868992554109
+* what_information
+	- utter_what_information
 * get_dates{"course": "rhetoric"}
     - slot{"course": "rhetoric"}
     - action_display_seminar
 	- slot{"seminar_id":"4"}
     - slot{"locations": "Berlin, Frankfurt, Munich"}
     - slot{"title": "Persuasion and Influence"}
-* book_seminar{"location": "Frankfurt"}
+* book_seminar{"location": "Frankfurt"}  
     - slot{"location": "Frankfurt"}
     - utter_ask_name
 * inform{"given-name": "Max", "last-name": "Thompson"}
@@ -1949,10 +1968,11 @@
     - slot{"location": null}
 	- slot{"course": null}
 	- slot{"date-period": null}
+	- utter_do_something_else
 * ask_whatspossible
 	- utter_whatspossible
 * show_bookings
-	- action_show_bookings
+	- action_show_bookings	
 	- slot{"date": null}
     - slot{"location": null}
 	- slot{"date-period": null}
@@ -1960,6 +1980,7 @@
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
 * cancel_seminar{"display-option":"next"}
+	- utter_ask_course_cancel
 	- action_show_bookings
     - slot{"date": null}
     - slot{"location": null}
@@ -1967,6 +1988,7 @@
 	- slot{"time": null}	
 	- slot{"display-option": null}
 	- slot{"booking-type": null}
+* inform{"course":"Excel"}
 	- utter_are_you_sure
 * affirm
 	- action_cancel_seminar
@@ -1975,6 +1997,48 @@
 	- slot{"location": null}		
 	- slot{"date": null}
 	- slot{"time": null}
+	
+## 32423324
+* welcome
+	- utter_welcome
+* what_information	
+	- utter_what_information
+* get_description{"course":"Excel"}
+	- action_provide_description
+* ask_whatspossible
+	- utter_whatspossible
+* show_bookings{"display-option":"upcoming"}
+	- action_show_bookings	
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"date-period": null}
+	- slot{"time": null}
+	- slot{"display-option": null}
+	- slot{"booking-type": null}
+* book_seminar{"course": "Machine Learning", "location":"Berlin"}
+    - utter_ask_name
+* inform{"given-name": "teresa", "last-name": "williams"}
+    - slot{"given-name": "teresa"}
+    - slot{"last-name": "williams"}
+    - action_verify_user
+    - slot{"user_verified": true}
+    - slot{"employee_id": 10}
+	- action_query_date
+	- slot{"dates": "30/04/19, 10/05/19, 20/05/19, 30/05/19"}
+    - slot{"title": "Advanced Excel functions and formulas"}
+    - seminar_form
+    - form{"name": "seminar_form"}
+* get_occupancy{"date":"30/04/19"}
+	- action_query_occupancy
+	- seminar_form
+	- form{"name": null}
+	- action_book_seminar
+	- slot{"booking_confirmed":"True"}
+	- slot{"date": null}
+    - slot{"location": null}
+	- slot{"course": null}
+	- slot{"date-period": null}
+
 
 	
 

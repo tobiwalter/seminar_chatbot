@@ -1,4 +1,4 @@
-## multi-intent: book seminar & get dates
+## multi-intent: book seminar & get dates  
 * book_seminar+get_dates{"course":"programming"}
 	- utter_ask_name
 * inform{"given-name":"Rob","last-name":"Cook"}
