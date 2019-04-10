@@ -9,7 +9,7 @@ inform;I want to give you the requested information.;
 inform;My choice is {course};course
 inform;My choice is {location};location
 inform;My choice is {date};date
-"inform;My name is {given-name} {last-name};given-name,last-name"
+inform;My name is {given-name} {last-name};given-name,last-name
 get_dates;On which dates do you offer the seminar?;
 get_dates;On which dates do you offer {course}?;course
 affirm;Agreed.;
@@ -27,7 +27,7 @@ get_course_offering;Which seminars are offered?;
 get_course_offering;Are any seminars about {course} offered?;course
 get_course_offering;Which seminars are offered in {date-period}?;date-period
 get_course_offering;Which seminars are offered in {location}?;location
-get_location;Where does the seminar take place?
+get_location;Where does the seminar take place?;
 get_location;At which location does {course} take place?;course
 other_loc_date;I prefer another date or location.;
 praise;You did a good job.;
@@ -48,8 +48,8 @@ cancel_seminar;I want to cancel a seminar in {course}.;course
 age;I want to know your age.;
 stop;Please stop the conversation.;
 thank+bye;Thank you and goodbye!;
-book_seminar+get_dates;I want to book the seminar. Please tell me possible dates.;
-book_seminar+get_dates;I want to book the {course} seminar. Please tell me possible dates.;course
+book_seminar+get_dates;I want to book the seminar. Please tell me possible dates.;course
+book_seminar+get_dates;I want to book the {course} seminar. Please tell me possible dates.;
 book_seminar+get_location;I want to book the seminar. Please tell me offered locations.;
 book_seminar+get_location;I want to book the {course} seminar. Please tell me offered locations.;course
 get_occupancy;Do you have free slots?;
