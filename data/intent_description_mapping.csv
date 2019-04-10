@@ -37,6 +37,7 @@ get_description;What is {course} about?;course
 get_prerequisites;What are the prerequisites?;
 get_prerequisites;What are the prerequisites for {course}?;course
 get_level;Which user-level is expected?;
+get_level;Is the expected user-level {user-level}?;user-level
 get_level;Which user-level is expected for {course}?;course
 bad;That was a bad experience.;
 get_help;I want to get in touch with the helpdesk.;
