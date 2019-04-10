@@ -12260,6 +12260,82 @@
         "text": "Display my next seminar"
       },
       {
+        "intent": "what_information",
+        "text": "What kind of information do you have?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What kind of questions do you answer?"
+      },
+      {
+        "intent": "what_information",
+        "text": "Do you have FAQs?"
+      },
+      {
+        "intent": "what_information",
+        "text": "Do you have faqs?"
+      },
+      {
+        "intent": "what_information",
+        "text": "FAQs"
+      },
+      {
+        "intent": "what_information",
+        "text": "faqs"
+      },
+      {
+        "intent": "what_information",
+        "text": "What do you have in your database?"
+      },
+      {
+        "intent": "what_information",
+        "text": "Wha kind of data do you have?"
+      },
+      {
+        "intent": "what_information",
+        "text": "Wha kind of data do you have about seminars?"
+      },
+      {
+        "intent": "what_information",
+        "text": "Which information about the seminar offering do you have?"
+      },
+      {
+        "intent": "what_information",
+        "text": "So what kind of questions do you answer?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What can I ask you?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What can I ask you in regards to seminars?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What can I ask you in regards to the seminar offering?"
+      },
+      {
+        "intent": "what_information",
+        "text": "So what information do you provide"
+      },
+      {
+        "intent": "what_information",
+        "text": "Do you have quick facts about seminar"
+      },
+      {
+        "intent": "what_information",
+        "text": "What type of information do you have?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What type of information do you provide?"
+      },
+      {
+        "intent": "what_information",
+        "text": "What kind of information do you provide in your databse?"
+      },
+      {
         "intent": "show_bookings",
         "entities": [
           {
