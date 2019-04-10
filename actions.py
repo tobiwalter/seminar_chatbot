@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -86,7 +86,7 @@ class ActionShowBookings(Action):
           if display_option == "next" or display_option == "upcoming":
             res = "This is your next seminar: " + self.showNextBooking(bookings)
           elif userGivenDate:
-            res = self.showBookingsOnGivenDate(userGivenDate,matchingID, bookings)
+            res = self.showBookingsOnGivenDate(time,userGivenDate,matchingID, bookings)
           elif date_period:
             res = self.showBookingsWithinPeriod(date_period,time,matchingID, bookings)
           elif city:
@@ -119,19 +119,37 @@ class ActionShowBookings(Action):
     return "{} on {} in {}.".format(bookings[0]["seminar_title"],bookings[0]["date"],
       bookings[0]["location"])
 
-  def showBookingsOnGivenDate(self, seminar_date,matchingID, bookings):
+  def showBookingsOnGivenDate(self, time, seminar_date, matchingID, bookings):
+    if not time:
+      userGivenDate = dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date()
+    else: 
+      if isinstance(time, dict):
+        start = dateparser.parse(time["from"]).date()
+        end = dateparser.parse(time["to"]).date()  
+      #   If bookings between start and end, add them to the list of matched seminars
+        matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]) 
+        for ele in bookings if not 'cancellation' in ele
+        if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
 
-    userGivenDate = dateparser.parse(seminar_date,settings={'DATE_ORDER': 'DMY'}).date()
-
-    matchedSeminars = ["{} in {}".format(ele["seminar_title"],ele["location"]) 
-    for ele in bookings 
-    if not 'cancellation' in ele if dateComparison(ele["date"], userGivenDate) == 0]
+      else: 
+        userGivenDate = dateparser.parse(time).date()
+        matchedSeminars = ["{} in {}".format(ele["seminar_title"],ele["location"]) 
+        for ele in bookings 
+        if not 'cancellation' in ele if dateComparison(ele["date"], userGivenDate) == 0]
 
     if len(matchedSeminars) != 0:
-      return "Your booked seminars on {} : {}.".format(userGivenDate.strftime("%d.%m.%y"),
+      if 'userGivenDate' in locals():
+        return "Your booked seminars on {} : {}.".format(userGivenDate.strftime("%d.%m.%y"),
+              ', '.join(matchedSeminars))
+      elif start:
+        return "Your booked seminars between {} and {} : {}.".format(start,end,
               ', '.join(matchedSeminars))
     else:
-      return "There are no recorded bookings for you on the specified date."
+      if 'userGivenDate' in locals():
+        return "There are no recorded bookings for you on {}.".format(userGivenDate.strftime("%d.%m.%y"))
+      elif start:
+         return "There are no recorded bookings for you between {} and {}.".format(start,end)
+
 
   def showBookingsWithinPeriod(self,date_period, time, matchingID, bookings):
 
@@ -141,13 +159,13 @@ class ActionShowBookings(Action):
       end = dateparser.parse(time["to"]).date()  
     #   If bookings between start and end, add them to the list of matched seminars
       matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]) 
-      for ele in bookings 
+      for ele in bookings if not 'cancellation' in ele
       if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
 
     # If duckling extracted a day value, set this day as start and try to infer the lenght of the interval by 
     #  the value of the date period entity
     elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
-      start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
+      start = dateparser.parse(time).date()
       if "week" in date_period.lower():
         end = start + relativedelta(days = 7)
       elif "month" in date_period.lower():
@@ -157,16 +175,15 @@ class ActionShowBookings(Action):
 
     # If bookings between start and end, add them to the list of matched seminars
       matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]) 
-      for ele in bookings 
+      for ele in bookings if not 'cancellation' in ele
       if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
 
     # If date-period is a month or season and duckling only extracted a date value (e.g. "Show bookings in April")
     else:
-      matchedSeminars = []
-      for ele in bookings:
-        if not "cancellation" in ele:
-          if period_check(date_period, ele["date"]):
-            matchedSeminars.append("{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"]))
+      matchedSeminars = ["{} at {} in {}".format(ele["seminar_title"],ele["date"],ele["location"])
+      for ele in bookings if not "cancellation" in ele 
+                          if period_check(date_period, ele["date"])]
+          
 
     if len(matchedSeminars) != 0:
       return "Your booked seminars for {}: \n{}".format(date_period.capitalize(), "\n".join(matchedSeminars))
@@ -462,7 +479,8 @@ class ActionProvideDescription(Action):
 
   def run(self, dispatcher, tracker, domain):
     """ retrieves slot values """
-    course = tracker.get_slot("course")
+    course = next(tracker.get_latest_entity_values('course'), None)
+    # course = tracker.get_slot("course")
 
     if course is not None:
       seminar_id = matchingSeminar(seminars,course)
@@ -534,7 +552,7 @@ class ActionDisplaySeminar(Action):
             # If duckling extracted a day value, set this day as start and try to infer
             # the lenght of the interval by the value of the date period entity
             elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
-              start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
+              start = dateparser.parse(time).date()
               if "week" in date_period.lower():
                 end = start + relativedelta(days = 7)
               elif "month" in date_period.lower():
@@ -610,7 +628,7 @@ class ActionDisplaySeminar(Action):
             available_seminars.append(seminar)
 
       elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
-        start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
+        start = dateparser.parse(time).date()
         if "week" in date_period.lower():
           end = start + relativedelta(days = 7)
         elif "month" in date_period.lower():
@@ -659,7 +677,7 @@ class ActionDisplaySeminar(Action):
       dispatcher.utter_message("You need to specify a course for your request.")
       return [FollowupAction('action_course_offering'), SlotSet('location', None), SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
-class ActionCourseOffering(Action):
+  
 
   def name(self):
     """returns name of the action """
@@ -973,10 +991,7 @@ class ActionLocationButtons(Action):
 
         if seminar_id != None:
           seminar = seminars[seminar_id]
-          if tracker.get_slot("locations"):
-            locations = tracker.get_slot("locations")      
-          else:
-            locations = seminar.get("locations")  
+          locations = seminar.get("locations")  
 
           # If user clicked on other locations, display all locations 
           # if tracker.latest_message['intent'].get('name') == 'other_loc_date':
@@ -1181,7 +1196,7 @@ class ActionDefaultAskAffirmation(Action):
   def __init__(self) ->None:
       import pandas as pd
 
-      self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';', encoding= 'utf-8')
+      self.intent_mappings = pd.read_csv("data/intent_description_mapping.csv", sep=';')
       self.intent_mappings.fillna("", inplace=True)
       self.intent_mappings.entities = self.intent_mappings.entities.map(
         lambda entities: {e.strip() for e in entities.split(',')})
@@ -1249,7 +1264,7 @@ class ActionDefaultAskAffirmation(Action):
       return button_title.format(**entities)
 
 
-class ActionDefaultFallback(Action):
+class ActionDefaultFallback(Action):  
 
   def name(self):
       return "action_default_fallback"
