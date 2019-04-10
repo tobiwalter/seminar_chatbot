@@ -973,10 +973,7 @@ class ActionLocationButtons(Action):
 
         if seminar_id != None:
           seminar = seminars[seminar_id]
-          if tracker.get_slot("locations"):
-            locations = tracker.get_slot("locations")      
-          else:
-            locations = seminar.get("locations")  
+          locations = seminar.get("locations")  
 
           # If user clicked on other locations, display all locations 
           # if tracker.latest_message['intent'].get('name') == 'other_loc_date':
