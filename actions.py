@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -675,7 +675,6 @@ class ActionDisplaySeminar(Action):
       return [FollowupAction('action_course_offering'), SlotSet('location', None), SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
 class ActionCourseOffering(Action):
-
   def name(self):
     """returns name of the action """
     return "action_course_offering"
@@ -1356,86 +1355,4 @@ class ActionShowAllButtons(Action):
 
 # return [SlotSet('budget', budget)]
 
-class ActionQueryOccupancy(Action):
-  def name(self):
-      return "action_query_occupancy"
-
-  def run(self, dispatcher, tracker, domain):
-
-      course = tracker.get_slot('course')
-      seminars = db.reference('seminars').get()
-      city = tracker.get_slot('location')
-      userGivenDate = tracker.get_slot('date')
-
-      if course:
-        seminar_id = matchingSeminar(seminars,course)
-        seminar = seminars[seminar_id]
-      else: 
-        res = 'You need to specify a course for your request'
-        dispatcher.utter_message(res)
-        return []
-
-      if seminar_id != None:
-        locs = sorted(seminar["locations"])
-        occ_at_dates = {}
-        capacity = seminar["capacity"]
-
-        if city in locs:
-          if userGivenDate:
-            for ele in seminar["locations"][city]:
-              if dateComparison(ele["date"],userGivenDate) == 0:
-                occupancy = capacity - ele["occupancy"]
-                res = "{} slot(s) are left for grabs in {} on {}".format(occupancy, city, ele["date"]) 
-          else:
-            occ_at_dates = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
-              for ele in seminar["locations"][city]]
-            occ_at_dates = sorted(occ_at_dates, key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
-            res = "This is how many slots are left for {} in {}:\n\n".format(course,city,)
-            res += '\n'.join(occ_at_dates)
-        else:
-          for loc in locs:    
-              # occ_at_dates[loc] = [(str(capacity - ele["occupancy"]) + " on " + ele["date"])
-              #   for ele in seminar["locations"][loc]]
-              occ_at_dates[loc] = [(capacity - ele["occupancy"])
-                for ele in seminar["locations"][loc]]
-              # occ_at_dates[loc] = sorted(occ_at_dates[loc], key=lambda x: datetime.strptime(x[-8:], '%d/%m/%y'))
-          availableLocs = {k : sum(v) for (k,v) in occ_at_dates.items() if sum(v) > 0}
-          res = "There are free slots left for {} in {}".format(course,', '.join(k for k in availableLocs))
-
-          # seminar locations:\n\n".format(course)
-          # res += '\n'.join(["{:10}: {:<10}".format(key, ', '.join(value)) for key, value in occ_at_dates.items()])
-
-        dispatcher.utter_message(res)
-        return []  
-      else:
-        res = "We don't offer {} seminars.".format(course)
-        dispatcher.utter_message(res)
-        return []
-
-class ActionResetSlots(Action):  
-    def name(self):     
-      return 'action_reset_slots' 
-
-    def run(self, dispatcher, tracker, domain): 
-      booking_confirmed = tracker.get_slot('booking_confirmed')
-
-      slots_to_keep = ['employee_id', 'user_verified', 'booking_confirmed', 'cancellation_confirmed']
-      # Keep course slot if booking was not successful as user might ask follow-up questions
-      # like where/when does it take place
-      if booking_confirmed is False:
-        slots_to_keep.append('course')    
-      return_slots = [SlotSet(slot, None) for slot in tracker.slots if slot not in slots_to_keep]
-      return return_slots
-
-class ActionRestarted(Action):
-    def name(self):
-      return 'action_restart'
-
-    def run(self, dispatcher, tracker, domain): 
-
-      # Restart conversation but keep employee_id 
-      # employee_id = tracker.get_slot('employee_id')
-      # tracker.trigger_followup_action(ACTION_LISTEN_NAME)
-      # tracker.set_slot('employee_id', employee_id)
-      return [Restarted(), FollowupAction('action_listen')]
       
