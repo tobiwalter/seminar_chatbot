@@ -447,7 +447,7 @@ class ActionCancelSeminar(Action):
                       if dateComparison(seminar_date, semdate) == 0:
                         dateMatch = ele
                         occupancy = ele["occupancy"]
-                        occupancy -= 1
+                        occupancy -= 1 if occupancy > 0 else 0
                         occupancyRef = seminarRef.child("{}/locations/{}/{}".format(str(seminar_id),
                         city.capitalize(),str(seminarDates.index(dateMatch)))).update({"occupancy": occupancy})
                         break
@@ -479,8 +479,7 @@ class ActionProvideDescription(Action):
 
   def run(self, dispatcher, tracker, domain):
     """ retrieves slot values """
-    course = next(tracker.get_latest_entity_values('course'), None)
-    # course = tracker.get_slot("course")
+    course = tracker.get_slot("course")
 
     if course is not None:
       seminar_id = matchingSeminar(seminars,course)
@@ -677,7 +676,7 @@ class ActionDisplaySeminar(Action):
       dispatcher.utter_message("You need to specify a course for your request.")
       return [FollowupAction('action_course_offering'), SlotSet('location', None), SlotSet('time', None), SlotSet('date', None), SlotSet('date-period', None)]
 
-  
+class ActionCourseOffering(Action):
 
   def name(self):
     """returns name of the action """
@@ -876,8 +875,8 @@ class SeminarForm(FormAction):
       return ["location", "date"]
 
   def slot_mappings(self):
-    return {"date": [self.from_entity(entity="date", intent= ["book_seminar","inform"]),
-        self.from_entity(entity="time", intent=["book_seminar", "inform"])],
+    return {"date": [self.from_entity(entity="date", not_intent=["get_occupancy"]),
+        self.from_entity(entity="time", not_intent=["get_occupancy"])],
         "location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
    
   @staticmethod 
