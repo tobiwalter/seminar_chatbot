@@ -315,7 +315,7 @@ class ActionBookSeminar(Action):
         'seminar_id' : seminar_id,
         'seminar_title': seminar["title"]
         }})
-      res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n You will receive a confirmation via email.".format(
+      res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n You will receive a confirmation via email.\n".format(
         course.capitalize(),city.capitalize(),userGivenDate)
       
       #check for date clashes
@@ -342,8 +342,7 @@ class ActionBookSeminar(Action):
             dispatcher.utter_message(res)
             dispatcher.utter_button_message("Do you want to cancel one seminar?", buttons)
           elif not breaker1:
-            res += "\nYou have another seminar on the same day: {}".format()
-            res += ',\t'.join(res1)
+            res += "\nYou have another seminar on the same day: {}".format(',\t'.join(res1))
 
             buttons=[{'title': 'Yes', 'payload': '/cancel_seminar'},{'title': 'No', 'payload': '/negative'}]
             dispatcher.utter_message(res)
@@ -598,8 +597,7 @@ class ActionDisplaySeminar(Action):
       available_seminars = [ele["category"] for ele in seminars if city.capitalize() in ele["locations"]]
           
       if len(available_seminars) != 0:
-        res = "We offer seminars in the following categories in {} :\n{}".format(
-                                  city.capitalize(), ', '.join(available_seminars))
+        res = "We offer the following seminars in {} :\n{}".format(city.capitalize(), ', '.join(available_seminars))
         dispatcher.utter_message(res)
         return [SlotSet('categories', available_seminars),SlotSet('date-period', None), SlotSet('time', None)]
       else: 
@@ -707,7 +705,10 @@ class ActionQueryDate(Action):
 
     def run(self, dispatcher, tracker, domain):
         course = tracker.get_slot("course")
-        city = tracker.get_slot("location").capitalize()
+        city = tracker.get_slot("location")
+
+        if not city:
+          return[FollowupAction('action_display_seminar')]
 
         if course:
           seminar_id = matchingSeminar(seminars,course)
@@ -717,10 +718,11 @@ class ActionQueryDate(Action):
           return []
 
         if seminar_id != None:
-            seminar = seminars[seminar_id]
+            seminarRef = db.reference('seminars/' + str(seminar_id))
+            seminar = seminarRef.get()
 
         # Collect dates of seminar in the corresponding city
-            if city in seminar["locations"] and location_check(seminar, city):
+            if city.capitalize() in seminar["locations"] and location_check(seminar, city):
               dates = [ele["date"] for ele in seminar["locations"][city] if date_check(seminar, city, ele["date"])]
 
               dates = sorted(dates, key=lambda x: datetime.strptime(x, '%d/%m/%y'))
@@ -732,7 +734,7 @@ class ActionQueryDate(Action):
             # Suggest closest seminar location if seminar not held in specified city 
             else:
                 res = "The seminar {} is not offered in {}.".format(seminar["title"],city)
-                next_loc = nextLocation(city,seminar)
+                next_loc = nextLocation(city.capitalize(),seminar)
                 if next_loc:
                     res += " But there is a seminar in {}.".format(next_loc)
 
@@ -1314,7 +1316,7 @@ class ActionShowAllButtons(Action):
             if location_check(seminar, loc):
               buttons.append({'title': loc, 'payload': '/inform{"location": \"' + loc + '\"}'})
           if buttons:
-            dispatcher.utter_button_message("These are all available locations. Please select a buttons or type stop if none of these fits:", buttons)
+            dispatcher.utter_button_message("These are all available locations. Please select a button or type stop if none of these fits:", buttons)
 
         elif otherDate is not None:
           if city is not None:
