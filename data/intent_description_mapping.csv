@@ -58,3 +58,4 @@ get_occupancy;Do you have free slots for {course}?;course
 get_occupancy;Do you have free slots in {location}?;location
 get_occupancy;Do you have free slots in {date-period}?;date-period
 ask_whatspossible;What can this bot do for me?;
+what_information; What questions can you answer?;
