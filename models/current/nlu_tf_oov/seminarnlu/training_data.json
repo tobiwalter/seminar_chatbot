@@ -34124,6 +34124,452 @@
           }
         ],
         "text": "Display my booked seminars in the next 4 days"
+      },
+      {
+        "intent": "praise",
+        "text": "I liked that"
+      },
+      {
+        "intent": "praise",
+        "text": "that was cool"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 9,
+            "end": 20,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Describe programming"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "Python",
+            "entity": "course"
+          }
+        ],
+        "text": "Describe Python"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Explain leadership"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Explain Excel"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "infos about Excel"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 18,
+            "end": 30,
+            "value": "data science",
+            "entity": "course"
+          }
+        ],
+        "text": "information about data science"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 25,
+            "end": 33,
+            "value": "16/05/19",
+            "entity": "date"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Munich",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 11,
+            "value": "Python",
+            "entity": "course"
+          }
+        ],
+        "text": "Book Python in Munich on 16/05/19"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "20/03/19",
+            "entity": "date"
+          },
+          {
+            "start": 14,
+            "end": 23,
+            "value": "Stuttgart",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Book Excel in Stuttgart on 20/03/19"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 15,
+            "value": "leadership",
+            "entity": "course"
+          },
+          {
+            "start": 19,
+            "end": 28,
+            "value": "Stuttgart",
+            "entity": "location"
+          },
+          {
+            "start": 32,
+            "end": 40,
+            "value": "20/03/19",
+            "entity": "date"
+          }
+        ],
+        "text": "Book leadership in Stuttgart on 20/03/19"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "Python",
+            "entity": "course"
+          },
+          {
+            "start": 15,
+            "end": 24,
+            "value": "Stuttgart",
+            "entity": "location"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "20/03/19",
+            "entity": "date"
+          }
+        ],
+        "text": "Book Python in Stuttgart on 20/03/19"
+      },
+      {
+        "intent": "book_seminar",
+        "entities": [
+          {
+            "start": 42,
+            "end": 50,
+            "value": "17/03/19",
+            "entity": "date"
+          },
+          {
+            "start": 31,
+            "end": 38,
+            "value": "Hamburg",
+            "entity": "location"
+          },
+          {
+            "start": 15,
+            "end": 27,
+            "value": "data science",
+            "entity": "course"
+          }
+        ],
+        "text": "I want to book data science in Hamburg on 17/03/19"
+      },
+      {
+        "intent": "get_location",
+        "entities": [
+          {
+            "start": 9,
+            "end": 14,
+            "value": "Excel ",
+            "entity": "course"
+          }
+        ],
+        "text": "Where is Excel offered?"
+      },
+      {
+        "intent": "get_location",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "Python",
+            "entity": "course"
+          }
+        ],
+        "text": "Where is Python offered?"
+      },
+      {
+        "intent": "get_location",
+        "entities": [
+          {
+            "start": 9,
+            "end": 19,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "Where is leadership offered?"
+      },
+      {
+        "intent": "get_location",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "programming",
+            "entity": "course"
+          },
+          {
+            "start": 29,
+            "end": 39,
+            "value": "next month",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Where can I take programming next month?"
+      },
+      {
+        "intent": "get_level",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "What is the level of Excel?"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want to do some smalltalk."
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "I want to smalltalk"
+      },
+      {
+        "intent": "other_smalltalk",
+        "text": "How is the weather today?"
+      },
+      {
+        "intent": "get_occupancy",
+        "text": "How many places are left at each date?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 37,
+            "end": 48,
+            "value": "programming",
+            "entity": "course"
+          }
+        ],
+        "text": "Do you offer courses in the category programming?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 30,
+            "end": 36,
+            "value": "winter",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Which seminars are offered in winter?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Which seminars exist in summer?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Can I take seminars in summer?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Are seminars available in summer?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "winter",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Are seminars available in winter?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 20,
+            "value": "May",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Can I take it in May?"
+      },
+      {
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Python",
+            "entity": "course"
+          }
+        ],
+        "text": "And how many in Python?"
+      },
+      {
+        "intent": "get_occupancy",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "leadership",
+            "entity": "course"
+          }
+        ],
+        "text": "And how many in leadership?"
+      },
+      {
+        "intent": "get_course_offering",
+        "text": "Can I take a look at the course offering"
+      },
+      {
+        "intent": "get_description",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "Excel",
+            "entity": "course"
+          }
+        ],
+        "text": "Tell me about Excel"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "spring",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Can I take it in spring?"
+      },
+      {
+        "intent": "get_dates",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "summer",
+            "entity": "date-period"
+          }
+        ],
+        "text": "Can I take it in summer?"
+      },
+      {
+        "intent": "get_course_offering",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "Bremen",
+            "entity": "location"
+          }
+        ],
+        "text": "Which ones are offered in Bremen?"
+      },
+      {
+        "intent": "get_location",
+        "text": "In which cities do you offer courses?"
       }
     ],
     "regex_features": [],

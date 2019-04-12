@@ -23,8 +23,8 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-#cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
+# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -461,8 +461,7 @@ class ActionCancelSeminar(Action):
                    FollowupAction('action_listen')]
 
         # bot message if cancellation was not successful      
-        dispatcher.utter_message("There are no bookings according to your request or the requested booking \
-                                    is already past and cannot be cancelled anymore.")
+        dispatcher.utter_message("There are no bookings according to your request.")
         return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None), SlotSet("time", None),
                  SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
 
@@ -577,8 +576,11 @@ class ActionDisplaySeminar(Action):
 
         if dates:
           res = "The seminar {} is offered at the following locations and dates:\n\n".format(seminar["title"])
-          res += '\n'.join(["{:10}: \t{:<10}".format(key, ',\t'.join(value)) for key, value in dates.items()])
-          dispatcher.utter_message(res)
+          res += '\n'.join(["*{:5}*: \t{:<5}".format(key, ',\t'.join(value)) for key, value in dates.items()])
+          attachment = json.dumps([{
+          "text": res}])
+          dispatcher.utter_attachment(attachment)
+          # dispatcher.utter_message(res)
           return [SlotSet("locations", locs),SlotSet("title", seminar["title"]),SlotSet("seminar_id", seminar_id),
           SlotSet('time', None)] 
         else:
@@ -876,8 +878,8 @@ class SeminarForm(FormAction):
       return ["location", "date"]
 
   def slot_mappings(self):
-    return {"date": [self.from_entity(entity="date", not_intent=["get_occupancy"]),
-        self.from_entity(entity="time", not_intent=["get_occupancy"])],
+    return {"date": [self.from_entity(entity="date", intent=["inform","book_seminar"]),
+        self.from_entity(entity="time", intent=["inform","book_seminar"])],
         "location": self.from_entity(entity="location", intent= ["book_seminar","inform"])}
    
   @staticmethod 
@@ -1287,7 +1289,7 @@ class ActionDefaultFallback(Action):
       # Fallback caused by Core
       else:
           dispatcher.utter_template('utter_default', tracker)
-          return [UserUtteranceReverted()]
+          return []
 
 class ActionShowAllButtons(Action):
 
