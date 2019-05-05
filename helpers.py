@@ -6,6 +6,7 @@ from datetime import date, datetime
 SETTINGS = "{'DATE_ORDER': 'DMY'}"
 
 def matchingSeminar(seminars,course) -> int:
+    """ Match a user-specified seminar with one of the seminars in the database"""
 
 		for ele in seminars:
 			if course.lower() in (d.lower() for d in ele["description"]):
@@ -13,6 +14,7 @@ def matchingSeminar(seminars,course) -> int:
 				return seminar_id 
 
 def dateComparison(date1, date2) -> int:
+    """ Compare two dates with each other"""
 
 		if isinstance(date1, date):
 			if isinstance(date2, date):
@@ -43,7 +45,8 @@ def dateComparison(date1, date2) -> int:
 					return -1
 			else: return 1
 
-def period_check(date_period, date_time):
+def period_check(date_period, date_time) -> bool:
+    """ Check if user-given date-period is a month or season"""
     from datetime import datetime
     month = {
         "January": 1,
@@ -82,7 +85,8 @@ def period_check(date_period, date_time):
     else:
       return False
 
-def location_check(seminar, location):
+def location_check(seminar, location) -> bool:
+    """ Check if there are slots left at a specific location"""
     occ = 0
     count = 0
     for ele in seminar["locations"][location]:
@@ -94,6 +98,7 @@ def location_check(seminar, location):
         return False
 
 def date_check(seminar, location, date):
+    """ Check if there are slots left at a specific date"""
     for i in range(len(seminar["locations"][location])):
         if seminar["locations"][location][i]["date"] == date:
             occ = seminar["locations"][location][i]["occupancy"]
@@ -104,6 +109,8 @@ def date_check(seminar, location, date):
         return False
 
 def nextLocation(city, seminar):
+    """ Calculate next location if seminar not available at specified location""" 
+
     # Install Module geopy
         from geopy.geocoders import Nominatim
         from geopy import distance

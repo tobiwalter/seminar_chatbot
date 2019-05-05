@@ -31,6 +31,7 @@ firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://seminar-b9c58.firebaseio.com/'
 })      
 
+# Initialize references 
 seminarRef = db.reference('seminars')
 countRef = db.reference('counts')
 employeesRef = db.reference('employees')
@@ -56,7 +57,10 @@ class ActionShowBookings(Action):
     display_option = tracker.get_slot('display-option')
 
   # Find booked seminars if a matching ID was extracted from user verification
-    if matchingID is not None:
+  if matchingID is None:
+      dispatcher.utter_template('utter_ask_name', tracker)
+      return[FollowupAction('action_listen')]
+  else:
       bookingRef = db.reference('bookings/' + str(matchingID))
       bookings = bookingRef.get()
       bookedSeminars = set([])
@@ -64,7 +68,7 @@ class ActionShowBookings(Action):
       if bookings:
         # Check for booking type and add seminars accordingly
         if bookingtype == 'past':
-            bookedSeminars = ["{} in {} on {}".format(ele["seminar_title"],ele["location"], ele["date"]) 
+            bookedSeminars = ["{} in {} on {}".format(ele["seminar_title"], ele["location"], ele["date"]) 
                   for ele in bookings if not "cancellation" in ele if \
                   dateComparison(ele["date"], date.today()) == -1]
 
@@ -97,10 +101,6 @@ class ActionShowBookings(Action):
 
       dispatcher.utter_message("There are no recorded bookings for you.")
       return []
-
-    else:
-      dispatcher.utter_message("You are not in our database. Please contact HR.")
-      return [SlotSet('user_verified', 'False')]
 
 
   def showNextBooking(self,bookings):
@@ -140,8 +140,8 @@ class ActionShowBookings(Action):
       for ele in bookings if not 'cancellation' in ele
       if start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end]
 
-    # If duckling extracted a day value, set this day as start and try to infer the lenght of the interval by 
-    #  the value of the date period entity
+    # If duckling extracted a day value, set this day as start and try to infer 
+    # the lenght of the interval by the value of the date period entity
     elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
       start = dateparser.parse(time).date()
       if "week" in date_period.lower():
@@ -192,7 +192,6 @@ class ActionBookSeminar(Action):
     city = tracker.get_slot('location')
     booking_confirmed = tracker.get_slot('booking_confirmed')
 
-    """ retrieves data snapshots """
     if matchingID is None:
       dispatcher.utter_template('utter_ask_name', tracker)
       return[FollowupAction('action_listen')]
@@ -358,7 +357,10 @@ class ActionCancelSeminar(Action):
     date_period = tracker.get_slot('date-period')
     time = tracker.get_slot('time')
 
-    if matchingID is not None:  
+    if matchingID is None:
+      dispatcher.utter_template('utter_ask_name', tracker)
+      return[FollowupAction('action_listen'), SlotSet('cancellation_confirmed', False)]
+    else:
       bookingRef = db.reference('bookings/' + str(matchingID))
       bookings = bookingRef.get()
 
@@ -378,7 +380,8 @@ class ActionCancelSeminar(Action):
         #Search for corresponding booking
         if not bookings:
           dispatcher.utter_message("We do not have bookings for you in our database.")
-          return []
+          return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None), SlotSet("time", None),
+                 SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
         else:
           for ele in bookings:
             # ignore cancelled bookings
@@ -401,7 +404,7 @@ class ActionCancelSeminar(Action):
 
                     dateEqual = (start <= dateparser.parse(ele["date"], settings={'DATE_ORDER': 'DMY'}).date() <= end)
 
-                  elif "week" in date_period.lower() or  "month" in date_period.lower() or "year" in date_period.lower():
+                  elif "week" in date_period.lower() or "month" in date_period.lower() or "year" in date_period.lower():
                     start = dateparser.parse(time,settings={'DATE_ORDER': 'DMY'}).date()
                     if "week" in date_period.lower():
                       end = start + relativedelta(days = 7)
@@ -452,15 +455,6 @@ class ActionCancelSeminar(Action):
                   return [SlotSet("cancellation_confirmed",True), SlotSet("course",None),
                    SlotSet("location",None), SlotSet("date",None), SlotSet("time", None),
                    FollowupAction('action_listen')]
-
-        # bot message if cancellation was not successful      
-        dispatcher.utter_message("There are no bookings according to your request.")
-        return  [SlotSet("cancellation_confirmed",False), SlotSet("course",None), SlotSet("time", None),
-                 SlotSet("location",None), SlotSet("date",None), FollowupAction('utter_suggest_help')]
-
-    # if no employee ID
-    dispatcher.utter_message("You are not in the database. Please contact HR.")
-    return [SlotSet("cancellation_confirmed",False)]
 
 
 class ActionProvideDescription(Action):
