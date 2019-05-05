@@ -1,2 +1,0 @@
-model_checkpoint_path: "/Users/thaonguyen/Documents/workspace/Seminarbot_Two/models/nlu/current/intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "/Users/thaonguyen/Documents/workspace/Seminarbot_Two/models/nlu/current/intent_classifier_tensorflow_embedding.ckpt"

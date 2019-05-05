@@ -1,0 +1,121 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "other_date",
+        "last-name",
+        "location",
+        "course",
+        "requested_slot",
+        "booking-type",
+        "user-level",
+        "date",
+        "time",
+        "other_location",
+        "date-period",
+        "display-option",
+        "given-name"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "user_verified",
+        "employee_id"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "location",
+        "course",
+        "booking-type",
+        "date",
+        "time",
+        "date-period",
+        "display-option"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "location",
+        "course",
+        "categories",
+        "date",
+        "time",
+        "seminar_id",
+        "date-period",
+        "title",
+        "locations"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "location",
+        "course",
+        "requested_slot",
+        "booking_confirmed",
+        "date",
+        "time"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "location",
+        "course",
+        "booking_confirmed",
+        "date",
+        "time",
+        "date-period"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "location",
+        "course",
+        "booking_confirmed",
+        "date",
+        "time",
+        "cancellation_confirmed",
+        "date-period"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "location",
+        "requested_slot",
+        "date",
+        "seminar_id",
+        "dates",
+        "title"
+      ]
+    },
+    "action_show_all_buttons": {
+      "slots": [
+        "other_date",
+        "location",
+        "date",
+        "other_location"
+      ]
+    },
+    "action_deactivate_form": {
+      "slots": []
+    }
+  },
+  "python": "3.6.7",
+  "max_histories": [
+    null,
+    null,
+    10,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.two_stage_fallback.TwoStageFallbackPolicy",
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190411-191131",
+  "rasa_core": "0.13.7",
+  "tensorflow": "1.12.0",
+  "sklearn": "0.20.3"
+}

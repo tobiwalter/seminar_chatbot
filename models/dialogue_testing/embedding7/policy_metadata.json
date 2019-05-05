@@ -1,0 +1,106 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "seminar_id",
+        "display-option",
+        "requested_slot",
+        "course",
+        "title",
+        "date-period",
+        "other_date",
+        "time",
+        "locations",
+        "last-name",
+        "other_location",
+        "given-name",
+        "date",
+        "user-level",
+        "location"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "course",
+        "employee_id",
+        "user_verified"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "course",
+        "title",
+        "date-period",
+        "time",
+        "locations",
+        "categories",
+        "seminar_id",
+        "date",
+        "location"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "requested_slot",
+        "dates",
+        "title",
+        "seminar_id",
+        "date",
+        "location"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "requested_slot",
+        "course",
+        "time",
+        "booking_confirmed",
+        "date",
+        "location"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "course",
+        "time",
+        "booking_confirmed",
+        "date-period",
+        "date",
+        "location"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "course",
+        "location",
+        "date",
+        "cancellation_confirmed"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "date-period",
+        "date",
+        "location",
+        "time"
+      ]
+    },
+    "action_deactivate_form": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.12.4",
+  "python": "3.6.6",
+  "max_histories": [
+    null,
+    null,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190402-072657"
+}

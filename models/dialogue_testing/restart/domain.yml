@@ -1,0 +1,334 @@
+%YAML 1.1
+---
+actions:
+- action_restart
+- action_book_seminar
+- action_cancel_seminar
+- action_course_offering
+- action_date_buttons
+- action_default_ask_affirmation
+- action_default_fallback
+- action_display_seminar
+- action_location_buttons
+- action_provide_datesWithLocation
+- action_provide_description
+- action_provide_prerequisites
+- action_query_date
+- action_query_duration
+- action_query_level
+- action_show_all_buttons
+- action_show_bookings
+- action_verify_user
+- utter_are_you_sure
+- utter_ask_continue
+- utter_ask_course_book
+- utter_ask_course_cancel
+- utter_no_insult
+- utter_ask_date
+- utter_ask_location
+- utter_ask_name
+- utter_book_somewhere_else
+- utter_bye
+- utter_default
+- utter_do_something_else
+- utter_get_help
+- utter_i''m sorry
+- utter_introduction
+- utter_no_chitchat
+- utter_no_worries
+- utter_restart_with_button
+- action_query_occupancy
+- utter_submit
+- utter_suggest_help
+- utter_thanks
+- utter_thanks_bye
+- utter_try_again
+- utter_welcome
+- utter_wrong_date
+- utter_wrong_location
+- utter_ask_rephrase
+- utter_whatspossible
+config:
+  store_entities_as_slots: true
+entities:
+- booking-type
+- course
+- course-type
+- date
+- date-period
+- display-option
+- given-name
+- last-name
+- location
+- other_date
+- other_location
+- time
+- user-level
+forms:
+- seminar_form
+intents:
+- affirm:
+    use_entities: true
+- age:
+    use_entities: false
+- bad:
+    use_entities: false
+- book_seminar:
+    use_entities: true
+- book_seminar+get_dates:
+    use_entities: true
+- book_seminar+get_location:
+    use_entities: true
+- bye:
+    use_entities: true
+- cancel_seminar:
+    use_entities: true
+- deny:
+    use_entities: true
+- get_course_offering:
+    use_entities: true
+- get_dates:
+    use_entities: true
+- get_description:
+    use_entities: true
+- get_duration:
+    use_entities: true
+- get_help:
+    use_entities: true
+- get_level:
+    use_entities: true
+- get_location:
+    use_entities: true
+- get_prerequisites:
+    use_entities: true
+- inform:
+    use_entities: true
+- insult:
+    use_entities: false
+- introduction:
+    use_entities: false
+- negative:
+    use_entities: false
+- other_loc_date:
+    use_entities: true
+- out_of_scope:
+    use_entities: false
+- praise:
+    use_entities: true
+- show_bookings:
+    use_entities: true
+- stop:
+    use_entities: true
+- thank:
+    use_entities: true
+- thank+bye:
+    use_entities: false
+- welcome:
+    use_entities: true
+- other_smalltalk:
+    use_entities: false
+- ask_whatspossible:
+    use_entities: true
+- get_occupancy:
+    use_entities: true
+slots:
+  booking-type:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - upcoming
+    - past
+  booking_confirmed:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  cancellation_confirmed:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  categories:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  course:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  date-period:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  dates:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  display-option:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  employee_id:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  given-name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  last-name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  locations:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  other_date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  other_location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  seminar_id:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  time:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  title:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  user-level:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  user_verified:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+templates:
+  utter_are_you_sure:
+  - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Are you sure to cancel your seminar in {course}?
+  utter_ask_continue:
+  - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Do you want to continue?
+  utter_ask_course_book:
+  - text: In which category do you want to take a seminar?
+  - text: Which seminar would you like to book?
+  utter_ask_course_cancel:
+  - text: In which category?
+  utter_ask_date:
+  - text: On which date do you want to take the {course} seminar?
+  - text: When do you want to take the {course} seminar?
+  utter_ask_location:
+  - text: Where do you want to take the seminar in {course}?
+  - text: In which city do you want to take the {course} seminar?
+  - text: Please select the city where you want to take the {course} seminar.
+  utter_ask_name:
+  - text: Please give me your first and last name
+  - text: Please provide your first and last name
+  - text: Please tell me your first and last name
+  utter_ask_rephrase:
+  - text: Could you rephrase your message please?
+  utter_book_somewhere_else:
+  - text: Do you want to book the seminar somewhere else? If yes, please specify the
+      location.
+  utter_bye:
+  - text: Goodbye
+  utter_default:
+  - text: Sorry, I didn't get that. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  utter_do_something_else:
+  - text: Can I do something else for you? Remember I can help you to book seminars,
+      show seminar bookings, cancel seminars and get information about the seminar
+      offering.
+  utter_get_help:
+  - buttons:
+    - payload: Call helpdesk
+      title: Call helpdesk
+    - payload: Write email
+      title: Write email
+    text: To get help, please reach out to helpdesk@company.com by mail or call +49
+      621 66566.
+  utter_i''m sorry:
+  - text: I am sorry I could not satisfy your request. Can I help you in any other
+      way?
+  utter_introduction:
+  - text: I am Sam. I can help you to book seminars, show seminar bookings and get
+      information about the seminar offering.
+  utter_no_chitchat:
+  - text: I don't do smalltalk, let's get things done!
+  utter_no_insult:
+  - text: Make peace, not war!
+  - text: No strong language!
+  - text: Don't get offensive!
+  utter_no_worries:
+  - text: No worries.
+  - text: You are welcome.
+  - text: My pleasure!
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: Click the button below if you want to start over.
+  utter_submit:
+  - text: Thanks! I will now attempt to fulfill your request.
+  utter_suggest_help:
+  - buttons:
+    - payload: /affirm
+      title: 'yes'
+    - payload: /negative
+      title: 'no'
+    text: Do you want to reach out to the helpdesk?
+  utter_thanks:
+  - text: Thank you, I try to do my best.
+  utter_thanks_bye:
+  - text: You're welcome, see you soon!
+  - text: My pleasure, goodbye!
+  - text: You're welcome, until next time!
+  utter_try_again:
+  - text: This name is not in our database. Please specify your name again.
+  utter_welcome:
+  - text: 'Hello! I can do the following tasks for you: Book a seminar, show your
+      seminar bookings, cancel a seminar or get information about the seminar offering.'
+  - text: Hi, i am Sam, your seminar chatbot. I can book seminars, show your seminar
+      bookings, cancel seminars or show information about the seminar offering.
+  utter_whatspossible:
+  - text: 'I can do the following tasks for you: Book a seminar, show your seminar
+      bookings, cancel a seminar or get information about the seminar offering.'
+  utter_wrong_date:
+  - text: 'The date you entered could not be verified. Please enter the date in the
+      following format: dd//mm//yy'
+  utter_wrong_location:
+  - text: The location you specified is not in our database. Please try again.

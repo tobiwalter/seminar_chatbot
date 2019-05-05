@@ -1,0 +1,125 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "given-name",
+        "user-level",
+        "date-period",
+        "last-name",
+        "display-option",
+        "time",
+        "course",
+        "location",
+        "requested_slot",
+        "date"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "user_verified",
+        "employee_id"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "locations",
+        "title",
+        "seminar_id"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "time",
+        "requested_slot",
+        "date",
+        "location"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "course",
+        "date",
+        "location",
+        "booking_confirmed"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "title",
+        "location",
+        "requested_slot",
+        "dates",
+        "date",
+        "seminar_id"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "time",
+        "location",
+        "date",
+        "date-period"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "course",
+        "cancellation_confirmed",
+        "location",
+        "date"
+      ]
+    },
+    "utter_get_help": {
+      "slots": []
+    },
+    "utter_no_worries": {
+      "slots": []
+    },
+    "utter_i''m sorry": {
+      "slots": []
+    },
+    "utter_no_chitchat": {
+      "slots": []
+    },
+    "utter_welcome": {
+      "slots": []
+    },
+    "utter_bye": {
+      "slots": []
+    },
+    "action_provide_description": {
+      "slots": []
+    },
+    "utter_do_something_else": {
+      "slots": []
+    },
+    "action_deactivate_form": {
+      "slots": []
+    },
+    "action_provide_prerequisites": {
+      "slots": []
+    },
+    "action_query_level": {
+      "slots": []
+    },
+    "action_query_duration": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.12.4",
+  "python": "3.6.6",
+  "max_histories": [
+    5,
+    null,
+    5,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190325-105152"
+}

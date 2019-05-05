@@ -1,0 +1,104 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "date-period",
+        "other_date",
+        "time",
+        "requested_slot",
+        "location",
+        "date",
+        "given-name",
+        "course",
+        "user-level",
+        "display-option",
+        "last-name",
+        "other_location"
+      ]
+    },
+    "action_verify_user": {
+      "slots": [
+        "employee_id",
+        "user_verified"
+      ]
+    },
+    "action_show_bookings": {
+      "slots": [
+        "date-period",
+        "time",
+        "location",
+        "date"
+      ]
+    },
+    "action_display_seminar": {
+      "slots": [
+        "date-period",
+        "locations",
+        "time",
+        "location",
+        "title",
+        "date",
+        "course",
+        "seminar_id",
+        "categories"
+      ]
+    },
+    "seminar_form": {
+      "slots": [
+        "booking_confirmed",
+        "time",
+        "requested_slot",
+        "location",
+        "date",
+        "course"
+      ]
+    },
+    "action_book_seminar": {
+      "slots": [
+        "date-period",
+        "booking_confirmed",
+        "time",
+        "location",
+        "date",
+        "course"
+      ]
+    },
+    "action_cancel_seminar": {
+      "slots": [
+        "course",
+        "location",
+        "cancellation_confirmed",
+        "date"
+      ]
+    },
+    "action_query_date": {
+      "slots": [
+        "requested_slot",
+        "location",
+        "title",
+        "dates",
+        "date",
+        "seminar_id"
+      ]
+    },
+    "action_deactivate_form": {
+      "slots": []
+    }
+  },
+  "python": "3.6.7",
+  "max_histories": [
+    null,
+    null,
+    2
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.embedding_policy.EmbeddingPolicy",
+    "rasa_core.policies.two_stage_fallback.TwoStageFallbackPolicy",
+    "rasa_core.policies.form_policy.FormPolicy"
+  ],
+  "trained_at": "20190403-080236",
+  "rasa_core": "0.13.7",
+  "tensorflow": "1.12.0",
+  "sklearn": "0.20.3"
+}
