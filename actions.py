@@ -304,7 +304,8 @@ class ActionBookSeminar(Action):
       res = "Your booking request for the seminar {} in {} on {} has been forwarded.\n You will receive a confirmation via email.\n".format(
         course.capitalize(),city.capitalize(),userGivenDate)
       
-      # Check for date clashes
+      # Check for date clashes: loop through bookings and check if there is another booking on the requested date (breaker1 = false)
+      # or if there is a booking for the same requested course with a future date (breaker2 = false).
       breaker1 = True
       breaker2 = True
       res1 = []
@@ -319,7 +320,8 @@ class ActionBookSeminar(Action):
                 res2.append("in {} on {}".format(ele["location"],ele["date"]))
                 breaker2 = False
 
-          # If date clash, ask if user wants to cancel one of the seminars  
+          # If a date clash was found (breaker1 or/and breaker2 is set false), ask if user wants to cancel one of the seminars
+          # otherwise only return booking confirmation message.
           if not breaker2:
             res += "\nYou have already booked the seminar {}: ".format(course.capitalize())
             res += ',\t'.join(res2)
