@@ -96,7 +96,7 @@ class ActionShowBookings(Action):
             elif city:
               res = self.showBoookingsAtLocation(city,matchingID, bookings)
             else:
-              res = "These are your booked seminars: \n" + '\n '.join(sorted(bookedSeminars))
+              res = "These are your booked seminars: \n" + '\n'.join(sorted(bookedSeminars))
 
             dispatcher.utter_message(res)
             return [SlotSet("date", None),SlotSet("location",None), SlotSet("date-period",None), 
@@ -1317,3 +1317,14 @@ class ActionShowAllButtons(Action):
         dispatcher.utter_template("utter_ask_course_book", tracker)
 
     return [FollowupAction('action_listen'),SlotSet("other_date", None),SlotSet("other_location",None)]
+
+
+class ActionRestarted(Action):
+
+    def name(self):
+      return 'action_restart'
+
+    def run(self, dispatcher, tracker, domain): 
+
+      return [Restarted(), FollowupAction('action_listen')]
+      
