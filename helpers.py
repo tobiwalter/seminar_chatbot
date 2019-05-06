@@ -8,42 +8,42 @@ SETTINGS = "{'DATE_ORDER': 'DMY'}"
 def matchingSeminar(seminars,course) -> int:
     """ Match a user-specified seminar with one of the seminars in the database"""
 
-		for ele in seminars:
-			if course.lower() in (d.lower() for d in ele["description"]):
-				seminar_id = int(ele["seminar_id"])
-				return seminar_id 
+    for ele in seminars:
+        if course.lower() in (d.lower() for d in ele["description"]):
+            seminar_id = int(ele["seminar_id"])
+            return seminar_id 
 
 def dateComparison(date1, date2) -> int:
     """ Compare two dates with each other"""
 
-		if isinstance(date1, date):
-			if isinstance(date2, date):
-				if date1 == date2: return 0
-				elif date1 < date2: return -1
-				else: return 1
+    if isinstance(date1, date):
+        if isinstance(date2, date):
+            if date1 == date2: return 0
+            elif date1 < date2: return -1
+            else: return 1
 
-			else:	
-				if date1 == dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-				 return 0
-				elif date1 < dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-					 return -1
-				else: return 1 
+        else:   
+            if date1 == dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+             return 0
+            elif date1 < dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+                 return -1
+            else: return 1 
 
-		elif isinstance(date2, date):
-			if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == date2:
-			 return 0
-			elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() < date2:
-				 return -1
-			else: return 1 
+    elif isinstance(date2, date):
+        if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == date2:
+         return 0
+        elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() < date2:
+             return -1
+        else: return 1 
 
-		else:
-			if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == \
-					dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-					return 0
-			elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() < \
-					dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
-					return -1
-			else: return 1
+    else:
+        if dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() == \
+                dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+                return 0
+        elif dateparser.parse(date1,settings={'DATE_ORDER': 'DMY'}).date() < \
+                dateparser.parse(date2,settings={'DATE_ORDER': 'DMY'}).date():
+                return -1
+        else: return 1
 
 def period_check(date_period, date_time) -> bool:
     """ Check if user-given date-period is a month or season"""
@@ -112,22 +112,22 @@ def nextLocation(city, seminar):
     """ Calculate next location if seminar not available at specified location""" 
 
     # Install Module geopy
-        from geopy.geocoders import Nominatim
-        from geopy import distance
+    from geopy.geocoders import Nominatim
+    from geopy import distance
 
-        geolocator = Nominatim(user_agent='myapplication')
-        loc_coordinates = []
-        loc_distance = {}
-        location = geolocator.geocode(city)
+    geolocator = Nominatim(user_agent='myapplication')
+    loc_coordinates = []
+    loc_distance = {}
+    location = geolocator.geocode(city)
 
-         #calculate distance between user's preferred location and seminar locations
-        for loc in seminar["locations"]:
-            sem_city = geolocator.geocode(loc)
-            loc_coordinates.append((sem_city.latitude, sem_city.longitude))
-            loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),
-              (location.latitude,location.longitude))
+     #calculate distance between user's preferred location and seminar locations
+    for loc in seminar["locations"]:
+        sem_city = geolocator.geocode(loc)
+        loc_coordinates.append((sem_city.latitude, sem_city.longitude))
+        loc_distance[loc] = distance.distance((sem_city.latitude, sem_city.longitude),
+          (location.latitude,location.longitude))
 
-        next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
+    next_loc = min(loc_distance.keys(), key=(lambda k: loc_distance[k]))
 
-        return next_loc
+    return next_loc
 
