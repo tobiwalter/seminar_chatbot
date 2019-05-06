@@ -1,3 +1,4 @@
+
 ## Sam - The seminar chatbot
 
 To train the Rasa NLU model: 
@@ -68,12 +69,3 @@ ngrok http 5004
  
 `run_app.py` - app that initiates bot agent and slack channel
  
-
-
-
-
-
-
-
-
-  
