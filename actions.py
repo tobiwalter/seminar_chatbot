@@ -23,8 +23,7 @@ import json
 # =============================================================================
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key_thao.json')
-# cred = credentials.Certificate('/Users/thaonguyen/Documents/Studium/Data Science/Teamprojekt/Seminar-b253e5498290.json')
+cred = credentials.Certificate('C:\\Users\\Tobias\\Documents\\Uni Mannheim\\Team Project NLU\\service_account_key.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
@@ -39,7 +38,12 @@ employees = employeesRef.get()
 seminars = seminarRef.get()
 counts = countRef.get()
 
+# =============================================================================
+# Rasa Code 
+# =============================================================================
+
 class ActionShowBookings(Action):
+  """Retrieves user bookings depending on params given"""
 
   def name(self):
     """returns name of the action """
@@ -180,6 +184,7 @@ class ActionShowBookings(Action):
 
 
 class ActionBookSeminar(Action):
+"""Stores new seminar bookings in database"""
 
   def name(self):
     return "action_book_seminar"
@@ -345,6 +350,7 @@ class ActionBookSeminar(Action):
 
 
 class ActionCancelSeminar(Action):
+  """Deletes seminar bookings from database"""
 
   def name(self):
     return "action_cancel_seminar"
@@ -860,6 +866,7 @@ class ActionQueryDuration(Action):
 
 
 class SeminarForm(FormAction):
+  """ Asks user for location and date slots that are needed in order to perform a booking"""
 
   RANDOMIZE = False
 
@@ -1164,7 +1171,8 @@ class ActionQueryOccupancy(Action):
 
 
 class ActionDefaultAskAffirmation(Action):
-
+  """ Prompts user affirmation when confidence score under certain threshold"""
+  
   def name(self):
       return "action_default_ask_affirmation"
 
