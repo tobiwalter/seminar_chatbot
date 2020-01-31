@@ -53,7 +53,7 @@ ngrok http 5004
 
 `models` - contains final dialogue and NLU model
 
-`domain.yml` - the domain file for Core
+`domain.yml` - the Core config file 
 
 `config_tf.yml` - the NLU config file
 
