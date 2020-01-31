@@ -49,7 +49,7 @@ ngrok http 5004
 
 `stories` - contains stories for Rasa Core
 
-`data/nlu_data/ - contains example NLU training data
+`data/nlu_data/` - contains example NLU training data
 
 `models` - contains final dialogue and NLU model
 
