@@ -2,6 +2,9 @@ We conceptualized and implemented a chatbot that serves employees in booking sem
 
 The core of our architecture is the Rasa Stack consisting of the two components Rasa NLU and Rasa Core. Rasa NLU takes on the task of classifying user intents and extracting relevant entities from the user input. The NLU unit passes the intent and extracted entities to Rasa Core which is responsible for managing the dialogue, i.e. predicting the bot’s next action. With the aid of Rasa Core SDK an action server is built up that allows the bot to perform actions beyond outputting a simple text utterance. Custom actions that require some form of calculation, read/write access to a database or the like can be written with this Python SDK and are accessible by providing an action endpoint, that will be called by Rasa Core whenever a custom action is predicted. For storing and manipulating data, we establish a connection between our Firebase Realtime Database instance and the action server. On the frontend side, we use the chat platform Slack. It provides an API that sends user input from Slack to the Rasa server and vice versa. We run the Rasa server locally on our machine and set up a tunnel with ngrok to route all incoming HTTP requests to the specified port.
 
+![alt text](https://github.com/tobiwalter/seminar_chatbot/blob/master/architecture.png")
+https://github.com/tobiwalter/seminar_chatbot/blob/master/architecture.png
+
 ## Sam - The seminar chatbot
 
 To train the Rasa NLU model: 
