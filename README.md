@@ -1,3 +1,5 @@
+## Sam - The seminar chatbot
+
 We conceptualized and implemented a chatbot that serves employees in booking seminars, managing seminar bookings and retrieving information about the seminar catalogue. 
 
 The core of our architecture is the Rasa Stack consisting of the two components Rasa NLU and Rasa Core. Rasa NLU takes on the task of classifying user intents and extracting relevant entities from the user input. The NLU unit passes the intent and extracted entities to Rasa Core which is responsible for managing the dialogue, i.e. predicting the bot’s next action. 
@@ -7,7 +9,7 @@ With the aid of Rasa Core SDK an action server is built up that allows the bot t
 In graphic form: 
 ![alt text](https://github.com/tobiwalter/seminar_chatbot/blob/master/architecture.png "Architecture")
 
-## Sam - The seminar chatbot
+## Commands 
 
 To train the Rasa NLU model: 
 ```
