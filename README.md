@@ -5,7 +5,7 @@ The core of our architecture is the Rasa Stack consisting of the two components 
 With the aid of Rasa Core SDK an action server is built up that allows the bot to perform actions beyond outputting a simple text utterance. Custom actions that require some form of calculation, read/write access to a database or the like can be written with this Python SDK and are accessible by providing an action endpoint, that will be called by Rasa Core whenever a custom action is predicted. For storing and manipulating data, we establish a connection between our Firebase Realtime Database instance and the action server. On the frontend side, we use the chat platform Slack. It provides an API that sends user input from Slack to the Rasa server and vice versa. We run the Rasa server locally on our machine and set up a tunnel with ngrok to route all incoming HTTP requests to the specified port.
 
 Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Architecture")
+![alt text](https://github.com/tobiwalter/seminar_chatbot/blob/master/architecture.png "Architecture")
 
 ## Sam - The seminar chatbot
 
